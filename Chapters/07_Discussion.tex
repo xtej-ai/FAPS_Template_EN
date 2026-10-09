@@ -97,24 +97,24 @@ by how it is handled. Both indicators identify the dangerous runs within a
 configuration, as their recall of 97.6\,\% and 100\,\% shows, and both are poor
 signals of a change between configurations.
 
-The monitoring windows of Table~\ref{tab:monitoring_windows} show the same split
-in the form a monitoring process would see. PED\_CPA reaches its SPI threshold in
-94 of 97 Campaign~1 windows and GAP\_TTC in 36; REAR\_TTC reaches it in four of
-73. Since all three thresholds are derived from the same baseline at the same
-significance level, the difference is a property of the indicators and not of the
-limits.
+The same split appears when the violation rates of the two configurations are
+set against each other, which removes the difference in eligible populations.
+The violation rate of PED\_CPA in Campaign~1 is 8.25 times its rate in
+Campaigns~2 and~3, whereas the corresponding ratio is 1.56 for GAP\_TTC and 1.2
+for REAR\_TTC. REQ\_DECEL, AEB\_ONC and AEB\_PED lie between these extremes, at
+3.59, 3.54 and 4.44. An indicator whose rate barely moves while the collisions of
+its chain fall from several hundred to zero cannot, on its own, signal that the
+argued property has changed, however well it separates dangerous from uneventful
+runs within one configuration.
 
-One further comparison in that table is worth recording, with the reservation
-that follows it. PED\_CPA reaches its SPI threshold in more Campaign~1 windows
-than the pedestrian collision count does under the same window procedure, 94 of
-97 against 73 of 97. The leading SPI fires in more windows than the loss it
-anticipates, which is what a precursor is supposed to do. The two thresholds are
-not, however, of the same kind: for the lagging indicators T is one, as
-Table~\ref{tab:dashboard_register} shows, so a lagging window is flagged by a
-single collision, whereas a leading window is flagged by a binomial limit
-calibrated at $\alpha = 0.01$. The comparison therefore describes the behaviour
-of the two monitors as configured and is not a like-for-like comparison of
-statistical sensitivity.
+This distinction carries over directly to the SPI threshold T defined in
+Section~\ref{sec:method_spithreshold}. Because T bounds the violation count of a
+population of runs against a baseline rate, an indicator whose rate is dominated
+by exposure moves little against T when the configuration changes, whereas an
+indicator whose rate tracks the configuration moves strongly. The ratios above
+therefore indicate which entries of the register are suited to rate-level
+monitoring and which are suited mainly to the per-run detection reported in
+Section~\ref{sec:results_statistics}.
 
 % =============================================================================
 \section{Geometry Decides the Warning Time}

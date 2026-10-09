@@ -392,19 +392,18 @@ indicator offers poor lead-time adequacy in this conflict.
 The second is the pedestrian-crossing conflict, a crossing interaction for which
 post-encroachment time rather than pure time-to-collision is the natural surrogate
 measure \cite{allen1978pet}. Pedestrian protection is assessed in rating protocols
-through dedicated automatic-emergency-braking pedestrian tests \cite{eNCAP_aeb}, yet
-studies of such systems at intersections show that occlusion, in which the pedestrian
-is hidden until late, sharply reduces the available response time and the achievable
-avoidance rate \cite{ped_aeb_occluded}. The adequacy of a crossing indicator therefore
+through dedicated automatic-emergency-braking pedestrian tests \cite{eNCAP_aeb}. A
+pedestrian who is hidden until late becomes observable only shortly before the
+conflict, and any indicator computed from observed kinematics inherits that delay. The adequacy of a crossing indicator therefore
 depends strongly on when the crossing road user first becomes observable, which differs
 in character from the oncoming conflict.
 
 The third is the rear-end, or following, conflict, in which the ego vehicle must
 maintain a safe separation from a vehicle behind it while it decelerates for the turn.
 The established surrogate measures here are time headway and the Responsibility-Sensitive
-Safety safe distance \cite{shalev2017rss}, and recent work estimates rear-end collision
-risk for automated vehicles in mixed traffic from real-world perception data
-\cite{rearend_av2025}. The controlling quantity is the follower's ability to respond to
+Safety safe distance \cite{shalev2017rss}, and the review of criticality metrics by Westhofen et~al.\ analyses
+the suitability of headway- and time-based measures for this following geometry
+\cite{westhofen2023}. The controlling quantity is the follower's ability to respond to
 the ego vehicle's deceleration, which is again a different mechanism from the other two
 conflicts.
 

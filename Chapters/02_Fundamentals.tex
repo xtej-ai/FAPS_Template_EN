@@ -6,9 +6,9 @@ which the remainder of the thesis builds. It first describes automated driving
 systems and their operating envelope, then the two safety paradigms that frame the
 work, followed by safety assurance cases and the notation used to express them, the
 definition of a safety performance indicator, the surrogate safety metrics that serve
-as candidate signals, and the simulation environment used for evaluation. The current
-state of research that builds on these foundations is reviewed in
-Chapter~\ref{ch:sota}.
+as candidate signals, the simulation environment used for evaluation, and the
+statistical concepts needed to evaluate rare events. The current state of research
+that builds on these foundations is reviewed in Chapter~\ref{ch:sota}.
 
 \section{Automated Driving Systems and the Operational Design Domain}
 \label{sec:fund_ads}
@@ -24,6 +24,28 @@ the operating conditions. This functional decomposition is used throughout the t
 because it names the tasks that any driving system must perform, independently of the
 particular software architecture that performs them.
 
+The \ac{DDT} comprises the sustained lateral and longitudinal control of the vehicle
+together with the monitoring of the driving environment and the response to objects
+and events within it \cite{saej3016}. The distinction between the levels therefore
+lies in who performs which part of this task and who acts when the system can no
+longer perform it. Up to Level~2 a human driver monitors the environment at all times;
+from Level~3 onwards the system monitors it, and from Level~4 onwards the system also
+performs the fallback itself by bringing the vehicle to a minimal risk condition
+\cite{saej3016}. For the assurance of a Level~4 system this has a direct consequence:
+no human is available to notice that a margin is eroding, so whatever observes the
+erosion has to be part of the technical system or of the process that operates it.
+
+The four functions named above act in sequence on every cycle of the driving task.
+Perception builds a representation of the surrounding objects from sensor data,
+prediction estimates how those objects will move, planning selects a trajectory that
+the vehicle is to follow, and control turns that trajectory into steering, throttle
+and brake commands. A deficiency in an early function propagates into the behaviour of
+the vehicle only through the later ones, so it becomes visible in the motion of the
+vehicle relative to other road users only after a delay. This propagation is the
+reason why the indicators of this thesis distinguish between signals taken from the
+behaviour of the vehicle and signals taken from inside a function, a distinction that
+Chapter~\ref{ch:methodology} formalises as two indicator tiers.
+
 Every \ac{ADS} is specified to operate only within a defined \ac{ODD}, that is, the
 set of operating conditions under which it is designed to function, including
 environmental, geographical, and time-of-day constraints as well as the presence or
@@ -34,13 +56,23 @@ the indicators derived in this thesis are therefore conditioned on the \ac{ODD},
 that the value considered acceptable under one set of conditions, for example dry
 weather, differs from the value considered acceptable under another, for example rain.
 
+The \ac{ODD} also bounds what any evidence about the system can establish. A claim
+supported by data gathered under one set of conditions transfers to another set only
+when the two are shown to be comparable, and the assurance guidance for autonomous
+systems in complex environments accordingly splits the top-level safety claim into a
+claim about operation inside the defined operating context and a separate claim about
+operation outside it \cite{hawkins2022sace}. The same split applies to an indicator:
+its metric threshold carries meaning only for the population of operating conditions
+from which it was calibrated, which is why the transferability of thresholds between
+configurations is tested explicitly in Chapter~\ref{ch:results}.
+
 \section{Functional Safety and the Safety of the Intended Functionality}
 \label{sec:fund_safety}
 
 Two complementary standards frame the safety of an \ac{ADS}. ISO~26262 addresses
 functional safety, defined as the absence of unreasonable risk due to hazards caused
-by malfunctioning behaviour of electrical and electronic systems, and provides a risk-
-based development process organised around automotive safety integrity levels
+by malfunctioning behaviour of electrical and electronic systems, and provides a
+risk-based development process organised around automotive safety integrity levels
 \cite{iso26262}. Its scope is the fault, that is, a component that fails to behave as
 specified. ISO~21448 addresses the \ac{SOTIF}, defined as the absence of unreasonable
 risk due to hazards resulting from functional insufficiencies of the intended
@@ -49,13 +81,90 @@ functionality or from reasonably foreseeable misuse, when no component has faile
 specified yet the specification itself is inadequate, which is characteristic of the
 perception and machine-learning elements of an \ac{ADS}.
 
+ISO~26262 derives its requirements from a hazard analysis and risk assessment. Each
+hazardous event is rated for the severity of its possible harm, the exposure to the
+operational situation in which it can occur, and the controllability of the situation
+by the persons involved, and the combination of the three ratings determines an
+\ac{ASIL} from A, the least demanding, to D, the most demanding, or a rating of
+quality management where no safety requirement is needed \cite{iso26262}. The
+\ac{ASIL} then fixes the rigour of the development and verification measures applied
+to the safety goals and to the requirements derived from them. The scheme presumes
+that a hazard can be traced to a malfunction, and it measures risk through
+categories that are assigned before operation rather than observed during it.
+
+ISO~21448 addresses the hazards that this scheme leaves out. A \ac{SOTIF}-related
+hazard requires two conditions to coincide: a triggering condition in the
+environment, such as extreme weather, an unusual road layout or an unexpected
+manoeuvre of another road user, and a performance limitation of the system in
+sensing, perception, decision-making or execution, or a deficiency of its
+specification \cite{iso21448} \cite{wang2024sotif}. Neither condition is a fault in
+the sense of ISO~26262. A perception function can operate exactly as trained and
+still misjudge a situation that its training did not cover, and a planner can follow
+its specification exactly when that specification omits a case.
+
+ISO~21448 organises the scenarios of a system into four areas, according to whether a
+scenario is known or unknown to the developers and whether the behaviour of the system
+in it is safe or unsafe \cite{iso21448}. Table~\ref{tab:sotif_areas} sets out the four
+areas together with the activity that addresses each. The objective of the standard is
+to shrink the known unsafe area through design measures and the unknown unsafe area
+through verification and validation until the residual risk is acceptable. The unknown
+unsafe area, however, cannot be shown to be empty by any finite programme of analysis
+or testing before release, because a scenario that has not been imagined cannot be
+analysed and a scenario that has not been met cannot be tested.
+
+% ---------------------------------------------------------------------------
+\begin{table}[htbp]
+    \centering
+    \caption{Scenario areas of ISO~21448. The four areas classify the scenarios of a
+    system by whether they are known and whether the behaviour of the system in them
+    is safe, together with the activity that provides evidence about each area
+    (based on \cite{iso21448}).}
+    \label{tab:sotif_areas}
+    \small
+    \begin{tabular}{@{}p{2.9cm} p{4.6cm} p{6.3cm}@{}}
+        \toprule
+        \textbf{Area} & \textbf{Content} & \textbf{Source of evidence} \\
+        \midrule
+        Known safe & scenarios analysed and handled correctly & design analysis and
+        verification \\[2pt]
+        Known unsafe & scenarios identified as hazardous & design measures that remove
+        or restrict them, then verification \\[2pt]
+        Unknown unsafe & hazardous scenarios not yet identified & validation, and
+        monitoring in operation once the system is released \\[2pt]
+        Unknown safe & scenarios not identified but handled correctly & no activity
+        required \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+% ---------------------------------------------------------------------------
+
+The residual risk that remains after development is consequently carried into
+operation. Analyses, improvements and verification during development cannot remove
+it entirely, and the operation phase has to observe whether triggering conditions and
+the internal state of the system combine into hazardous behaviour that development
+did not anticipate \cite{wang2024sotif}. Wang et al. also identify the definition of
+acceptance criteria as an open problem and list the comparison with traffic
+statistics, the comparison with experienced and cautious human drivers, and
+risk-acceptance principles such as GAMAB and ALARP as candidate bases
+\cite{wang2024sotif}. Both points recur in this thesis: the first motivates indicators
+that are monitored after release, and the second marks the boundary of what the
+statistical thresholds of Chapter~\ref{ch:methodology} can claim.
+
 The distinction matters for the present work because the two paradigms call for
 different reasoning. A fault-based hazard is well captured by the failure logic of
 classical reliability analysis, whereas a functional insufficiency is not, since there
 is no failed component to point to. The indicators derived in this thesis are intended
 to observe the developing consequences of both kinds of hazard in the behaviour of the
-vehicle, which is the reason the derivation reasons about functional impossibilities
-rather than component failures.
+vehicle, which is why the derivation addresses functional impossibilities rather than
+component failures.
+
+A third standard sets the frame for monitoring after release. Whereas ISO~26262 and
+ISO~21448 prescribe what is to be done during development, ANSI/UL~4600 is
+goal-based: it requires a safety case for a fully autonomous product and leaves the
+means of supporting it to the developer, while requiring that the case be kept valid
+over the lifecycle through monitored indicators \cite{ul4600} \cite{wang2024sotif}.
+This combination of a goal-based safety case with field monitoring is the setting in
+which the indicators of this thesis are to be used.
 
 \section{Safety Assurance Cases and the Goal Structuring Notation}
 \label{sec:fund_gsn}
@@ -63,15 +172,36 @@ rather than component failures.
 A \ac{SAC} is a structured argument, supported by a body of evidence, that a system is
 acceptably safe to operate in a defined context \cite{bishop2000methodology}. It makes
 the reasoning from evidence to a top-level safety claim explicit and reviewable, rather
-than leaving it implicit in a collection of documents. The \ac{GSN} is a graphical
-notation for expressing such arguments and is widely used in safety-critical domains
-\cite{kelly2004gsn}. Its community standard defines the core element types used in this
-thesis \cite{gsncs2021}, which are summarised in Figure~\ref{fig:gsn_notation}: a goal
-states a claim to be established, a strategy explains how a goal is decomposed into
-sub-goals, a solution provides the evidence that supports a goal, and context,
-assumption, and justification elements record the conditions under which the argument
-holds. An argument is built by decomposing the top-level goal through strategies into
-sub-goals until each remaining goal can be discharged by a solution.
+than leaving it implicit in a collection of documents. Kelly and Weaver require of such
+a case that it communicate a clear, comprehensive and defensible argument, and they
+identify three principal elements: the safety requirements and objectives, the safety
+argument, and the safety evidence \cite{kelly2004gsn}. Argument and evidence depend on
+each other. An argument without evidence is unfounded and therefore unconvincing,
+whereas evidence without an argument leaves unexplained how it satisfies the
+objectives \cite{kelly2004gsn}.
+
+Bishop and Bloomfield describe the same structure in terms of claims, arguments and
+evidence, with an inference rule connecting evidence to the claim it supports
+\cite{bishop2000methodology}. They distinguish three types of argument, namely
+deterministic arguments that apply predetermined rules, probabilistic arguments that
+establish a numerical level through statistical reasoning, and qualitative arguments
+that rest on compliance with rules only indirectly linked to the property claimed
+\cite{bishop2000methodology}. They also name the sources from which evidence can be
+drawn: the design, the development process, simulated experience, and prior field
+experience. Two further points from their methodology are used later in this thesis.
+Evidence may itself be a sub-claim supported by a subsidiary argument, and a claim
+supported by two independent arguments tolerates a flaw in either of them
+\cite{bishop2000methodology}.
+
+The \ac{GSN} is a graphical notation for expressing such arguments and is widely used
+in safety-critical domains \cite{kelly2004gsn}. Its community standard defines the core
+element types used in this thesis \cite{gsncs2021}, which are summarised in
+Figure~\ref{fig:gsn_notation}: a goal states a claim to be established, a strategy
+explains how a goal is decomposed into sub-goals, a solution provides the evidence that
+supports a goal, and context, assumption, and justification elements record the
+conditions under which the argument holds. An argument is built by decomposing the
+top-level goal through strategies into sub-goals until each remaining goal can be
+discharged by a solution.
 
 % ---------------------------------------------------------------------------
 \begin{figure}[htbp]
@@ -85,14 +215,56 @@ sub-goals until each remaining goal can be discharged by a solution.
 \end{figure}
 % ---------------------------------------------------------------------------
 
+Two relations connect the elements. The supported-by relation links a goal to the
+strategies, sub-goals and solutions from which it is inferred, and the in-context-of
+relation links a goal or strategy to the context, assumption and justification
+elements that qualify it \cite{gsncs2021}. A goal that has not yet been decomposed
+further is marked as undeveloped, which makes the incompleteness of an argument
+visible rather than hiding it. The notation records the structure of an argument but
+not its strength: a goal structure is inductive rather than deductive, because the
+truth of all solutions makes the top-level goal probable rather than certain, and the
+confidence that the child elements warrant in their parent is a judgement that the
+notation by itself leaves implicit \cite{kelly2004gsn}.
+
+Several extensions make the notation manageable for large systems. Safety case
+patterns capture recurring argument structures, documented with their intent,
+motivation, structure and applicability, so that a successful argument can be reused
+without carrying over assumptions that do not hold in the new context
+\cite{kelly1998patterns}. Patterns use parameterised expressions, multiplicity and
+choice to describe a family of arguments rather than a single one, and these
+constructs have been given a formal definition as a step towards an assurance case
+language \cite{matsuno2014gsnpatterns}. Modular safety cases partition an argument
+along the architecture of the system, so that the argument for one module can be
+developed and assessed separately and referenced from another module
+\cite{kelly2004gsn} \cite{gsncs2021}. Finally, the maintenance of an argument through
+the operational life of a system is recognised as a problem of its own, because
+changing requirements, new evidence and design changes can each challenge a goal
+that was considered supported at approval \cite{kelly2004gsn}.
+
+Guidance for autonomous systems builds directly on these extensions. The \ac{SACE}
+guidance of the University of York provides a set of argument patterns organised in
+eight stages, from the assurance of the operating context to the assurance of
+verification, and it states its top-level claim as the system being sufficiently safe
+throughout its operational life \cite{hawkins2022sace}. It marks the points at which a
+confidence argument is required with assurance claim points, and it requires that a
+runtime monitor be independent of the components it monitors, noting that trends in
+monitored behaviour can act as a leading indicator of future unsafe behaviour
+\cite{hawkins2022sace}. For automated vehicles, Loba et al.\ derive structural
+requirements for a \ac{GSN}-based argumentation and propose a generic structure that
+separates a product argument, a process argument, a conformance argument, a context
+argument and a soundness argument, with explicit concern for how valid the
+assumptions of the argument remain during field operation \cite{loba2025harmonized}.
+
 The \ac{GSN} is adopted here for two reasons. First, its decomposition of a top-level
 goal into sub-goals produces the claim hierarchy to which safety performance indicators
 are attached in Chapter~\ref{ch:methodology}. Second, a goal that is expressed as a
 bare assertion can be turned into a monitorable claim by attaching an indicator to it,
 which is the mechanism by which the assurance case is connected to operational data.
-The assurance cases of this thesis are modelled in a model-based safety-engineering
-environment that supports the construction of \ac{GSN} arguments and their linkage to
-other safety artefacts.
+In the terms of Bishop and Bloomfield, such an indicator supplies a probabilistic
+argument from simulated or field experience to a goal that development evidence alone
+cannot discharge. The assurance cases of this thesis are modelled in a model-based
+safety-engineering environment that supports the construction of \ac{GSN} arguments
+and their linkage to other safety artefacts.
 
 \section{Safety Performance Indicators}
 \label{sec:fund_spi}
@@ -132,6 +304,40 @@ at which a following gap drops below a safe distance are leading indicators
 \cite{koopman2022howsafe}. An effective programme combines both, but only leading
 indicators enable a proactive response, which is why their systematic construction is
 the central concern of this work.
+
+The framework for measuring automated vehicle safety by Fraade-Blanar et al.\ gives
+the same distinction a precise footing. Lagging measures are observations of safety
+outcomes involving harm, such as crashes, injuries and deaths, whereas leading
+measures reflect performance, activity and prevention and act as proxies for the
+lagging ones; in the terms of the Haddon matrix they are drawn from the pre-crash
+phase \cite{fraadeblanar2018}. Because the events counted by a leading measure occur
+more often than those counted by a lagging measure, a leading measure reaches
+statistical confidence at a lower cumulative exposure, which allows the safety of a
+system to be judged earlier in development and deployment \cite{fraadeblanar2018}.
+
+The same framework states the properties that any such measure has to satisfy and the
+ways in which a leading measure can fail. A measure has to be valid, feasible,
+reliable and non-manipulatable \cite{fraadeblanar2018}. The link between a proxy and
+the outcome it stands for is required not to depend on the circumstances under
+which either occurs, for example being strong at high speed and weak at low speed. Disengagements
+illustrate how a measure can fail these properties: they are sensitive to the training
+and risk tolerance of the safety driver, they presuppose a safety driver, and their
+use as a target creates an incentive to disengage as rarely as possible
+\cite{fraadeblanar2018}. For measures of driving behaviour the framework asks that they
+be objective, physics-based, available with current technology, and able to separate
+the road user who initiates an unsafe situation from the one who responds to it, so
+that evasive action is not penalised \cite{fraadeblanar2018}. These properties serve
+as criteria for the signals selected in Chapter~\ref{ch:methodology}, and the last of
+them reappears in the definition of a pedestrian collision in
+Chapter~\ref{ch:experiment}.
+
+Every indicator is stated against a unit of exposure. A violation count has a meaning
+only relative to the amount of operation in which it was gathered, whether that is
+measured in distance driven, operating hours or manoeuvres performed, and a comparison
+between configurations is meaningful only when it is made per unit of the same
+exposure \cite{fraadeblanar2018}. For a manoeuvre-specific use case such as the one
+studied here, the manoeuvre is the natural unit, because the conflicts of interest
+arise once per manoeuvre rather than continuously along a route.
 
 A concrete example makes the structure explicit. Consider the assurance-case goal that
 the vehicle keeps a safe separation from a leading vehicle. A candidate leading \ac{SPI}
@@ -181,14 +387,78 @@ where:
     $v_\mathrm{rel}$ \> relative closing speed, positive when the gap is closing, in m/s
 \end{tabbing}
 
+Equation~\ref{eq:ttc} presumes that both road users move along one line. When they
+move in a plane, as at an intersection, the same idea is expressed along the line of
+sight between them: the range is the distance between the two reference points, the
+range rate is its derivative, and the \ac{TTC} is the range divided by the negative
+range rate whenever the range is decreasing, as given in Equation~\ref{eq:ttc_los}.
+
+\begin{equation}
+    \mathrm{TTC}_\mathrm{LOS} = -\frac{r}{\dot{r}}, \qquad
+    \dot{r} = \frac{\Delta\mathbf{p} \cdot \Delta\mathbf{v}}{r}, \qquad \dot{r} < 0
+    \label{eq:ttc_los}
+\end{equation}
+\equationentry{Line-of-sight time-to-collision}
+
+where:
+\begin{tabbing}
+    \hspace{2.2cm} \= \kill
+    $\Delta\mathbf{p}$ \> position of the other road user relative to the ego vehicle in m \\
+    $\Delta\mathbf{v}$ \> velocity of the other road user relative to the ego vehicle in m/s \\
+    $r$ \> range $\lvert \Delta\mathbf{p} \rvert$ between the two reference points in m \\
+    $\dot{r}$ \> range rate, negative when the range is decreasing, in m/s
+\end{tabbing}
+
+The line-of-sight formulation inherits the central limitation of every \ac{TTC}: it
+extrapolates the current relative velocity unchanged. It responds only to the
+component of the relative motion that lies along the line of sight, so two road users
+whose paths cross at an angle produce a large value while they are still far apart and
+a rapidly falling value once their paths almost meet. It also takes no account of
+whether the extrapolated paths actually intersect, so a road user that closes in range
+but passes at a safe lateral distance still produces a finite value.
+
+The second of these limitations is removed by the closest point of approach, which
+asks not when the range reaches zero but when it is smallest and how small it becomes.
+Under the same constant-velocity assumption, the time until the \ac{CPA} and the
+distance at that moment follow from the relative position and velocity as given in
+Equation~\ref{eq:cpa}.
+
+\begin{equation}
+    t_\mathrm{CPA} = -\frac{\Delta\mathbf{p} \cdot \Delta\mathbf{v}}{\lvert \Delta\mathbf{v} \rvert^{2}},
+    \qquad
+    d_\mathrm{CPA} = \left\lvert \Delta\mathbf{p} + \Delta\mathbf{v}\, t_\mathrm{CPA} \right\rvert
+    \label{eq:cpa}
+\end{equation}
+\equationentry{Time and distance at the closest point of approach}
+
+where:
+\begin{tabbing}
+    \hspace{2.2cm} \= \kill
+    $t_\mathrm{CPA}$ \> time until the closest point of approach in s \\
+    $d_\mathrm{CPA}$ \> distance between the two road users at that time in m \\
+    $\Delta\mathbf{p}$, $\Delta\mathbf{v}$ \> relative position in m and relative velocity in m/s, as in
+    Equation~\ref{eq:ttc_los}
+\end{tabbing}
+
+A positive $t_\mathrm{CPA}$ together with a small $d_\mathrm{CPA}$ describes a road
+user who will pass close to the vehicle soon, whereas a large $d_\mathrm{CPA}$
+identifies a road user who will miss the vehicle however short the time. Gating the
+time on the distance therefore separates conflicts from mere proximity, which is the
+property required for a crossing pedestrian whose walking line may or may not
+intersect the path of the vehicle. The pedestrian indicator PED\_CPA of this thesis is
+built on this quantity.
+
 A related time-based measure is the \ac{PET}, introduced by Allen et al., which
 applies to crossing conflicts and measures the time between the moment the first road
 user leaves a shared conflict area and the moment the second enters it
 \cite{allen1978pet}. A small \ac{PET} indicates that two road users occupied nearly
-the same space at nearly the same time. Where a required response is of interest rather
-than the time available, the required deceleration to avoid a collision, given in
-Equation~\ref{eq:areq}, expresses how hard the vehicle would have to brake, and a value
-approaching the physical limit of the vehicle indicates a critical situation.
+the same space at nearly the same time. Unlike the \ac{TTC} and the closest point of
+approach, the \ac{PET} is known only once both road users have passed the conflict
+area, so it describes how close an encounter came rather than how close it is about
+to come. Where a required response is of interest rather than the time available, the
+required deceleration to avoid a collision, given in Equation~\ref{eq:areq}, expresses
+how hard the vehicle has to brake, and a value approaching the physical limit
+of the vehicle indicates a critical situation.
 
 \begin{equation}
     a_\mathrm{req} = \frac{v_\mathrm{rel}^{2}}{2\,d_\mathrm{rel}}
@@ -202,6 +472,34 @@ where:
     $a_\mathrm{req}$ \> required deceleration in m/s\textsuperscript{2} \\
     $v_\mathrm{rel}$ \> relative closing speed in m/s \\
     $d_\mathrm{rel}$ \> relative distance in m
+\end{tabbing}
+
+Equation~\ref{eq:areq} treats the obstacle as stationary at the end of the available
+distance. It therefore states the braking needed to stop short of a point, not the
+braking needed to avoid a road user who is itself moving,
+and it grows without bound as the distance approaches zero. Both properties matter for
+an implementation, because a moving partner makes the true demand different from the
+computed one and a very short distance makes the value numerically unstable.
+
+For the following conflict the time headway is the established complement to the
+\ac{TTC}. It is the time a following vehicle needs to reach the current position of
+the vehicle ahead at its own current speed, as given in Equation~\ref{eq:thw} \cite{westhofen2023}, and it
+remains defined when the two vehicles travel at the same speed, where the \ac{TTC} is
+undefined.
+
+\begin{equation}
+    \mathrm{THW} = \frac{d_\mathrm{gap}}{v_\mathrm{f}}, \qquad v_\mathrm{f} > 0
+    \label{eq:thw}
+\end{equation}
+\equationentry{Time headway}
+
+where:
+\begin{tabbing}
+    \hspace{2.2cm} \= \kill
+    $\mathrm{THW}$ \> time headway in s \\
+    $d_\mathrm{gap}$ \> distance between the rear of the vehicle ahead and the front of the
+    following vehicle in m \\
+    $v_\mathrm{f}$ \> speed of the following vehicle in m/s
 \end{tabbing}
 
 A formal alternative defines a safe distance from explicit assumptions about
@@ -231,7 +529,16 @@ where:
     $[\,\cdot\,]_{+}$ \> the positive part, that is $\max(\cdot,0)$
 \end{tabbing}
 
-The four measures differ in the conflict geometry for which each is defined and in the
+The Responsibility-Sensitive Safety distance differs in kind from the other measures.
+The \ac{TTC}, the closest point of approach, the \ac{PET} and the required
+deceleration describe what is happening between two road users, whereas the
+Responsibility-Sensitive Safety distance prescribes what ought to be maintained under
+stated assumptions about their capabilities \cite{shalev2017rss}. Its value as a
+threshold therefore depends entirely on parameters such as the response time and the
+braking capabilities, which have to be fixed for every vehicle and every road
+condition before the distance can be computed.
+
+The six measures differ in the conflict geometry for which each is defined and in the
 quantity each returns, and Table~\ref{tab:surrogate_metrics} summarises these
 differences, since the suitability of a signal for a given conflict is what governs its
 selection in Chapter~\ref{ch:methodology}.
@@ -250,10 +557,14 @@ selection in Chapter~\ref{ch:methodology}.
         \midrule
         Time-to-collision & following, or any conflict with a closing range rate
         & time remaining to contact & lower \\[2pt]
+        Time to closest point of approach & crossing, gated on the miss distance &
+        time until the smallest separation & lower \\[2pt]
         Post-encroachment time & crossing & time between successive occupancies of a
         shared area & lower \\[2pt]
         Required deceleration & following, and turning conflicts with a defined
         stopping point & braking effort demanded & upper \\[2pt]
+        Time headway & following & time to reach the position of the vehicle ahead &
+        lower \\[2pt]
         Responsibility-Sensitive Safety distance & longitudinal & minimum admissible
         separation & lower \\
         \bottomrule
@@ -284,6 +595,15 @@ is examined further in Chapter~\ref{ch:sota}.
 \end{figure}
 % ---------------------------------------------------------------------------
 
+Every surrogate metric is evaluated over time, whereas an indicator decides once per
+manoeuvre. A metric sampled at every simulation step yields a time series, and the
+indicator reduces it to a single value per manoeuvre, its minimum for a metric whose
+critical tail is lower and its maximum for a metric whose critical tail is upper. The
+reduction keeps the most critical moment of the manoeuvre and discards the rest,
+which makes the per-manoeuvre values independent observations even though the steps
+within one manoeuvre are strongly correlated. The same reduction is used for the
+calibration of every metric threshold in Chapter~\ref{ch:methodology}.
+
 \section{Simulation-Based Safety Assessment}
 \label{sec:fund_sim}
 
@@ -294,7 +614,118 @@ simulator for automated driving research that provides sensor models, traffic
 participants, and configurable environmental conditions, together with a programmable
 interface for scripting scenarios and logging ground-truth state \cite{dosovitskiy2017carla}.
 In this thesis it is used to generate the scenarios from which the derived indicators
-are evaluated. The use of ground-truth state has an important consequence for the scope
-of the evaluation, which is discussed in Chapter~\ref{ch:methodology}, because signals
+are evaluated.
+
+CARLA follows a client-server architecture in which the server runs the simulation and
+a client retrieves data and requests changes to the world \cite{carladocs_sync}. By
+default the server advances as fast as it can without waiting for the client, and the
+simulated time between two steps varies with the computational load. In synchronous
+mode the server instead waits for a tick from the client before it advances, and with
+a fixed time-step every step covers the same simulated interval; a step of 0.05\,s,
+for example, gives 20 steps per simulated second \cite{carladocs_sync}. Physics
+substepping divides each step further, and the documentation states that the physics
+cannot run properly with a time-step larger than 0.1\,s \cite{carladocs_sync}.
+Deterministic repetition of a run requires synchronous mode, a fixed time-step, a
+reloaded world for every repetition, and commands that are applied in batches
+\cite{carladocs_sync}. These conditions are what allow every run of this thesis to be
+regenerated from its seed.
+
+Road users other than the ego vehicle are animated by built-in controllers. Vehicles
+in autopilot mode are driven by the Traffic Manager, a client-side module that passes
+every vehicle through a sequence of stages for localisation along a waypoint path,
+collision checking against nearby vehicles, handling of traffic lights and junction
+priority, and motion planning, where a proportional-integral-derivative controller
+converts the planned targets into throttle, brake and steering commands
+\cite{carladocs_tm}. Its behaviour can be adjusted for each vehicle, for example to
+ignore traffic lights, other vehicles or walkers, to keep a given distance to the
+vehicle ahead, or to drive at a given fraction of the speed limit, and its
+deterministic mode requires synchronous operation and a seed that is set again after
+every world reload \cite{carladocs_tm}. These per-vehicle parameters are what a
+scenario generator varies to produce conflicts of different severity.
+
+Contacts are recorded by a collision sensor attached to an actor. The sensor registers
+an event whenever its parent actor collides with anything in the world and reports the
+frame, the simulation time, the other actor involved and the normal impulse of the
+contact, producing one event per collision and frame \cite{carladocs_sensors}. Because
+the other actor is reported with its identity, every contact can be attributed to the
+road user involved, which is the basis on which collisions are assigned to conflict
+chains in Chapter~\ref{ch:experiment}.
+
+A simulator answers questions about a model of the world rather than about the world.
+Its vehicle dynamics, the behaviour models of other road users and, where sensors are
+simulated, the sensor models all differ from their real counterparts, so a quantity
+measured in simulation transfers to the field only as far as those models are
+faithful. The use of ground-truth state has a further consequence for the scope of
+the evaluation, which is discussed in Chapter~\ref{ch:methodology}, because signals
 that depend on the internal outputs of a perception module cannot be observed when the
 ego vehicle is driven by a rule-based agent on ground truth.
+
+Simulation does not by itself remove the rarity of safety-critical events. Feng et al.\
+observe that, owing to the high dimensionality of the driving environment and the
+rareness of safety-critical events, testing in a naturalistic driving environment requires
+hundreds of millions of miles to demonstrate the safety performance of an
+automated vehicle, even in simulation \cite{feng2021nade}. They show that sparse
+adversarial adjustments of the naturalistic environment reduce the required test
+distance by orders of magnitude without biasing the evaluation, provided that the
+adjustments are learned and the resulting estimates are corrected by importance
+sampling \cite{feng2021nade}. The corollary matters for this thesis: a campaign that
+provokes conflicts without such a correction produces many collisions quickly, but its
+collision frequency is not an estimate of the frequency in naturalistic operation.
+
+\section{Statistical Basis for Evaluating Rare Events}
+\label{sec:fund_statistics}
+
+Every result of this thesis is a count of runs in which an event occurred, and most of
+the events of interest are rare. The statistical treatment of such counts is
+therefore part of the foundation of the evaluation, and three of its elements recur
+throughout: the estimation of a proportion with an interval, the comparison of two
+proportions through their ratio, and the treatment of a count of zero.
+
+A proportion estimated from $k$ events in $n$ trials is uncertain, and the uncertainty
+is largest relative to the estimate when $k$ is small. The common normal-approximation
+interval centres on $k/n$ and collapses to a single point when $k$ is zero, which
+claims certainty precisely where the data are weakest. The score interval of Wilson
+avoids this by inverting the score test rather than the estimate, and it remains
+informative for counts of zero and for counts close to $n$
+\cite{wilson1927probable}. It is given in Equation~\ref{eq:wilson}.
+
+\begin{equation}
+    \frac{\hat{p} + \dfrac{z^{2}}{2n} \pm z\sqrt{\dfrac{\hat{p}\,(1-\hat{p})}{n} + \dfrac{z^{2}}{4n^{2}}}}
+    {1 + \dfrac{z^{2}}{n}}
+    \label{eq:wilson}
+\end{equation}
+\equationentry{Wilson score interval of a proportion}
+
+where:
+\begin{tabbing}
+    \hspace{2.2cm} \= \kill
+    $\hat{p}$ \> observed proportion $k/n$, dimensionless \\
+    $n$ \> number of trials, here eligible runs, dimensionless \\
+    $z$ \> standard normal quantile, 1.96 for a two-sided 95\,\% interval, dimensionless
+\end{tabbing}
+
+For $k = 0$ the lower limit of Equation~\ref{eq:wilson} is zero and the upper limit
+is positive, so a campaign without any collision still yields an upper bound on the
+collision probability per run. This bound shrinks only as $n$ grows, which is the
+statistical form of the argument of Kalra and Paddock that the absence of failures
+demonstrates a low failure rate only after an exposure that is large relative to the
+rate to be demonstrated \cite{kalra2016driving}.
+
+A leading indicator is useful only if a violation changes the probability of the loss
+that it anticipates. The natural measure of that change is the relative risk, the
+ratio of the probability of the loss among runs with a violation to the probability
+among runs without one. It is the measure used in cohort studies, where a group
+exposed to a factor is compared with an unexposed group, and its logarithm is
+approximately normally distributed, which gives the interval of Katz et al.\
+\cite{katz1978risk}. A relative risk of one means that a violation carries no
+information about the loss, and an interval that excludes one means that the
+association is unlikely to arise by chance.
+
+The relative risk and the interval of Katz et al.\ are undefined when one cell of the
+underlying two-by-two classification is zero, which occurs whenever every loss is
+preceded by a violation or no loss occurs at all. A count of zero in such a table is
+not evidence of an infinite or a zero ratio but of a sample too small to resolve it,
+and Chapter~\ref{ch:experiment} states how such cells are treated and how the
+resulting value is reported. The three elements together determine which statements
+the evaluation can support: an interval for every proportion, a ratio with an interval
+for every association, and an explicit bound wherever a count is zero.
