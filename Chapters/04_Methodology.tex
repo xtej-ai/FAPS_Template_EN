@@ -12,9 +12,10 @@ threshold calibration grounded in precursor-estimation theory \cite{bieryi1995}.
 derived indicators are modelled in a \ac{GSN} modelling tool and evaluated on
 simulation data generated in the CARLA simulator \cite{dosovitskiy2017carla}. The chapter first gives
 an overview of the seven steps, then describes each step, presents worked examples,
-and finally describes the simulation environment and the evaluation pipeline.
+and closes with the properties of the method that carry over into its instantiation
+in Chapter~\ref{ch:experiment}.
 
-\section{Overview of the Causal-Chain Derivation Method}
+\section{Overview of the Causal Chain Derivation Method}
 \label{sec:method_overview}
 
 The method is defined to be use-case-agnostic, so that it applies without change to a
@@ -250,14 +251,13 @@ the threshold marks unusual behaviour rather than unacceptable behaviour.
 
 \textbf{ROC analysis with Youden's index} selects the threshold that maximises
 sensitivity plus specificity on labelled data and so gives the best available
-trade-off between false alarms and missed collisions [CITATION NEEDED: Youden's
-index]. It requires collision labels. The only labels available here are the
+trade-off between false alarms and missed collisions \cite{youden1950}. It requires collision labels. The only labels available here are the
 collisions against which the indicators are evaluated, so the threshold would be
 fitted on the evaluation set and the evaluation would become circular.
 
 \textbf{Extreme value theory} fits a parametric model to the tail of the metric
 distribution and can therefore link $\theta$ to a target collision probability
-[CITATION NEEDED: extreme value theory for traffic conflicts]. It requires a
+\cite{songchitruksa2006evt}. It requires a
 tail-model assumption and enough extreme observations to fit it, which is a study
 in its own right.
 
@@ -268,9 +268,9 @@ Those quantities vary with the sampled weather of
 Section~\ref{sec:exp_parameters} and are not logged as ground truth.
 
 \textbf{Human-driver baselines} set $\theta$ to match the behaviour of careful
-human drivers, as industry best practice suggests [CITATION NEEDED: AVSC best
-practice on human-driver baselines]. This requires naturalistic driving data
-[CITATION NEEDED: inD dataset] [CITATION NEEDED: SIND dataset], which was not
+human drivers, as an industry best practice describes \cite{avsc2023human}. This requires
+naturalistic driving data such as the inD and SinD trajectory datasets
+\cite{bock2020ind} \cite{xu2022sind}, which were not
 evaluated in this work.
 
 Three criteria decide between them. First, independence from the evaluation: the
@@ -322,9 +322,9 @@ means that the violation count of a window has become improbable under the
 behaviour the baseline campaigns demonstrated; it does not mean that a level of
 risk has been exceeded, because no level of risk has been stated. A
 risk-acceptance SPI threshold would instead be derived from a principle such as
-ALARP, GAMAB, MEM or the benchmark of a careful and competent human driver
-[CITATION NEEDED: ALARP, GAMAB and MEM risk-acceptance principles] [CITATION
-NEEDED: careful and competent human driver benchmark]. Those principles are named
+ALARP \cite{hse2001r2p2}, GAMAB, which EN~50126-2 terms GAME, or MEM
+\cite{en50126}, or from the benchmark of a careful and competent human driver
+\cite{wang2024sotif} \cite{avsc2023human}. Those principles are named
 here to place the statistical threshold against them; none of them is applied in
 this work, and setting T from one of them is left to
 Section~\ref{sec:outlook}.

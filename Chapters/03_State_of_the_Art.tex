@@ -119,8 +119,8 @@ the practitioner \cite{ul4600}.
 \end{figure}
 % ---------------------------------------------------------------------------
 
-Several frameworks build on this leading-indicator property. The Dynamic Realtime
-\ac{SPI} framework of Diaz and Woon attaches indicators computed at runtime to
+Several frameworks build on this leading-indicator property. The Dynamic Runtime
+\ac{SPI} (\ac{DRSPI}) framework of Diaz and Woon attaches indicators computed at runtime to
 sufficiently low safety-case sub-claims, so that a threshold violation signals that
 the \ac{ADS} is encountering an untested situation, and assigns each such indicator an
 improvement mechanism that adjusts vehicle behaviour to re-establish the validity of
@@ -216,8 +216,9 @@ actions are candidate leading indicators, and the approach captures the non-fail
 functional-insufficiency hazards that Fault Tree Analysis misses under the safety of
 the intended functionality \cite{iso21448}. The open aspect is that System-Theoretic
 Process Analysis and Causal Analysis based on System Theory are qualitative and do
-not natively produce thresholds or continuously monitored indicators
-\cite{khastgir2021}. The hierarchical control view is shown in
+not natively produce thresholds or continuously monitored indicators; their
+application to automated driving has concentrated on deriving test scenarios
+from unsafe control actions \cite{khastgir2021}. The hierarchical control view is shown in
 Figure~\ref{fig:stamp}, in which each control action and feedback path is a place where
 an unsafe control action, and hence a candidate leading indicator, can be located.
 
