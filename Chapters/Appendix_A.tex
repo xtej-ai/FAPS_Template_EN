@@ -1,0 +1,102 @@
+% =============================================================================
+% Appendix A: Detection statistics per campaign and operating conditions
+% Carries the label app:statistics, which Chapter 6 references.
+% Tables copied verbatim from tables.tex and dashboard_tables.tex.
+% =============================================================================
+
+\chapter{Detection Statistics per Campaign and Operating Condition}
+\label{app:statistics}
+
+This appendix holds the two breakdowns that support
+Chapter~\ref{ch:results} without belonging in its argument.
+Table~\ref{tab:statistics_per_campaign} repeats the detection statistics of
+Section~\ref{sec:results_statistics} separately for the three campaigns, and
+Table~\ref{tab:dashboard_odd} gives the violations and collisions of the three
+kinematic leading SPIs per light and weather condition.
+
+% ---------------------------------------------------------------------------
+% Copied verbatim from tables.tex
+\begin{table}[htbp]
+\centering
+\caption{Detection statistics per campaign. The table repeats the statistics of each leading SPI separately for the three campaigns under the thresholds calibrated on Campaign~1.}
+\label{tab:statistics_per_campaign}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}llrrrrrr@{}}
+\toprule
+{\bfseries Indicator} & {\bfseries Campaign} & {\bfseries \begin{tabular}[b]{@{}c@{}}Eligible\\runs\end{tabular}} & {\bfseries Violations} & {\bfseries Collisions} & {\bfseries \begin{tabular}[b]{@{}c@{}}Precision\\in \%\end{tabular}} & {\bfseries \begin{tabular}[b]{@{}c@{}}Recall\\in \%\end{tabular}} & {\bfseries \begin{tabular}[b]{@{}c@{}}Relative\\risk\end{tabular}} \\
+\midrule
+GAP\_TTC & Campaign 1 & 15,362 & 2,070 & 540 & 25.5 & 97.6 & 260.3 \\
+ & Campaign 2 & 29,118 & 2,500 & 0 & 0.0 & -- & -- \\
+ & Campaign 3 & 35,975 & 3,124 & 0 & 0.0 & -- & -- \\
+REQ\_DECEL & Campaign 1 & 15,362 & 1,031 & 540 & 30.7 & 58.7 & 19.8 \\
+ & Campaign 2 & 29,118 & 542 & 0 & 0.0 & -- & -- \\
+ & Campaign 3 & 35,975 & 676 & 0 & 0.0 & -- & -- \\
+AEB\_ONC & Campaign 1 & 15,362 & 629 & 540 & 45.5 & 53.0 & 26.4 \\
+ & Campaign 2 & 29,118 & 341 & 0 & 0.0 & -- & -- \\
+ & Campaign 3 & 35,975 & 412 & 0 & 0.0 & -- & -- \\
+PED\_CPA & Campaign 1 & 8,424 & 1,268 & 814 & 62.2 & 96.9 & 178.1 \\
+ & Campaign 2 & 12,890 & 220 & 1 & 0.5 & 100.0 & $\geq$\,172.0 \\
+ & Campaign 3 & 15,995 & 307 & 0 & 0.0 & -- & -- \\
+AEB\_PED & Campaign 1 & 8,424 & 851 & 814 & 12.8 & 13.4 & 1.4 \\
+ & Campaign 2 & 12,890 & 278 & 1 & 0.4 & 100.0 & $\geq$\,135.6 \\
+ & Campaign 3 & 15,995 & 379 & 0 & 0.0 & -- & -- \\
+REAR\_TTC & Campaign 1 & 14,373 & 2,243 & 101 & 4.5 & 100.0 & $\geq$\,1,097.4 \\
+ & Campaign 2 & 33,797 & 4,290 & 0 & 0.0 & -- & -- \\
+ & Campaign 3 & 41,712 & 5,551 & 0 & 0.0 & -- & -- \\
+\bottomrule
+\end{tabular}
+\par\smallskip\footnotesize\raggedright -- : not defined because the campaign has no violation or no collision of the chain. The pedestrian values of Campaign~2 rest on a single collision. Suitable for an appendix.
+\end{table}
+
+% ---------------------------------------------------------------------------
+% Copied verbatim from dashboard_tables.tex
+\begin{table}[htbp]
+\centering
+\caption{Operating conditions. Violations and collisions per light and weather condition for the three kinematic leading SPIs.}
+\label{tab:dashboard_odd}
+\small
+\begin{tabular}{@{}lllrrr@{}}
+\toprule
+{\bfseries Light} & {\bfseries Weather} & {\bfseries Indicator} & {\bfseries \begin{tabular}[b]{@{}c@{}}Eligible\\runs\end{tabular}} & {\bfseries Violations} & {\bfseries Collisions} \\
+\midrule
+day & clear & GAP\_TTC & 31,251 & 2,728 & 18 \\
+day & clear & PED\_CPA & 13,843 & 267 & 18 \\
+day & clear & REAR\_TTC & 36,047 & 4,587 & 4 \\
+day & cloudy & GAP\_TTC & 1,021 & 110 & 6 \\
+day & cloudy & PED\_CPA & 517 & 35 & 18 \\
+day & cloudy & REAR\_TTC & 1,111 & 169 & 1 \\
+day & fog & GAP\_TTC & 27,881 & 2,800 & 299 \\
+day & fog & PED\_CPA & 13,218 & 806 & 420 \\
+day & fog & REAR\_TTC & 30,606 & 4,290 & 63 \\
+day & rain & GAP\_TTC & 3,881 & 398 & 39 \\
+day & rain & PED\_CPA & 1,922 & 139 & 79 \\
+day & rain & REAR\_TTC & 4,224 & 593 & 9 \\
+night & clear & GAP\_TTC & 578 & 64 & 7 \\
+night & clear & PED\_CPA & 257 & 12 & 10 \\
+night & clear & REAR\_TTC & 640 & 87 & 0 \\
+night & cloudy & GAP\_TTC & 255 & 30 & 3 \\
+night & cloudy & PED\_CPA & 133 & 14 & 8 \\
+night & cloudy & REAR\_TTC & 287 & 45 & 2 \\
+night & fog & GAP\_TTC & 7,555 & 763 & 87 \\
+night & fog & PED\_CPA & 3,550 & 273 & 129 \\
+night & fog & REAR\_TTC & 8,167 & 1,111 & 7 \\
+night & rain & GAP\_TTC & 1,015 & 104 & 12 \\
+night & rain & PED\_CPA & 497 & 43 & 21 \\
+night & rain & REAR\_TTC & 1,111 & 153 & 0 \\
+twilight & clear & GAP\_TTC & 404 & 38 & 1 \\
+twilight & clear & PED\_CPA & 189 & 12 & 8 \\
+twilight & clear & REAR\_TTC & 469 & 62 & 0 \\
+twilight & cloudy & GAP\_TTC & 201 & 24 & 0 \\
+twilight & cloudy & PED\_CPA & 94 & 6 & 2 \\
+twilight & cloudy & REAR\_TTC & 218 & 35 & 2 \\
+twilight & fog & GAP\_TTC & 5,631 & 547 & 63 \\
+twilight & fog & PED\_CPA & 2,693 & 169 & 91 \\
+twilight & fog & REAR\_TTC & 6,141 & 848 & 12 \\
+twilight & rain & GAP\_TTC & 782 & 88 & 5 \\
+twilight & rain & PED\_CPA & 396 & 19 & 11 \\
+twilight & rain & REAR\_TTC & 861 & 104 & 1 \\
+\bottomrule
+\end{tabular}
+\par\smallskip\footnotesize\raggedright Bins: fog density at least 20, precipitation at least 20, cloudiness at least 30; night at sun altitude at most 0\textdegree, twilight up to 15\textdegree. Suitable for an appendix.
+\end{table}

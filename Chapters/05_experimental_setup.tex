@@ -1,0 +1,435 @@
+% =============================================================================
+% Chapter 5: Experimental Setup
+% Source of truth: Thesis_Final_Handover.md (6 October 2026) and
+% spi_results_data.json. Every number is taken from those two files unchanged.
+% Tables and figure blocks are copied verbatim from tables.tex and
+% figure_captions.tex so that they cannot drift from the generated versions.
+% =============================================================================
+
+\chapter{Experimental Setup}
+\label{ch:experiment}
+
+The Causal Chain Derivation Method of Chapter~\ref{ch:methodology} yields a
+register of nine indicators. Whether that register is usable cannot be settled by
+argument alone, so this chapter describes the simulation campaigns against which
+it is evaluated and the measures by which the evaluation is judged. One
+unprotected left turn exposes three conflict geometries under controlled and
+reproducible conditions, which is what allows the scalability question of
+Section~\ref{sec:intro_objective} to be answered within a single manoeuvre.
+
+Section~\ref{sec:exp_scenario} describes the manoeuvre and its three conflicts.
+Section~\ref{sec:exp_environment} states the ego configuration and the simulation
+parameters. Section~\ref{sec:exp_parameters} gives the quantities sampled per
+run. Section~\ref{sec:exp_audit} accounts for the difference between the rows
+recorded and the runs analysed. Section~\ref{sec:exp_collision} fixes what counts
+as a collision, which for the pedestrian chain is not self-evident.
+Section~\ref{sec:exp_criteria} defines the evaluation measures, and
+Section~\ref{sec:exp_calibration} gives the calibrated metric thresholds.
+
+% =============================================================================
+\section{Scenario and Conflict Geometries}
+\label{sec:exp_scenario}
+\label{sec:exp_manoeuvre}
+
+A single manoeuvre is used throughout, because three conflicts of different
+character arise within it and can therefore be compared without changing the
+driving task. The ego vehicle enters the intersection from the south and turns
+left across the opposing lane. All traffic signals are frozen green, so no signal
+resolves any conflict on the ego vehicle's behalf and every conflict has to be
+resolved by the vehicle itself. Figure~\ref{fig:5_1_scenario} shows the
+intersection and the three conflict geometries.
+
+% ---------------------------------------------------------------------------
+% NOTE: this scenario image is drawn separately and is not produced by
+% make_thesis_figures.py. It was missing from the earlier compiled PDF.
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=16cm]{fig_5_1_scenario}
+    \caption{The unprotected left turn on Town10HD. The ego vehicle enters from
+    the south and turns left under a frozen green signal; oncoming vehicles cross
+    the turn arc at an angle, pedestrians cross the leg the ego vehicle turns
+    into, and a following vehicle closes along the ego vehicle's path.}
+    \label{fig:5_1_scenario}
+\end{figure}
+
+The three conflicts differ in the way they close. In the oncoming-vehicle chain
+(ONC) the partner crosses the turn arc at an angle, which is the geometry
+classified as left turn across path, opposite direction. In the pedestrian chain
+(PED) walkers cross the leg that the ego vehicle turns into, late in the turn, so
+the conflict closes laterally. In the following-vehicle chain (REAR) a follower
+closes along the ego vehicle's own path whenever the ego vehicle brakes, so the
+conflict closes longitudinally. One manoeuvre therefore carries a crossing, a
+lateral and a following conflict at once.
+
+% =============================================================================
+\section{Ego Vehicle and Simulation Environment}
+\label{sec:exp_environment}
+
+The quantity under evaluation is the indicator, not a driving function, and the
+ego configuration is chosen accordingly: it has to produce conflicts of all three
+kinds reliably and reproducibly, not to resolve them well.
+
+The ego vehicle is driven by the CARLA Traffic Manager with an added
+pedestrian-stop rule and without gap acceptance. It therefore enters the turn
+without evaluating whether the gap in oncoming traffic is sufficient. The
+evaluation consequently tests the indicators on trajectories rather than on a
+driving function, and the oncoming conflicts that arise are the result of a
+missing capability rather than of a functional insufficiency in the sense of
+ISO~21448 \cite{iso21448}.
+
+Simulation runs in CARLA~0.9.15 \cite{dosovitskiy2017carla} on the map Town10HD,
+in synchronous mode at 20\,Hz, that is at a fixed step of 0.05\,s. Each run
+covers 400 steps, or 20\,s, and executes in an isolated subprocess under one
+seed, so that a failure in one run cannot affect another. Only raw telemetry is
+stored: the ego vehicle's state and control inputs, the pose and velocity of
+every actor, and every collision event with the identity of the actor involved.
+No indicator is computed during the run. All indicators are computed offline from
+the stored ground truth, which keeps the derivation independent of the simulated
+vehicle's own perception and makes every value reproducible from the frozen data.
+The datasets were frozen on 28~September 2026.
+
+Three campaigns were executed. They differ in the scenario generator as well as
+in the controller configuration, so a comparison between them is a comparison of
+two known groups rather than a controlled variation of one factor.
+Table~\ref{tab:campaigns} gives their composition.
+
+% ---------------------------------------------------------------------------
+\begin{table}[htbp]
+    \centering
+    \caption{Simulation campaigns. The table gives the configuration and the
+    number of analysed runs of each campaign.}
+    \label{tab:campaigns}
+    \small
+    \begin{tabular}{@{}llr@{}}
+        \toprule
+        {\bfseries Campaign} & {\bfseries Configuration} & {\bfseries Analysed runs} \\
+        \midrule
+        Campaign 1 & collisions provoked, high-collision configuration & 19,307 \\
+        Campaign 2 & realistic driving, low-collision configuration & 33,797 \\
+        Campaign 3 & realistic driving, low-collision configuration & 41,712 \\
+        \midrule
+        Total      &                                                 & 94,816 \\
+        \bottomrule
+    \end{tabular}
+    \par\smallskip\footnotesize\raggedright Campaign~3 is statistically
+    indistinguishable from Campaign~2; see Section~\ref{sec:results_poolability}.
+\end{table}
+
+% =============================================================================
+\section{Sampled Parameters}
+\label{sec:exp_parameters}
+\label{sec:exp_pipeline}
+
+Reproducibility requires that the variation between runs be explicit. Every run
+draws its actors and its environment from the ranges given in
+Tables~\ref{tab:actor_parameters} and~\ref{tab:environment_parameters} under the
+run's seed, so that any run can be regenerated exactly.
+
+% ---------------------------------------------------------------------------
+\begin{table}[htbp]
+    \centering
+    \caption{Actor parameters sampled per run. Each run draws the number,
+    appearance and behaviour of its conflict partners from the ranges given.}
+    \label{tab:actor_parameters}
+    \small
+    \begin{tabular}{@{}lll@{}}
+        \toprule
+        {\bfseries Actor} & {\bfseries Parameter} & {\bfseries Range or set} \\
+        \midrule
+        Oncoming vehicle & number            & 1 to 3 \\
+                         & vehicle model     & four models \\
+                         & speed             & 7 to 12\,m/s \\
+                         & turn direction    & straight, left, right \\
+                         & obeys signal      & yes, no \\
+                         & yields            & yes, no \\
+                         & optional braking  & 4.0\,m/s\textsuperscript{2} \\
+                         & launch            & staggered \\
+        \midrule
+        Pedestrian       & number            & 1 to 3 \\
+                         & walker model      & four models \\
+                         & crossing route    & eight routes over four crosswalks \\
+                         & speed             & 0.9 to 1.7\,m/s \\
+                         & group crossing    & probability 0.5 \\
+        \midrule
+        Following vehicle & vehicle model    & four models \\
+                         & initial gap       & 4 to 20\,m \\
+                         & speed             & 8 to 12\,m/s \\
+                         & reaction delay    & 0 to 1.5\,s \\
+                         & minimum gap       & 2 to 6\,m \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+% ---------------------------------------------------------------------------
+\begin{table}[htbp]
+    \centering
+    \caption{Environment parameters sampled per run. Cloud cover, precipitation
+    and deposits are drawn together, so wet road surfaces accompany rain.}
+    \label{tab:environment_parameters}
+    \small
+    \begin{tabular}{@{}ll@{}}
+        \toprule
+        {\bfseries Parameter} & {\bfseries Range} \\
+        \midrule
+        Cloud cover, precipitation, deposits & 0 to 100\,\%, coupled \\
+        Wind                                 & sampled \\
+        Fog density                          & sampled \\
+        Wetness                              & sampled \\
+        Sun altitude                         & $-20$ to 90\textdegree \\
+        Fog visibility                       & 10 to 200\,m \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+% =============================================================================
+\section{Data Audit}
+\label{sec:exp_audit}
+
+The number of rows written by the simulation campaigns is not the number of runs
+available for analysis, and the difference is large enough that it has to be
+accounted for rather than assumed away. A failed attempt was written as a row and
+then retried under the same seed, so rows overstate the number of runs.
+Figure~\ref{fig:5_1_data_audit} traces the reduction from recorded rows to
+analysed runs.
+
+% ---------------------------------------------------------------------------
+% Copied verbatim from figure_captions.tex
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=16cm]{fig_5_1_data_audit.pdf}
+\caption{Data audit of the frozen simulation campaigns. Failed attempts were logged as rows and retried under the same seed; keeping one complete run per seed and excluding the first 500 rows of Campaign 1 leaves 94,816 analysed runs.}
+\label{fig:5_1_data_audit}
+\end{figure}
+
+Of 113,787 registered rows, 95,586 carry a distinct seed. Of those, 95,143 are
+complete runs that reached all 400 of 400 steps. The first 500 rows of
+Campaign~1, corresponding to 327 complete runs, are excluded because they were
+produced while the CARLA Traffic Manager parameters were still being adjusted to
+the requirements of the scenario, so they do not belong to the final
+configuration. This leaves 94,816 analysed runs, which is the population behind
+every result in Chapter~\ref{ch:results}.
+
+% =============================================================================
+\section{Collision Definition}
+\label{sec:exp_collision}
+
+The reference event of the whole evaluation is the collision, so its definition
+decides what every leading indicator is scored against. For the two vehicle
+chains the definition is immediate: any recorded contact with the oncoming
+vehicle or with the following vehicle counts. For the pedestrian chain it is not,
+because CARLA walkers follow a planned path and do not avoid vehicles. A walker
+whose route crosses a stationary ego vehicle walks into it, and the simulator
+emits a contact event that is indistinguishable in the log from a contact the ego
+vehicle caused.
+
+A pedestrian contact therefore counts as a collision only if the ego vehicle
+moves at at least 0.3\,m/s at the simulation step before the contact event.
+Contacts with a standing ego vehicle are recorded but not counted.
+Figure~\ref{fig:5_2_pedestrian_contacts} and Table~\ref{tab:pedestrian_contacts}
+give the audit on which that rule rests.
+
+% ---------------------------------------------------------------------------
+% Copied verbatim from figure_captions.tex
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=16cm]{fig_5_2_pedestrian_contacts.pdf}
+\caption{Pedestrian contacts by type and campaign. Each bar classifies the first pedestrian contact of every contact run by the motion one simulation step before the contact; only contacts while the ego moves at least 0.3\,m/s count as pedestrian collisions.}
+\label{fig:5_2_pedestrian_contacts}
+\end{figure}
+
+% ---------------------------------------------------------------------------
+\begin{table}[htbp]
+    \centering
+    \caption{Audit of the pedestrian contacts. The table classifies the first
+    pedestrian contact of each of the 1,323 contact runs by the motion of the ego
+    vehicle one simulation step before the contact.}
+    \label{tab:pedestrian_contacts}
+    \small
+    \begin{tabular}{@{}lrrrr@{}}
+        \toprule
+        {\bfseries Campaign} &
+        {\bfseries \begin{tabular}[b]{@{}c@{}}Ego drives into\\the pedestrian\end{tabular}} &
+        {\bfseries \begin{tabular}[b]{@{}c@{}}Pedestrian walks into\\the moving ego\end{tabular}} &
+        {\bfseries \begin{tabular}[b]{@{}c@{}}Pedestrian walks into\\the standing ego\end{tabular}} &
+        {\bfseries Contacts} \\
+        \midrule
+        Campaign 1 & 812 & 2 & 28  & 842 \\
+        Campaign 2 & 0   & 1 & 193 & 194 \\
+        Campaign 3 & 0   & 0 & 287 & 287 \\
+        \midrule
+        Total      & 812 & 3 & 508 & 1,323 \\
+        \bottomrule
+    \end{tabular}
+    \par\smallskip\footnotesize\raggedright The first two columns count as
+    pedestrian collisions, the third does not.
+\end{table}
+
+The two populations differ in kind and not only in label. Contacts in which the
+ego vehicle drives into the pedestrian occur at a median ego speed of 7.1\,m/s
+one step before contact, and the pedestrian is in front of the ego vehicle in 800
+of 812 cases. Contacts with a standing ego vehicle occur at an ego speed of
+0.0\,m/s and carry a median contact impulse of 34\,N\,s, against 310\,N\,s for
+contacts in which the ego vehicle is driving, which is about one tenth.
+
+Applying the rule leaves 815 pedestrian collisions: 814 in Campaign~1, one in
+Campaign~2 and none in Campaign~3. The effect is concentrated in the two
+low-collision campaigns, where 480 of the 481 recorded contacts occur with a
+standing ego vehicle.
+
+% =============================================================================
+\section{Evaluation Measures}
+\label{sec:exp_criteria}
+
+An indicator is evaluated by how its violations relate to the collisions of its
+own chain, so each eligible run is classified before any measure is computed. A
+run of a given chain is a true positive (TP) if the indicator is violated before
+a collision of that chain, a false positive (FP) if it is violated and no
+collision of that chain occurs, a false negative (FN) if a collision occurs
+without an earlier violation, and a true negative (TN) if neither happens. Only
+violations that precede the collision are counted, so that a violation can never
+be a consequence of the event it is meant to anticipate.
+
+Three measures follow directly from that classification. Precision, in
+Equation~(\ref{eq:exp_precision}), is the share of violating runs that end in a
+collision of the chain.
+
+\begin{equation}
+    \mathrm{Precision} = \frac{\mathrm{TP}}{\mathrm{TP} + \mathrm{FP}}
+    \label{eq:exp_precision}
+\end{equation}
+\equationentry{Precision}
+
+Recall, in Equation~(\ref{eq:exp_recall}), is the share of collision runs
+preceded by a violation.
+
+\begin{equation}
+    \mathrm{Recall} = \frac{\mathrm{TP}}{\mathrm{TP} + \mathrm{FN}}
+    \label{eq:exp_recall}
+\end{equation}
+\equationentry{Recall}
+
+The false-alarm rate, in Equation~(\ref{eq:exp_falsealarm}), is the share of
+collision-free eligible runs that nevertheless record a violation.
+
+\begin{equation}
+    \mathrm{False\text{-}alarm\ rate} = \frac{\mathrm{FP}}{\mathrm{FP} + \mathrm{TN}}
+    \label{eq:exp_falsealarm}
+\end{equation}
+\equationentry{False-alarm rate}
+
+Precision and recall describe the indicator but do not state how much a violation
+changes the collision probability. The relative risk, in
+Equation~(\ref{eq:exp_relrisk}), gives that directly as the ratio of the
+collision probability among violating runs to the collision probability among
+runs without a violation.
+
+\begin{equation}
+    \mathrm{RR} = \frac{\mathrm{TP} / (\mathrm{TP} + \mathrm{FP})}
+                       {\mathrm{FN} / (\mathrm{FN} + \mathrm{TN})}
+    \label{eq:exp_relrisk}
+\end{equation}
+\equationentry{Relative risk of a collision after a violation}
+
+\textbf{Variable key:} TP, number of eligible runs with a violation before a
+collision of the chain, dimensionless; FP, number of eligible runs with a
+violation and without a collision of the chain, dimensionless; FN, number of
+eligible runs with a collision of the chain and without an earlier violation,
+dimensionless; TN, number of eligible runs with neither, dimensionless; RR,
+relative risk, dimensionless.
+
+Every proportion is reported with a Wilson score interval and every relative risk
+with the Katz log interval of Equation~(\ref{eq:exp_katz}), both at 95\,\%
+[CITATION NEEDED: Wilson score interval] [CITATION NEEDED: Katz log interval for
+the relative risk].
+
+\begin{equation}
+    \ln \mathrm{RR} \pm z \sqrt{\frac{1}{\mathrm{TP}}
+        - \frac{1}{\mathrm{TP} + \mathrm{FP}}
+        + \frac{1}{\mathrm{FN}}
+        - \frac{1}{\mathrm{FN} + \mathrm{TN}}}
+    \label{eq:exp_katz}
+\end{equation}
+\equationentry{Katz log interval of the relative risk}
+
+\textbf{Variable key:} $z$, standard normal quantile, here 1.96 for a two-sided
+95\,\% interval, dimensionless.
+
+Where a cell of the classification is zero the interval is not defined, so 0.5 is
+added to every cell before the interval is computed [CITATION NEEDED:
+Haldane-Anscombe correction]. Where FN is zero the corrected relative risk is
+reported as a lower bound rather than as a point estimate.
+
+The SPI threshold T is defined on the violation count of a monitoring window
+rather than on a single run. For a window of eligible runs, T is the smallest
+count at which the observed number of violations becomes improbable under the
+violation rate of the realistic-driving campaigns, as given in
+Equation~(\ref{eq:exp_spithreshold}).
+
+\begin{equation}
+    T = \min \left\{ k \in \mathbb{N} \;:\;
+        P(X \geq k) \leq \alpha,\quad X \sim \mathrm{Bin}(n, p_0) \right\}
+    \label{eq:exp_spithreshold}
+\end{equation}
+\equationentry{SPI threshold as an exact one-sided binomial limit}
+
+\textbf{Variable key:} $k$, violation count of the window, dimensionless; $n$,
+number of eligible runs in the window, dimensionless; $p_0$, violation rate of
+Campaigns~2 and~3 for the indicator, dimensionless; $\alpha$, significance level,
+here 0.01, dimensionless.
+
+Monitoring windows hold 200 consecutive runs. The window is the unit over which
+the rate is checked; it is not the unit of T, which is stated in the general SPI
+form of Section~\ref{sec:method_thresholds}. Because T is an exact limit at
+$\alpha = 0.01$, about one window in a hundred exceeds it in the campaigns from
+which it is derived, by construction.
+
+% =============================================================================
+\section{Calibration of the Metric Thresholds}
+\label{sec:exp_calibration}
+
+The metric threshold $\theta$ is calibrated once and then applied unchanged, so
+that no indicator is tuned on the collisions against which it is later scored.
+The calibration population is the set of uneventful runs of Campaign~1, that is
+runs that end without a collision and without an emergency braking event. One
+value per run enters the calibration, namely the minimum or the maximum of the
+metric over the run, because consecutive simulation steps are strongly
+autocorrelated and would otherwise be counted as independent observations.
+Table~\ref{tab:metric_thresholds} gives the result.
+
+% ---------------------------------------------------------------------------
+% Copied verbatim from tables.tex
+\begin{table}[htbp]
+\centering
+\caption{Metric thresholds. Each metric threshold is a percentile of the Campaign~1 runs without collision and without emergency braking.}
+\label{tab:metric_thresholds}
+\small
+\begin{tabular}{@{}llllll@{}}
+\toprule
+{\bfseries Indicator} & {\bfseries Chain} & {\bfseries Violation} & {\bfseries $\theta$} & {\bfseries 95\,\% interval} & {\bfseries Calibration runs} \\
+\midrule
+GAP\_TTC & ONC & below & 0.913\,s & 0.905 to 0.920\,s & 13,290 \\
+REQ\_DECEL & ONC & above & 7.549\,m/s\textsuperscript{2} & 7.253 to 7.903\,m/s\textsuperscript{2} & 13,290 \\
+PED\_CPA & PED & below & 1.174\,s & 1.138 to 1.261\,s & 2,070 \\
+REAR\_TTC & REAR & below & 2.679\,s & 2.596 to 2.794\,s & 12,505 \\
+\bottomrule
+\end{tabular}
+\par\smallskip\footnotesize\raggedright 10th percentile for time-based metrics, 95th percentile for REQ\_DECEL; bootstrap percentile intervals.
+\end{table}
+
+The bootstrap intervals are narrow relative to the thresholds themselves, so the
+percentile is well determined by the calibration sample. The interval of
+PED\_CPA is the widest, at 1.138 to 1.261\,s, and rests on 2,070 calibration
+runs, against 13,290 for the two oncoming-vehicle indicators.
+
+The thresholds are not transferable between configurations without checking. The
+metric threshold of REQ\_DECEL shifts by 21.5\,\% and that of PED\_CPA by
+37.9\,\% between Campaign~1 and the realistic-driving campaigns, which is why
+calibration is performed once on Campaign~1 and the resulting value is applied
+unchanged rather than refitted per campaign. Section~\ref{sec:results_poolability}
+reports the shift for every indicator.
+
+Two reaction-tier indicators carry no metric threshold. AEB\_ONC and AEB\_PED
+fire on an event, namely a brake command of at least 0.8 together with a
+line-of-sight time to collision of at most 1.5\,s to the gated partner of the
+chain in the same simulation step. Their calibration population of 16,950 runs is
+used only to establish that the event is rare under uneventful driving.

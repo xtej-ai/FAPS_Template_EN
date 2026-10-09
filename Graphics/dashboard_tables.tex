@@ -1,0 +1,112 @@
+\begin{table}[htbp]
+\centering
+\caption{SPI register as monitored. Metric threshold, baseline violations in Campaigns~2 and~3, SPI threshold T for a full monitoring window and the latest window of each SPI.}
+\label{tab:dashboard_register}
+\footnotesize
+\setlength{\tabcolsep}{2.5pt}
+\begin{tabular}{@{}llrrrr@{}}
+\toprule
+{\bfseries SPI} & {\bfseries Type} & {\bfseries $\theta$} & {\bfseries \begin{tabular}[b]{@{}c@{}}Baseline\\(Campaigns 2, 3)\end{tabular}} & {\bfseries \begin{tabular}[b]{@{}c@{}}T: violations of\\eligible runs\end{tabular}} & {\bfseries Latest window} \\
+\midrule
+LTI-ONC-P1-REQ\_DECEL & leading & 7.549\,m/s\textsuperscript{2} & 1,218 of 65,093 & 9 of 171 & 1 of 97 (OK) \\
+LTI-ONC-P2-GAP\_TTC & leading & 0.913\,s & 5,624 of 65,093 & 25 of 171 & 8 of 97 (OK) \\
+LTI-ONC-P3-AEB\_ONC & leading & -- & 753 of 65,093 & 7 of 171 & 0 of 97 (OK) \\
+LTI-PED-P3-AEB\_PED & leading & -- & 657 of 28,885 & 6 of 78 & 1 of 50 (OK) \\
+LTI-PED-S1-PED\_CPA & leading & 1.174\,s & 527 of 28,885 & 6 of 78 & 2 of 50 (OK) \\
+LTI-REAR-P1-REAR\_TTC & leading & 2.679\,s & 9,841 of 75,509 & 39 of 200 & 16 of 112 (OK) \\
+LTI-ONC-O1-COLLISION & lagging & -- & 0 of 65,093 & 1 of 171 & 0 of 97 (OK) \\
+LTI-PED-O1-COLLISION & lagging & -- & 1 of 28,885 & 1 of 78 & 0 of 50 (OK) \\
+LTI-REAR-O1-COLLISION & lagging & -- & 0 of 75,509 & 1 of 200 & 0 of 112 (OK) \\
+\bottomrule
+\end{tabular}
+\par\smallskip\footnotesize\raggedright T is the exact one-sided binomial limit ($\alpha = 0.01$) for the median number of eligible runs in a full window of 200 runs; a window is flagged when its violation count reaches T. Lagging rows count collisions.
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{Chain detection scorecard. Collision runs of each chain with a violation before the collision, for each SPI and for any SPI of the chain.}
+\label{tab:dashboard_scorecard}
+\small
+\begin{tabular}{@{}llrrrr@{}}
+\toprule
+{\bfseries Chain} & {\bfseries Indicator} & {\bfseries \begin{tabular}[b]{@{}c@{}}Collision\\runs\end{tabular}} & {\bfseries \begin{tabular}[b]{@{}c@{}}Violation before\\collision\end{tabular}} & {\bfseries \begin{tabular}[b]{@{}c@{}}Lead at\\least 1\,s\end{tabular}} & {\bfseries \begin{tabular}[b]{@{}c@{}}Median\\lead\end{tabular}} \\
+\midrule
+ONC & GAP\_TTC & 540 & 527 & 38 & 0.60\,s \\
+ONC & REQ\_DECEL & 540 & 317 & 1 & 0.10\,s \\
+ONC & AEB\_ONC & 540 & 286 & 57 & 0.75\,s \\
+ONC & any ONC & 540 & 538 & 92 & 0.70\,s \\
+PED & PED\_CPA & 815 & 790 & 2 & 0.50\,s \\
+PED & AEB\_PED & 815 & 110 & 108 & 5.15\,s \\
+PED & any PED & 815 & 791 & 110 & 0.55\,s \\
+REAR & REAR\_TTC & 101 & 101 & 87 & 1.15\,s \\
+REAR & any REAR & 101 & 101 & 87 & 1.15\,s \\
+\bottomrule
+\end{tabular}
+\par\smallskip\footnotesize\raggedright \emph{any}: earliest violation among the chain's indicators.
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{Leading-to-lagging funnel. Eligible runs of each chain with at least one kinematic leading violation, an emergency braking event and a collision.}
+\label{tab:dashboard_funnel}
+\small
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+{\bfseries Chain} & {\bfseries Eligible runs} & {\bfseries \begin{tabular}[b]{@{}c@{}}Leading\\violation\end{tabular}} & {\bfseries \begin{tabular}[b]{@{}c@{}}Emergency\\braking\end{tabular}} & {\bfseries Collision} \\
+\midrule
+Oncoming vehicle & 80,455 & 9,156 & 1,382 & 540 \\
+Pedestrian & 37,309 & 1,795 & 1,508 & 815 \\
+Following vehicle & 89,882 & 12,084 & 0 & 101 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{Operating conditions. Violations and collisions per light and weather condition for the three kinematic leading SPIs.}
+\label{tab:dashboard_odd}
+\small
+\begin{tabular}{@{}lllrrr@{}}
+\toprule
+{\bfseries Light} & {\bfseries Weather} & {\bfseries Indicator} & {\bfseries \begin{tabular}[b]{@{}c@{}}Eligible\\runs\end{tabular}} & {\bfseries Violations} & {\bfseries Collisions} \\
+\midrule
+day & clear & GAP\_TTC & 31,251 & 2,728 & 18 \\
+day & clear & PED\_CPA & 13,843 & 267 & 18 \\
+day & clear & REAR\_TTC & 36,047 & 4,587 & 4 \\
+day & cloudy & GAP\_TTC & 1,021 & 110 & 6 \\
+day & cloudy & PED\_CPA & 517 & 35 & 18 \\
+day & cloudy & REAR\_TTC & 1,111 & 169 & 1 \\
+day & fog & GAP\_TTC & 27,881 & 2,800 & 299 \\
+day & fog & PED\_CPA & 13,218 & 806 & 420 \\
+day & fog & REAR\_TTC & 30,606 & 4,290 & 63 \\
+day & rain & GAP\_TTC & 3,881 & 398 & 39 \\
+day & rain & PED\_CPA & 1,922 & 139 & 79 \\
+day & rain & REAR\_TTC & 4,224 & 593 & 9 \\
+night & clear & GAP\_TTC & 578 & 64 & 7 \\
+night & clear & PED\_CPA & 257 & 12 & 10 \\
+night & clear & REAR\_TTC & 640 & 87 & 0 \\
+night & cloudy & GAP\_TTC & 255 & 30 & 3 \\
+night & cloudy & PED\_CPA & 133 & 14 & 8 \\
+night & cloudy & REAR\_TTC & 287 & 45 & 2 \\
+night & fog & GAP\_TTC & 7,555 & 763 & 87 \\
+night & fog & PED\_CPA & 3,550 & 273 & 129 \\
+night & fog & REAR\_TTC & 8,167 & 1,111 & 7 \\
+night & rain & GAP\_TTC & 1,015 & 104 & 12 \\
+night & rain & PED\_CPA & 497 & 43 & 21 \\
+night & rain & REAR\_TTC & 1,111 & 153 & 0 \\
+twilight & clear & GAP\_TTC & 404 & 38 & 1 \\
+twilight & clear & PED\_CPA & 189 & 12 & 8 \\
+twilight & clear & REAR\_TTC & 469 & 62 & 0 \\
+twilight & cloudy & GAP\_TTC & 201 & 24 & 0 \\
+twilight & cloudy & PED\_CPA & 94 & 6 & 2 \\
+twilight & cloudy & REAR\_TTC & 218 & 35 & 2 \\
+twilight & fog & GAP\_TTC & 5,631 & 547 & 63 \\
+twilight & fog & PED\_CPA & 2,693 & 169 & 91 \\
+twilight & fog & REAR\_TTC & 6,141 & 848 & 12 \\
+twilight & rain & GAP\_TTC & 782 & 88 & 5 \\
+twilight & rain & PED\_CPA & 396 & 19 & 11 \\
+twilight & rain & REAR\_TTC & 861 & 104 & 1 \\
+\bottomrule
+\end{tabular}
+\par\smallskip\footnotesize\raggedright Bins: fog density at least 20, precipitation at least 20, cloudiness at least 30; night at sun altitude at most 0\textdegree, twilight up to 15\textdegree. Suitable for an appendix.
+\end{table}

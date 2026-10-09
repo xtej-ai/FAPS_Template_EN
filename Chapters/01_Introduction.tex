@@ -1,0 +1,140 @@
+% ============================================================
+%  Chapter 1: Introduction and Objective
+%  (descriptive title retained per author preference; the FAPS
+%  template names this chapter "Introduction" -- either is fine.)
+% ============================================================
+\chapter{Introduction}
+\label{ch:introduction}
+
+% The descriptive working title of this chapter has been shortened to "Introduction"
+% so that the running head does not wrap across two lines on every page. The former
+% phrasing is retained as the framing of Section~\ref{sec:intro_motivation}.
+
+This chapter sets out why the operational safety assurance of an automated driving
+system depends on indicators that anticipate a loss event rather than record one, and
+why the construction of such indicators is not yet a solved problem. It states the
+objective of the thesis, the three research questions that structure the work, the
+scenario on which the work is validated, and the organisation of the chapters that
+follow.
+
+\section{Motivation}
+\label{sec:intro_motivation}
+
+An automated driving system reaches public roads only once a safety case has argued
+that it is acceptably safe for a stated operating domain, built around the kind of
+structured, evidence-supported argument introduced in Chapter~\ref{ch:fundamentals}.
+That argument is constructed and reviewed before deployment, yet its subject keeps
+producing evidence about itself only once it is operating among road users whose
+behaviour was never fully enumerable at design time. Some of the doubts an engineer
+raises while building the argument cannot be closed through development-time testing
+at all, because the evidence that would close them is precisely the evidence that
+operation itself produces. A safety case for such a system is therefore not a document
+that is completed once at approval. It remains open on specific, identifiable points,
+and those points stay open until operational evidence closes them.
+
+The scale of the difficulty is not small. Demonstrating, from observed outcomes alone,
+that an automated driving system achieves a fatality rate meaningfully better than the
+human baseline would require, by established estimates, on the order of hundreds of
+millions to billions of kilometres of driving \cite{kalra2016driving}, a volume no
+fleet reaches within a commercially relevant timeframe. Waiting for lagging evidence,
+meaning evidence recorded only once a hazardous outcome has already occurred, is
+consequently not a workable basis for closing the open points in an operational safety
+case. Both ANSI/UL~4600 and PAS~1881 address this directly: a deployed system is
+required to be monitored through indicators that anticipate a hazardous outcome rather
+than merely record it, and reliance on lagging indicators alone is explicitly ruled out
+\cite{ul4600, pas1881}. Koopman and Wagner make a closely related argument from the
+deployment decision itself, holding that a defensible decision to deploy rests on a
+positive trust balance the developer commits to sustaining after release, rather than
+on a body of pre-deployment evidence considered sufficient on its own
+\cite{koopman2020positive}.
+
+What neither standard supplies, and what the review in Chapter~\ref{ch:sota} shows the
+wider literature does not supply either, is a procedure for constructing such an
+indicator in the first place. Existing work is well developed at locating where in a
+safety argument an indicator is needed and at specifying how a system should respond
+once one is violated, but the step in between, deriving the indicator's signal, source
+and threshold from a specific, unresolved doubt in the argument, is left to engineering
+judgement exercised case by case. This thesis develops a systematic procedure for that
+step, the Causal Chain Derivation Method (CCDM) presented in Chapter~\ref{ch:methodology},
+which takes an unresolved doubt surviving the eliminative elaboration of a Goal
+Structuring Notation claim and derives from it a leading indicator whose signal, source
+and threshold are all traceable back to the claim it addresses. The method is developed
+generically and then validated empirically against the criteria set out in the same
+chapter.
+
+\section{Problem Statement}
+\label{sec:intro_problem}
+
+The gap that this thesis addresses is therefore narrow and specific. It is not the
+absence of a requirement to monitor, which the standards already impose, nor the
+absence of a place in the argument at which an indicator belongs, which the
+assurance-case literature already supplies. It is the absence of a reproducible
+procedure that turns a named, unresolved doubt into a named, calibrated quantity. In
+the absence of such a procedure the derivation is performed anew by each engineer for
+each claim, which makes the resulting indicator set neither reviewable nor
+transferable, and leaves the connection between an indicator and the claim it is
+meant to support asserted rather than demonstrated.
+
+The direction of current vehicle regulation reinforces why this is worth solving
+systematically rather than case by case. Germany's ordinance governing the operation of
+vehicles with autonomous driving functions already imposes operational monitoring
+obligations on deployed systems, and the assessment method under development at the
+United Nations Economic Commission for Europe points toward comparable in-service
+monitoring and reporting expectations at the international level \cite{afgbv2022,
+natm2021}. A method that derives leading indicators traceably from a safety case,
+rather than one that depends on an individual engineer's judgement repeated anew for
+every claim, is accordingly not only a methodological convenience but a step toward
+meeting an obligation that regulation is moving to require outright.
+
+\section{Objective and Research Questions}
+\label{sec:intro_objective}
+
+The objective of this thesis is to develop this derivation procedure and to establish
+whether the indicators it produces are usable for the operational safety assurance of
+an automated driving system. Three research questions structure the work. The first
+asks how a leading safety performance indicator, comprising a signal, a source, and a
+threshold, can be derived systematically and traceably from an unresolved doubt in a
+Goal Structuring Notation safety case. The second asks whether the indicators so
+derived detect a developing violation early enough to permit a response, rather than
+merely confirming that a violation has occurred. The third asks whether a single
+derivation method transfers across conflicts of different character, namely
+longitudinal, crossing, and following conflicts, within one manoeuvre. The first
+question is addressed by the method of Chapter~\ref{ch:methodology}, and the second and
+third by its empirical evaluation in Chapter~\ref{ch:results}.
+
+\section{Scope of the Empirical Validation}
+\label{sec:intro_scope}
+
+The empirical validation is carried out on an unprotected left turn at an urban
+intersection, in which the ego vehicle must negotiate oncoming traffic and a crossing
+pedestrian without a protected signal phase, while separately maintaining a safe
+separation from traffic following behind it. In-depth crash investigation databases
+such as the German In-Depth Accident Study record left-turn manoeuvres among the
+recurring conflict types at urban intersections, and using such databases to
+characterise the criticality of a manoeuvre for an automated system is itself an active
+area of work \cite{babisch2023gidas}. The scenario is a demanding one for a single
+derivation method to be tested against, precisely because it folds together three
+conflicts of different character within one manoeuvre: a longitudinal conflict with
+oncoming traffic, a crossing conflict with a pedestrian, and a longitudinal following
+conflict to the rear. Whether indicators derived by the same method transfer across
+these three geometries, or whether they do not, is itself informative about the
+assumptions the method makes, and Chapter~\ref{ch:results} reports this comparison
+directly.
+
+\section{Structure of the Thesis}
+\label{sec:intro_structure}
+
+The remainder of this thesis is structured as follows. Chapter~\ref{ch:fundamentals}
+establishes the terminology of safety assurance, safety argumentation, and safety
+performance indicators, together with the surrogate safety metrics and the simulation
+environment used in the later chapters. Chapter~\ref{ch:sota} reviews the current state
+of research, covering operational safety assurance, accident causation and
+investigation, the transition from reactive to proactive monitoring, and the derivation
+of leading indicators from lagging ones across safety domains, and it closes with the
+research gap that this work addresses. Chapter~\ref{ch:methodology} presents the Causal
+Chain Derivation Method and the simulation-based evaluation pipeline built on the CARLA
+simulator. Chapter~\ref{ch:results} reports the derived indicators and their evaluation
+on the unprotected left-turn scenario. Chapter~\ref{ch:discussion} interprets the
+results with respect to the objective and the state of the art and states the
+limitations of the work, and Chapter~\ref{ch:conclusion} summarises the contributions
+and outlines directions for future work.

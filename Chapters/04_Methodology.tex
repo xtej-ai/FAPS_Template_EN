@@ -1,0 +1,479 @@
+\chapter{Methodology}
+\label{ch:methodology}
+
+This chapter presents the core contribution of the thesis, a systematic Causal Chain
+Derivation Method (CCDM) that produces calibrated leading safety performance indicators
+from lagging ones and attaches them to a \ac{GSN} safety case. As established in
+Chapter~\ref{ch:sota}, the reasoning components already exist in separate literatures
+but are not integrated into a reproducible procedure. The method combines three of
+them, namely the top-down decomposition of Fault Tree Analysis \cite{iec61025}, the
+counterfactual prevention test of Why-Because Analysis \cite{ladkin1998}, and
+threshold calibration grounded in precursor-estimation theory \cite{bieryi1995}. The
+derived indicators are modelled in a \ac{GSN} modelling tool and evaluated on
+simulation data generated in the CARLA simulator \cite{dosovitskiy2017carla}. The chapter first gives
+an overview of the seven steps, then describes each step, presents worked examples,
+and finally describes the simulation environment and the evaluation pipeline.
+
+\section{Overview of the Causal-Chain Derivation Method}
+\label{sec:method_overview}
+
+The method is defined to be use-case-agnostic, so that it applies without change to a
+left-turn, construction-zone, or pedestrian-crossing use case, or to any future one.
+It consists of a preparatory step and seven derivation steps, of which
+Steps~2 to~7 form a loop executed once for every lagging indicator in the register
+built in Step~1. The complete sequence is shown in
+Figure~\ref{fig:derivation_flow}. The method is architecture-independent in its
+reasoning, because the subsystem decomposition in Step~3 names the functions that any
+driving system must perform rather than the components that a particular
+implementation contains. Architecture dependence enters only at Step~4, where a
+required signal may or may not be exposed by a given implementation, and this
+distinction gives rise to the two indicator tiers described in
+Section~\ref{sec:method_signal}.
+
+% ---------------------------------------------------------------------------
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=13cm]{spi_derivation_flow}
+    \caption{The seven-step causal-chain derivation method. Steps~2 to~7 are executed
+    once for each lagging safety performance indicator in the register produced by
+    Step~1, and the loop terminates when the register is exhausted.}
+    \label{fig:derivation_flow}
+\end{figure}
+% ---------------------------------------------------------------------------
+
+\section{Use Case and Lagging-Indicator Register}
+\label{sec:method_register}
+
+The preparatory step, Step~0, defines the use case in terms of the function the system
+performs, the actors present, and the operational design domain. Step~1 then builds
+the lagging-indicator register by listing every loss event for the use case as a
+lagging \ac{SPI}, each with a single loss-event type and a single unit of measurement.
+This register is the set over which the derivation loop iterates. Candidate loss events
+are drawn from a catalogue of twelve families, ranging from collision and contact events,
+through near-miss and last-resort response events, to control-handover and operating-
+domain violations. Near-miss and last-resort response events are the preferred
+starting point, because they occur more frequently than collisions yet carry the same
+causal information, which mirrors the precursor rationale of
+Section~\ref{sec:sota_reactive_proactive}. A selection rule governs the register: each
+lagging indicator must resolve to exactly one proximate cause in Step~2, and a
+candidate that resolves to several unrelated causes is defined too broadly and is
+split before proceeding.
+
+\section{Proximate Cause by the Prevention Test}
+\label{sec:method_proximate}
+
+Step~2 identifies the proximate cause of each lagging indicator by applying the
+prevention test, which asks whether the loss event would have been prevented if one
+condition had been corrected at the last possible moment. This test is the
+counterfactual test of Why-Because Analysis applied prospectively
+\cite{ladkin1998}. The answer is expressed as a functional impossibility in passive
+form, of the type that the system could not perform a required action, and exactly one
+proximate cause is admitted per lagging indicator. The boundary between a proximate
+and an intermediate cause is set by whether a response window remained after the
+failure. If a detection failure left no time for any response, the detection failure
+is the proximate cause, whereas if a response window remained and was not used, the
+detection failure is an intermediate cause and the resulting avoidance failure is the
+proximate cause.
+
+\section{Causal Decomposition with Gate Logic}
+\label{sec:method_decomposition}
+
+Step~3 decomposes the proximate cause into intermediate causes using the gate logic of
+Fault Tree Analysis \cite{iec61025}. An OR gate applies when any one cause is
+sufficient on its own, which requires a separate leading indicator for each branch and
+is the common case for perception and planning failures. An AND gate applies when the
+causes must co-occur because redundancy is present, in which case a single shared
+indicator can suffice. The gate for a pair of candidate causes is determined by asking
+whether either cause alone can produce the proximate cause without the other. The
+decomposition terminates when each cause maps to exactly one functional subsystem,
+namely perception, prediction, planning, control, or operating-domain monitoring, and
+is describable by a quantity that any implementation of that subsystem would produce.
+Deeper decomposition is deliberately avoided, because it reaches algorithm-specific or
+sensor-specific detail and breaks the implementation-agnostic character of the method.
+A supplementary System-Theoretic Process Analysis cross-check is recommended for
+control-loop and non-failure hazards that Fault Tree Analysis does not capture under
+the safety of the intended functionality \cite{iso21448,stpahandbook}.
+
+The use of gate logic requires reconciliation with the criticism of Fault Tree Analysis
+made in Chapter~\ref{ch:sota}, namely that binary component-failure logic does not
+represent the continuous, non-failure insufficiencies characteristic of a
+machine-learning perception stack. The reconciliation rests on what the gates are
+applied to. The decomposition does not enumerate component failure states; it partitions
+a proximate cause into functional causes, each of which states that a required function
+was not delivered adequately, and adequacy is fixed by the threshold calibrated in
+Step~6 rather than by a binary health state. A gate therefore records which functional
+shortfalls are jointly or severally sufficient to produce the proximate cause, while the
+continuous quantity is carried by the signal and its threshold rather than by the gate.
+This preserves the deductive structure that makes the derivation reproducible and places
+the continuity where it belongs. One limitation remains and is stated rather than
+concealed: a cause arising only from the interaction of two functions, neither of which
+is individually inadequate, is not expressible in this logic, and the System-Theoretic
+Process Analysis cross-check is the intended remedy for that class of cause.
+
+\section{Observable Signal and Observability Check}
+\label{sec:method_signal}
+
+Step~4 names, for each intermediate cause, the earliest measurable quantity with units
+that tracks the development of that cause before it fully manifests, together with the
+lead time by which it does so. Step~5 then subjects each candidate signal to two tests
+that both must pass. The first is computability, meaning that the signal can be
+computed at runtime or from available logged data at a sufficient frequency. The
+second is independence, meaning that the source of the signal is not the subsystem
+being monitored, since a degraded subsystem that reports on itself would appear
+healthy at exactly the moment monitoring is required. A signal that fails either test
+is unusable regardless of how well it correlates with the loss event, and the requirement to
+state signal provenance explicitly is claimed as a contribution, because published
+indicator sets rarely record it.
+
+The independence claimed for the behavioural tier requires one qualification, because it
+governs how the results of this work transfer to a deployed system. In the simulation
+environment of Section~\ref{sec:method_carla} the kinematic quantities are read from
+ground truth, which is external to the vehicle software, so a behavioural-tier indicator
+is independent of the driving function in the strict sense. In a deployed system no
+ground truth exists, and the same quantities are estimated on board by perception and
+localisation. A degradation of that estimation chain corrupts the indicator and the
+driving function together, so the independence that holds by construction in simulation
+becomes an assumption that must be argued separately in deployment, for example by
+deriving the indicator from a sensing path not shared with the function it monitors. The
+behavioural tier is independent of the planning and control functions it monitors in
+both settings, but independent of the perception function only in simulation, and the
+results reported for that tier are to be read under this restriction.
+
+The independence requirement partitions the derivable indicators into two tiers,
+summarised in Table~\ref{tab:tiers}. Behavioural-tier indicators are computed purely
+from vehicle kinematics and scene state and are portable across any architecture,
+including an opaque end-to-end network or a human driver. Architectural-tier indicators
+require a signal exposed from inside a subsystem and therefore presuppose a modular
+pipeline. The trade-off is explicit: behavioural-tier indicators buy portability but
+give lower diagnostic resolution, since they reveal that a margin is eroding rather
+than which subsystem caused it, and they typically provide shorter lead time, since
+internal degradation usually precedes its kinematic consequence.
+
+% ---------------------------------------------------------------------------
+\begin{table}[htbp]
+    \centering
+    \caption{The two indicator tiers produced by the observability and independence
+    check of Step~5.}
+    \label{tab:tiers}
+    \begin{tabular}{l l l}
+        \toprule
+        \textbf{Property} & \textbf{Behavioural tier} & \textbf{Architectural tier} \\
+        \midrule
+        Signal source     & vehicle kinematics, scene state & internal subsystem output \\
+        Examples          & time-to-collision, closing speed, & detection confidence, \\
+                          & required deceleration, PET & time-of-first-detection \\
+        Architecture      & portable across any design & modular pipeline required \\
+        Diagnostic resolution & margin erosion only & subsystem attribution \\
+        Typical lead time & shorter & longer \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+% ---------------------------------------------------------------------------
+
+% =============================================================================
+% DROP-IN REPLACEMENT for Section 4.6 of Chapter 4 (Method).
+% Paste this in place of the existing Section 4.6. It carries the label
+% sec:method_thresholds, which Chapters 5, 6 and 7 reference.
+% Addresses the fix list: ALARP, GAMAB and MEM named as not applied; T defined
+% as the exact one-sided binomial limit at alpha = 0.01 from Campaigns 2 and 3;
+% the percentile example corrected to the 10th and 95th.
+% =============================================================================
+
+\section{The Metric Threshold and the SPI Threshold}
+\label{sec:method_thresholds}
+
+Steps~1 to~5 produce a signal and a source. A signal alone is not yet an
+indicator: a quantity becomes a safety performance indicator only once a
+threshold decides when its value is to be treated as a violation, and a second
+threshold decides when the frequency of such violations is to be treated as a
+departure from the argued behaviour. Step~6 sets both, and the general form of an
+SPI used throughout this work is given in Equation~(\ref{eq:method_spiform}).
+
+\begin{equation}
+    \left\{
+        \begin{array}{c}
+            \text{No. of times the metric crosses } \theta
+            \text{ in the unsafe direction} \\
+            \text{per 100k manoeuvres, km or h driven}
+        \end{array}
+    \right\} < T
+    \label{eq:method_spiform}
+\end{equation}
+\equationentry{General form of a safety performance indicator}
+
+\textbf{Variable key:} $\theta$, metric threshold, in the unit of the metric; T,
+SPI threshold, as a count per exposure unit.
+
+The two thresholds answer different questions and are set by different means.
+The metric threshold decides a single run and is calibrated from observed
+behaviour; the SPI threshold bounds the violation count of a population of runs
+and is set statistically. Neither is a risk-acceptance criterion.
+
+\subsection{Setting the Metric Threshold}
+\label{sec:method_metricthreshold}
+
+Five ways of setting a metric threshold were considered before the method fixed
+on one, and the choice is argued here rather than assumed, because it determines
+whether the later evaluation is circular.
+Table~\ref{tab:threshold_methods} compares the five by the data and the
+assumptions each requires. The comparison is qualitative: no numerical benchmark
+between the five was run, and none is implied.
+
+% ---------------------------------------------------------------------------
+% Copied verbatim from tables.tex
+\begin{table}[htbp]
+\centering
+\caption{Options for the metric threshold. Five ways to set the metric threshold $\theta$ compared by the data and assumptions they require.}
+\label{tab:threshold_methods}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{2.8cm}>{\raggedright\arraybackslash}p{2.1cm}>{\raggedright\arraybackslash}p{3.8cm}>{\raggedright\arraybackslash}p{3.4cm}>{\raggedright\arraybackslash}p{2.3cm}@{}}
+\toprule
+{\bfseries Method} & {\bfseries Needs collision labels} & {\bfseries Main assumption} & {\bfseries Data required} & {\bfseries Decision} \\
+\midrule
+Empirical percentile & no & uneventful runs represent normal driving & collision-free runs (available) & used \\
+ROC curve, Youden index & yes & labelled collisions are representative & labelled collisions (the evaluation set) & not used: circular \\
+Extreme value theory & no & a parametric tail model holds & long tails of the metric & future work \\
+Kinematic bounds & no & friction and actuator limits are known per run & road and vehicle parameters & not used \\
+Human-driver baselines & no & careful human driving is the reference & naturalistic data (inD, SIND) & future work \\
+\bottomrule
+\end{tabular}
+\par\smallskip\footnotesize\raggedright Qualitative comparison by requirements, not a numerical benchmark.
+\end{table}
+
+The \textbf{empirical percentile} sets $\theta$ to a fixed percentile of the
+per-run metric over runs that show normal behaviour. It requires no collision
+labels, no distributional assumption and no vehicle parameters, and it is
+reproducible from the data alone. Its cost is explicit: a tenth-percentile
+threshold is crossed by about one tenth of uneventful runs by construction, so
+the threshold marks unusual behaviour rather than unacceptable behaviour.
+
+\textbf{ROC analysis with Youden's index} selects the threshold that maximises
+sensitivity plus specificity on labelled data and so gives the best available
+trade-off between false alarms and missed collisions [CITATION NEEDED: Youden's
+index]. It requires collision labels. The only labels available here are the
+collisions against which the indicators are evaluated, so the threshold would be
+fitted on the evaluation set and the evaluation would become circular.
+
+\textbf{Extreme value theory} fits a parametric model to the tail of the metric
+distribution and can therefore link $\theta$ to a target collision probability
+[CITATION NEEDED: extreme value theory for traffic conflicts]. It requires a
+tail-model assumption and enough extreme observations to fit it, which is a study
+in its own right.
+
+\textbf{Kinematic bounds} derive $\theta$ from physical limits, for instance from
+the deceleration the vehicle can actually achieve. Such bounds are explainable,
+but they require friction, actuator and road-state assumptions for every run.
+Those quantities vary with the sampled weather of
+Section~\ref{sec:exp_parameters} and are not logged as ground truth.
+
+\textbf{Human-driver baselines} set $\theta$ to match the behaviour of careful
+human drivers, as industry best practice suggests [CITATION NEEDED: AVSC best
+practice on human-driver baselines]. This requires naturalistic driving data
+[CITATION NEEDED: inD dataset] [CITATION NEEDED: SIND dataset], which was not
+evaluated in this work.
+
+Three criteria decide between them. First, independence from the evaluation: the
+threshold must not be fitted on the collisions against which it is tested, which
+excludes the ROC criterion. Second, assumptions: the percentile needs none beyond
+the choice of the calibration population, whereas extreme value theory needs a
+tail model and kinematic bounds need per-run physical parameters. Third,
+availability of data within this work: collision-free simulation runs exist in
+large numbers, whereas naturalistic data and per-run physical parameters do not.
+The empirical percentile is the only option that satisfies all three, and it is
+the one used.
+
+The threshold is computed from one value per run, namely the minimum or the
+maximum of the metric over the run, because consecutive simulation steps are
+strongly autocorrelated and would otherwise be counted as independent
+observations. The calibration population is the uneventful runs of Campaign~1,
+that is the runs without a collision and without an emergency braking event. The
+tenth percentile is taken for the metrics in which small values are dangerous and
+the ninety-fifth for REQ\_DECEL, in which large values are dangerous. Bootstrap
+intervals confirm that the resulting values are stable;
+Section~\ref{sec:exp_calibration} reports them. The width of the two tails is
+itself a choice, and a sensitivity sweep over the percentile remains open.
+
+The threshold depends on the configuration from which it is calibrated. Between
+Campaign~1 and the realistic-driving campaigns the threshold of REQ\_DECEL shifts
+by 21.5\,\% and that of PED\_CPA by 37.9\,\%. It is therefore calibrated once and
+applied unchanged to every campaign rather than refitted per campaign, so that
+the same decision rule is applied to every run of the evaluation.
+
+\subsection{Setting the SPI Threshold}
+\label{sec:method_spithreshold}
+
+The metric threshold leaves open how many violations are too many. The SPI
+threshold answers that, and it is set statistically because the inputs for a
+risk-based answer are not available in this work.
+
+T is the exact one-sided binomial limit at a significance level of
+$\alpha = 0.01$ on the violation rate observed in Campaigns~2 and~3, evaluated
+for the number of eligible runs in the window being checked. It is the smallest
+violation count whose probability under that baseline rate falls to or below
+$\alpha$; Equation~(\ref{eq:exp_spithreshold}) in
+Section~\ref{sec:exp_criteria} states it formally. The rate is checked over
+monitoring windows of 200 runs. The window is the unit over which the check is
+performed and not the unit of T, which is stated per exposure unit in
+Equation~(\ref{eq:method_spiform}).
+
+A threshold set this way bounds departure from a measured baseline. Reaching T
+means that the violation count of a window has become improbable under the
+behaviour the baseline campaigns demonstrated; it does not mean that a level of
+risk has been exceeded, because no level of risk has been stated. A
+risk-acceptance SPI threshold would instead be derived from a principle such as
+ALARP, GAMAB, MEM or the benchmark of a careful and competent human driver
+[CITATION NEEDED: ALARP, GAMAB and MEM risk-acceptance principles] [CITATION
+NEEDED: careful and competent human driver benchmark]. Those principles are named
+here to place the statistical threshold against them; none of them is applied in
+this work, and setting T from one of them is left to
+Section~\ref{sec:outlook}.
+
+\section{Attachment to the Safety Case}
+\label{sec:method_gsn}
+
+Step~7 attaches each derived leading indicator to the \ac{GSN} goal that it monitors,
+attaches the lagging parent indicator to the same goal, records $\theta$ and $T$ as
+dimension elements, and documents the full derivation chain in the traceability field
+of the model in the \ac{GSN} modelling tool. This closes the loop opened in Step~1, since the goal that
+began as a bare assertion now carries a monitorable claim, and a violation invalidates
+that specific claim rather than leaving the safety case silently wrong. Two failure
+modes are avoided explicitly, namely attaching an indicator to a convenient parent
+goal instead of the goal it actually monitors, and omitting the traceability record,
+which is the element that distinguishes a derived indicator from an asserted one. The
+resulting argument structure is consistent with the \ac{GSN} community standard
+\cite{gsncs2021} and with the argument pattern for the use of indicators proposed by
+Ratiu et al. \cite{ratiu2024}. The method does not depend on any particular tool; a
+model-based safety-engineering environment that supports \ac{GSN}, such as SafeTbox, is
+recommended for carrying out the attachment in practice.
+
+\section{Worked Examples}
+\label{sec:method_examples}
+
+The method is illustrated on three loss events drawn from the target use cases, one per
+use case, and summarised in Table~\ref{tab:examples}. The three cases are given to
+show that the derivation is use-case-agnostic, which is a claim of the method rather than
+of the evaluation; only the left-turn case is carried into the empirical work of
+Chapter~\ref{ch:results}, in line with the scope set in
+Section~\ref{sec:intro_scope}. Each example begins from a lagging
+indicator, identifies a single proximate cause, decomposes it with an OR gate into two
+intermediate causes attributed to distinct subsystems, and yields one leading indicator
+per branch. The left-turn example is developed in full in
+Figure~\ref{fig:causal_chain_example}. Its lagging indicator is the rate of collisions
+with an oncoming vehicle, its proximate cause is that the ego vehicle occupied the
+conflict area while an oncoming vehicle was closing on it and no avoidance action
+succeeded in time, and its two branches are a gap that was already insufficient at the
+moment of commitment, attributed to planning, and a closing speed that exceeded what
+the turn arc allowed, attributed to prediction. The example also illustrates the
+placement of the reaction tier. An emergency-braking activation with an oncoming
+vehicle inside the collision horizon is not a lagging indicator, because no loss has
+yet occurred; it is an intermediate leading indicator, the last-resort mitigation
+nearest the loss, and it is therefore positioned above the kinematic decomposition and
+attached to the safety case independently of it rather than being derived from the
+kinematic branches. The two kinematic branches
+carry different lead times, of the order of three to eight seconds and of half a second
+to three seconds respectively, which demonstrates the spanning property described in
+Section~\ref{sec:method_thresholds}.
+
+% ---------------------------------------------------------------------------
+\begin{table}[htbp]
+    \centering
+    \caption{Three worked derivations, one per use case, from a lagging indicator
+    through its proximate cause to a pair of leading indicators, each attributed to the
+    functional subsystem in which its cause originates.}
+    \label{tab:examples}
+    \small
+    \begin{tabular}{@{}p{2.6cm} p{5.4cm} p{5.6cm}@{}}
+        \toprule
+        \textbf{Use case} & \textbf{Lagging indicator and proximate cause} & \textbf{Leading indicators (subsystem)} \\
+        \midrule
+        Left turn & collision with an oncoming vehicle; the
+        conflict area was occupied while an oncoming vehicle was closing and no
+        avoidance succeeded in time & gap TTC at commitment (planning);
+        required deceleration over the arc (prediction) \\[2pt]
+        Pedestrian crossing & collision with a crossing pedestrian; the turn was
+        committed without time to stop & time to closest point of approach
+        (planning); crosswalk occupancy confidence (perception) \\[2pt]
+        Construction zone & collision with or near-miss of a worker; the system
+        could not stop in time & TTC at first detection (perception); detection
+        confidence per frame (perception) \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+% ---------------------------------------------------------------------------
+
+% ---------------------------------------------------------------------------
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=15cm]{spi_causal_chain_example}
+    \caption{Worked causal-chain derivation for the left-turn use case. The lagging
+    indicator, a collision with an oncoming vehicle, is decomposed through its proximate
+    cause and an OR gate into two subsystem-level intermediate causes, each yielding a
+    leading indicator with its own earliest observable signal and lead time. The
+    emergency-braking activation is the intermediate leading indicator of the reaction
+    tier and attaches to the safety case independently of the kinematic branches.}
+    \label{fig:causal_chain_example}
+\end{figure}
+% ---------------------------------------------------------------------------
+% PASTE INTO: Chapter 4, Section 4.8 (Worked Examples)
+% WHERE:      directly after the existing Figure 4.2 (the ONC chain figure)
+% UPLOAD:     spi_causal_chain_ped.pdf and spi_causal_chain_rear.pdf into your Graphics folder
+
+% First add this sentence to the end of the paragraph above Figure 4.2:
+%
+%   The same derivation is carried out for the other two conflict chains of the
+%   manoeuvre. Figure~\ref{fig:chain_ped} gives the pedestrian chain and
+%   Figure~\ref{fig:chain_rear} the following chain. The three differ in where the
+%   derivation terminates: the oncoming and pedestrian chains each retain a
+%   reaction-tier indicator, whereas the following chain has none, and the
+%   pedestrian and following chains each lose one branch at the observability and
+%   independence check of Step~5.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=15cm]{spi_causal_chain_ped}
+  \caption{Worked causal-chain derivation for the pedestrian-crossing
+    conflict. The lagging indicator, a collision with a crossing pedestrian,
+    is decomposed through its proximate cause and an OR gate into two
+    subsystem-level intermediate causes. Only the planning branch yields an
+    indicator that survives Step~5; the perception branch is derived but is
+    of the architectural tier and therefore outside the empirical scope of
+    this work.}
+  \label{fig:chain_ped}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=15cm]{spi_causal_chain_rear}
+  \caption{Worked causal-chain derivation for the following-vehicle conflict.
+    The chain carries no reaction-tier indicator, because the ego vehicle has
+    no last-resort mitigation directed rearward, and the branch attributing
+    the conflict to the follower's reaction delay is rejected at Step~5 as
+    not observable to the ego vehicle.}
+  \label{fig:chain_rear}
+\end{figure}
+\section{Instantiation of the Method}
+\label{sec:method_carla}
+
+The seven steps above are defined without reference to a particular use case or
+simulator, which is what allows the same procedure to be applied to the three conflict
+chains of a single manoeuvre. Their instantiation is the subject of
+Chapter~\ref{ch:experiment}, which fixes the simulation environment and the ego
+configuration, describes each of the three conflict chains and the mechanism by which
+conflicts in it are generated, states the indicator register that Steps~3 to~7 produce
+for those chains, and defines the criteria against which the resulting indicators are
+judged. Chapter~\ref{ch:results} then reports the evaluation against those definitions.
+
+Two properties of the instantiation are noted here because they follow from the method
+rather than from the experiment. First, because the configuration used exposes no
+perception internals, every indicator that survives the observability and independence
+check of Section~\ref{sec:method_signal} is of the behavioural tier; the
+architectural-tier indicators that depend on detection confidence or time of first
+detection are outside the empirical scope of this work, since ground truth carries no
+notion of confidence and a calibrated perception model would be required before any
+threshold on such a signal is meaningful. Second, indicators are computed in
+post-processing rather than during a run, which permits $\theta$ and $T$ to be
+recalibrated without regenerating the scenarios, and which equally means that the
+runtime cost of evaluating an indicator on a vehicle is not measured here. The
+operational loop of Chapter~\ref{ch:sota} is accordingly evidenced in its derivation and
+monitoring stages only.

@@ -1,0 +1,258 @@
+\documentclass[
+    12pt,               
+    a4paper,            
+    twoside,                  
+    chapterprefix=false,
+    captions=tableheading
+]{scrreprt}
+
+% --- LANGUAGE & FONT ---
+\usepackage[T1]{fontenc}
+\usepackage[british]{babel}   % british: matches the British spelling used throughout
+\usepackage[scaled]{helvet}         
+\renewcommand{\familydefault}{\sfdefault} 
+\usepackage{setspace}
+\setstretch{1.2}
+\setlength{\parindent}{0pt} % Sets paragraph indent to 0
+
+% --- PAGE LAYOUT (Word guidelines) ---
+\usepackage[
+    inner=3cm, 
+    outer=2cm, 
+    top=2.5cm, 
+    bottom=3cm, 
+    bindingoffset=0cm
+]{geometry}
+
+% --- SPACING FOR HEADINGS ---
+\RedeclareSectionCommand[beforeskip=0pt]{chapter}
+
+% --- FORMATTING DIRECTORIES ---
+\DeclareTOCStyleEntry[indent=0pt]{tocline}{figure}
+\DeclareTOCStyleEntry[indent=0pt]{tocline}{table}
+
+% --- LIST OF EQUATIONS (Custom) ---
+\DeclareNewTOC[
+    type=equation,
+    types=equations,
+    name={Equation},
+    listname={List of Equations}
+]{equ}
+
+% Formatting: Left-aligned (0pt) and space for the number (2.3em)
+\DeclareTOCStyleEntry[indent=0pt, numwidth=2.3em]{tocline}{equation}
+
+% Command for students to add equations to the list
+\newcommand{\equationentry}[1]{\addxcontentsline{equ}{equation}[{\theequation}]{#1}}
+
+% --- HEADER AND FOOTER ---
+\usepackage[headsepline=0.75pt, automark]{scrlayer-scrpage}
+\clearpairofpagestyles  
+\ohead{\pagemark}       
+\ihead{\headmark}       
+\renewcommand{\chaptermarkformat}{\thechapter\autodot\enskip} 
+\renewcommand*{\chapterpagestyle}{scrheadings}
+\automark[chapter]{chapter}
+
+% --- CITATION STYLE (IEEE) ---
+\usepackage[
+    backend=biber,
+    style=ieee,
+    autolang=other
+]{biblatex}
+% ADDED: the bibliography file is named references_sota.bib, not References.bib.
+% Rename the file on Overleaf or keep this line pointing at it.
+\addbibresource{references.bib}
+
+% --- ADDITIONAL PACKAGES ---
+\usepackage{graphicx}
+% ADDED: figures/ searched as well, so chapter figures resolve wherever they sit.
+\graphicspath{{Graphics/}{figures/}}
+\usepackage[absolute,overlay]{textpos} 
+\usepackage{calc} 
+\usepackage[nointegrals]{wasysym} % nointegrals: avoids \iint clash with amsmath
+\usepackage{acronym} 
+\usepackage{csquotes}
+\usepackage[hidelinks]{hyperref}
+\usepackage{booktabs}
+
+% --- ADDED: required by the drafted chapters -------------------------------
+\usepackage{amsmath}      % equation environments used in Ch. 2, 4, 5
+\usepackage{amssymb}
+\usepackage{tabularx}     % tables in Ch. 3, 5, 6
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{multirow}
+\numberwithin{equation}{chapter}   % FAPS: equations numbered (X.Y) per chapter
+
+% --- ADDED: placeholder marker for results not yet produced ----------------
+% Chapter 6 contains 54 \RES{...} markers; without this macro the compile
+% fails with "Undefined control sequence". \RESdraftfalse prints them black.
+\newif\ifRESdraft
+\RESdrafttrue
+\newcommand{\RES}[1]{\ifRESdraft\textcolor{red}{\textbf{[#1]}}\else\textbf{[#1]}\fi}
+
+% --- CAPTIONS (Figures & Tables) ---
+\usepackage[
+    justification=raggedright,  
+    singlelinecheck=false,      
+    labelfont=it,               
+    font={small, it}            
+]{caption}
+\captionsetup[table]{skip=10pt} 
+
+% --- COLORS & LISTS (Corporate Design) ---
+\usepackage{xcolor}
+\usepackage{enumitem}
+
+\definecolor{FAPSGruen}{RGB}{151, 193, 57} 
+\setlist[itemize,1]{label=\textcolor{FAPSGruen}{\rule{1ex}{1ex}}}
+\setlist[itemize,2]{label=\textcolor{FAPSGruen}{--}}
+
+% ==============================================================================
+% 1. PLEASE ENTER YOUR PERSONAL DATA HERE!
+% ==============================================================================
+\newcommand{\Title}{Systematic Derivation and Evaluation of Safety Performance
+Indicators for Autonomous Driving Systems} 
+\newcommand{\ThesisType}{Master's Thesis in Electromobility (ACES)} 
+\newcommand{\Author}{Tejas Kute} 
+\newcommand{\MatriculationNumber}{12345678} 
+\newcommand{\AuthorDetails}{\Author, \MatriculationNumber}
+\newcommand{\SupervisorOne}{Prof. Dr.-Ing. Jörg Franke} 
+\newcommand{\SupervisorTwo}{Patrick Ziegler, M.\,Sc.} 
+\newcommand{\SupervisorThree}{Nishanth Laxman, M.\,Sc., Fraunhofer IESE} 
+\newcommand{\SubmissionDate}{XX.XX.202X} 
+\newcommand{\ProcessingTime}{XX Months} 
+\newcommand{\CoverImage}{CoverImage} % Filename WITHOUT extension (e.g., .png)
+
+% Show list of equations? (true = yes, false = no)
+\newif\ifWithEquationList
+\WithEquationListtrue
+
+\begin{document}
+
+% --- TITLE PAGE ---
+\begin{titlepage}
+    \begin{textblock*}{0cm}[0,0](0.85cm, 2.9cm + 0.02cm)
+        \includegraphics[height=0.53cm,width=1.5cm]{BalkenFAPSGruen}
+    \end{textblock*}
+    \begin{textblock*}{13.2cm}[0,0](2.5cm, 2.9cm - 0.65cm)
+        {\singlespacing\large\bfseries\Title}
+    \end{textblock*}
+    \begin{textblock*}{0cm}[0,0](16.38cm, 1.4cm)
+        \includegraphics[height=3cm,width=3cm]{LogoFAPS}
+    \end{textblock*}
+    \begin{textblock*}{13cm}[0,0](2.5cm, 2.9cm + 3.6cm)
+        {\normalsize\textbf{\ThesisType}}
+    \end{textblock*}
+    \begin{textblock*}{16cm}[0,0](2.5cm, 2.9cm + 5.6cm)
+        Friedrich-Alexander-Universität Erlangen-Nürnberg \\ 
+        Institute for Factory Automation and Production Systems \\ 
+        Prof. Dr.-Ing. Jörg Franke
+    \end{textblock*}
+    \begin{textblock*}{16.88cm}[0,0](2.5cm, 2.9cm + 8.75cm)
+        \includegraphics[width=16.88cm,height=9cm]{\CoverImage}
+    \end{textblock*}
+    \begin{textblock*}{16cm}[0,0](2.5cm, 2.9cm + 9cm + 10.2cm)
+        \begin{tabular}{@{}ll}
+            Author: & \AuthorDetails \\[0.6cm] 
+            Supervisors: & \SupervisorOne \\ 
+                         & \SupervisorTwo \\ 
+                         & \SupervisorThree \\[0.6cm] 
+            Submission date: & \SubmissionDate \\ 
+            Processing time: & \ProcessingTime 
+        \end{tabular}
+    \end{textblock*}
+    \mbox{}
+\end{titlepage}
+
+\cleardoublepage 
+
+% ==============================================================================
+% DECLARATION OF INDEPENDENT WORK
+% ==============================================================================
+
+\input{Chapters/00_Declaration_of_Independence}
+
+% ==============================================================================
+% PRELIMINARY PAGES (Roman Numerals I, II...)
+% ==============================================================================
+\pagestyle{scrheadings} 
+\pagenumbering{Roman} 
+\setcounter{page}{1} 
+
+\tableofcontents 
+\cleardoublepage
+
+\listoffigures 
+\cleardoublepage
+
+\listoftables 
+\cleardoublepage
+
+\ifWithEquationList
+    \listofequations
+    \cleardoublepage
+\fi
+
+\chapter*{List of Abbreviations}
+\markboth{List of Abbreviations}{List of Abbreviations}
+% NOTE: Enter new abbreviations here in the format \acro{Abbreviation}{Full Text}.
+% In the text, you can call them using \ac{Abbreviation}!
+% FIXED: the trailing commas after each \acro{...}{...} printed literally in the
+% list. ADDED: CCDM, PET, TTC and the remaining abbreviations the chapters call.
+\begin{acronym}[XXXXXXXXX]
+    \acro{ADS}{Automated Driving System}
+    \acro{AEB}{Automatic Emergency Braking}
+    \acro{AI}{Artificial Intelligence}
+    \acro{CARLA}{Car Learning to Act}
+    \acro{CCDM}{Causal Chain Derivation Method}
+    \acro{DRSPI}{Dynamic Risk-based Safety Performance Indicator}
+    \acro{FAPS}{Factory Automation and Production Systems}
+    \acro{FTA}{Fault Tree Analysis}
+    \acro{GDPR}{General Data Protection Regulation}
+    \acro{GSN}{Goal Structuring Notation}
+    \acro{ODD}{Operational Design Domain}
+    \acro{PET}{Post-Encroachment Time}
+    \acro{SAC}{Safety Assurance Case}
+    \acro{SOTIF}{Safety of the Intended Functionality}
+    \acro{SPI}{Safety Performance Indicator}
+    \acro{TCPA}{Time to Closest Point of Approach}
+    \acro{TTC}{Time to Collision}
+    \acro{WBA}{Why-Because Analysis}
+\end{acronym}
+\cleardoublepage
+
+% ==============================================================================
+% MAIN CONTENT (Arabic Numerals 1, 2...)
+% ==============================================================================
+\pagenumbering{arabic}
+
+% Here the individual files from the folder "Chapters" are loaded:
+\input{Chapters/01_Introduction}
+\input{Chapters/02_Fundamentals}
+\input{Chapters/03_State_of_the_Art}
+\input{Chapters/04_Methodology}
+\input{Chapters/05_Experimental_Setup}
+\input{Chapters/06_Results}
+% CHANGED: 07_DiscussionConclusion + 08_Conclusion duplicated the conclusion.
+% FAPS keeps Discussion and Conclusion as separate chapters. If you would
+% rather merge them, delete the 08 line and rename 07 back.
+\input{Chapters/07_Discussion}
+\input{Chapters/08_Conclusion}
+
+% ==============================================================================
+% BIBLIOGRAPHY
+% ==============================================================================
+\cleardoublepage
+\printbibliography[heading=bibintoc, title={Bibliography}]
+
+% ==============================================================================
+% APPENDIX
+% ==============================================================================
+\cleardoublepage
+\appendix 
+\input{Chapters/Appendix_A}
+\input{Chapters/Appendix_B}
+
+\end{document}

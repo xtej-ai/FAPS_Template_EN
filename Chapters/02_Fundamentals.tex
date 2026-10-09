@@ -1,0 +1,300 @@
+\chapter{Fundamentals}
+\label{ch:fundamentals}
+
+This chapter establishes the terminology and the stable, established knowledge on
+which the remainder of the thesis builds. It first describes automated driving
+systems and their operating envelope, then the two safety paradigms that frame the
+work, followed by safety assurance cases and the notation used to express them, the
+definition of a safety performance indicator, the surrogate safety metrics that serve
+as candidate signals, and the simulation environment used for evaluation. The current
+state of research that builds on these foundations is reviewed in
+Chapter~\ref{ch:sota}.
+
+\section{Automated Driving Systems and the Operational Design Domain}
+\label{sec:fund_ads}
+
+An \ac{ADS} is the combination of hardware and software that performs the entire
+dynamic driving task on a sustained basis. The taxonomy of SAE~J3016 distinguishes
+six levels of driving automation, from no automation at Level~0 to full automation at
+Level~5, and reserves the term \ac{ADS} for the systems at Levels~3 to~5 that perform
+the dynamic driving task without the constant supervision of a human driver
+\cite{saej3016}. The dynamic driving task is commonly decomposed into the functions of
+perception, prediction, planning, and control, together with a function that monitors
+the operating conditions. This functional decomposition is used throughout the thesis
+because it names the tasks that any driving system must perform, independently of the
+particular software architecture that performs them.
+
+Every \ac{ADS} is specified to operate only within a defined \ac{ODD}, that is, the
+set of operating conditions under which it is designed to function, including
+environmental, geographical, and time-of-day constraints as well as the presence or
+absence of certain traffic and road features \cite{saej3016}. The \ac{ODD} is central
+to safety assurance, because a claim of safety holds only within the declared
+conditions, and a departure from those conditions is itself a hazard. Thresholds on
+the indicators derived in this thesis are therefore conditioned on the \ac{ODD}, so
+that the value considered acceptable under one set of conditions, for example dry
+weather, differs from the value considered acceptable under another, for example rain.
+
+\section{Functional Safety and the Safety of the Intended Functionality}
+\label{sec:fund_safety}
+
+Two complementary standards frame the safety of an \ac{ADS}. ISO~26262 addresses
+functional safety, defined as the absence of unreasonable risk due to hazards caused
+by malfunctioning behaviour of electrical and electronic systems, and provides a risk-
+based development process organised around automotive safety integrity levels
+\cite{iso26262}. Its scope is the fault, that is, a component that fails to behave as
+specified. ISO~21448 addresses the \ac{SOTIF}, defined as the absence of unreasonable
+risk due to hazards resulting from functional insufficiencies of the intended
+functionality or from reasonably foreseeable misuse, when no component has failed
+\cite{iso21448}. Its scope is the situation in which every component operates as
+specified yet the specification itself is inadequate, which is characteristic of the
+perception and machine-learning elements of an \ac{ADS}.
+
+The distinction matters for the present work because the two paradigms call for
+different reasoning. A fault-based hazard is well captured by the failure logic of
+classical reliability analysis, whereas a functional insufficiency is not, since there
+is no failed component to point to. The indicators derived in this thesis are intended
+to observe the developing consequences of both kinds of hazard in the behaviour of the
+vehicle, which is the reason the derivation reasons about functional impossibilities
+rather than component failures.
+
+\section{Safety Assurance Cases and the Goal Structuring Notation}
+\label{sec:fund_gsn}
+
+A \ac{SAC} is a structured argument, supported by a body of evidence, that a system is
+acceptably safe to operate in a defined context \cite{bishop2000methodology}. It makes
+the reasoning from evidence to a top-level safety claim explicit and reviewable, rather
+than leaving it implicit in a collection of documents. The \ac{GSN} is a graphical
+notation for expressing such arguments and is widely used in safety-critical domains
+\cite{kelly2004gsn}. Its community standard defines the core element types used in this
+thesis \cite{gsncs2021}, which are summarised in Figure~\ref{fig:gsn_notation}: a goal
+states a claim to be established, a strategy explains how a goal is decomposed into
+sub-goals, a solution provides the evidence that supports a goal, and context,
+assumption, and justification elements record the conditions under which the argument
+holds. An argument is built by decomposing the top-level goal through strategies into
+sub-goals until each remaining goal can be discharged by a solution.
+
+% ---------------------------------------------------------------------------
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=15cm]{gsn_notation}
+    \caption{Core element types of the Goal Structuring Notation used in this thesis:
+    goal, strategy, solution, context, assumption, and justification, together with
+    the supported-by and in-context-of connectors (based on the GSN community standard
+    \cite{gsncs2021}).}
+    \label{fig:gsn_notation}
+\end{figure}
+% ---------------------------------------------------------------------------
+
+The \ac{GSN} is adopted here for two reasons. First, its decomposition of a top-level
+goal into sub-goals produces the claim hierarchy to which safety performance indicators
+are attached in Chapter~\ref{ch:methodology}. Second, a goal that is expressed as a
+bare assertion can be turned into a monitorable claim by attaching an indicator to it,
+which is the mechanism by which the assurance case is connected to operational data.
+The assurance cases of this thesis are modelled in a model-based safety-engineering
+environment that supports the construction of \ac{GSN} arguments and their linkage to
+other safety artefacts.
+
+\section{Safety Performance Indicators}
+\label{sec:fund_spi}
+
+A \ac{SPI} is a metric, supported by evidence, that uses a threshold comparison to
+condition a claim within a safety assurance case; it is a metric-threshold pair that
+measures a specific aspect of safety \cite{laxman2024}. Three parts therefore make up
+every \ac{SPI}, and all three are needed. The first is the metric, a quantity computed
+from data, such as a count, a rate, or a physical measurement. The second is the
+threshold, a value that separates acceptable from unacceptable, against which the metric
+is compared. The third is the claim, the specific statement in the assurance case that
+the comparison is taken to support or to challenge. A metric on its own does not
+constitute an \ac{SPI}, because the same numerical value can be acceptable in one
+operating context and unacceptable in another; only when the metric is paired with a
+threshold and tied to a claim does it carry a safety meaning
+\cite{laxman2024, koopman2022howsafe}.
+
+Metrics may be quantitative or qualitative. A quantitative metric is a measured or
+counted value, for example a rate of events per distance driven, whereas a qualitative
+metric records the presence or the completeness of a process step, for example whether
+a required review has been carried out. Because context governs acceptability, the
+threshold is frequently conditioned on the operating conditions, so that the value
+regarded as acceptable in one part of the \ac{ODD} differs from that in another. The
+threshold itself has two distinct roles that are developed in
+Chapter~\ref{ch:methodology}: a per-event threshold defines what counts as a single
+violation, and a rate-level threshold defines how often such violations may occur
+before the violation rate itself is anomalous.
+
+The property that matters most for this thesis is whether an indicator is leading or
+lagging, according to whether it is observed before or after a loss event. A lagging
+\ac{SPI} reports an outcome after the fact; the collision rate, the injury rate, and
+the count of automation disengagements are lagging indicators of an \ac{ADS}. A leading
+\ac{SPI} observes a condition that precedes a loss event and therefore offers the
+opportunity to act before it occurs; the rate at which the time-to-collision falls
+below a set value, the rate of activation of automatic emergency braking, and the rate
+at which a following gap drops below a safe distance are leading indicators
+\cite{koopman2022howsafe}. An effective programme combines both, but only leading
+indicators enable a proactive response, which is why their systematic construction is
+the central concern of this work.
+
+A concrete example makes the structure explicit. Consider the assurance-case goal that
+the vehicle keeps a safe separation from a leading vehicle. A candidate leading \ac{SPI}
+for this goal pairs the time-to-collision metric of Section~\ref{sec:fund_metrics} with
+a per-event threshold $\theta$ and a rate-level threshold $T$, and conditions the goal
+in the form given in Equation~\ref{eq:spi_example}.
+
+\begin{equation}
+    \mathrm{count}\!\left(\mathrm{TTC}_{\min} < \theta\right)\ \mathrm{per}\ N\ \mathrm{manoeuvres}\ <\ T
+    \label{eq:spi_example}
+\end{equation}
+\equationentry{Example leading safety performance indicator on time-to-collision}
+
+where $\mathrm{TTC}_{\min}$ is the minimum time-to-collision observed during a
+manoeuvre, $\theta$ is the per-event threshold below which the manoeuvre counts as a
+violation, $N$ is a fixed number of manoeuvres over which the count is taken, and $T$
+is the rate-level threshold. A measured violation rate at or above $T$ challenges the
+safe-separation goal and, within an operational safety assurance process, triggers a
+review of that part of the assurance case rather than waiting for a collision to be
+recorded. The concept, its origin in the aviation safety management systems of the
+International Civil Aviation Organization \cite{icao9859}, and its requirement for
+automated driving by ANSI/UL~4600 \cite{ul4600} and BSI PAS~1881 \cite{pas1881} are all
+introduced here as fundamentals; how a leading \ac{SPI} such as this one is derived
+systematically from a claim is the subject of Chapter~\ref{ch:methodology}.
+
+\section{Surrogate Safety Metrics}
+\label{sec:fund_metrics}
+
+Because collisions are rare, safety is commonly assessed through surrogate metrics that
+quantify how close an interaction comes to a collision, and these metrics supply the
+signal component of the indicators derived later. The most established is the
+\ac{TTC}, introduced by Hayward, which expresses the time remaining before two road
+users on a collision course would collide if their velocities remained unchanged
+\cite{hayward1972ttc}. For a following vehicle approaching a leading vehicle along the
+same path, the \ac{TTC} is given by Equation~\ref{eq:ttc}.
+
+\begin{equation}
+    \mathrm{TTC} = \frac{d_\mathrm{rel}}{v_\mathrm{rel}}, \qquad v_\mathrm{rel} > 0
+    \label{eq:ttc}
+\end{equation}
+\equationentry{Time-to-collision}
+
+where:
+\begin{tabbing}
+    \hspace{2.2cm} \= \kill
+    $d_\mathrm{rel}$ \> relative distance between the two road users in m \\
+    $v_\mathrm{rel}$ \> relative closing speed, positive when the gap is closing, in m/s
+\end{tabbing}
+
+A related time-based measure is the \ac{PET}, introduced by Allen et al., which
+applies to crossing conflicts and measures the time between the moment the first road
+user leaves a shared conflict area and the moment the second enters it
+\cite{allen1978pet}. A small \ac{PET} indicates that two road users occupied nearly
+the same space at nearly the same time. Where a required response is of interest rather
+than the time available, the required deceleration to avoid a collision, given in
+Equation~\ref{eq:areq}, expresses how hard the vehicle would have to brake, and a value
+approaching the physical limit of the vehicle indicates a critical situation.
+
+\begin{equation}
+    a_\mathrm{req} = \frac{v_\mathrm{rel}^{2}}{2\,d_\mathrm{rel}}
+    \label{eq:areq}
+\end{equation}
+\equationentry{Required deceleration to avoid a collision}
+
+where:
+\begin{tabbing}
+    \hspace{2.2cm} \= \kill
+    $a_\mathrm{req}$ \> required deceleration in m/s\textsuperscript{2} \\
+    $v_\mathrm{rel}$ \> relative closing speed in m/s \\
+    $d_\mathrm{rel}$ \> relative distance in m
+\end{tabbing}
+
+A formal alternative defines a safe distance from explicit assumptions about
+behaviour. The Responsibility-Sensitive Safety model of Shalev-Shwartz et al. defines
+the minimum safe longitudinal distance behind a leading vehicle from the response time
+and the assumed acceleration and braking capabilities, as given in
+Equation~\ref{eq:rss} \cite{shalev2017rss}. A distance below this value denotes a state
+that the model regards as unsafe, which makes the model a natural source of a
+distance-based threshold.
+
+\begin{equation}
+    d_\mathrm{min} = \left[ v_r \rho + \frac{1}{2} a_\mathrm{max}^\mathrm{acc}\,\rho^{2}
+    + \frac{\left(v_r + \rho\,a_\mathrm{max}^\mathrm{acc}\right)^{2}}{2\,a_\mathrm{min}^\mathrm{brake}}
+    - \frac{v_f^{2}}{2\,a_\mathrm{max}^\mathrm{brake}} \right]_{+}
+    \label{eq:rss}
+\end{equation}
+\equationentry{Responsibility-Sensitive Safety minimum safe longitudinal distance}
+
+where:
+\begin{tabbing}
+    \hspace{2.2cm} \= \kill
+    $v_r,\ v_f$ \> speed of the rear and the front vehicle in m/s \\
+    $\rho$ \> response time of the rear vehicle in s \\
+    $a_\mathrm{max}^\mathrm{acc}$ \> maximum acceleration during the response time in m/s\textsuperscript{2} \\
+    $a_\mathrm{min}^\mathrm{brake}$ \> minimum braking of the rear vehicle in m/s\textsuperscript{2} \\
+    $a_\mathrm{max}^\mathrm{brake}$ \> maximum braking of the front vehicle in m/s\textsuperscript{2} \\
+    $[\,\cdot\,]_{+}$ \> the positive part, that is $\max(\cdot,0)$
+\end{tabbing}
+
+The four measures differ in the conflict geometry for which each is defined and in the
+quantity each returns, and Table~\ref{tab:surrogate_metrics} summarises these
+differences, since the suitability of a signal for a given conflict is what governs its
+selection in Chapter~\ref{ch:methodology}.
+
+% ---------------------------------------------------------------------------
+\begin{table}[htbp]
+    \centering
+    \caption{Surrogate safety metrics used as candidate indicator signals, with the
+    conflict geometry for which each is defined, the quantity it returns, and the
+    tail in which a critical value lies.}
+    \label{tab:surrogate_metrics}
+    \small
+    \begin{tabular}{@{}p{3.5cm} p{3.3cm} p{3.4cm} p{3.2cm}@{}}
+        \toprule
+        \textbf{Metric} & \textbf{Conflict geometry} & \textbf{Quantity returned} & \textbf{Critical tail} \\
+        \midrule
+        Time-to-collision & following, or any conflict with a closing range rate
+        & time remaining to contact & lower \\[2pt]
+        Post-encroachment time & crossing & time between successive occupancies of a
+        shared area & lower \\[2pt]
+        Required deceleration & following, and turning conflicts with a defined
+        stopping point & braking effort demanded & upper \\[2pt]
+        Responsibility-Sensitive Safety distance & longitudinal & minimum admissible
+        separation & lower \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+% ---------------------------------------------------------------------------
+
+Beyond time- and distance-based measures, model-predictive metrics such as the Model
+Predictive Instantaneous Safety Metric of Weng et al. assess safety by predicting the
+evolution of a scene under a control model \cite{weng2020mprism}. The geometry of the
+two representative conflicts, a following conflict for time-to-collision and required
+deceleration and a crossing conflict for post-encroachment time, is shown in
+Figure~\ref{fig:metrics_geometry}. The suitability of each metric depends on this
+geometry, and a comprehensive survey of criticality metrics and their applicability is
+provided by Westhofen et al. \cite{westhofen2023}. This dependence on conflict geometry
+is examined further in Chapter~\ref{ch:sota}.
+
+% ---------------------------------------------------------------------------
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=15cm]{surrogate_metrics_geometry}
+    \caption{Geometry of the surrogate safety metrics used in this work. Left: a
+    following conflict, in which the relative distance and closing speed define the
+    time-to-collision and the required deceleration. Right: a crossing conflict, in
+    which the post-encroachment time is the interval between the first road user
+    leaving and the second entering the shared conflict area.}
+    \label{fig:metrics_geometry}
+\end{figure}
+% ---------------------------------------------------------------------------
+
+\section{Simulation-Based Safety Assessment}
+\label{sec:fund_sim}
+
+Because field data on rare safety-critical events is sparse and reporting is
+inconsistent, safety-critical behaviour is studied in simulation, where scenarios can
+be generated in large numbers and with controlled parameters. CARLA is an open-source
+simulator for automated driving research that provides sensor models, traffic
+participants, and configurable environmental conditions, together with a programmable
+interface for scripting scenarios and logging ground-truth state \cite{dosovitskiy2017carla}.
+In this thesis it is used to generate the scenarios from which the derived indicators
+are evaluated. The use of ground-truth state has an important consequence for the scope
+of the evaluation, which is discussed in Chapter~\ref{ch:methodology}, because signals
+that depend on the internal outputs of a perception module cannot be observed when the
+ego vehicle is driven by a rule-based agent on ground truth.

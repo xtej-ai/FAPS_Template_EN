@@ -1,0 +1,145 @@
+% =============================================================================
+% Chapter 8: Conclusion and Outlook
+% FAPS: at most three pages. Active voice permitted for the own contribution.
+% Subjunctive permitted in the outlook only.
+% =============================================================================
+
+\chapter{Conclusion and Outlook}
+\label{ch:conclusion}
+
+% =============================================================================
+\section{Conclusion}
+\label{sec:conclusion}
+
+Operational safety assurance requires that the claims of a safety case be kept
+under observation after release, and the instrument of that observation is the
+safety performance indicator. UL~4600 \cite{ul4600} and PAS~1881
+\cite{pas1881} require such monitoring and give examples of indicators;
+ISO~21448 \cite{iso21448} requires that functional insufficiencies be monitored
+in operation without saying which quantities carry that information; and the
+assurance frameworks that consume indicator values take the indicators as given.
+The step between an unresolved doubt in a safety case and a named signal with a
+source and a threshold was the gap this thesis addressed.
+
+This thesis makes three contributions.
+
+The first is the Causal Chain Derivation Method. It takes a lagging outcome that
+a Goal Structuring Notation claim denies and returns a leading indicator with a
+signal, a source, a metric threshold and a documented path back to the claim, in
+seven traceable steps: a lagging-indicator register, a proximate cause selected
+by a prevention test, a decomposition through gate logic, the earliest observable
+signal in the formulation the geometry admits, an observability and independence
+check, the two thresholds, and attachment to the goal that the indicator actually
+monitors.
+
+The second is an evaluation of the resulting register on 94,816 simulated
+unprotected left turns across three campaigns, in which the violations of six
+leading indicators are set against the 540 oncoming-vehicle, 815 pedestrian and
+101 following-vehicle collisions of the same runs.
+
+The third is the monitoring of all nine indicators against their SPI thresholds
+in a dashboard built on the same results, which demonstrates the form in which a
+derived register is consumed.
+
+Table~\ref{tab:rq_answers} states what the evaluation establishes for each
+research question.
+
+% ---------------------------------------------------------------------------
+\begin{table}[htbp]
+    \centering
+    \caption{Answers to the research questions. The table states the answer
+    established by the evaluation and the evidence on which it rests.}
+    \label{tab:rq_answers}
+    \small
+    \begin{tabular}{@{}l>{\raggedright\arraybackslash}p{1.6cm}>{\raggedright\arraybackslash}p{8.4cm}@{}}
+        \toprule
+        {\bfseries Research question} & {\bfseries Answer} & {\bfseries Evidence} \\
+        \midrule
+        RQ1 Derivation &
+        Yes &
+        Seven traceable steps produce the register, and the checks reject
+        candidates: PLAN\_DEV as an input of the controller's own error, the
+        pedestrian perception branch as architectural, and the follower reaction
+        delay as not observable to the ego vehicle \\
+        RQ2 Timeliness &
+        Partly &
+        The leading SPIs remain measurable where collisions are rare, with 527 to
+        9,841 violations against one collision in 75,509 runs; but only REAR\_TTC
+        warns at least one second ahead in most collisions of its chain, 87 of
+        101 at a median lead of 1.15\,s \\
+        RQ3 Scalability &
+        Yes &
+        Indicators were derived and evaluated for all three conflict chains; the
+        crossing chains require the time to the closest point of approach in
+        place of the time to collision \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+The answer to the second question is the one that qualifies the others. In the
+two crossing conflicts the median lead time is 0.60\,s for GAP\_TTC and 0.50\,s
+for PED\_CPA, and at least one second of warning is reached in 38 of 540 and two
+of 815 collisions respectively. Measured against an in-run response, the derived
+indicators of the crossing chains are not timely. Measured against an assurance
+process that reads a violation count over a window of runs, they are: a
+monitoring process reading PED\_CPA reaches the SPI threshold in 94 of 97
+Campaign~1 windows against none of the 169 windows of Campaign~2 and one of the
+209 windows of Campaign~3. Which of the two
+readings applies depends on what the indicator is monitored for, and the register
+should record it.
+
+Three statements bound every result reported here. The evaluation validates the
+derivation method and the evaluation itself, not the safety of a driving
+function. The metric threshold marks unusual behaviour rather than unacceptable
+behaviour, and the SPI threshold is statistical for the same reason. And where
+collisions are too rare to count, as in the 75,509 runs of the realistic-driving
+campaigns, the leading SPIs are what remains to be monitored.
+
+% =============================================================================
+\section{Outlook}
+\label{sec:outlook}
+
+Several of the limitations in Section~\ref{sec:disc_limitations} point to work
+that could be carried out on the existing data.
+
+A sensitivity analysis under the unrestricted pedestrian collision definition
+would bound how far the pedestrian results depend on the moving-ego rule of
+Section~\ref{sec:exp_collision}, and would belong in an appendix beside the
+results reported here. A per-run check of the 110 AEB\_PED runs would settle
+whether the interval of about five to six seconds reflects a stop-and-go sequence
+or a genuine warning, and would decide whether the reaction tier of the
+pedestrian chain carries any timing information at all. Both could be done
+without new simulation.
+
+Beyond the present data, the SPI threshold could be derived from a risk
+acceptance principle rather than from a statistical baseline. Setting T from
+ALARP, GAMAB, MEM or a careful and competent human driver benchmark would require
+a stated level of acceptable risk, and would have to be done with safety
+engineers rather than from the data alone.
+
+The register could be extended to the architectural tier. The indicators
+evaluated here all measure kinematics or the vehicle's reaction to them, whereas
+the doubts an automated driving system's safety case most often leaves open
+concern the components that build its world model. Deriving an indicator from a
+doubt about a perception component would require a signal observable at runtime
+and informative about that component's state, and a confidence-based candidate
+would require the model's confidence to be calibrated before a threshold on it
+could carry meaning.
+
+The exposure could be widened. A gap-accepting driving function with responsive
+conflict partners would produce oncoming conflicts that arise from a functional
+insufficiency rather than from a missing capability, and naturalistic trajectory
+data [CITATION NEEDED: inD dataset] [CITATION NEEDED: SIND dataset] would place
+the same indicators under a distribution of operating conditions that a designed
+parameter grid cannot reproduce. Extreme value theory and human-driver baselines
+for the metric threshold would become available with that data, and a sensitivity
+sweep over the calibration percentile would show how much the reported operating
+points depend on the tenth and ninety-fifth percentiles.
+
+Finally, the method itself could be tested rather than only applied. A study in
+which several engineers derive indicators independently from the same claim would
+show how far the seven steps constrain the result, which the present work cannot
+establish from a single application. A cross-check against a systems-theoretic
+analysis would show whether causes that arise only from interacting functions,
+and that a gate decomposition of component failures cannot reach, are being
+missed.

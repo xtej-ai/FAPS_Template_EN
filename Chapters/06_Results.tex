@@ -1,0 +1,526 @@
+% =============================================================================
+% Chapter 6: Results
+% Findings only. All interpretation is in Chapter 7.
+% Every figure block is copied verbatim from figure_captions.tex and every table
+% from tables.tex or dashboard_tables.tex, so the numbers cannot drift.
+% Results are reported as actual run counts with their eligible population;
+% rates per 100,000 appear only inside an SPI definition, never as a result.
+% =============================================================================
+
+\chapter{Results}
+\label{ch:results}
+
+This chapter reports what the register of Chapter~\ref{ch:methodology} does on
+the 94,816 analysed runs of Chapter~\ref{ch:experiment}. It states the findings
+and does not interpret them; the interpretation follows in
+Chapter~\ref{ch:discussion}. Every result is given as a number of runs together
+with the eligible population of the chain concerned.
+
+Section~\ref{sec:results_collisions} gives the collisions each chain produced.
+Section~\ref{sec:results_violations} sets the violations of the leading SPIs
+against those collisions, and Section~\ref{sec:results_leadtime} reports which
+collisions were preceded by a violation and by how long.
+Section~\ref{sec:results_statistics} gives the detection statistics.
+Sections~\ref{sec:results_gate} and~\ref{sec:results_poolability} report two
+properties of the evaluation itself, namely the effect of the oncoming conflict
+gate and the transferability of the metric thresholds between campaigns.
+Section~\ref{sec:results_windows} reports the monitoring windows that reach the
+SPI threshold, and Section~\ref{sec:results_dashboard} the state of the register
+as the monitoring dashboard presents it.
+
+% =============================================================================
+\section{Collisions per Conflict Chain}
+\label{sec:results_collisions}
+
+The collisions are the reference events of the whole evaluation, so they are
+stated first. Table~\ref{tab:collisions_per_chain} gives them per chain and per
+campaign under the collision definition of
+Section~\ref{sec:exp_collision}.
+
+% ---------------------------------------------------------------------------
+\begin{table}[htbp]
+    \centering
+    \caption{Collisions per conflict chain. The table counts the collision runs
+    of each chain per campaign under the collision definition of
+    Section~\ref{sec:exp_collision}.}
+    \label{tab:collisions_per_chain}
+    \small
+    \begin{tabular}{@{}lrrrr@{}}
+        \toprule
+        {\bfseries Chain} & {\bfseries Campaign 1} & {\bfseries Campaign 2} &
+        {\bfseries Campaign 3} & {\bfseries Total} \\
+        \midrule
+        Oncoming vehicle (ONC)  & 540 & 0 & 0 & 540 \\
+        Pedestrian (PED)        & 814 & 1 & 0 & 815 \\
+        Following vehicle (REAR)& 101 & 0 & 0 & 101 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+All 540 oncoming-vehicle collisions and all 101 following-vehicle collisions
+occur in Campaign~1. Of the 815 pedestrian collisions, 814 occur in Campaign~1
+and one in Campaign~2. The 75,509 runs of Campaigns~2 and~3 together therefore
+contain a single collision across all three chains.
+
+% =============================================================================
+\section{Violations and Collisions}
+\label{sec:results_violations}
+
+The question this section answers is how often each leading SPI was violated,
+set against how often its chain produced a collision, and whether that relation
+survives the change from the provoked configuration to realistic driving.
+Figure~\ref{fig:6_1_violations_collisions} and
+Table~\ref{tab:violations_collisions} give the counts.
+
+% ---------------------------------------------------------------------------
+% Copied verbatim from figure_captions.tex
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=16cm]{fig_6_1_violations_collisions.pdf}
+\caption{Leading SPI violations and collisions per conflict chain. Bars give the number of eligible runs in which each leading SPI was violated and the number of collision runs of the chain (hatched), split into Campaign 1 and Campaigns 2 and 3; the metric thresholds are calibrated on Campaign 1 and applied unchanged to all 94,816 runs.}
+\label{fig:6_1_violations_collisions}
+\end{figure}
+
+% ---------------------------------------------------------------------------
+% Copied verbatim from tables.tex
+\begin{table}[htbp]
+\centering
+\caption{Violations and collisions. The table gives the number of runs per configuration in which each leading SPI was violated, and the collision runs of its chain.}
+\label{tab:violations_collisions}
+\small
+\begin{tabular}{@{}llrrrrr@{}}
+\toprule
+{\bfseries Indicator} & {\bfseries Chain} & {\bfseries \begin{tabular}[b]{@{}c@{}}Eligible\\runs\end{tabular}} & {\bfseries \begin{tabular}[b]{@{}c@{}}Violations\\Campaign 1\end{tabular}} & {\bfseries \begin{tabular}[b]{@{}c@{}}Violations\\Campaigns 2, 3\end{tabular}} & {\bfseries \begin{tabular}[b]{@{}c@{}}Violations\\total\end{tabular}} & {\bfseries \begin{tabular}[b]{@{}c@{}}Collisions\\C1 / C2, 3\end{tabular}} \\
+\midrule
+GAP\_TTC & ONC & 80,455 & 2,070 & 5,624 & 7,694 & 540 / 0 \\
+REQ\_DECEL & ONC & 80,455 & 1,031 & 1,218 & 2,249 & 540 / 0 \\
+AEB\_ONC & ONC & 80,455 & 629 & 753 & 1,382 & 540 / 0 \\
+PED\_CPA & PED & 37,309 & 1,268 & 527 & 1,795 & 814 / 1 \\
+AEB\_PED & PED & 37,309 & 851 & 657 & 1,508 & 814 / 1 \\
+REAR\_TTC & REAR & 89,882 & 2,243 & 9,841 & 12,084 & 101 / 0 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The eligible populations differ between the two configurations. For the oncoming
+chain, 15,362 of the 80,455 eligible runs belong to Campaign~1 and 65,093 to
+Campaigns~2 and~3; for the pedestrian chain, 8,424 and 28,885; for the
+following-vehicle chain, 14,373 and 75,509.
+
+In Campaign~1 the violation counts and the collision counts are of the same
+order. The oncoming chain records 2,070 GAP\_TTC violations against 540
+collisions, which is 3.8 violations per collision, 1,031 REQ\_DECEL violations at
+1.9 per collision and 629 AEB\_ONC events at 1.2 per collision. The pedestrian
+chain records 1,268 PED\_CPA violations against 814 collisions, or 1.6 per
+collision, and 851 AEB\_PED events at 1.0 per collision. The following-vehicle
+chain records 2,243 REAR\_TTC violations against 101 collisions, or 22.2 per
+collision.
+
+In Campaigns~2 and~3 the relation changes. The 75,509 runs contain one collision,
+while every leading SPI continues to be violated: 5,624 times for GAP\_TTC, 1,218
+for REQ\_DECEL, 753 for AEB\_ONC, 527 for PED\_CPA, 657 for AEB\_PED and 9,841
+for REAR\_TTC. For the pedestrian chain this gives 527 PED\_CPA violations and
+657 AEB\_PED events per collision. For the chains without any collision no ratio
+is defined; using the 95\,\% Wilson upper bound of a zero collision count gives
+at least 1,464 violations per collision for GAP\_TTC, at least 317 for
+REQ\_DECEL, at least 196 for AEB\_ONC and at least 2,562 for REAR\_TTC.
+
+% =============================================================================
+\section{Detection and Lead Time}
+\label{sec:results_leadtime}
+
+A violation is only useful if it precedes the collision it anticipates, and the
+time by which it precedes it bounds any response. This section reports both.
+Figure~\ref{fig:6_2_detection} gives the share of collision runs with an earlier
+violation, Figure~\ref{fig:6_3_lead_time} the distribution of the lead time, and
+Table~\ref{tab:lead_time} both as counts. Lead time is measured from the first
+violation in the run to the collision.
+
+% ---------------------------------------------------------------------------
+% Copied verbatim from figure_captions.tex
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=16cm]{fig_6_2_detection.pdf}
+\caption{Collision runs with a violation before the collision. For each leading SPI, the bar divides the collision runs of its chain into runs in which the SPI was violated before the collision and runs without such a violation, over all 94,816 analysed runs.}
+\label{fig:6_2_detection}
+\end{figure}
+
+% ---------------------------------------------------------------------------
+% Copied verbatim from figure_captions.tex
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=16cm]{fig_6_3_lead_time.pdf}
+\caption{Lead time of the leading SPIs. Markers give the median and bars the interquartile range of the time from the first violation to the collision in collision runs with an earlier violation; the numbers at the right count collisions warned at least 1\,s ahead. AEB\_PED is omitted because its lead time does not measure a warning.}
+\label{fig:6_3_lead_time}
+\end{figure}
+
+% ---------------------------------------------------------------------------
+% Copied verbatim from tables.tex
+\begin{table}[htbp]
+\centering
+\caption{Detection and lead time. The table counts collision runs with an earlier violation and gives the time from the first violation to the collision.}
+\label{tab:lead_time}
+\small
+\begin{tabular}{@{}llrrrr@{}}
+\toprule
+{\bfseries Indicator} & {\bfseries Chain} & {\bfseries \begin{tabular}[b]{@{}c@{}}Violation before\\collision\end{tabular}} & {\bfseries \begin{tabular}[b]{@{}c@{}}Median\\lead\end{tabular}} & {\bfseries Q1 to Q3} & {\bfseries \begin{tabular}[b]{@{}c@{}}Warned at least\\1\,s ahead\end{tabular}} \\
+\midrule
+GAP\_TTC & ONC & 527 of 540 & 0.60\,s & 0.55 to 0.70\,s & 38 of 540 \\
+REQ\_DECEL & ONC & 317 of 540 & 0.10\,s & 0.10 to 0.20\,s & 1 of 540 \\
+AEB\_ONC & ONC & 286 of 540 & 0.75\,s & 0.20 to 0.95\,s & 57 of 540 \\
+PED\_CPA & PED & 790 of 815 & 0.50\,s & 0.40 to 0.55\,s & 2 of 815 \\
+AEB\_PED & PED & 110 of 815 & 5.15\,s & 4.95 to 6.24\,s & not a warning time \\
+REAR\_TTC & REAR & 101 of 101 & 1.15\,s & 1.05 to 3.30\,s & 87 of 101 \\
+\bottomrule
+\end{tabular}
+\par\smallskip\footnotesize\raggedright Lead time is measured from the first violation in the run.
+\end{table}
+
+The two kinematic indicators that watch the first branch of their chain precede
+nearly every collision of that chain: GAP\_TTC 527 of 540 oncoming-vehicle
+collisions, PED\_CPA 790 of 815 pedestrian collisions and REAR\_TTC all 101
+following-vehicle collisions. REQ\_DECEL precedes 317 of 540 and AEB\_ONC 286 of
+540 oncoming-vehicle collisions. AEB\_PED precedes 110 of 815 pedestrian
+collisions.
+
+The lead times separate the following conflict from the two crossing conflicts.
+REAR\_TTC has a median lead of 1.15\,s and warns at least one second ahead in 87
+of the 101 following-vehicle collisions. The three oncoming-vehicle indicators
+have median leads of 0.60\,s, 0.10\,s and 0.75\,s and warn at least one second
+ahead in 38, one and 57 of the 540 collisions respectively. PED\_CPA has a median
+lead of 0.50\,s and warns at least one second ahead in two of the 815 pedestrian
+collisions.
+
+The AEB\_PED row is not comparable with the others. Only 110 of the 815
+pedestrian collisions follow an emergency braking event at all, and in those 110
+runs the event lies between 4.95\,s and 6.24\,s before the collision, with a
+median of 5.15\,s. Because lead time is measured from the first violation
+anywhere in the run, this interval is not established to be a warning time for
+the collision that follows it, and it is not reported as one. The point is taken
+up in Section~\ref{sec:disc_aebped}.
+
+% =============================================================================
+\section{Detection Statistics}
+\label{sec:results_statistics}
+
+The counts of the previous section describe each indicator from one side at a
+time. This section combines them into the classification of
+Section~\ref{sec:exp_criteria} and reports precision, recall, false-alarm rate
+and relative risk with their intervals. Table~\ref{tab:confusion_counts} gives
+the classification of every eligible run and
+Table~\ref{tab:detection_statistics} the measures derived from it.
+
+% ---------------------------------------------------------------------------
+% Copied verbatim from tables.tex
+\begin{table}[htbp]
+\centering
+\caption{Confusion counts. The table classifies every eligible run by whether the SPI was violated before any collision and whether a collision of the chain occurred.}
+\label{tab:confusion_counts}
+\small
+\begin{tabular}{@{}llrrrr@{}}
+\toprule
+{\bfseries Indicator} & {\bfseries Chain} & {\bfseries TP} & {\bfseries FP} & {\bfseries FN} & {\bfseries TN} \\
+\midrule
+GAP\_TTC & ONC & 527 & 7,167 & 13 & 72,748 \\
+REQ\_DECEL & ONC & 317 & 1,932 & 223 & 77,983 \\
+AEB\_ONC & ONC & 286 & 1,096 & 254 & 78,819 \\
+PED\_CPA & PED & 790 & 1,005 & 25 & 35,489 \\
+AEB\_PED & PED & 110 & 1,398 & 705 & 35,096 \\
+REAR\_TTC & REAR & 101 & 11,983 & 0 & 77,798 \\
+\bottomrule
+\end{tabular}
+\par\smallskip\footnotesize\raggedright TP: violation before a collision of the chain; FP: violation, no collision; FN: collision without an earlier violation; TN: neither.
+\end{table}
+
+% ---------------------------------------------------------------------------
+% Copied verbatim from tables.tex
+\begin{table}[htbp]
+\centering
+\caption{Detection statistics. Precision, recall, false-alarm rate and relative risk of each leading SPI over all eligible runs, with 95\,\% intervals.}
+\label{tab:detection_statistics}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+{\bfseries Indicator} & {\bfseries \begin{tabular}[b]{@{}c@{}}Precision\\in \%\end{tabular}} & {\bfseries \begin{tabular}[b]{@{}c@{}}Recall\\in \%\end{tabular}} & {\bfseries \begin{tabular}[b]{@{}c@{}}False-alarm\\rate in \%\end{tabular}} & {\bfseries Relative risk} \\
+\midrule
+GAP\_TTC & 6.8 [6.3, 7.4] & 97.6 [95.9, 98.6] & 8.97 & 383.4 [221.2, 664.3] \\
+REQ\_DECEL & 14.1 [12.7, 15.6] & 58.7 [54.5, 62.8] & 2.42 & 49.4 [41.9, 58.4] \\
+AEB\_ONC & 20.7 [18.6, 22.9] & 53.0 [48.7, 57.1] & 1.37 & 64.4 [54.9, 75.6] \\
+PED\_CPA & 44.0 [41.7, 46.3] & 96.9 [95.5, 97.9] & 2.75 & 625.2 [421.1, 928.3] \\
+AEB\_PED & 7.3 [6.1, 8.7] & 13.5 [11.3, 16.0] & 3.83 & 3.7 [3.1, 4.5] \\
+REAR\_TTC & 0.8 [0.7, 1.0] & 100.0 [96.3, 100.0] & 13.35 & $\geq$\,1,306.8 [81.2, 21,035.8] \\
+\bottomrule
+\end{tabular}
+\par\smallskip\footnotesize\raggedright Precision and recall with Wilson score intervals; relative risk with the Katz log interval. REAR\_TTC: every collision was preceded by a violation, so the relative risk is a Haldane-corrected lower bound.
+\end{table}
+
+Every leading SPI has a relative risk whose 95\,\% interval excludes unity. The
+point estimates are 383.4 for GAP\_TTC, 49.4 for REQ\_DECEL, 64.4 for AEB\_ONC,
+625.2 for PED\_CPA and 3.7 for AEB\_PED; REAR\_TTC records no collision without
+an earlier violation, so its value of 1,306.8 is a lower bound and its interval,
+from 81.2 to 21,035.8, is correspondingly wide.
+
+The pooled precision values rest on all three campaigns together, and
+Campaigns~2 and~3 contribute violations while contributing one collision. The
+pooled precision is therefore lower than the precision within Campaign~1 for
+every indicator, and the two values are reported together.
+Table~\ref{tab:statistics_per_campaign}, placed in Appendix~\ref{app:statistics},
+gives the full per-campaign breakdown. Within Campaign~1 the precision is
+25.5\,\% for GAP\_TTC against 6.8\,\% pooled, 30.7\,\% against 14.1\,\% for
+REQ\_DECEL, 45.5\,\% against 20.7\,\% for AEB\_ONC, 62.2\,\% against 44.0\,\%
+for PED\_CPA, 12.8\,\% against 7.3\,\% for AEB\_PED and 4.5\,\% against 0.8\,\%
+for REAR\_TTC. The relative risks within Campaign~1 are 260.3 for GAP\_TTC, 19.8
+for REQ\_DECEL, 26.4 for AEB\_ONC, 178.1 for PED\_CPA, 1.4 for AEB\_PED and at
+least 1,097.4 for REAR\_TTC.
+
+% =============================================================================
+\section{Effect of the Oncoming Conflict Gate}
+\label{sec:results_gate}
+
+Step~5 of the derivation requires that an indicator be computed only where its
+conflict can arise. For the oncoming chain this is implemented by the conflict
+gate defined in Chapter~\ref{ch:methodology}, and its effect is isolated by scoring the
+three oncoming-vehicle indicators twice on the same runs, once with and once
+without the gate. Table~\ref{tab:conflict_gate} gives the comparison.
+
+% ---------------------------------------------------------------------------
+% Copied verbatim from tables.tex
+\begin{table}[htbp]
+\centering
+\caption{Oncoming conflict gate. The table compares the oncoming chain without and with the conflict gate.}
+\label{tab:conflict_gate}
+\small
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+{\bfseries Indicator} & {\bfseries Eligible runs} & {\bfseries Violations} & {\bfseries ONC collisions} \\
+\midrule
+GAP\_TTC & 94,816 / 80,455 & 10,360 / 7,694 & 540 / 540 \\
+REQ\_DECEL & 94,816 / 80,455 & 3,146 / 2,249 & 540 / 540 \\
+AEB\_ONC & 94,816 / 80,455 & 1,490 / 1,382 & 540 / 540 \\
+\bottomrule
+\end{tabular}
+\par\smallskip\footnotesize\raggedright Values given as without gate / with gate.
+\end{table}
+
+The gate removes 14,361 runs from the eligible population of the oncoming chain
+and all 540 oncoming-vehicle collisions remain eligible. The violation counts
+fall from 10,360 to 7,694 for GAP\_TTC, from 3,146 to 2,249 for REQ\_DECEL and
+from 1,490 to 1,382 for AEB\_ONC.
+
+% =============================================================================
+\section{Poolability of the Metric Thresholds}
+\label{sec:results_poolability}
+
+The metric thresholds are calibrated on Campaign~1 and applied to all three
+campaigns, which is defensible only if the underlying distributions are close
+enough for one value to stand for all of them. To test this, each threshold was
+recalibrated separately on each campaign and the pairwise relative shift
+examined. Table~\ref{tab:poolability} gives the result; pooling is refused above
+a relative shift of 15\,\%.
+
+% ---------------------------------------------------------------------------
+% Copied verbatim from tables.tex
+\begin{table}[htbp]
+\centering
+\caption{Threshold poolability. Metric thresholds calibrated separately per campaign and their relative shift.}
+\label{tab:poolability}
+\small
+\begin{tabular}{@{}lrrrrrr@{}}
+\toprule
+{\bfseries Indicator} & {\bfseries $\theta$ C1} & {\bfseries $\theta$ C2} & {\bfseries $\theta$ C3} & {\bfseries Shift 1 vs 2} & {\bfseries Shift 1 vs 3} & {\bfseries Shift 2 vs 3} \\
+\midrule
+GAP\_TTC & 0.913 & 0.927 & 0.926 & 1.55\,\% & 1.50\,\% & 0.05\,\% \\
+REQ\_DECEL & 7.549 & 5.924 & 5.924 & 21.52\,\%, no & 21.52\,\%, no & 0.00\,\% \\
+PED\_CPA & 1.174 & 1.619 & 1.617 & 37.90\,\%, no & 37.74\,\%, no & 0.12\,\% \\
+REAR\_TTC & 2.679 & 2.517 & 2.500 & 6.08\,\% & 6.71\,\% & 0.67\,\% \\
+\bottomrule
+\end{tabular}
+\par\smallskip\footnotesize\raggedright Pooling is refused above 15\,\% relative shift (marked no).
+\end{table}
+
+Campaigns~2 and~3 agree on every metric threshold to within 0.67\,\%, so
+Campaign~3 is a statistical replicate of Campaign~2. Between Campaign~1 and the
+two realistic-driving campaigns, the thresholds of GAP\_TTC and REAR\_TTC remain
+within the criterion, at shifts of 1.55\,\% and 1.50\,\% and of 6.08\,\% and
+6.71\,\%. The thresholds of REQ\_DECEL and PED\_CPA do not: REQ\_DECEL shifts by
+21.52\,\% against both campaigns and PED\_CPA by 37.90\,\% and 37.74\,\%.
+
+% =============================================================================
+\section{Monitoring Windows above the SPI Threshold}
+\label{sec:results_windows}
+
+The metric threshold decides a single run; the SPI threshold T decides a window
+of runs, and it is the quantity a monitoring process reads. This section reports
+how often a window of 200 runs reaches T under each configuration.
+Figure~\ref{fig:6_4_monitoring_windows} and
+Table~\ref{tab:monitoring_windows} give the counts, including the three lagging
+indicators scored by the same procedure.
+
+% ---------------------------------------------------------------------------
+% Copied verbatim from figure_captions.tex
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=16cm]{fig_6_4_monitoring_windows.pdf}
+\caption{Monitoring windows above the SPI threshold. Bars give the share of monitoring windows of 200 runs in which the violation count reaches the SPI threshold T, an exact one-sided binomial limit ($\alpha = 0.01$) derived from the violation rate of Campaigns 2 and 3; labels give the number of such windows.}
+\label{fig:6_4_monitoring_windows}
+\end{figure}
+
+% ---------------------------------------------------------------------------
+% Copied verbatim from tables.tex
+\begin{table}[htbp]
+\centering
+\caption{Monitoring windows above the SPI threshold. Windows of 200 runs in which the violation count reaches T, per campaign.}
+\label{tab:monitoring_windows}
+\small
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+{\bfseries Indicator} & {\bfseries Campaign 1} & {\bfseries Campaign 2} & {\bfseries Campaign 3} \\
+\midrule
+GAP\_TTC & 36 of 97 & 1 of 169 & 2 of 209 \\
+REQ\_DECEL & 76 of 97 & 0 of 169 & 2 of 209 \\
+AEB\_ONC & 47 of 97 & 1 of 169 & 0 of 209 \\
+PED\_CPA & 94 of 97 & 0 of 169 & 1 of 209 \\
+AEB\_PED & 74 of 97 & 0 of 169 & 1 of 209 \\
+REAR\_TTC & 4 of 73 & 0 of 169 & 2 of 209 \\
+COLL\_ONC & 97 of 97 & 0 of 169 & 0 of 209 \\
+COLL\_PED & 73 of 97 & 1 of 169 & 0 of 209 \\
+COLL\_REAR & 54 of 73 & 0 of 169 & 0 of 209 \\
+\bottomrule
+\end{tabular}
+\par\smallskip\footnotesize\raggedright T: exact one-sided binomial limit ($\alpha = 0.01$) from the Campaign 2 and 3 violation rate; about 1\,\% of windows in Campaigns 2 and 3 exceed T by construction.
+\end{table}
+
+In Campaigns~2 and~3, from which T is derived, no indicator reaches T in more
+than one of the 169 windows of Campaign~2 or two of the 209 windows of
+Campaign~3, which is the share the choice of $\alpha = 0.01$ admits by
+construction.
+
+In Campaign~1 the leading SPIs separate. PED\_CPA reaches T in 94 of 97 windows,
+REQ\_DECEL in 76, AEB\_PED in 74, AEB\_ONC in 47 and GAP\_TTC in 36. REAR\_TTC
+reaches T in four of its 73 windows; the following-vehicle rows cover 73 rather
+than 97 windows because a following vehicle is present only in part of
+Campaign~1.
+
+The three lagging indicators, scored by the same window procedure, reach their
+threshold in 97 of 97 windows for COLL\_ONC, 73 of 97 for COLL\_PED and 54 of the
+73 following-vehicle windows for COLL\_REAR.
+
+% =============================================================================
+\section{The Register under Monitoring}
+\label{sec:results_dashboard}
+
+The preceding sections evaluate the register after the fact. A monitoring process
+reads it while the runs accumulate, and the form in which it does so is part of
+the result. The nine SPIs were exported to a database and presented in a Grafana
+dashboard; Figure~\ref{fig:6_5_dashboard} shows it. The dashboard is not deployed
+on a vehicle.
+
+% ---------------------------------------------------------------------------
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=16cm]{fig_6_5_dashboard.png}
+    \caption{The SPI register under monitoring. The dashboard presents each
+    indicator with its metric threshold, the baseline violations of
+    Campaigns~2 and~3, the SPI threshold T and the state of the current
+    monitoring window, over the same results as the preceding sections.}
+    \label{fig:6_5_dashboard}
+\end{figure}
+
+The dashboard presents the register itself, the violation count of each
+monitoring window against T, a detection scorecard per chain, a funnel from
+eligible runs to collisions, and tables of violations and collisions per
+operating condition.
+Tables~\ref{tab:dashboard_register} to~\ref{tab:dashboard_funnel} give the three
+of these that bear on the register as a whole;
+Table~\ref{tab:dashboard_odd}, in Appendix~\ref{app:statistics}, gives the
+operating-condition breakdown.
+
+% ---------------------------------------------------------------------------
+% Copied verbatim from dashboard_tables.tex
+\begin{table}[htbp]
+\centering
+\caption{SPI register as monitored. Metric threshold, baseline violations in Campaigns~2 and~3, SPI threshold T for a full monitoring window and the latest window of each SPI.}
+\label{tab:dashboard_register}
+\footnotesize
+\setlength{\tabcolsep}{2.5pt}
+\begin{tabular}{@{}llrrrr@{}}
+\toprule
+{\bfseries SPI} & {\bfseries Type} & {\bfseries $\theta$} & {\bfseries \begin{tabular}[b]{@{}c@{}}Baseline\\(Campaigns 2, 3)\end{tabular}} & {\bfseries \begin{tabular}[b]{@{}c@{}}T: violations of\\eligible runs\end{tabular}} & {\bfseries Latest window} \\
+\midrule
+LTI-ONC-P1-REQ\_DECEL & leading & 7.549\,m/s\textsuperscript{2} & 1,218 of 65,093 & 9 of 171 & 1 of 97 (OK) \\
+LTI-ONC-P2-GAP\_TTC & leading & 0.913\,s & 5,624 of 65,093 & 25 of 171 & 8 of 97 (OK) \\
+LTI-ONC-P3-AEB\_ONC & leading & -- & 753 of 65,093 & 7 of 171 & 0 of 97 (OK) \\
+LTI-PED-P3-AEB\_PED & leading & -- & 657 of 28,885 & 6 of 78 & 1 of 50 (OK) \\
+LTI-PED-S1-PED\_CPA & leading & 1.174\,s & 527 of 28,885 & 6 of 78 & 2 of 50 (OK) \\
+LTI-REAR-P1-REAR\_TTC & leading & 2.679\,s & 9,841 of 75,509 & 39 of 200 & 16 of 112 (OK) \\
+LTI-ONC-O1-COLLISION & lagging & -- & 0 of 65,093 & 1 of 171 & 0 of 97 (OK) \\
+LTI-PED-O1-COLLISION & lagging & -- & 1 of 28,885 & 1 of 78 & 0 of 50 (OK) \\
+LTI-REAR-O1-COLLISION & lagging & -- & 0 of 75,509 & 1 of 200 & 0 of 112 (OK) \\
+\bottomrule
+\end{tabular}
+\par\smallskip\footnotesize\raggedright T is the exact one-sided binomial limit ($\alpha = 0.01$) for the median number of eligible runs in a full window of 200 runs; a window is flagged when its violation count reaches T. Lagging rows count collisions.
+\end{table}
+
+The SPI thresholds that result differ by an order of magnitude across the
+register, from six violations of a 78-run pedestrian window to 39 violations of a
+200-run following-vehicle window. For the three lagging indicators T is one, so a
+single collision in a window reaches the threshold.
+
+% ---------------------------------------------------------------------------
+% Copied verbatim from dashboard_tables.tex
+\begin{table}[htbp]
+\centering
+\caption{Chain detection scorecard. Collision runs of each chain with a violation before the collision, for each SPI and for any SPI of the chain.}
+\label{tab:dashboard_scorecard}
+\small
+\begin{tabular}{@{}llrrrr@{}}
+\toprule
+{\bfseries Chain} & {\bfseries Indicator} & {\bfseries \begin{tabular}[b]{@{}c@{}}Collision\\runs\end{tabular}} & {\bfseries \begin{tabular}[b]{@{}c@{}}Violation before\\collision\end{tabular}} & {\bfseries \begin{tabular}[b]{@{}c@{}}Lead at\\least 1\,s\end{tabular}} & {\bfseries \begin{tabular}[b]{@{}c@{}}Median\\lead\end{tabular}} \\
+\midrule
+ONC & GAP\_TTC & 540 & 527 & 38 & 0.60\,s \\
+ONC & REQ\_DECEL & 540 & 317 & 1 & 0.10\,s \\
+ONC & AEB\_ONC & 540 & 286 & 57 & 0.75\,s \\
+ONC & any ONC & 540 & 538 & 92 & 0.70\,s \\
+PED & PED\_CPA & 815 & 790 & 2 & 0.50\,s \\
+PED & AEB\_PED & 815 & 110 & 108 & 5.15\,s \\
+PED & any PED & 815 & 791 & 110 & 0.55\,s \\
+REAR & REAR\_TTC & 101 & 101 & 87 & 1.15\,s \\
+REAR & any REAR & 101 & 101 & 87 & 1.15\,s \\
+\bottomrule
+\end{tabular}
+\par\smallskip\footnotesize\raggedright \emph{any}: earliest violation among the chain's indicators.
+\end{table}
+
+Taking the earliest violation among the indicators of a chain raises the
+detection beyond that of any single indicator for the oncoming and pedestrian
+chains: 538 of 540 oncoming-vehicle collisions and 791 of 815 pedestrian
+collisions are preceded by a violation of at least one indicator of the chain,
+against 527 and 790 for the best single indicator. The number warned at least one
+second ahead rises from 57 to 92 for the oncoming chain and from two to 110 for
+the pedestrian chain.
+
+% ---------------------------------------------------------------------------
+% Copied verbatim from dashboard_tables.tex
+\begin{table}[htbp]
+\centering
+\caption{Leading-to-lagging funnel. Eligible runs of each chain with at least one kinematic leading violation, an emergency braking event and a collision.}
+\label{tab:dashboard_funnel}
+\small
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+{\bfseries Chain} & {\bfseries Eligible runs} & {\bfseries \begin{tabular}[b]{@{}c@{}}Leading\\violation\end{tabular}} & {\bfseries \begin{tabular}[b]{@{}c@{}}Emergency\\braking\end{tabular}} & {\bfseries Collision} \\
+\midrule
+Oncoming vehicle & 80,455 & 9,156 & 1,382 & 540 \\
+Pedestrian & 37,309 & 1,795 & 1,508 & 815 \\
+Following vehicle & 89,882 & 12,084 & 0 & 101 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The funnel narrows at every stage for the oncoming chain, from 80,455 eligible
+runs through 9,156 with a kinematic leading violation and 1,382 with an emergency
+braking event to 540 collisions. For the pedestrian chain the two leading stages
+are of similar size, 1,795 and 1,508, against 815 collisions. The
+following-vehicle chain has no reaction tier, so its funnel runs from 89,882
+eligible runs through 12,084 leading violations to 101 collisions.
