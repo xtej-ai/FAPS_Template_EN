@@ -1,11 +1,3 @@
-% =============================================================================
-% Chapter 5: Experimental Setup
-% Source of truth: Thesis_Final_Handover.md (6 October 2026) and
-% spi_results_data.json. Every number is taken from those two files unchanged.
-% Tables and figure blocks are copied verbatim from tables.tex and
-% figure_captions.tex so that they cannot drift from the generated versions.
-% =============================================================================
-
 \chapter[Experimental Setup]{Simulation-Based Evaluation Setup for an Unprotected Left Turn in CARLA}
 \label{ch:experiment}
 
@@ -26,7 +18,6 @@ as a collision, which for the pedestrian chain is not self-evident.
 Section~\ref{sec:exp_criteria} defines the evaluation measures, and
 Section~\ref{sec:exp_calibration} gives the calibrated metric thresholds.
 
-% =============================================================================
 \section{Scenario and Conflict Geometries}
 \label{sec:exp_scenario}
 \label{sec:exp_manoeuvre}
@@ -39,8 +30,6 @@ resolves any conflict on the ego vehicle's behalf and every conflict has to be
 resolved by the vehicle itself. Figure~\ref{fig:5_1_scenario} shows the
 intersection and the three conflict geometries.
 
-% ---------------------------------------------------------------------------
-% Figure 5.1: schematic conflict geometry (Graphics/leftturn_conflict_geometry.pdf).
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=16cm]{leftturn_conflict_geometry.pdf}
@@ -60,7 +49,6 @@ closes along the ego vehicle's own path whenever the ego vehicle brakes, so the
 conflict closes longitudinally. One manoeuvre therefore carries a crossing, a
 lateral and a following conflict at once.
 
-% =============================================================================
 \section{Ego Vehicle and Simulation Environment}
 \label{sec:exp_environment}
 
@@ -92,7 +80,6 @@ in the controller configuration, so a comparison between them is a comparison of
 two known groups rather than a controlled variation of one factor.
 Table~\ref{tab:campaigns} gives their composition.
 
-% ---------------------------------------------------------------------------
 \begin{table}[htbp]
     \centering
     \caption{Simulation campaigns. The table gives the configuration and the
@@ -114,7 +101,6 @@ Table~\ref{tab:campaigns} gives their composition.
     indistinguishable from Campaign~2; see Section~\ref{sec:results_poolability}.
 \end{table}
 
-% =============================================================================
 \section{Sampled Parameters}
 \label{sec:exp_parameters}
 \label{sec:exp_pipeline}
@@ -124,7 +110,6 @@ draws its actors and its environment from the ranges given in
 Tables~\ref{tab:actor_parameters} and~\ref{tab:environment_parameters} under the
 run's seed, so that any run can be regenerated exactly.
 
-% ---------------------------------------------------------------------------
 \begin{table}[htbp]
     \centering
     \caption{Actor parameters sampled per run. Each run draws the number,
@@ -159,7 +144,6 @@ run's seed, so that any run can be regenerated exactly.
     \end{tabular}
 \end{table}
 
-% ---------------------------------------------------------------------------
 \begin{table}[htbp]
     \centering
     \caption{Environment parameters sampled per run. Cloud cover, precipitation
@@ -180,7 +164,6 @@ run's seed, so that any run can be regenerated exactly.
     \end{tabular}
 \end{table}
 
-% =============================================================================
 \section{Data Audit}
 \label{sec:exp_audit}
 
@@ -191,8 +174,6 @@ then retried under the same seed, so rows overstate the number of runs.
 Figure~\ref{fig:5_1_data_audit} traces the reduction from recorded rows to
 analysed runs.
 
-% ---------------------------------------------------------------------------
-% Copied verbatim from figure_captions.tex
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=16cm]{fig_5_1_data_audit.pdf}
@@ -208,7 +189,6 @@ the requirements of the scenario, so they do not belong to the final
 configuration. This leaves 94,816 analysed runs, which is the population behind
 every result in Chapter~\ref{ch:results}.
 
-% =============================================================================
 \section{Collision Definition}
 \label{sec:exp_collision}
 
@@ -227,8 +207,6 @@ Contacts with a standing ego vehicle are recorded but not counted.
 Figure~\ref{fig:5_2_pedestrian_contacts} and Table~\ref{tab:pedestrian_contacts}
 give the audit on which that rule rests.
 
-% ---------------------------------------------------------------------------
-% Copied verbatim from figure_captions.tex
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=16cm]{fig_5_2_pedestrian_contacts.pdf}
@@ -236,7 +214,6 @@ give the audit on which that rule rests.
 \label{fig:5_2_pedestrian_contacts}
 \end{figure}
 
-% ---------------------------------------------------------------------------
 \begin{table}[htbp]
     \centering
     \caption{Audit of the pedestrian contacts. The table classifies the first
@@ -275,7 +252,6 @@ Campaign~2 and none in Campaign~3. The effect is concentrated in the two
 low-collision campaigns, where 480 of the 481 recorded contacts occur with a
 standing ego vehicle.
 
-% =============================================================================
 \section{Evaluation Measures}
 \label{sec:exp_criteria}
 
@@ -381,7 +357,6 @@ form of Section~\ref{sec:method_thresholds}. Because T is an exact limit at
 $\alpha = 0.01$, about one window in a hundred exceeds it in the campaigns from
 which it is derived, by construction.
 
-% =============================================================================
 \section{Calibration of the Metric Thresholds}
 \label{sec:exp_calibration}
 
@@ -394,8 +369,6 @@ metric over the run, because consecutive simulation steps are strongly
 autocorrelated and would otherwise be counted as independent observations.
 Table~\ref{tab:metric_thresholds} gives the result.
 
-% ---------------------------------------------------------------------------
-% Copied verbatim from tables.tex
 \begin{table}[htbp]
 \centering
 \caption{Metric thresholds. Each metric threshold is a percentile of the Campaign~1 runs without collision and without emergency braking.}

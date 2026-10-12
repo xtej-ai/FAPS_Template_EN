@@ -31,7 +31,6 @@ required signal may or may not be exposed by a given implementation, and this
 distinction gives rise to the two indicator tiers described in
 Section~\ref{sec:method_signal}.
 
-% ---------------------------------------------------------------------------
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=13cm]{spi_derivation_flow}
@@ -40,7 +39,6 @@ Section~\ref{sec:method_signal}.
     Step~1, and the loop terminates when the register is exhausted.}
     \label{fig:derivation_flow}
 \end{figure}
-% ---------------------------------------------------------------------------
 
 \section{Use Case and Lagging-Indicator Register}
 \label{sec:method_register}
@@ -150,7 +148,6 @@ give lower diagnostic resolution, since they reveal that a margin is eroding rat
 than which subsystem caused it, and they typically provide shorter lead time, since
 internal degradation usually precedes its kinematic consequence.
 
-% ---------------------------------------------------------------------------
 \begin{table}[htbp]
     \centering
     \caption{The two indicator tiers produced by the observability and independence
@@ -169,16 +166,6 @@ internal degradation usually precedes its kinematic consequence.
         \bottomrule
     \end{tabular}
 \end{table}
-% ---------------------------------------------------------------------------
-
-% =============================================================================
-% DROP-IN REPLACEMENT for Section 4.6 of Chapter 4 (Method).
-% Paste this in place of the existing Section 4.6. It carries the label
-% sec:method_thresholds, which Chapters 5, 6 and 7 reference.
-% Addresses the fix list: ALARP, GAMAB and MEM named as not applied; T defined
-% as the exact one-sided binomial limit at alpha = 0.01 from Campaigns 2 and 3;
-% the percentile example corrected to the 10th and 95th.
-% =============================================================================
 
 \section{The Metric Threshold and the SPI Threshold}
 \label{sec:method_thresholds}
@@ -220,8 +207,6 @@ Table~\ref{tab:threshold_methods} compares the five by the data and the
 assumptions each requires. The comparison is qualitative: no numerical benchmark
 between the five was run, and none is implied.
 
-% ---------------------------------------------------------------------------
-% Copied verbatim from tables.tex
 \begin{table}[htbp]
 \centering
 \caption{Options for the metric threshold. Five ways to set the metric threshold $\theta$ compared by the data and assumptions they require.}
@@ -375,7 +360,6 @@ carry different lead times, of the order of three to eight seconds and of half a
 to three seconds respectively, which demonstrates the spanning property described in
 Section~\ref{sec:method_thresholds}.
 
-% ---------------------------------------------------------------------------
 \begin{table}[htbp]
     \centering
     \caption{Three worked derivations, one per use case, from a lagging indicator
@@ -400,9 +384,7 @@ Section~\ref{sec:method_thresholds}.
         \bottomrule
     \end{tabular}
 \end{table}
-% ---------------------------------------------------------------------------
 
-% ---------------------------------------------------------------------------
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=15cm]{spi_causal_chain_example}
@@ -414,20 +396,6 @@ Section~\ref{sec:method_thresholds}.
     tier and attaches to the safety case independently of the kinematic branches.}
     \label{fig:causal_chain_example}
 \end{figure}
-% ---------------------------------------------------------------------------
-% PASTE INTO: Chapter 4, Section 4.8 (Worked Examples)
-% WHERE:      directly after the existing Figure 4.2 (the ONC chain figure)
-% UPLOAD:     spi_causal_chain_ped.pdf and spi_causal_chain_rear.pdf into your Graphics folder
-
-% First add this sentence to the end of the paragraph above Figure 4.2:
-%
-%   The same derivation is carried out for the other two conflict chains of the
-%   manoeuvre. Figure~\ref{fig:chain_ped} gives the pedestrian chain and
-%   Figure~\ref{fig:chain_rear} the following chain. The three differ in where the
-%   derivation terminates: the oncoming and pedestrian chains each retain a
-%   reaction-tier indicator, whereas the following chain has none, and the
-%   pedestrian and following chains each lose one branch at the observability and
-%   independence check of Step~5.
 
 \begin{figure}[htbp]
   \centering

@@ -1,12 +1,3 @@
-% =============================================================================
-% Chapter 6: Results
-% Findings only. All interpretation is in Chapter 7.
-% Every figure block is copied verbatim from figure_captions.tex and every table
-% from tables.tex or dashboard_tables.tex, so the numbers cannot drift.
-% Results are reported as actual run counts with their eligible population;
-% rates per 100,000 appear only inside an SPI definition, never as a result.
-% =============================================================================
-
 \chapter[Results]{Results of the Simulation-Based Indicator Evaluation}
 \label{ch:results}
 
@@ -27,7 +18,6 @@ gate and the transferability of the metric thresholds between campaigns.
 Section~\ref{sec:results_dashboard} gives the state of the register as the
 monitoring dashboard presents it.
 
-% =============================================================================
 \section{Collisions per Conflict Chain}
 \label{sec:results_collisions}
 
@@ -36,7 +26,6 @@ stated first. Table~\ref{tab:collisions_per_chain} gives them per chain and per
 campaign under the collision definition of
 Section~\ref{sec:exp_collision}.
 
-% ---------------------------------------------------------------------------
 \begin{table}[htbp]
     \centering
     \caption{Collisions per conflict chain. The table counts the collision runs
@@ -61,7 +50,6 @@ occur in Campaign~1. Of the 815 pedestrian collisions, 814 occur in Campaign~1
 and one in Campaign~2. The 75,509 runs of Campaigns~2 and~3 together therefore
 contain a single collision across all three chains.
 
-% =============================================================================
 \section{Violations and Collisions}
 \label{sec:results_violations}
 
@@ -71,8 +59,6 @@ survives the change from the provoked configuration to realistic driving.
 Figure~\ref{fig:6_1_violations_collisions} and
 Table~\ref{tab:violations_collisions} give the counts.
 
-% ---------------------------------------------------------------------------
-% Copied verbatim from figure_captions.tex
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=16cm]{fig_6_1_violations_collisions.pdf}
@@ -80,8 +66,6 @@ Table~\ref{tab:violations_collisions} give the counts.
 \label{fig:6_1_violations_collisions}
 \end{figure}
 
-% ---------------------------------------------------------------------------
-% Copied verbatim from tables.tex
 \begin{table}[htbp]
 \centering
 \caption{Violations and collisions. The table gives the number of runs per configuration in which each leading SPI was violated, and the collision runs of its chain.}
@@ -124,7 +108,6 @@ is defined; using the 95\,\% Wilson upper bound of a zero collision count gives
 at least 1,464 violations per collision for GAP\_TTC, at least 317 for
 REQ\_DECEL, at least 196 for AEB\_ONC and at least 2,562 for REAR\_TTC.
 
-% =============================================================================
 \section{Detection and Lead Time}
 \label{sec:results_leadtime}
 
@@ -135,8 +118,6 @@ violation, Figure~\ref{fig:6_3_lead_time} the distribution of the lead time, and
 Table~\ref{tab:lead_time} both as counts. Lead time is measured from the first
 violation in the run to the collision.
 
-% ---------------------------------------------------------------------------
-% Copied verbatim from figure_captions.tex
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=16cm]{fig_6_2_detection.pdf}
@@ -144,8 +125,6 @@ violation in the run to the collision.
 \label{fig:6_2_detection}
 \end{figure}
 
-% ---------------------------------------------------------------------------
-% Copied verbatim from figure_captions.tex
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=16cm]{fig_6_3_lead_time.pdf}
@@ -153,8 +132,6 @@ violation in the run to the collision.
 \label{fig:6_3_lead_time}
 \end{figure}
 
-% ---------------------------------------------------------------------------
-% Copied verbatim from tables.tex
 \begin{table}[htbp]
 \centering
 \caption{Detection and lead time. The table counts collision runs with an earlier violation and gives the time from the first violation to the collision.}
@@ -198,7 +175,6 @@ anywhere in the run, this interval is not established to be a warning time for
 the collision that follows it, and it is not reported as one. The point is taken
 up in Section~\ref{sec:disc_aebped}.
 
-% =============================================================================
 \section{Detection Statistics}
 \label{sec:results_statistics}
 
@@ -209,8 +185,6 @@ and relative risk with their intervals. Table~\ref{tab:confusion_counts} gives
 the classification of every eligible run and
 Table~\ref{tab:detection_statistics} the measures derived from it.
 
-% ---------------------------------------------------------------------------
-% Copied verbatim from tables.tex
 \begin{table}[htbp]
 \centering
 \caption{Confusion counts. The table classifies every eligible run by whether the SPI was violated before any collision and whether a collision of the chain occurred.}
@@ -231,8 +205,6 @@ REAR\_TTC & REAR & 101 & 11,983 & 0 & 77,798 \\
 \par\smallskip\footnotesize\raggedright TP: violation before a collision of the chain; FP: violation, no collision; FN: collision without an earlier violation; TN: neither.
 \end{table}
 
-% ---------------------------------------------------------------------------
-% Copied verbatim from tables.tex
 \begin{table}[htbp]
 \centering
 \caption{Detection statistics. Precision, recall, false-alarm rate and relative risk of each leading SPI over all eligible runs, with 95\,\% intervals.}
@@ -273,7 +245,6 @@ for REAR\_TTC. The relative risks within Campaign~1 are 260.3 for GAP\_TTC, 19.8
 for REQ\_DECEL, 26.4 for AEB\_ONC, 178.1 for PED\_CPA, 1.4 for AEB\_PED and at
 least 1,097.4 for REAR\_TTC.
 
-% =============================================================================
 \section{Effect of the Oncoming Conflict Gate}
 \label{sec:results_gate}
 
@@ -283,8 +254,6 @@ gate defined in Chapter~\ref{ch:methodology}, and its effect is isolated by scor
 three oncoming-vehicle indicators twice on the same runs, once with and once
 without the gate. Table~\ref{tab:conflict_gate} gives the comparison.
 
-% ---------------------------------------------------------------------------
-% Copied verbatim from tables.tex
 \begin{table}[htbp]
 \centering
 \caption{Oncoming conflict gate. The table compares the oncoming chain without and with the conflict gate.}
@@ -307,7 +276,6 @@ and all 540 oncoming-vehicle collisions remain eligible. The violation counts
 fall from 10,360 to 7,694 for GAP\_TTC, from 3,146 to 2,249 for REQ\_DECEL and
 from 1,490 to 1,382 for AEB\_ONC.
 
-% =============================================================================
 \section{Poolability of the Metric Thresholds}
 \label{sec:results_poolability}
 
@@ -318,8 +286,6 @@ recalibrated separately on each campaign and the pairwise relative shift
 examined. Table~\ref{tab:poolability} gives the result; pooling is refused above
 a relative shift of 15\,\%.
 
-% ---------------------------------------------------------------------------
-% Copied verbatim from tables.tex
 \begin{table}[htbp]
 \centering
 \caption{Threshold poolability. Metric thresholds calibrated separately per campaign and their relative shift.}
@@ -345,7 +311,6 @@ within the criterion, at shifts of 1.55\,\% and 1.50\,\% and of 6.08\,\% and
 6.71\,\%. The thresholds of REQ\_DECEL and PED\_CPA do not: REQ\_DECEL shifts by
 21.52\,\% against both campaigns and PED\_CPA by 37.90\,\% and 37.74\,\%.
 
-% =============================================================================
 \section{The Register under Monitoring}
 \label{sec:results_dashboard}
 
@@ -355,7 +320,6 @@ the result. The nine SPIs were exported to a database and presented in a Grafana
 dashboard; Figure~\ref{fig:6_5_dashboard} shows it. The dashboard is not deployed
 on a vehicle.
 
-% ---------------------------------------------------------------------------
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=16cm]{fig_6_5_dashboard.png}
@@ -375,8 +339,6 @@ of these that bear on the register as a whole;
 Table~\ref{tab:dashboard_odd}, in Appendix~\ref{app:statistics}, gives the
 operating-condition breakdown.
 
-% ---------------------------------------------------------------------------
-% Trimmed from dashboard_tables.tex (v4: window columns removed)
 \begin{table}[htbp]
 \centering
 \caption{SPI register as monitored. Identifier, type and metric threshold of each SPI, together with its baseline violations in Campaigns~2 and~3.}
@@ -406,8 +368,6 @@ leading SPIs record between 527 and 9,841 violating runs, whereas the three
 lagging SPIs record one collision in total, which belongs to the pedestrian
 chain.
 
-% ---------------------------------------------------------------------------
-% Copied verbatim from dashboard_tables.tex
 \begin{table}[htbp]
 \centering
 \caption{Chain detection scorecard. Collision runs of each chain with a violation before the collision, for each SPI and for any SPI of the chain.}
@@ -439,8 +399,6 @@ against 527 and 790 for the best single indicator. The number warned at least on
 second ahead rises from 57 to 92 for the oncoming chain and from two to 110 for
 the pedestrian chain.
 
-% ---------------------------------------------------------------------------
-% Copied verbatim from dashboard_tables.tex
 \begin{table}[htbp]
 \centering
 \caption{Leading-to-lagging funnel. Eligible runs of each chain with at least one kinematic leading violation, an emergency braking event and a collision.}

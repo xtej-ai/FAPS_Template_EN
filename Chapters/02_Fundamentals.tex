@@ -112,7 +112,6 @@ unsafe area, however, cannot be shown to be empty by any finite programme of ana
 or testing before release, because a scenario that has not been imagined cannot be
 analysed and a scenario that has not been met cannot be tested.
 
-% ---------------------------------------------------------------------------
 \begin{table}[htbp]
     \centering
     \caption{Scenario areas of ISO~21448. The four areas classify the scenarios of a
@@ -136,7 +135,6 @@ analysed and a scenario that has not been met cannot be tested.
         \bottomrule
     \end{tabular}
 \end{table}
-% ---------------------------------------------------------------------------
 
 The residual risk that remains after development is consequently carried into
 operation. Analyses, improvements and verification during development cannot remove
@@ -203,7 +201,6 @@ conditions under which the argument holds. An argument is built by decomposing t
 top-level goal through strategies into sub-goals until each remaining goal can be
 discharged by a solution.
 
-% ---------------------------------------------------------------------------
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=15cm]{gsn_notation}
@@ -213,7 +210,6 @@ discharged by a solution.
     \cite{gsncs2021}).}
     \label{fig:gsn_notation}
 \end{figure}
-% ---------------------------------------------------------------------------
 
 Two relations connect the elements. The supported-by relation links a goal to the
 strategies, sub-goals and solutions from which it is inferred, and the in-context-of
@@ -543,7 +539,6 @@ quantity each returns, and Table~\ref{tab:surrogate_metrics} summarises these
 differences, since the suitability of a signal for a given conflict is what governs its
 selection in Chapter~\ref{ch:methodology}.
 
-% ---------------------------------------------------------------------------
 \begin{table}[htbp]
     \centering
     \caption{Surrogate safety metrics used as candidate indicator signals, with the
@@ -570,7 +565,6 @@ selection in Chapter~\ref{ch:methodology}.
         \bottomrule
     \end{tabular}
 \end{table}
-% ---------------------------------------------------------------------------
 
 Beyond time- and distance-based measures, model-predictive metrics such as the Model
 Predictive Instantaneous Safety Metric of Weng et al. assess safety by predicting the
@@ -582,7 +576,6 @@ geometry, and a comprehensive survey of criticality metrics and their applicabil
 provided by Westhofen et al. \cite{westhofen2023}. This dependence on conflict geometry
 is examined further in Chapter~\ref{ch:sota}.
 
-% ---------------------------------------------------------------------------
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=15cm]{surrogate_metrics_geometry}
@@ -593,7 +586,6 @@ is examined further in Chapter~\ref{ch:sota}.
     leaving and the second entering the shared conflict area.}
     \label{fig:metrics_geometry}
 \end{figure}
-% ---------------------------------------------------------------------------
 
 Every surrogate metric is evaluated over time, whereas an indicator decides once per
 manoeuvre. A metric sampled at every simulation step yields a time series, and the
