@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="500pt" height="268pt" viewBox="0 0 500 268">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="500pt" height="268pt" viewBox="0 0 500 268">
 <rect x="0" y="0" width="500" height="268" fill="#ffffff"/>
 <polyline points="34.00,18.00 34.00,243.00" fill="none" stroke="#1a1a1a" stroke-width="1.3"/>
 <polygon points="34.00,251.00 29.50,242.00 38.50,242.00" fill="#1a1a1a"/>
@@ -8,11 +8,11 @@
 <text x="215.00" y="45.75" font-family="Arial, Helvetica, sans-serif" font-size="10.00" fill="#1a1a1a" font-weight="bold" text-anchor="middle" xml:space="preserve"><tspan>Top-level goal</tspan></text>
 <text x="215.00" y="59.75" font-family="Arial, Helvetica, sans-serif" font-size="8.80" fill="#1a1a1a" text-anchor="middle" xml:space="preserve"><tspan>"Vehicle is acceptably safe"</tspan></text>
 <polygon points="115.28,84.00 314.72,84.00 343.28,152.00 86.72,152.00" fill="#d6e6c2" stroke="#6e9024" stroke-width="1"/>
-<text x="215.00" y="110.00" font-family="Arial, Helvetica, sans-serif" font-size="10.00" fill="#1a1a1a" font-weight="bold" text-anchor="middle" xml:space="preserve"><tspan>Intermediate sub-claims</tspan></text>
+<text x="215.00" y="110.00" font-family="Arial, Helvetica, sans-serif" font-size="10.00" fill="#1a1a1a" font-weight="bold" text-anchor="middle" xml:space="preserve"><tspan>Intermediate sub-goals</tspan></text>
 <text x="215.00" y="124.00" font-family="Arial, Helvetica, sans-serif" font-size="8.80" fill="#1a1a1a" text-anchor="middle" xml:space="preserve"><tspan>e.g. "collision is avoided</tspan></text>
 <text x="215.00" y="135.50" font-family="Arial, Helvetica, sans-serif" font-size="8.80" fill="#1a1a1a" text-anchor="middle" xml:space="preserve"><tspan>in the conflict"</tspan></text>
 <polygon points="84.20,158.00 345.80,158.00 384.44,250.00 45.56,250.00" fill="#97c139" stroke="#6e9024" stroke-width="1"/>
-<text x="215.00" y="190.25" font-family="Arial, Helvetica, sans-serif" font-size="10.00" fill="#1a1a1a" font-weight="bold" text-anchor="middle" xml:space="preserve"><tspan>Deep sub-claims</tspan></text>
+<text x="215.00" y="190.25" font-family="Arial, Helvetica, sans-serif" font-size="10.00" fill="#1a1a1a" font-weight="bold" text-anchor="middle" xml:space="preserve"><tspan>Deep sub-goals</tspan></text>
 <text x="215.00" y="204.25" font-family="Arial, Helvetica, sans-serif" font-size="8.80" fill="#1a1a1a" text-anchor="middle" xml:space="preserve"><tspan>kinematic predicates:</tspan></text>
 <text x="215.00" y="215.75" font-family="Arial, Helvetica, sans-serif" font-size="8.80" fill="#1a1a1a" text-anchor="middle" xml:space="preserve"><tspan>time to collision, safe distance,</tspan></text>
 <text x="215.00" y="227.25" font-family="Arial, Helvetica, sans-serif" font-size="8.80" fill="#1a1a1a" text-anchor="middle" xml:space="preserve"><tspan>required deceleration</tspan></text>
