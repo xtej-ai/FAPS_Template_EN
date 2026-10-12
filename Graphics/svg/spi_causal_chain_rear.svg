@@ -1,501 +1,90 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
-
-<svg
-   version="1.1"
-   id="svg2"
-   width="900"
-   height="848"
-   viewBox="0 0 900 848"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg">
-  <defs
-     id="defs6" />
-  <g
-     id="g8"
-     transform="matrix(1.3333333,0,0,1.3333333,0,2.12e-5)">
-    <g
-       id="g10">
-      <path
-         d="M 0,0 H 675 V 636 H 0 Z"
-         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="path12" />
-      <text
-         xml:space="preserve"
-         transform="translate(221.20703,19.5)"
-         style="font-variant:normal;font-weight:bold;font-size:10.875px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#1f3b63;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text16"><tspan
-           x="0 7.8517499 15.105375 22.957125 33.832127 39.878624 46.523251 52.569752 55.592999 62.237625 68.882248 74.928749 81.573372 88.218002 91.839378 94.862625 97.885872 103.93237 110.577 119.03775 122.061 125.68237 135.35025 144.42 148.04138 154.686 157.70924 160.7325 167.37712 175.83788 178.86113 185.50575 195.17363 201.22012 207.26663 213.91125 216.93449 222.981 226.00426"
-           y="0"
-           id="tspan14">REARchain:conflictwithafollowingvehicle</tspan></text>
-      <text
-         xml:space="preserve"
-         transform="translate(179.64844,33.75)"
-         style="font-variant:normal;font-weight:normal;font-size:7.35px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#8a8a8a;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text20"><tspan
-           x="0 5.3067002 9.3933001 11.84085 13.47255 17.147551 21.23415 23.277451 24.909149 28.99575 35.125648 37.5732 41.659801 45.746399 51.464699 55.5513 59.637901 64.944603 69.031197 74.337898 78.4245 80.872047 84.958649 89.04525 91.088547 93.536102 97.622704 105.78855 107.83185 111.91845 118.04835 121.72335 125.80995 127.44165 129.07335 130.70505 134.38005 136.01175 140.09834 146.22826 148.6758 150.3075 154.3941 158.4807 162.56731 164.19901 168.2856 174.4155 179.31795 184.2204 186.2637 190.75455 194.84116 198.92775 202.60275 208.32104 210.36435 216.49425 218.53755 222.62415 228.75404 232.84065 236.92725 239.3748 241.0065 242.6382 246.72479 250.3998 254.4864 258.573 262.65961 266.33459 270.4212 272.86874 276.54376 280.63034 284.71695 286.34866 292.47855 296.15356 297.78525 301.87186 305.95844 310.04504 311.67676"
-           y="0"
-           id="tspan18">Derivationrunsdownward,fromthecollision(laggingSPI)backtotheearliestobservablesignals</tspan></text>
-      <g
-         id="g22">
-        <path
-           d="m 32.25,43.5 h 610.5 c 1.242,0 2.25,1.242 2.25,2.25 v 42 c 0,1.242 -1.008,2.25 -2.25,2.25 H 32.25 C 31.008,90 30,88.758 30,87.75 v -42 c 0,-1.242 1.008,-2.25 2.25,-2.25 z"
-           style="fill:#9e4746;fill-opacity:1;fill-rule:nonzero;stroke:#833938;stroke-width:0.9;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           id="path24" />
-      </g>
-      <text
-         xml:space="preserve"
-         transform="translate(40.5,57.75)"
-         style="font-variant:normal;font-weight:bold;font-size:7.875px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text28"><tspan
-           x="0 5.2605 11.395125 17.970751 24.554251 27.192375 33.327 42.540749 48.242249 53.943748 59.227875"
-           y="0"
-           id="tspan26">LAGGINGSPI9</tspan></text>
-      <text
-         xml:space="preserve"
-         transform="translate(40.5,69.75)"
-         style="font-variant:normal;font-weight:normal;font-size:7.2px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#f4e6e6;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text34"><tspan
-           x="0 2.3975999 7.5960002 11.5992 15.6024 19.6056 23.608801 25.610399 27.208799 33.206402 37.209599 42.811199 45.208801 50.4072 55.209599 60.012001 65.210403 69.2136 74.412003 80.013603 84.0168 88.019997 92.419197 96.422401 100.4256 104.8248 108.828 112.8312 116.8344 122.436 128.43359 132.4368 136.44 140.44321 144.4464 148.4496 152.04961 154.4472 158.45039 162.0504 166.4496 172.65601 177.05521 181.0584 186.25681 191.0592 195.8616"
-           y="0"
-           id="tspan30">(No.oftimes(REAR_COLL)per100kmanoeuvres)&lt;T_REAR</tspan><tspan
-           x="0 5.9976001 10.0008 12.0024 14.4 15.9984 19.5984 23.601601 27.201599 31.2048 35.208 37.209599 41.212799 44.812801 48.816002 52.819199 56.822399 58.824001 64.0224 68.025597 72.028801 78.0336 80.035202 84.038399 90.043198 92.0448 96.047997 97.6464 99.244797 103.248 108.4464 112.4496 116.8488 120.852 124.8552 130.86 132.8616 136.86481 142.8696 146.8728 150.87601 156.8808 160.4808 164.48399 168.4872 170.0856 173.68559 175.284 179.2872 183.29041 187.29359 191.2968 195.696 199.6992 203.70239 207.7056 213.30721 219.30479 223.308 227.3112 231.31441 235.3176 239.3208 242.92081 245.31841 249.32159 252.9216 256.9248 261.32401 265.32721 267.72479 271.728 275.328 279.33121 283.33441 284.9328 288.936 292.93921 297.33841 301.34161 306.54001 311.34241 316.14481 321.3432"
-           y="10.125"
-           id="tspan32">Metric:contactbetweenthefollowerandtheegovehicle,per100kmanoeuvres.Threshold:T_REAR.</tspan></text>
-      <g
-         id="g36">
-        <path
-           d="m 337.5,90 v 22.5"
-           style="fill:none;stroke:#8a8a8a;stroke-width:0.975;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           id="path38" />
-      </g>
-      <path
-         d="m 341.887,103.727 -4.387,8.773 -4.387,-8.773 z"
-         style="fill:#8a8a8a;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="path40" />
-      <text
-         xml:space="preserve"
-         transform="translate(343.5,103.875)"
-         style="font-variant:normal;font-weight:normal;font-size:6.75px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#8a8a8a;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text44"><tspan
-           x="0 4.8734999 8.6265001"
-           y="0"
-           id="tspan42">why</tspan></text>
-      <g
-         id="g46">
-        <path
-           d="m 32.25,114 h 610.5 c 1.242,0 2.25,1.242 2.25,2.25 v 48 c 0,1.242 -1.008,2.25 -2.25,2.25 H 32.25 c -1.242,0 -2.25,-1.242 -2.25,-2.25 v -48 c 0,-1.242 1.008,-2.25 2.25,-2.25 z"
-           style="fill:#fbfcfe;fill-opacity:1;fill-rule:nonzero;stroke:#c3ccd8;stroke-width:0.9;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           id="path48" />
-      </g>
-      <text
-         xml:space="preserve"
-         transform="translate(40.5,128.25)"
-         style="font-variant:normal;font-weight:bold;font-size:7.875px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#1f3b63;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text52"><tspan
-           x="0 5.7014999 11.836125 18.411751 24.121124 26.759251 33.768002 39.902626 45.163124 53.510624 59.637375 65.779877 71.914497 77.615997"
-           y="0"
-           id="tspan50">PROXIMATECAUSE</tspan></text>
-      <text
-         xml:space="preserve"
-         transform="translate(40.5,140.25)"
-         style="font-variant:normal;font-weight:normal;font-size:7.2px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#1a1a1a;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text60"><tspan
-           x="0 4.3992 8.4024 14.4072 18.4104 22.413601 28.4184 32.018398 36.021599 40.024799 41.623199 45.223202 46.821602 52.826401 56.829601 60.832802 64.4328 68.435997 70.034401 74.037598 76.435204 80.4384 82.440002 86.443199 92.447998 94.046402 98.049599 101.6496 103.248 107.2512 113.256 115.2576 119.2608 125.2656 131.2632 135.2664 139.26961 143.2728 147.276 151.27921 154.8792 157.27679 161.28 165.2832 169.28641 173.2896 175.2912 179.2944 181.692 187.69679 191.7 195.7032 197.7048 200.1024 205.70399 209.7072 214.1064 218.1096 222.11279 228.1176 232.1208 236.12399 240.1272 244.1304 247.73039 249.73199 252.12959 253.728 257.7312 263.73599 267.336 269.33759 273.34079 277.34399"
-           y="0"
-           id="tspan54">Theegovehicledeceleratedinsidethemanoeuvre,atturnentryoratapedestrianstop,</tspan><tspan
-           x="0 4.0032001 8.0064001 14.0112 16.0128 20.016001 26.0208 28.0224 32.0256 33.624001 35.222401 39.225601 44.424 48.4272 52.826401 56.829601 58.428001 64.4328 68.435997 72.439201 76.442398 80.445602 82.843201 85.240799 89.244003 92.844002 96.847198 98.445602 100.4472 106.0488 110.052 114.0552 118.0584 120.456 124.4592 128.4624 132.06239 138.0672 143.26559 144.864 146.8656 150.8688 152.46719 158.472 160.4736 164.47681 170.4816 174.4848 178.48801 184.4928 186.4944 190.4976 194.50079 198.504 200.9016 204.9048 210.9024 214.90559 216.504 220.5072 224.51041 228.5136"
-           y="10.125"
-           id="tspan56">andthefollowerdidnotarrestitsapproachwithinthegapthatremained.</tspan><tspan
-           x="0 5.1984 11.2032 13.2048 17.208 18.8064 21.204 27.208799 31.212 35.215199 37.612801 39.614399 45.216 46.8144 52.416 54.0144 58.017601 61.617599 65.620796 67.2192 70.819199 74.822403 78.8256 82.828796 84.830399 88.833603 94.838402 98.841599 102.8448 106.4448 110.448 112.8456 118.8504 120.4488 126.0504 129.65041 132.048 136.05119 140.0544 142.056 146.0592 152.064 156.0672 161.66879 163.67039 167.6736 173.67841 177.68159 181.6848 187.68961 191.2896 195.2928 199.29601 200.89439 204.4944 206.0928 210.09599 211.47121 217.0728 221.076 226.2744 232.27921 236.28239 240.2856 243.8856 247.88879 249.4872 253.4904 255.888 259.8912 261.89279 263.49121 267.49438 271.49759"
-           y="20.25"
-           id="tspan58">Nothirdpartyisinvolved:thehazardiscreatedbytheegovehicle'sowndeceleration.</tspan></text>
-      <g
-         id="g62">
-        <path
-           d="m 337.5,166.5 v 27"
-           style="fill:none;stroke:#8a8a8a;stroke-width:0.975;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           id="path64" />
-      </g>
-      <path
-         d="m 341.887,184.727 -4.387,8.773 -4.387,-8.773 z"
-         style="fill:#8a8a8a;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="path66" />
-      <text
-         xml:space="preserve"
-         transform="translate(343.5,182.625)"
-         style="font-variant:normal;font-weight:normal;font-size:6.75px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#8a8a8a;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text70"><tspan
-           x="0 3.753 7.506 10.881 14.634 20.25675 24.00975 27.762751 31.137751 36.76725 38.643749 42.396751 48.026249 51.779251 54.027 57.779999 61.154999 62.6535 68.276253 72.029251 73.905746 79.535248 82.910248 86.663254 90.416252 93.791252 99.420753 101.6685 105.0435 106.542 110.295 114.048 119.67075 123.42375 125.30025 126.79875 132.05025 135.80325 138.05099 141.804 145.179 148.93201 151.17975 154.55475 158.30775 162.43201 164.3085 165.80701 169.56 171.80775"
-           y="0"
-           id="tspan68">decomposetheproximatecause(kinematicprecursortier)</tspan></text>
-      <g
-         id="g72">
-        <path
-           d="m 32.25,196.5 h 610.5 c 1.242,0 2.25,1.242 2.25,2.25 v 28.5 c 0,1.242 -1.008,2.25 -2.25,2.25 H 32.25 c -1.242,0 -2.25,-1.242 -2.25,-2.25 v -28.5 c 0,-1.242 1.008,-2.25 2.25,-2.25 z"
-           style="fill:#fbfcfe;fill-opacity:1;fill-rule:nonzero;stroke:#c3ccd8;stroke-width:0.9;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           id="path74" />
-      </g>
-      <text
-         xml:space="preserve"
-         transform="translate(40.5,210.75)"
-         style="font-variant:normal;font-weight:bold;font-size:7.875px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#1f3b63;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text78"><tspan
-           x="0 6.134625 15.348375 21.490875 27.192375 33.327 39.461624 44.722126 47.360249 53.935875 60.070499 63.149624 68.410126 71.048248 76.749748 85.530373 88.160622 94.303123 100.43775 103.07587 109.2105 115.34512 120.60562 127.18913 135.96187 142.53751 151.31026 156.57076 162.71326 165.35138 173.69099 179.82562 185.96025 192.09488 194.74088"
-           y="0"
-           id="tspan76">NOREACTION-TIERINDICATORONTHISCHAIN</tspan></text>
-      <text
-         xml:space="preserve"
-         transform="translate(40.5,222.75)"
-         style="font-variant:normal;font-weight:normal;font-size:7.2px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#1a1a1a;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text82"><tspan
-           x="0 4.3992 8.4024 14.4072 18.4104 22.413601 28.4184 32.018398 36.021599 40.024799 41.623199 45.223202 46.821602 52.826401 56.829601 60.832802 66.434402 70.437599 76.442398 78.040802 82.043999 85.643997 87.645599 90.043198 92.440804 96.444 100.044 104.0472 106.4448 110.448 116.4456 118.044 120.0456 121.644 125.6472 129.65041 131.65199 133.2504 137.2536 143.25841 147.2616 148.86 151.2576 155.2608 158.86079 160.8624 164.8656 170.87041 173.26801 177.27119 181.2744 183.672 188.87041 192.8736 195.27119 199.2744 203.2776 206.87759 212.8824 214.884 218.88721 224.892 227.2896 231.2928 235.29601 238.896 240.8976 242.496 246.49921 252.504 254.5056 256.104 260.10721 264.50641 268.50961 270.9072 274.9104 278.51041 282.51361 286.51682 290.51999 294.52319 300.52802 302.5296 306.53281 312.5376 318.13919 323.33759 330.5376 334.5408 338.54401 344.5488 349.3512 354.15359 361.35361 364.95361 368.95679 372.95999 374.55841 378.56161 384.16321 385.7616 391.36319 395.36639 401.36401 405.36719 407.3688 412.9704 416.9736 420.97681 423.37439 427.37759"
-           y="0"
-           id="tspan80">Theegovehiclehasnolast-resortmitigationdirectedrearward,sothereactiontierpresentontheONCandPEDchainsisemptyhere.</tspan></text>
-      <g
-         id="g84">
-        <path
-           d="m 337.5,229.5 v 24"
-           style="fill:none;stroke:#8a8a8a;stroke-width:0.975;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           id="path86" />
-      </g>
-      <path
-         d="m 341.887,244.727 -4.387,8.773 -4.387,-8.773 z"
-         style="fill:#8a8a8a;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="path88" />
-      <g
-         id="g90">
-        <path
-           d="m 237,255 h 201 l 12,11.25 -12,11.25 H 237 l -12,-11.25 z"
-           style="fill:#f2f2f2;fill-opacity:1;fill-rule:nonzero;stroke:#8a8a8a;stroke-width:0.9;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           id="path92" />
-      </g>
-      <text
-         xml:space="preserve"
-         transform="translate(263.48828,269.25)"
-         style="font-variant:normal;font-weight:bold;font-size:7.5px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#1a1a1a;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text96"><tspan
-           x="0 5.835 13.335 19.17 24.584999 29.1675 34.169998 38.752499 42.922501 45.0075 47.505001 52.087502 56.2575 61.259998 65.43 69.599998 74.182503 78.352501 84.607498 88.777496 90.862503 95.445 100.0275 106.2825 108.3675 114.6225 118.7925 123.375 125.8725 128.37 130.455 134.625 136.71001 140.88 145.46249"
-           y="0"
-           id="tspan94">ORGATE:eithercausealoneissufficient</tspan></text>
-      <g
-         id="g98">
-        <path
-           d="m 337.5,277.5 v 15.75 H 176.25 V 309"
-           style="fill:none;stroke:#8a8a8a;stroke-width:0.975;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           id="path100" />
-      </g>
-      <path
-         d="M 180.637,300.227 176.25,309 171.863,300.227 Z"
-         style="fill:#8a8a8a;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="path102" />
-      <g
-         id="g104">
-        <path
-           d="m 337.5,277.5 v 15.75 H 498.75 V 309"
-           style="fill:none;stroke:#8a8a8a;stroke-width:0.975;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           id="path106" />
-      </g>
-      <path
-         d="M 503.137,300.227 498.75,309 494.363,300.227 Z"
-         style="fill:#8a8a8a;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="path108" />
-      <g
-         id="g110">
-        <path
-           d="m 32.25,310.5 h 288 c 1.242,0 2.25,1.242 2.25,2.25 v 60 c 0,1.242 -1.008,2.25 -2.25,2.25 h -288 C 31.008,375 30,373.758 30,372.75 v -60 c 0,-1.242 1.008,-2.25 2.25,-2.25 z"
-           style="fill:#fbfcfe;fill-opacity:1;fill-rule:nonzero;stroke:#c3ccd8;stroke-width:0.9;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           id="path112" />
-      </g>
-      <text
-         xml:space="preserve"
-         transform="translate(40.5,324.75)"
-         style="font-variant:normal;font-weight:bold;font-size:7.875px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#1f3b63;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text116"><tspan
-           x="0 6.134625 12.277125 18.403875 24.113251 32.452873"
-           y="0"
-           id="tspan114">CAUSEA</tspan></text>
-      <text
-         xml:space="preserve"
-         transform="translate(40.5,336.75)"
-         style="font-variant:normal;font-weight:normal;font-size:7.2px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#1a1a1a;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text126"><tspan
-           x="0 4.3992 8.4024 14.4072 18.4104 22.413601 28.4184 32.4216 36.424801 38.023201 44.028 48.0312 53.632801 55.634399 59.6376 65.642403 67.643997 71.647202 73.245598 74.844002 78.847198 84.045601 88.048798 92.447998 97.6464 101.6496 107.2512 111.2544 112.8528 115.2504 119.2536 123.2568 127.26 132.8616 134.8632 138.86639"
-           y="0"
-           id="tspan118">Thegapheldbythefollowerwasalreadytoo</tspan><tspan
-           x="0 3.5999999 9.5976 13.6008 15.1992 18.7992 20.8008 26.805599 30.8088 34.812 38.411999 42.415199 44.812801 50.8176 56.822399 60.8256 64.828796 68.428802 72.431999 74.030403 78.0336 80.431198 84.434402 86.435997 88.034401 92.037598 98.042397 102.0456 106.0488 108.0504 112.0536 118.0584 124.056 128.0592 132.06239 136.0656 137.664 139.6656 143.66879 147.672"
-           y="10.125"
-           id="tspan120">smalltoabsorbadecelerationofthemagnitude</tspan><tspan
-           x="0 2.0016 6.0047998 12.0096 18.0072 22.010401 26.013599 30.0168 34.02 38.023201 41.623199 44.020802 50.0256 52.423199 56.426399 60.4296 64.4328 66.031197 68.428802 72.431999 76.031998"
-           y="20.25"
-           id="tspan122">themanoeuvrerequires.</tspan><tspan
-           x="0 4.8024001 8.8056002 14.8104 18.813601 20.412001 24.415199 28.4184 32.4216 34.02 38.023201 44.028 47.627998 51.631199 55.634399 59.234402 62.8344 66.434402 68.435997 72.439201 78.436798 82.440002 84.441597 88.444801 90.8424 94.845596 98.848801 102.852 108.8568 110.4552 112.4568 118.0584 121.6584 125.6616 129.66479 133.668 139.67281 143.67599 146.07359 150.0768 152.0784 153.6768 155.27521 159.2784"
-           y="30.375"
-           id="tspan124">Egoplanningsubsystem,throughitsspeedprofile.</tspan></text>
-      <g
-         id="g128">
-        <path
-           d="m 354.75,310.5 h 288 c 1.242,0 2.25,1.242 2.25,2.25 v 60 c 0,1.242 -1.008,2.25 -2.25,2.25 h -288 c -1.242,0 -2.25,-1.242 -2.25,-2.25 v -60 c 0,-1.242 1.008,-2.25 2.25,-2.25 z"
-           style="fill:#f0f0f0;fill-opacity:1;fill-rule:nonzero;stroke:#c9c9c9;stroke-width:0.9;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           id="path130" />
-      </g>
-      <text
-         xml:space="preserve"
-         transform="translate(363,324.75)"
-         style="font-variant:normal;font-weight:bold;font-size:7.875px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#6b6b6b;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text134"><tspan
-           x="0 6.134625 12.277125 18.403875 24.113251 32.452873"
-           y="0"
-           id="tspan132">CAUSEB</tspan></text>
-      <text
-         xml:space="preserve"
-         transform="translate(363,336.75)"
-         style="font-variant:normal;font-weight:normal;font-size:7.2px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#6b6b6b;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text142"><tspan
-           x="0 4.3992 8.4024 14.4072 16.4088 20.412001 22.010401 23.608801 27.612 32.810398 36.813599 41.212799 43.610401 47.613602 51.2136 55.216801 59.220001 63.223202 67.226402 71.229599 77.234398 78.832802 82.835999 84.837601 88.840797 92.844002 96.444 100.4472 104.4504 106.452 108.0504 112.0536 116.0568 117.6552 121.6584 127.6632 129.66479 135.6696 139.26961 140.868 144.8712 148.47121"
-           y="0"
-           id="tspan136">Thefollowerrespondedlate,continuingtoclose</tspan><tspan
-           x="0 2.0016 6.0047998 10.404 14.4072 20.412001 22.010401 26.013599 28.0152 32.018398 34.416 38.015999 42.019199 45.619202 49.622398 51.624001 53.625599 57.628799 62.028 66.031197 68.428802 72.431999 76.031998 77.630402 81.633598 87.638397 91.641602 95.644798 99.648003 103.6512 107.6544"
-           y="10.125"
-           id="tspan138">foranintervalafterbrakingbegan.</tspan><tspan
-           x="0 4.3992 8.4024 10.0008 11.5992 15.6024 20.8008 24.804001 27.201599 28.576799 34.178398 38.181599 43.380001 49.3848 53.388 55.785599 57.383999 60.984001 64.987198 69.386398 73.389603 77.788803 81.388802 85.391998 89.395203 91.396797 93.794403 97.7976 101.3976 104.9976 106.9992 111.0024 114.6024 118.2024"
-           y="20.25"
-           id="tspan140">Follower'sowndriverorcontrolstack.</tspan></text>
-      <g
-         id="g144">
-        <path
-           d="m 32.25,387 h 288 c 1.242,0 2.25,1.242 2.25,2.25 v 42 c 0,1.242 -1.008,2.25 -2.25,2.25 h -288 c -1.242,0 -2.25,-1.242 -2.25,-2.25 v -42 c 0,-1.242 1.008,-2.25 2.25,-2.25 z"
-           style="fill:#fbfcfe;fill-opacity:1;fill-rule:nonzero;stroke:#c3ccd8;stroke-width:0.9;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           id="path146" />
-      </g>
-      <text
-         xml:space="preserve"
-         transform="translate(40.5,401.25)"
-         style="font-variant:normal;font-weight:bold;font-size:7.875px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#1f3b63;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text150"><tspan
-           x="0 5.7014999 8.3474998 14.91525 21.057751 27.192375 35.091"
-           y="0"
-           id="tspan148">SIGNALA</tspan></text>
-      <text
-         xml:space="preserve"
-         transform="translate(40.5,413.25)"
-         style="font-variant:normal;font-weight:normal;font-size:7.2px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#1a1a1a;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text156"><tspan
-           x="0 4.0032001 5.6016002 9.6048002 13.608 16.0056 20.008801 22.010401 24.408001 28.007999 29.6064 33.6096 37.612801 41.616001 43.617599 45.216 51.2136 57.218399 59.220001 65.2248 68.824799 72.828003 74.426399 76.024803 77.623199 81.223198 82.821602 86.824799 92.829597 94.8312 97.228798 101.232 109.2312 111.2328 115.236 121.2408 123.2424 127.2456 128.84399 130.4424 134.4456 139.644 143.6472"
-           y="0"
-           id="tspan152">Line-of-sighttimetocollisionfromthefollower</tspan><tspan
-           x="0 2.0016 8.0064001 10.008 14.0112 20.016001 24.019199 28.0224 34.027199 37.627201 41.630402 45.633598 47.231998 50.832001 52.430401 56.433601 60.436798 64.036797 68.040001 74.037598 78.040802 79.639198 83.642403 89.647202 93.650398 97.653603 101.2536 107.2584 109.26 111.6576 115.6608 121.6584 125.6616"
-           y="10.125"
-           id="tspan154">totheegovehicle,sampledeachframe.</tspan></text>
-      <g
-         id="g158">
-        <path
-           d="m 354.75,387 h 288 c 1.242,0 2.25,1.242 2.25,2.25 v 42 c 0,1.242 -1.008,2.25 -2.25,2.25 h -288 c -1.242,0 -2.25,-1.242 -2.25,-2.25 v -42 c 0,-1.242 1.008,-2.25 2.25,-2.25 z"
-           style="fill:#f0f0f0;fill-opacity:1;fill-rule:nonzero;stroke:#c9c9c9;stroke-width:0.9;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           id="path160" />
-      </g>
-      <text
-         xml:space="preserve"
-         transform="translate(363,401.25)"
-         style="font-variant:normal;font-weight:bold;font-size:7.875px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#6b6b6b;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text164"><tspan
-           x="0 5.7014999 8.3474998 14.91525 21.057751 27.192375 35.091"
-           y="0"
-           id="tspan162">SIGNALB</tspan></text>
-      <text
-         xml:space="preserve"
-         transform="translate(363,413.25)"
-         style="font-variant:normal;font-weight:normal;font-size:7.2px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#6b6b6b;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text170"><tspan
-           x="0 5.1984 9.2016001 13.2048 16.8048 18.8064 20.4048 24.408001 30.4128 34.416 38.419201 40.017601 44.020802 49.622398 53.625599 57.628799 59.630402 63.633598 69.638397 71.639999 75.643204 77.2416 78.839996 82.843201 88.041603 89.639999 93.643204 99.648003 103.248 107.2512 111.2544 112.8528 116.4528 118.0512 122.0544"
-           y="0"
-           id="tspan166">Reactiondelayofthefollowingvehicle,</tspan><tspan
-           x="0 5.9976001 10.0008 14.004 17.604 21.607201 24.004801 28.007999 34.012798 36.0144 38.411999 42.415199 50.414398 54.417599 56.815201 60.818401 64.418404 70.423203 74.426399 78.429604 82.029602 86.032799 88.034401"
-           y="10.125"
-           id="tspan168">measuredfrombrakeonset.</tspan></text>
-      <g
-         id="g172">
-        <path
-           d="M 30,444 H 645"
-           style="fill:none;stroke:#8a8a8a;stroke-width:0.75;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3, 3;stroke-dashoffset:0;stroke-opacity:1"
-           id="path174" />
-      </g>
-      <text
-         xml:space="preserve"
-         transform="translate(280.15625,441)"
-         style="font-variant:normal;font-weight:normal;font-size:6.75px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#8a8a8a;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text178"><tspan
-           x="0 3.753 7.506 10.881 14.634 16.88175 20.25675 24.00975 27.762751 29.26125 30.75975 32.258251 34.13475 39.38625 43.139252 46.89225 52.521751 54.020248 57.773251 61.526249 65.279251 69.032249 72.785248 76.538254 80.291252 84.04425 87.797249 91.172249 96.80175 100.17675 103.92975 107.68275 111.05775"
-           y="0"
-           id="tspan176">observabilityandindependencecheck</tspan></text>
-      <g
-         id="g180">
-        <path
-           d="m 32.25,451.5 h 288 c 1.242,0 2.25,1.242 2.25,2.25 v 54 c 0,1.242 -1.008,2.25 -2.25,2.25 h -288 C 31.008,510 30,508.758 30,507.75 v -54 c 0,-1.242 1.008,-2.25 2.25,-2.25 z"
-           style="fill:#dfa640;fill-opacity:1;fill-rule:nonzero;stroke:#c08f2e;stroke-width:0.9;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           id="path182" />
-      </g>
-      <text
-         xml:space="preserve"
-         transform="translate(40.5,465.75)"
-         style="font-variant:normal;font-weight:bold;font-size:7.875px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#3d2f08;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text186"><tspan
-           x="0 5.2605 10.962 17.1045 23.231251 25.877251 32.011875 41.225624 46.927124 52.636501 57.91275"
-           y="0"
-           id="tspan184">LEADINGSPI4</tspan></text>
-      <text
-         xml:space="preserve"
-         transform="translate(40.5,477.75)"
-         style="font-variant:normal;font-weight:normal;font-size:7.2px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#3d2f08;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text190"><tspan
-           x="0 2.3975999 7.5960002 11.5992 15.6024 19.6056 23.608801 25.610399 27.208799 33.206402 37.209599 42.811199 45.208801 50.4072 55.209599 60.012001 65.210403 69.2136 73.612801 78.012001 85.211998"
-           y="0"
-           id="tspan188">(No.oftimes(REAR_TTC&lt;</tspan></text>
-      <text
-         xml:space="preserve"
-         transform="translate(131.9184,477.75)"
-         style="font-variant:normal;font-weight:normal;font-size:7.2px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#3d2f08;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text194"><tspan
-           x="0"
-           y="0"
-           id="tspan192">θ</tspan></text>
-      <text
-         xml:space="preserve"
-         transform="translate(136.1016,477.75)"
-         style="font-variant:normal;font-weight:normal;font-size:7.2px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#3d2f08;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text202"><tspan
-           x="0 4.0032001 9.2016001 13.6008 18 23.1984 27.597601 31.6008 35.604 40.003201 44.006401 48.009602 52.012798 55.612801 60.012001 66.218399 70.617599 74.620796 79.819199 84.218399 88.617599"
-           y="0"
-           id="tspan196">_RTTC)per100k)&lt;T_RTTC</tspan><tspan
-           x="-95.601601 -89.603996 -85.6008 -83.599197 -81.201599 -79.603203 -76.003197 -72 -66.002403 -64.403999 -60.400799 -58.802399 -52.804798 -48.801601 -40.802399 -39.203999 -37.605598 -33.602402 -29.599199 -27.201599 -23.1984 -21.1968 -18.7992 -15.1992 -13.6008 -9.5976 -5.5943999 -1.5912 2.8080001 7.2072001 12.4056 16.4088 18.4104 22.413601 24.011999 25.610399 29.6136 34.812 38.815201 43.214401 45.216 51.220798 55.223999 59.2272 63.2304"
-           y="10.125"
-           id="tspan198">Metric:minimumline-of-sightTTC,followertoego.</tspan><tspan
-           x="-95.601601 -90.799202 -87.199203 -83.195999 -79.192802"
-           y="20.25"
-           id="tspan200">Event</tspan></text>
-      <text
-         xml:space="preserve"
-         transform="translate(60.912,498)"
-         style="font-variant:normal;font-weight:normal;font-size:7.2px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#3d2f08;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text206"><tspan
-           x="0"
-           y="0"
-           id="tspan204">θ</tspan></text>
-      <text
-         xml:space="preserve"
-         transform="translate(65.0952,498)"
-         style="font-variant:normal;font-weight:normal;font-size:7.2px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#3d2f08;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text210"><tspan
-           x="0 4.0032001 9.2016001 13.6008 18 25.200001 27.597601 29.195999 33.1992 38.397598 42.400799 46.799999 48.801601 52.804798 54.403198 56.001598 58.3992 62.402401 67.6008 71.603996 73.605598 79.610397 84.009598 88.012802 93.211197 97.610397 102.0096 107.208"
-           y="0"
-           id="tspan208">_RTTC(lowertail);RateT_RTTC.</tspan></text>
-      <g
-         id="g212">
-        <path
-           d="m 354.75,451.5 h 288 c 1.242,0 2.25,1.242 2.25,2.25 v 54 c 0,1.242 -1.008,2.25 -2.25,2.25 h -288 c -1.242,0 -2.25,-1.242 -2.25,-2.25 v -54 c 0,-1.242 1.008,-2.25 2.25,-2.25 z"
-           style="fill:#f0f0f0;fill-opacity:1;fill-rule:nonzero;stroke:#c9c9c9;stroke-width:0.9;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           id="path214" />
-      </g>
-      <text
-         xml:space="preserve"
-         transform="translate(363,465.75)"
-         style="font-variant:normal;font-weight:bold;font-size:7.875px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#6b6b6b;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text218"><tspan
-           x="0 6.134625 11.836125 16.671375 22.372875 28.5075 33.768002 39.469501 48.242249 54.376877 62.283375 67.984879 73.245377 78.946877 87.286499"
-           y="0"
-           id="tspan216">REJECTEDATSTEP5</tspan></text>
-      <text
-         xml:space="preserve"
-         transform="translate(363,477.75)"
-         style="font-variant:normal;font-weight:normal;font-size:7.2px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#6b6b6b;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text226"><tspan
-           x="0 5.1984 9.2016001 13.2048 17.208 21.211201 24.811199 28.8144 31.212 34.812 38.815201 42.818401 44.416801 50.4216 52.423199 58.428001 60.4296 64.4328 70.437599 74.440804 78.444 84.448799 88.048798 92.052002 96.055199 97.653603 101.2536 102.852 106.8552 110.8584 112.86 116.8632 122.868 126.8712 130.8744 134.87759 138.8808 140.8824 142.4808 144.48241 150.084 154.0872 158.09039 159.6888 163.692 167.69521 171.69839"
-           y="0"
-           id="tspan220">Notobservabletotheegovehicle:thequantitybelongs</tspan><tspan
-           x="0 2.0016 8.0064001 10.008 14.0112 20.016001 22.017599 26.0208 27.6192 29.2176 33.220798 38.419201 40.017601 44.020802 50.0256 54.028801 56.426399 58.024799 61.624802 65.627998 70.027199 74.030403 78.0336 84.038399 85.636803 91.238403 95.2416 98.841599 102.8448 104.4432 106.0416 110.0448 114.048 115.6464 121.6512 123.2496 129.25439 132.8544 134.4528 140.45039 144.4536 146.052 150.05521 152.05679 153.6552 157.6584"
-           y="10.125"
-           id="tspan222">tothefollowingdriverandisavailableinsimulation</tspan><tspan
-           x="0 4.0032001 8.0064001 9.6048002 15.2064 19.2096 23.212799 26.812799 30.816 34.819199 38.419201 44.424 46.425598 50.428799 56.433601 60.436798 64.440002 66.038399 70.041603 75.643204 77.2416 82.843201 88.848 92.447998 96.451202 102.4488 106.452 108.0504 112.0536 118.0584 122.0616 126.0648 128.4624 132.46561 138.4632 142.4664 144.468 148.47121 150.8688"
-           y="20.25"
-           id="tspan224">onlybecausethedelayisasampledparameter.</tspan></text>
-      <g
-         id="g228">
-        <path
-           d="m 176.25,510 v 24"
-           style="fill:none;stroke:#8a8a8a;stroke-width:0.975;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           id="path230" />
-      </g>
-      <path
-         d="M 180.637,525.227 176.25,534 171.863,525.227 Z"
-         style="fill:#8a8a8a;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="path232" />
-      <g
-         id="g234">
-        <path
-           d="m 498.75,510 v 12 h -322.5"
-           style="fill:none;stroke:#c9c9c9;stroke-width:0.9;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3, 3;stroke-dashoffset:0;stroke-opacity:1"
-           id="path236" />
-      </g>
-      <g
-         id="g238">
-        <path
-           d="m 32.25,535.5 h 610.5 c 1.242,0 2.25,1.242 2.25,2.25 v 24 c 0,1.242 -1.008,2.25 -2.25,2.25 H 32.25 C 31.008,564 30,562.758 30,561.75 v -24 c 0,-1.242 1.008,-2.25 2.25,-2.25 z"
-           style="fill:#dce5f1;fill-opacity:1;fill-rule:nonzero;stroke:#9fb3cd;stroke-width:0.9;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           id="path240" />
-      </g>
-      <text
-         xml:space="preserve"
-         transform="translate(40.5,549.75)"
-         style="font-variant:normal;font-weight:bold;font-size:7.875px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#1f3b63;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text244"><tspan
-           x="0 6.134625 11.395125 16.6635 22.790251 28.932751 37.705502 42.966 52.179749 57.448124 63.582748 71.922379 77.623878 83.758499 89.026878 94.728378 99.988876 108.3285 114.46313 120.59775 126.29925"
-           y="0"
-           id="tspan242">ATTACHTOTHESAFETYCASE</tspan></text>
-      <text
-         xml:space="preserve"
-         transform="translate(40.5,561.75)"
-         style="font-variant:normal;font-weight:normal;font-size:7.2px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#2c4062;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text248"><tspan
-           x="0 4.8024001 9.6048002 13.608 19.612801 23.615999 29.2176 30.816 34.819199 38.822399 42.8256 44.424 48.4272 54.431999 58.4352 62.035198 63.633598 67.636803 71.639999 75.643204 79.243202 85.248001 89.251198 93.254402 99.259201 104.0616 108.864 112.8672 118.872 122.8752 128.47681 130.0752 134.0784 138.0816 142.08479 143.6832 147.6864 153.69119 157.6944 161.2944 162.89281 166.896 170.8992 174.9024 178.5024 184.5072 188.51041 194.5152 196.5168 200.52 206.5248 208.5264 212.5296 214.12801 215.72639 219.7296 224.92799 226.5264 230.5296 234.53281 236.9304 240.5304 244.5336 248.5368 250.53841 252.1368 253.7352 257.33521 261.33841 265.34161 269.34479 273.34799 274.94641"
-           y="0"
-           id="tspan246">SPI4asleadingevidenceandSPI9aslaggingevidenceonthefollowing-conflictgoal.</tspan></text>
-      <g
-         id="g250">
-        <path
-           d="m 337.5,564 v 15"
-           style="fill:none;stroke:#8a8a8a;stroke-width:0.975;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           id="path252" />
-      </g>
-      <path
-         d="M 341.887,570.227 337.5,579 l -4.387,-8.773 z"
-         style="fill:#8a8a8a;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="path254" />
-      <g
-         id="g256">
-        <path
-           d="m 32.25,580.5 h 610.5 c 1.242,0 2.25,1.242 2.25,2.25 v 34.5 c 0,1.242 -1.008,2.25 -2.25,2.25 H 32.25 c -1.242,0 -2.25,-1.242 -2.25,-2.25 v -34.5 c 0,-1.242 1.008,-2.25 2.25,-2.25 z"
-           style="fill:#dce5f1;fill-opacity:1;fill-rule:nonzero;stroke:#9fb3cd;stroke-width:0.9;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           id="path258" />
-      </g>
-      <text
-         xml:space="preserve"
-         transform="translate(40.5,594.75)"
-         style="font-variant:normal;font-weight:bold;font-size:7.875px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#1f3b63;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text262"><tspan
-           x="0 5.7014999 11.836125 17.1045 19.734751 25.877251 32.011875 37.272373"
-           y="0"
-           id="tspan260">VALIDATE</tspan></text>
-      <text
-         xml:space="preserve"
-         transform="translate(40.5,606.75)"
-         style="font-variant:normal;font-weight:normal;font-size:7.2px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#2c4062;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text268"><tspan
-           x="0 4.8024001 8.4024 12.4056 14.8032 18.8064 24.811199 28.8144 32.8176 34.416 40.017601 44.020802 50.0256 52.423199 56.426399 60.4296 66.031197 67.629601 73.634399 78.832802 82.835999 84.434402 88.034401 94.0392 100.044 102.0456 106.0488 107.6472 109.2456 113.2488 118.4472 122.4504 126.8496 128.448 134.04961 138.0528 140.45039 144.4536 148.0536 152.05679 156.06 158.0616 162.0648 165.66479 167.2632 171.2664 174.86639 180.8712 182.8728 186.87601 192.8808 196.884 200.88721 204.4872 208.4904 210.888 216.89281 220.4928 224.496 228.49921 232.5024 236.5056 240.5088 244.51199 246.90961 248.508 252.108 258.11279 263.31119 264.90961 266.91119 270.9144 274.9176 278.92081 282.92401 286.92719 290.93039 294.93359 298.9368 303.336 307.3392"
-           y="0"
-           id="tspan264">Scoredonlyonrunsinwhichafollowerispresent,sincethehazardcannotarisewithoutone.The</tspan><tspan
-           x="0 4.0032001 7.6032 11.2032 15.2064 19.2096 21.211201 25.214399 29.2176 32.8176 38.822399 42.422401 44.82 46.4184 48.419998 52.423199 54.820801 56.419201 60.422401 66.4272 68.025597 73.627197 77.630402 80.028 84.031197 88.034401 92.037598 98.042397 102.0456 108.0504 110.052 114.0552 120.06 124.0632 128.06641 131.6664 135.6696 137.26801 138.86639 142.8696 146.8728 149.2704 152.87041 156.8736 162.8712 166.8744 170.87759 173.27521 174.8736 178.4736 182.47681 188.4816 192.4848 194.8824 196.4808 200.48399 204.084 205.6824 209.68559 211.284 215.2872 219.29041 221.29201 225.2952 231.3 233.30161 237.30479 238.9032 240.5016 244.50481 249.7032 251.30161 255.30479 261.3096 265.31281 267.71039 269.30881 272.90881 276.91199 281.31119 285.31439 289.3176 290.91599 294.91919 300.92401 306.9288 310.93201 314.93521 317.33279 319.33441 320.9328 324.53281 326.1312 330.1344 334.1376 338.14081 342.14401 343.7424 349.74719 351.74881 355.75201 361.75681 365.35681 369.35999 375.3576 381.3624 383.36401 385.7616 389.7648 391.76639 393.76801 395.36639 400.96799 404.56799 408.168 411.76801 413.76959 417.7728 423.77039"
-           y="10.125"
-           id="tspan266">acceptancecriterionisarguedonthebaseline-comparisonprinciple,thefollowingdriverbeingaparticipantinthesametrafficsystem.</tspan></text>
-    </g>
-  </g>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="480pt" height="687pt" viewBox="0 0 480 687">
+<rect x="0" y="0" width="480" height="687" fill="#ffffff"/>
+<text x="240.00" y="20.00" font-family="Arial, Helvetica, sans-serif" font-size="11.50" fill="#1f3b63" font-weight="bold" text-anchor="middle" xml:space="preserve"><tspan>REAR chain: conflict with a following vehicle</tspan></text>
+<text x="240.00" y="33.00" font-family="Arial, Helvetica, sans-serif" font-size="8.00" fill="#8a8a8a" text-anchor="middle" xml:space="preserve"><tspan>Derivation runs downward, from the collision (lagging SPI) back to the earliest observable signals</tspan></text>
+<rect x="14.00" y="41.00" width="428.00" height="48.00" rx="3" ry="3" fill="#9e4746" stroke="#833938" stroke-width="0.9"/>
+<text x="21.00" y="57.00" font-family="Arial, Helvetica, sans-serif" font-size="9.00" fill="#ffffff" font-weight="bold" xml:space="preserve"><tspan>LAGGING SPI: REAR collision</tspan></text>
+<text x="21.00" y="71.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#ffffff" xml:space="preserve"><tspan>SPI: runs with a collision with the following vehicle per 10</tspan><tspan font-size="6.05" baseline-shift="super">5</tspan><tspan> manoeuvres &lt; T</tspan><tspan font-size="6.05" baseline-shift="sub">REAR</tspan></text>
+<text x="21.00" y="82.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#ffffff" xml:space="preserve"><tspan>Metric: contact between the following vehicle and the ego vehicle.</tspan></text>
+<polyline points="228.00,89.00 228.00,104.00" fill="none" stroke="#8a8a8a" stroke-width="1.0"/>
+<polygon points="228.00,109.00 225.00,103.00 231.00,103.00" fill="#8a8a8a"/>
+<text x="234.00" y="102.00" font-family="Arial, Helvetica, sans-serif" font-size="7.60" fill="#8a8a8a" font-style="italic" xml:space="preserve"><tspan>why</tspan></text>
+<rect x="14.00" y="109.00" width="428.00" height="59.00" rx="3" ry="3" fill="#fbfcfe" stroke="#c3ccd8" stroke-width="0.9"/>
+<text x="21.00" y="125.00" font-family="Arial, Helvetica, sans-serif" font-size="9.00" fill="#1f3b63" font-weight="bold" xml:space="preserve"><tspan>PROXIMATE CAUSE</tspan></text>
+<text x="21.00" y="139.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#1a1a1a" xml:space="preserve"><tspan>The ego vehicle decelerated inside the manoeuvre, at turn entry or at a pedestrian stop, and the follower did</tspan></text>
+<text x="21.00" y="150.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#1a1a1a" xml:space="preserve"><tspan>not arrest its approach within the gap that remained. No third party is involved: the hazard is created by the ego</tspan></text>
+<text x="21.00" y="161.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#1a1a1a" xml:space="preserve"><tspan>vehicle's own deceleration.</tspan></text>
+<polyline points="228.00,168.00 228.00,183.00" fill="none" stroke="#8a8a8a" stroke-width="1.0"/>
+<polygon points="228.00,188.00 225.00,182.00 231.00,182.00" fill="#8a8a8a"/>
+<text x="234.00" y="181.00" font-family="Arial, Helvetica, sans-serif" font-size="7.60" fill="#8a8a8a" font-style="italic" xml:space="preserve"><tspan>reaction tier</tspan></text>
+<rect x="14.00" y="188.00" width="428.00" height="48.00" rx="3" ry="3" fill="#fbfcfe" stroke="#c3ccd8" stroke-width="0.9"/>
+<text x="21.00" y="204.00" font-family="Arial, Helvetica, sans-serif" font-size="9.00" fill="#1f3b63" font-weight="bold" xml:space="preserve"><tspan>NO REACTION-TIER INDICATOR ON THIS CHAIN</tspan></text>
+<text x="21.00" y="218.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#1a1a1a" xml:space="preserve"><tspan>The ego vehicle has no last-resort mitigation directed rearward, so the reaction tier present on the ONC and</tspan></text>
+<text x="21.00" y="229.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#1a1a1a" xml:space="preserve"><tspan>PED chains is empty here.</tspan></text>
+<polyline points="228.00,236.00 228.00,251.00" fill="none" stroke="#8a8a8a" stroke-width="1.0"/>
+<polygon points="228.00,256.00 225.00,250.00 231.00,250.00" fill="#8a8a8a"/>
+<text x="234.00" y="249.00" font-family="Arial, Helvetica, sans-serif" font-size="7.60" fill="#8a8a8a" font-style="italic" xml:space="preserve"><tspan>decompose the proximate cause (kinematic precursor tier)</tspan></text>
+<polygon points="133.00,256.00 323.00,256.00 333.00,266.00 323.00,276.00 133.00,276.00 123.00,266.00" fill="#f2f2f2" stroke="#8a8a8a" stroke-width="0.9"/>
+<text x="228.00" y="269.00" font-family="Arial, Helvetica, sans-serif" font-size="8.20" fill="#1a1a1a" font-weight="bold" text-anchor="middle" xml:space="preserve"><tspan>OR gate: either cause alone is sufficient</tspan></text>
+<polyline points="228.00,276.00 228.00,284.00 118.00,284.00 118.00,295.00" fill="none" stroke="#8a8a8a" stroke-width="1.0"/>
+<polygon points="118.00,300.00 115.00,294.00 121.00,294.00" fill="#8a8a8a"/>
+<polyline points="228.00,276.00 228.00,284.00 338.00,284.00 338.00,295.00" fill="none" stroke="#8a8a8a" stroke-width="1.0"/>
+<polygon points="338.00,300.00 335.00,294.00 341.00,294.00" fill="#8a8a8a"/>
+<rect x="14.00" y="300.00" width="208.00" height="70.00" rx="3" ry="3" fill="#fbfcfe" stroke="#c3ccd8" stroke-width="0.9"/>
+<text x="21.00" y="316.00" font-family="Arial, Helvetica, sans-serif" font-size="9.00" fill="#1f3b63" font-weight="bold" xml:space="preserve"><tspan>CAUSE A</tspan></text>
+<text x="21.00" y="330.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#1a1a1a" xml:space="preserve"><tspan>The gap held by the follower was already too small</tspan></text>
+<text x="21.00" y="341.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#1a1a1a" xml:space="preserve"><tspan>to absorb a deceleration of the magnitude the</tspan></text>
+<text x="21.00" y="352.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#1a1a1a" xml:space="preserve"><tspan>manoeuvre requires.</tspan></text>
+<text x="21.00" y="363.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#1a1a1a" xml:space="preserve"><tspan>Ego planning subsystem, through its speed profile.</tspan></text>
+<rect x="234.00" y="300.00" width="208.00" height="70.00" rx="3" ry="3" fill="#f0f0f0" stroke="#c9c9c9" stroke-width="0.9"/>
+<text x="241.00" y="316.00" font-family="Arial, Helvetica, sans-serif" font-size="9.00" fill="#6b6b6b" font-weight="bold" xml:space="preserve"><tspan>CAUSE B</tspan></text>
+<text x="241.00" y="330.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#6b6b6b" xml:space="preserve"><tspan>The follower responded late, continuing to close for</tspan></text>
+<text x="241.00" y="341.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#6b6b6b" xml:space="preserve"><tspan>an interval after braking began.</tspan></text>
+<text x="241.00" y="352.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#6b6b6b" xml:space="preserve"><tspan>Follower's own driver or control stack.</tspan></text>
+<polyline points="118.00,370.00 118.00,381.00" fill="none" stroke="#8a8a8a" stroke-width="1.0"/>
+<polygon points="118.00,386.00 115.00,380.00 121.00,380.00" fill="#8a8a8a"/>
+<polyline points="338.00,370.00 338.00,381.00" fill="none" stroke="#8a8a8a" stroke-width="1.0"/>
+<polygon points="338.00,386.00 335.00,380.00 341.00,380.00" fill="#8a8a8a"/>
+<rect x="14.00" y="386.00" width="208.00" height="48.00" rx="3" ry="3" fill="#fbfcfe" stroke="#c3ccd8" stroke-width="0.9"/>
+<text x="21.00" y="402.00" font-family="Arial, Helvetica, sans-serif" font-size="9.00" fill="#1f3b63" font-weight="bold" xml:space="preserve"><tspan>SIGNAL A</tspan></text>
+<text x="21.00" y="416.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#1a1a1a" xml:space="preserve"><tspan>Line-of-sight time to collision from the follower to the</tspan></text>
+<text x="21.00" y="427.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#1a1a1a" xml:space="preserve"><tspan>ego vehicle, sampled each frame.</tspan></text>
+<rect x="234.00" y="386.00" width="208.00" height="48.00" rx="3" ry="3" fill="#f0f0f0" stroke="#c9c9c9" stroke-width="0.9"/>
+<text x="241.00" y="402.00" font-family="Arial, Helvetica, sans-serif" font-size="9.00" fill="#6b6b6b" font-weight="bold" xml:space="preserve"><tspan>SIGNAL B</tspan></text>
+<text x="241.00" y="416.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#6b6b6b" xml:space="preserve"><tspan>Reaction delay of the following vehicle, measured</tspan></text>
+<text x="241.00" y="427.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#6b6b6b" xml:space="preserve"><tspan>from brake onset.</tspan></text>
+<polyline points="14.00,447.00 442.00,447.00" fill="none" stroke="#b0b0b0" stroke-width="0.8" stroke-dasharray="3,3"/>
+<rect x="158.57" y="441.00" width="138.86" height="12.00" rx="0" ry="0" fill="#ffffff" stroke="#ffffff" stroke-width="0"/>
+<text x="228.00" y="450.00" font-family="Arial, Helvetica, sans-serif" font-size="7.60" fill="#8a8a8a" font-style="italic" text-anchor="middle" xml:space="preserve"><tspan>observability and independence check</tspan></text>
+<polyline points="118.00,434.00 118.00,457.00" fill="none" stroke="#8a8a8a" stroke-width="1.0"/>
+<polygon points="118.00,462.00 115.00,456.00 121.00,456.00" fill="#8a8a8a"/>
+<polyline points="338.00,434.00 338.00,457.00" fill="none" stroke="#8a8a8a" stroke-width="1.0"/>
+<polygon points="338.00,462.00 335.00,456.00 341.00,456.00" fill="#8a8a8a"/>
+<rect x="14.00" y="462.00" width="208.00" height="70.00" rx="3" ry="3" fill="#dfa640" stroke="#c08f2e" stroke-width="0.9"/>
+<text x="21.00" y="478.00" font-family="Arial, Helvetica, sans-serif" font-size="9.00" fill="#3d2f08" font-weight="bold" xml:space="preserve"><tspan>LEADING SPI: REAR_TTC</tspan></text>
+<text x="21.00" y="492.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#3d2f08" xml:space="preserve"><tspan>SPI: runs with REAR_TTC below θ</tspan></text>
+<text x="21.00" y="503.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#3d2f08" xml:space="preserve"><tspan>per 10</tspan><tspan font-size="6.05" baseline-shift="super">5</tspan><tspan> manoeuvres &lt; T</tspan><tspan font-size="6.05" baseline-shift="sub">REAR_TTC</tspan></text>
+<text x="21.00" y="514.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#3d2f08" xml:space="preserve"><tspan>Metric: minimum line-of-sight TTC, follower to ego</tspan></text>
+<text x="21.00" y="525.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#3d2f08" xml:space="preserve"><tspan>vehicle.</tspan></text>
+<rect x="234.00" y="462.00" width="208.00" height="70.00" rx="3" ry="3" fill="#f0f0f0" stroke="#c9c9c9" stroke-width="0.9"/>
+<text x="241.00" y="478.00" font-family="Arial, Helvetica, sans-serif" font-size="9.00" fill="#6b6b6b" font-weight="bold" xml:space="preserve"><tspan>REJECTED AT STEP 5</tspan></text>
+<text x="241.00" y="492.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#6b6b6b" xml:space="preserve"><tspan>Not observable to the ego vehicle: the quantity</tspan></text>
+<text x="241.00" y="503.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#6b6b6b" xml:space="preserve"><tspan>belongs to the following driver and is available in</tspan></text>
+<text x="241.00" y="514.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#6b6b6b" xml:space="preserve"><tspan>simulation only because the delay is a sampled</tspan></text>
+<text x="241.00" y="525.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#6b6b6b" xml:space="preserve"><tspan>parameter.</tspan></text>
+<polyline points="338.00,532.00 338.00,541.00 118.00,541.00" fill="none" stroke="#c9c9c9" stroke-width="0.9" stroke-dasharray="3,3"/>
+<polyline points="118.00,532.00 118.00,549.00" fill="none" stroke="#8a8a8a" stroke-width="1.0"/>
+<polygon points="118.00,554.00 115.00,548.00 121.00,548.00" fill="#8a8a8a"/>
+<rect x="14.00" y="554.00" width="428.00" height="48.00" rx="3" ry="3" fill="#dce5f1" stroke="#9fb3cd" stroke-width="0.9"/>
+<text x="21.00" y="570.00" font-family="Arial, Helvetica, sans-serif" font-size="9.00" fill="#1f3b63" font-weight="bold" xml:space="preserve"><tspan>ATTACH TO THE SAFETY CASE</tspan></text>
+<text x="21.00" y="584.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#2c4062" xml:space="preserve"><tspan>REAR_TTC on G4.1 as leading evidence and the REAR collision as lagging evidence on G4, the</tspan></text>
+<text x="21.00" y="595.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#2c4062" xml:space="preserve"><tspan>following-conflict goal. The rejected branch corresponds to the undeveloped goal G4.2.</tspan></text>
+<polyline points="228.00,602.00 228.00,613.00" fill="none" stroke="#8a8a8a" stroke-width="1.0"/>
+<polygon points="228.00,618.00 225.00,612.00 231.00,612.00" fill="#8a8a8a"/>
+<rect x="14.00" y="618.00" width="428.00" height="59.00" rx="3" ry="3" fill="#dce5f1" stroke="#9fb3cd" stroke-width="0.9"/>
+<text x="21.00" y="634.00" font-family="Arial, Helvetica, sans-serif" font-size="9.00" fill="#1f3b63" font-weight="bold" xml:space="preserve"><tspan>VALIDATE</tspan></text>
+<text x="21.00" y="648.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#2c4062" xml:space="preserve"><tspan>Scored only on runs in which a follower is present, since the hazard cannot arise without one. The acceptance</tspan></text>
+<text x="21.00" y="659.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#2c4062" xml:space="preserve"><tspan>criterion is argued on the baseline-comparison principle, the following driver being a participant in the same</tspan></text>
+<text x="21.00" y="670.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#2c4062" xml:space="preserve"><tspan>traffic system.</tspan></text>
 </svg>
