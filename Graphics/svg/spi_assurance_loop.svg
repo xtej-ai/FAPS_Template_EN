@@ -31,7 +31,7 @@
 <text x="409.00" y="283.25" font-family="Arial, Helvetica, sans-serif" font-size="8.60" fill="#1a1a1a" text-anchor="middle" xml:space="preserve"><tspan>field or simulation data</tspan></text>
 <rect x="177.00" y="331.00" width="146.00" height="50.00" rx="2" ry="2" fill="#e3812b" stroke="#e3812b" stroke-width="0"/>
 <text x="250.00" y="353.25" font-family="Arial, Helvetica, sans-serif" font-size="10.50" fill="#ffffff" font-weight="bold" text-anchor="middle" xml:space="preserve"><tspan>SPI violation</tspan></text>
-<text x="250.00" y="367.25" font-family="Arial, Helvetica, sans-serif" font-size="8.60" fill="#ffffff" text-anchor="middle" xml:space="preserve"><tspan>claim validity challenged</tspan></text>
+<text x="250.00" y="367.25" font-family="Arial, Helvetica, sans-serif" font-size="8.60" fill="#ffffff" text-anchor="middle" xml:space="preserve"><tspan>claim invalid</tspan></text>
 <rect x="18.00" y="247.00" width="146.00" height="50.00" rx="2" ry="2" fill="#dcdcdc" stroke="#dcdcdc" stroke-width="0"/>
 <text x="91.00" y="264.00" font-family="Arial, Helvetica, sans-serif" font-size="10.50" fill="#1a1a1a" font-weight="bold" text-anchor="middle" xml:space="preserve"><tspan>Change-impact analysis</tspan></text>
 <text x="91.00" y="278.00" font-family="Arial, Helvetica, sans-serif" font-size="8.60" fill="#1a1a1a" text-anchor="middle" xml:space="preserve"><tspan>affected claims and evidence</tspan></text>

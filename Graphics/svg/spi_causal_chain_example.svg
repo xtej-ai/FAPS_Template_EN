@@ -1,95 +1,108 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="480pt" height="698pt" viewBox="0 0 480 698">
-<rect x="0" y="0" width="480" height="698" fill="#ffffff"/>
-<text x="240.00" y="20.00" font-family="Arial, Helvetica, sans-serif" font-size="11.50" fill="#1f3b63" font-weight="bold" text-anchor="middle" xml:space="preserve"><tspan>ONC chain: conflict with an oncoming vehicle</tspan></text>
-<text x="240.00" y="33.00" font-family="Arial, Helvetica, sans-serif" font-size="8.00" fill="#8a8a8a" text-anchor="middle" xml:space="preserve"><tspan>Derivation runs downward, from the collision (lagging SPI) back to the earliest observable signals</tspan></text>
-<rect x="14.00" y="41.00" width="428.00" height="48.00" rx="3" ry="3" fill="#9e4746" stroke="#833938" stroke-width="0.9"/>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="500pt" height="727pt" viewBox="0 0 500 727">
+<rect x="0" y="0" width="500" height="727" fill="#ffffff"/>
+<text x="250.00" y="20.00" font-family="Arial, Helvetica, sans-serif" font-size="11.50" fill="#1f3b63" font-weight="bold" text-anchor="middle" xml:space="preserve"><tspan>ONC chain: conflict with an oncoming vehicle</tspan></text>
+<text x="250.00" y="33.00" font-family="Arial, Helvetica, sans-serif" font-size="8.00" fill="#8a8a8a" text-anchor="middle" xml:space="preserve"><tspan>Derivation runs downward, from the collision (lagging SPI) back to the earliest observable signals</tspan></text>
+<rect x="14.00" y="41.00" width="462.00" height="65.00" rx="3" ry="3" fill="#9e4746" stroke="#833938" stroke-width="0.9"/>
 <text x="21.00" y="57.00" font-family="Arial, Helvetica, sans-serif" font-size="9.00" fill="#ffffff" font-weight="bold" xml:space="preserve"><tspan>LAGGING SPI: ONC collision</tspan></text>
-<text x="21.00" y="71.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#ffffff" xml:space="preserve"><tspan>SPI: runs with a collision with an oncoming vehicle per 10</tspan><tspan font-size="6.05" baseline-shift="super">5</tspan><tspan> manoeuvres &lt; T</tspan><tspan font-size="6.05" baseline-shift="sub">ONC</tspan></text>
-<text x="21.00" y="82.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#ffffff" xml:space="preserve"><tspan>Metric: contact between the ego vehicle and an oncoming vehicle.</tspan></text>
-<polyline points="228.00,89.00 228.00,104.00" fill="none" stroke="#8a8a8a" stroke-width="1.0"/>
-<polygon points="228.00,109.00 225.00,103.00 231.00,103.00" fill="#8a8a8a"/>
-<text x="234.00" y="102.00" font-family="Arial, Helvetica, sans-serif" font-size="7.60" fill="#8a8a8a" font-style="italic" xml:space="preserve"><tspan>why</tspan></text>
-<rect x="14.00" y="109.00" width="428.00" height="48.00" rx="3" ry="3" fill="#fbfcfe" stroke="#c3ccd8" stroke-width="0.9"/>
-<text x="21.00" y="125.00" font-family="Arial, Helvetica, sans-serif" font-size="9.00" fill="#1f3b63" font-weight="bold" xml:space="preserve"><tspan>PROXIMATE CAUSE</tspan></text>
-<text x="21.00" y="139.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#1a1a1a" xml:space="preserve"><tspan>The ego vehicle occupied the conflict area while an oncoming vehicle was closing on it, and no avoidance</tspan></text>
-<text x="21.00" y="150.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#1a1a1a" xml:space="preserve"><tspan>action succeeded in time.</tspan></text>
-<polyline points="228.00,157.00 228.00,172.00" fill="none" stroke="#8a8a8a" stroke-width="1.0"/>
-<polygon points="228.00,177.00 225.00,171.00 231.00,171.00" fill="#8a8a8a"/>
-<text x="234.00" y="170.00" font-family="Arial, Helvetica, sans-serif" font-size="7.60" fill="#8a8a8a" font-style="italic" xml:space="preserve"><tspan>reaction tier (last resort, nearest the loss)</tspan></text>
-<rect x="14.00" y="177.00" width="428.00" height="70.00" rx="3" ry="3" fill="#b26a63" stroke="#9a5650" stroke-width="0.9"/>
-<text x="21.00" y="193.00" font-family="Arial, Helvetica, sans-serif" font-size="9.00" fill="#ffffff" font-weight="bold" xml:space="preserve"><tspan>INTERMEDIATE LEADING SPI: AEB_ONC</tspan></text>
-<text x="21.00" y="207.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#ffffff" xml:space="preserve"><tspan>SPI: runs with an emergency braking event with a gated oncoming vehicle in conflict</tspan></text>
-<text x="21.00" y="218.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#ffffff" xml:space="preserve"><tspan>per 10</tspan><tspan font-size="6.05" baseline-shift="super">5</tspan><tspan> manoeuvres &lt; T</tspan><tspan font-size="6.05" baseline-shift="sub">AEB_ONC</tspan></text>
-<text x="21.00" y="229.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#ffffff" xml:space="preserve"><tspan>Metric: hard emergency brake while an oncoming vehicle was within the collision horizon. Mitigation attempted,</tspan></text>
-<text x="21.00" y="240.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#ffffff" xml:space="preserve"><tspan>collision not yet realised.</tspan></text>
-<polyline points="228.00,247.00 228.00,262.00" fill="none" stroke="#8a8a8a" stroke-width="1.0"/>
-<polygon points="228.00,267.00 225.00,261.00 231.00,261.00" fill="#8a8a8a"/>
-<text x="234.00" y="260.00" font-family="Arial, Helvetica, sans-serif" font-size="7.60" fill="#8a8a8a" font-style="italic" xml:space="preserve"><tspan>decompose the proximate cause (kinematic precursor tier)</tspan></text>
-<polygon points="133.00,267.00 323.00,267.00 333.00,277.00 323.00,287.00 133.00,287.00 123.00,277.00" fill="#f2f2f2" stroke="#8a8a8a" stroke-width="0.9"/>
-<text x="228.00" y="280.00" font-family="Arial, Helvetica, sans-serif" font-size="8.20" fill="#1a1a1a" font-weight="bold" text-anchor="middle" xml:space="preserve"><tspan>OR gate: either cause alone is sufficient</tspan></text>
-<polyline points="228.00,287.00 228.00,295.00 118.00,295.00 118.00,306.00" fill="none" stroke="#8a8a8a" stroke-width="1.0"/>
-<polygon points="118.00,311.00 115.00,305.00 121.00,305.00" fill="#8a8a8a"/>
-<polyline points="228.00,287.00 228.00,295.00 338.00,295.00 338.00,306.00" fill="none" stroke="#8a8a8a" stroke-width="1.0"/>
-<polygon points="338.00,311.00 335.00,305.00 341.00,305.00" fill="#8a8a8a"/>
-<rect x="14.00" y="311.00" width="208.00" height="70.00" rx="3" ry="3" fill="#fbfcfe" stroke="#c3ccd8" stroke-width="0.9"/>
-<text x="21.00" y="327.00" font-family="Arial, Helvetica, sans-serif" font-size="9.00" fill="#1f3b63" font-weight="bold" xml:space="preserve"><tspan>CAUSE A</tspan></text>
-<text x="21.00" y="341.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#1a1a1a" xml:space="preserve"><tspan>The accepted gap was already insufficient when the</tspan></text>
-<text x="21.00" y="352.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#1a1a1a" xml:space="preserve"><tspan>manoeuvre began.</tspan></text>
-<text x="21.00" y="363.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#1a1a1a" xml:space="preserve"><tspan>Planning subsystem.</tspan></text>
-<rect x="234.00" y="311.00" width="208.00" height="70.00" rx="3" ry="3" fill="#fbfcfe" stroke="#c3ccd8" stroke-width="0.9"/>
-<text x="241.00" y="327.00" font-family="Arial, Helvetica, sans-serif" font-size="9.00" fill="#1f3b63" font-weight="bold" xml:space="preserve"><tspan>CAUSE B</tspan></text>
-<text x="241.00" y="341.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#1a1a1a" xml:space="preserve"><tspan>Closing speed exceeded what the turn arc allowed</tspan></text>
-<text x="241.00" y="352.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#1a1a1a" xml:space="preserve"><tspan>because of increased oncoming velocity, so the</tspan></text>
-<text x="241.00" y="363.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#1a1a1a" xml:space="preserve"><tspan>deceleration needed rose beyond normal braking.</tspan></text>
-<text x="241.00" y="374.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#1a1a1a" xml:space="preserve"><tspan>Prediction subsystem.</tspan></text>
-<polyline points="118.00,381.00 118.00,392.00" fill="none" stroke="#8a8a8a" stroke-width="1.0"/>
-<polygon points="118.00,397.00 115.00,391.00 121.00,391.00" fill="#8a8a8a"/>
-<polyline points="338.00,381.00 338.00,392.00" fill="none" stroke="#8a8a8a" stroke-width="1.0"/>
-<polygon points="338.00,397.00 335.00,391.00 341.00,391.00" fill="#8a8a8a"/>
-<rect x="14.00" y="397.00" width="208.00" height="48.00" rx="3" ry="3" fill="#fbfcfe" stroke="#c3ccd8" stroke-width="0.9"/>
-<text x="21.00" y="413.00" font-family="Arial, Helvetica, sans-serif" font-size="9.00" fill="#1f3b63" font-weight="bold" xml:space="preserve"><tspan>SIGNAL A</tspan></text>
-<text x="21.00" y="427.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#1a1a1a" xml:space="preserve"><tspan>TTC to the nearest closing oncoming vehicle,</tspan></text>
-<text x="21.00" y="438.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#1a1a1a" xml:space="preserve"><tspan>sampled each frame.</tspan></text>
-<rect x="234.00" y="397.00" width="208.00" height="48.00" rx="3" ry="3" fill="#fbfcfe" stroke="#c3ccd8" stroke-width="0.9"/>
-<text x="241.00" y="413.00" font-family="Arial, Helvetica, sans-serif" font-size="9.00" fill="#1f3b63" font-weight="bold" xml:space="preserve"><tspan>SIGNAL B</tspan></text>
-<text x="241.00" y="427.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#1a1a1a" xml:space="preserve"><tspan>Deceleration required to stop short of the conflict</tspan></text>
-<text x="241.00" y="438.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#1a1a1a" xml:space="preserve"><tspan>area at the current speed, sampled each frame.</tspan></text>
-<polyline points="14.00,458.00 442.00,458.00" fill="none" stroke="#b0b0b0" stroke-width="0.8" stroke-dasharray="3,3"/>
-<rect x="158.57" y="452.00" width="138.86" height="12.00" rx="0" ry="0" fill="#ffffff" stroke="#ffffff" stroke-width="0"/>
-<text x="228.00" y="461.00" font-family="Arial, Helvetica, sans-serif" font-size="7.60" fill="#8a8a8a" font-style="italic" text-anchor="middle" xml:space="preserve"><tspan>observability and independence check</tspan></text>
-<polyline points="118.00,445.00 118.00,468.00" fill="none" stroke="#8a8a8a" stroke-width="1.0"/>
-<polygon points="118.00,473.00 115.00,467.00 121.00,467.00" fill="#8a8a8a"/>
-<polyline points="338.00,445.00 338.00,468.00" fill="none" stroke="#8a8a8a" stroke-width="1.0"/>
-<polygon points="338.00,473.00 335.00,467.00 341.00,467.00" fill="#8a8a8a"/>
-<rect x="14.00" y="473.00" width="208.00" height="70.00" rx="3" ry="3" fill="#dfa640" stroke="#c08f2e" stroke-width="0.9"/>
-<text x="21.00" y="489.00" font-family="Arial, Helvetica, sans-serif" font-size="9.00" fill="#3d2f08" font-weight="bold" xml:space="preserve"><tspan>LEADING SPI: GAP_TTC</tspan></text>
-<text x="21.00" y="503.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#3d2f08" xml:space="preserve"><tspan>SPI: runs with GAP_TTC below θ</tspan></text>
-<text x="21.00" y="514.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#3d2f08" xml:space="preserve"><tspan>per 10</tspan><tspan font-size="6.05" baseline-shift="super">5</tspan><tspan> manoeuvres &lt; T</tspan><tspan font-size="6.05" baseline-shift="sub">GAP_TTC</tspan></text>
-<text x="21.00" y="525.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#3d2f08" xml:space="preserve"><tspan>Metric: minimum gap TTC over the manoeuvre.</tspan></text>
-<rect x="234.00" y="473.00" width="208.00" height="70.00" rx="3" ry="3" fill="#dfa640" stroke="#c08f2e" stroke-width="0.9"/>
-<text x="241.00" y="489.00" font-family="Arial, Helvetica, sans-serif" font-size="9.00" fill="#3d2f08" font-weight="bold" xml:space="preserve"><tspan>LEADING SPI: REQ_DECEL</tspan></text>
-<text x="241.00" y="503.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#3d2f08" xml:space="preserve"><tspan>SPI: runs with REQ_DECEL above θ</tspan></text>
-<text x="241.00" y="514.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#3d2f08" xml:space="preserve"><tspan>per 10</tspan><tspan font-size="6.05" baseline-shift="super">5</tspan><tspan> manoeuvres &lt; T</tspan><tspan font-size="6.05" baseline-shift="sub">REQ_DECEL</tspan></text>
-<text x="241.00" y="525.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#3d2f08" xml:space="preserve"><tspan>Metric: maximum required deceleration over the</tspan></text>
-<text x="241.00" y="536.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#3d2f08" xml:space="preserve"><tspan>manoeuvre.</tspan></text>
-<polyline points="118.00,543.00 118.00,552.00 338.00,552.00 338.00,543.00" fill="none" stroke="#8a8a8a" stroke-width="1.0"/>
-<polyline points="228.00,552.00 228.00,560.00" fill="none" stroke="#8a8a8a" stroke-width="1.0"/>
-<polygon points="228.00,565.00 225.00,559.00 231.00,559.00" fill="#8a8a8a"/>
-<rect x="14.00" y="565.00" width="428.00" height="48.00" rx="3" ry="3" fill="#dce5f1" stroke="#9fb3cd" stroke-width="0.9"/>
-<text x="21.00" y="581.00" font-family="Arial, Helvetica, sans-serif" font-size="9.00" fill="#1f3b63" font-weight="bold" xml:space="preserve"><tspan>ATTACH TO THE SAFETY CASE</tspan></text>
-<text x="21.00" y="595.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#2c4062" xml:space="preserve"><tspan>GAP_TTC on G2.1 and REQ_DECEL on G2.2 as leading evidence; AEB_ONC as intermediate leading and the</tspan></text>
-<text x="21.00" y="606.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#2c4062" xml:space="preserve"><tspan>ONC collision as lagging evidence on G2, the oncoming-conflict goal.</tspan></text>
-<polyline points="442.00,212.00 451.00,212.00" fill="none" stroke="#9a5650" stroke-width="0.9"/>
-<polyline points="451.00,212.00 451.00,589.00" fill="none" stroke="#9a5650" stroke-width="0.9" stroke-dasharray="3,2.5"/>
-<polyline points="451.00,589.00 448.00,589.00" fill="none" stroke="#9a5650" stroke-width="0.9"/>
-<polygon points="442.00,589.00 447.50,586.25 447.50,591.75" fill="#9a5650"/>
-<g transform="translate(460.00,400.50) rotate(90)"><text x="0.00" y="0.00" font-family="Arial, Helvetica, sans-serif" font-size="7.40" fill="#9a5650" text-anchor="middle" xml:space="preserve"><tspan>AEB_ONC attaches directly, independent of the kinematic tier</tspan></text></g>
-<polyline points="228.00,613.00 228.00,624.00" fill="none" stroke="#8a8a8a" stroke-width="1.0"/>
-<polygon points="228.00,629.00 225.00,623.00 231.00,623.00" fill="#8a8a8a"/>
-<rect x="14.00" y="629.00" width="428.00" height="59.00" rx="3" ry="3" fill="#dce5f1" stroke="#9fb3cd" stroke-width="0.9"/>
-<text x="21.00" y="645.00" font-family="Arial, Helvetica, sans-serif" font-size="9.00" fill="#1f3b63" font-weight="bold" xml:space="preserve"><tspan>VALIDATE</tspan></text>
-<text x="21.00" y="659.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#2c4062" xml:space="preserve"><tspan>Temporal precedence is checked against the ONC collision only. Incidents are attributed by actor identity, so a</tspan></text>
-<text x="21.00" y="670.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#2c4062" xml:space="preserve"><tspan>pedestrian or a rear impact is never counted here. The metric is separated between uneventful and</tspan></text>
-<text x="21.00" y="681.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#2c4062" xml:space="preserve"><tspan>ONC-collision manoeuvres.</tspan></text>
+<text x="21.00" y="84.50" font-family="Arial, Helvetica, sans-serif" font-size="23.00" fill="#ffffff" font-weight="200" xml:space="preserve"><tspan>{</tspan></text>
+<text x="94.18" y="71.00" font-family="Arial, Helvetica, sans-serif" font-size="7.80" fill="#ffffff" text-anchor="middle" xml:space="preserve"><tspan>No. of times an ONC collision occurs</tspan></text>
+<text x="94.18" y="82.00" font-family="Arial, Helvetica, sans-serif" font-size="7.80" fill="#ffffff" text-anchor="middle" xml:space="preserve"><tspan>per 100k manoeuvres</tspan></text>
+<text x="159.68" y="84.50" font-family="Arial, Helvetica, sans-serif" font-size="23.00" fill="#ffffff" font-weight="200" xml:space="preserve"><tspan>}</tspan></text>
+<text x="171.37" y="79.50" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#ffffff" xml:space="preserve"><tspan>&lt; T</tspan><tspan font-size="6.05" baseline-shift="sub">ONC</tspan></text>
+<text x="21.00" y="99.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#ffffff" xml:space="preserve"><tspan>Metric: contact between the ego vehicle and an oncoming vehicle.</tspan></text>
+<polyline points="245.00,106.00 245.00,121.00" fill="none" stroke="#8a8a8a" stroke-width="1.0"/>
+<polygon points="245.00,126.00 242.00,120.00 248.00,120.00" fill="#8a8a8a"/>
+<text x="251.00" y="119.00" font-family="Arial, Helvetica, sans-serif" font-size="7.60" fill="#8a8a8a" font-style="italic" xml:space="preserve"><tspan>why</tspan></text>
+<rect x="14.00" y="126.00" width="462.00" height="48.00" rx="3" ry="3" fill="#fbfcfe" stroke="#c3ccd8" stroke-width="0.9"/>
+<text x="21.00" y="142.00" font-family="Arial, Helvetica, sans-serif" font-size="9.00" fill="#1f3b63" font-weight="bold" xml:space="preserve"><tspan>PROXIMATE CAUSE</tspan></text>
+<text x="21.00" y="156.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#1a1a1a" xml:space="preserve"><tspan>The ego vehicle occupied the conflict area while an oncoming vehicle was closing on it, and no avoidance action</tspan></text>
+<text x="21.00" y="167.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#1a1a1a" xml:space="preserve"><tspan>succeeded in time.</tspan></text>
+<polyline points="245.00,174.00 245.00,189.00" fill="none" stroke="#8a8a8a" stroke-width="1.0"/>
+<polygon points="245.00,194.00 242.00,188.00 248.00,188.00" fill="#8a8a8a"/>
+<text x="251.00" y="187.00" font-family="Arial, Helvetica, sans-serif" font-size="7.60" fill="#8a8a8a" font-style="italic" xml:space="preserve"><tspan>reaction tier (last resort, nearest the loss)</tspan></text>
+<rect x="14.00" y="194.00" width="462.00" height="76.00" rx="3" ry="3" fill="#b26a63" stroke="#9a5650" stroke-width="0.9"/>
+<text x="21.00" y="210.00" font-family="Arial, Helvetica, sans-serif" font-size="9.00" fill="#ffffff" font-weight="bold" xml:space="preserve"><tspan>INTERMEDIATE LEADING SPI: AEB_ONC</tspan></text>
+<text x="21.00" y="237.50" font-family="Arial, Helvetica, sans-serif" font-size="23.00" fill="#ffffff" font-weight="200" xml:space="preserve"><tspan>{</tspan></text>
+<text x="91.37" y="224.00" font-family="Arial, Helvetica, sans-serif" font-size="7.80" fill="#ffffff" text-anchor="middle" xml:space="preserve"><tspan>No. of times AEB_ONC is triggered</tspan></text>
+<text x="91.37" y="235.00" font-family="Arial, Helvetica, sans-serif" font-size="7.80" fill="#ffffff" text-anchor="middle" xml:space="preserve"><tspan>per 100k manoeuvres</tspan></text>
+<text x="154.06" y="237.50" font-family="Arial, Helvetica, sans-serif" font-size="23.00" fill="#ffffff" font-weight="200" xml:space="preserve"><tspan>}</tspan></text>
+<text x="165.74" y="232.50" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#ffffff" xml:space="preserve"><tspan>&lt; T</tspan><tspan font-size="6.05" baseline-shift="sub">AEB_ONC</tspan></text>
+<text x="21.00" y="252.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#ffffff" xml:space="preserve"><tspan>Metric: hard emergency brake while a gated oncoming vehicle was within the collision horizon. Mitigation attempted,</tspan></text>
+<text x="21.00" y="263.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#ffffff" xml:space="preserve"><tspan>collision not yet realised.</tspan></text>
+<polyline points="245.00,270.00 245.00,285.00" fill="none" stroke="#8a8a8a" stroke-width="1.0"/>
+<polygon points="245.00,290.00 242.00,284.00 248.00,284.00" fill="#8a8a8a"/>
+<text x="251.00" y="283.00" font-family="Arial, Helvetica, sans-serif" font-size="7.60" fill="#8a8a8a" font-style="italic" xml:space="preserve"><tspan>decompose the proximate cause (kinematic precursor tier)</tspan></text>
+<polygon points="150.00,290.00 340.00,290.00 350.00,300.00 340.00,310.00 150.00,310.00 140.00,300.00" fill="#f2f2f2" stroke="#8a8a8a" stroke-width="0.9"/>
+<text x="245.00" y="303.00" font-family="Arial, Helvetica, sans-serif" font-size="8.20" fill="#1a1a1a" font-weight="bold" text-anchor="middle" xml:space="preserve"><tspan>OR gate: either cause alone is sufficient</tspan></text>
+<polyline points="245.00,310.00 245.00,318.00 126.50,318.00 126.50,329.00" fill="none" stroke="#8a8a8a" stroke-width="1.0"/>
+<polygon points="126.50,334.00 123.50,328.00 129.50,328.00" fill="#8a8a8a"/>
+<polyline points="245.00,310.00 245.00,318.00 363.50,318.00 363.50,329.00" fill="none" stroke="#8a8a8a" stroke-width="1.0"/>
+<polygon points="363.50,334.00 360.50,328.00 366.50,328.00" fill="#8a8a8a"/>
+<rect x="14.00" y="334.00" width="225.00" height="70.00" rx="3" ry="3" fill="#fbfcfe" stroke="#c3ccd8" stroke-width="0.9"/>
+<text x="21.00" y="350.00" font-family="Arial, Helvetica, sans-serif" font-size="9.00" fill="#1f3b63" font-weight="bold" xml:space="preserve"><tspan>CAUSE A</tspan></text>
+<text x="21.00" y="364.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#1a1a1a" xml:space="preserve"><tspan>The accepted gap was already insufficient when the</tspan></text>
+<text x="21.00" y="375.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#1a1a1a" xml:space="preserve"><tspan>manoeuvre began.</tspan></text>
+<text x="21.00" y="386.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#1a1a1a" xml:space="preserve"><tspan>Planning subsystem.</tspan></text>
+<rect x="251.00" y="334.00" width="225.00" height="70.00" rx="3" ry="3" fill="#fbfcfe" stroke="#c3ccd8" stroke-width="0.9"/>
+<text x="258.00" y="350.00" font-family="Arial, Helvetica, sans-serif" font-size="9.00" fill="#1f3b63" font-weight="bold" xml:space="preserve"><tspan>CAUSE B</tspan></text>
+<text x="258.00" y="364.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#1a1a1a" xml:space="preserve"><tspan>Closing speed exceeded what the turn arc allowed</tspan></text>
+<text x="258.00" y="375.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#1a1a1a" xml:space="preserve"><tspan>because of increased oncoming velocity, so the</tspan></text>
+<text x="258.00" y="386.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#1a1a1a" xml:space="preserve"><tspan>deceleration needed rose beyond normal braking.</tspan></text>
+<text x="258.00" y="397.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#1a1a1a" xml:space="preserve"><tspan>Prediction subsystem.</tspan></text>
+<polyline points="126.50,404.00 126.50,415.00" fill="none" stroke="#8a8a8a" stroke-width="1.0"/>
+<polygon points="126.50,420.00 123.50,414.00 129.50,414.00" fill="#8a8a8a"/>
+<polyline points="363.50,404.00 363.50,415.00" fill="none" stroke="#8a8a8a" stroke-width="1.0"/>
+<polygon points="363.50,420.00 360.50,414.00 366.50,414.00" fill="#8a8a8a"/>
+<rect x="14.00" y="420.00" width="225.00" height="48.00" rx="3" ry="3" fill="#fbfcfe" stroke="#c3ccd8" stroke-width="0.9"/>
+<text x="21.00" y="436.00" font-family="Arial, Helvetica, sans-serif" font-size="9.00" fill="#1f3b63" font-weight="bold" xml:space="preserve"><tspan>SIGNAL A</tspan></text>
+<text x="21.00" y="450.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#1a1a1a" xml:space="preserve"><tspan>TTC to the nearest closing oncoming vehicle, sampled</tspan></text>
+<text x="21.00" y="461.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#1a1a1a" xml:space="preserve"><tspan>each frame.</tspan></text>
+<rect x="251.00" y="420.00" width="225.00" height="48.00" rx="3" ry="3" fill="#fbfcfe" stroke="#c3ccd8" stroke-width="0.9"/>
+<text x="258.00" y="436.00" font-family="Arial, Helvetica, sans-serif" font-size="9.00" fill="#1f3b63" font-weight="bold" xml:space="preserve"><tspan>SIGNAL B</tspan></text>
+<text x="258.00" y="450.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#1a1a1a" xml:space="preserve"><tspan>Deceleration required to stop short of the conflict area at</tspan></text>
+<text x="258.00" y="461.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#1a1a1a" xml:space="preserve"><tspan>the current speed, sampled each frame.</tspan></text>
+<polyline points="14.00,481.00 476.00,481.00" fill="none" stroke="#b0b0b0" stroke-width="0.8" stroke-dasharray="3,3"/>
+<rect x="175.57" y="475.00" width="138.86" height="12.00" rx="0" ry="0" fill="#ffffff" stroke="#ffffff" stroke-width="0"/>
+<text x="245.00" y="484.00" font-family="Arial, Helvetica, sans-serif" font-size="7.60" fill="#8a8a8a" font-style="italic" text-anchor="middle" xml:space="preserve"><tspan>observability and independence check</tspan></text>
+<polyline points="126.50,468.00 126.50,491.00" fill="none" stroke="#8a8a8a" stroke-width="1.0"/>
+<polygon points="126.50,496.00 123.50,490.00 129.50,490.00" fill="#8a8a8a"/>
+<polyline points="363.50,468.00 363.50,491.00" fill="none" stroke="#8a8a8a" stroke-width="1.0"/>
+<polygon points="363.50,496.00 360.50,490.00 366.50,490.00" fill="#8a8a8a"/>
+<rect x="14.00" y="496.00" width="225.00" height="76.00" rx="3" ry="3" fill="#dfa640" stroke="#c08f2e" stroke-width="0.9"/>
+<text x="21.00" y="512.00" font-family="Arial, Helvetica, sans-serif" font-size="9.00" fill="#3d2f08" font-weight="bold" xml:space="preserve"><tspan>LEADING SPI: GAP_TTC</tspan></text>
+<text x="21.00" y="539.50" font-family="Arial, Helvetica, sans-serif" font-size="23.00" fill="#3d2f08" font-weight="200" xml:space="preserve"><tspan>{</tspan></text>
+<text x="90.08" y="526.00" font-family="Arial, Helvetica, sans-serif" font-size="7.80" fill="#3d2f08" text-anchor="middle" xml:space="preserve"><tspan>No. of times GAP_TTC &lt; θ</tspan><tspan font-size="5.62" baseline-shift="sub">GAP_TTC</tspan></text>
+<text x="90.08" y="537.00" font-family="Arial, Helvetica, sans-serif" font-size="7.80" fill="#3d2f08" text-anchor="middle" xml:space="preserve"><tspan>per 100k manoeuvres</tspan></text>
+<text x="151.48" y="539.50" font-family="Arial, Helvetica, sans-serif" font-size="23.00" fill="#3d2f08" font-weight="200" xml:space="preserve"><tspan>}</tspan></text>
+<text x="163.17" y="534.50" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#3d2f08" xml:space="preserve"><tspan>&lt; T</tspan><tspan font-size="6.05" baseline-shift="sub">GAP_TTC</tspan></text>
+<text x="21.00" y="554.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#3d2f08" xml:space="preserve"><tspan>Metric: minimum gap TTC over the manoeuvre.</tspan></text>
+<rect x="251.00" y="496.00" width="225.00" height="76.00" rx="3" ry="3" fill="#dfa640" stroke="#c08f2e" stroke-width="0.9"/>
+<text x="258.00" y="512.00" font-family="Arial, Helvetica, sans-serif" font-size="9.00" fill="#3d2f08" font-weight="bold" xml:space="preserve"><tspan>LEADING SPI: REQ_DECEL</tspan></text>
+<text x="258.00" y="539.50" font-family="Arial, Helvetica, sans-serif" font-size="23.00" fill="#3d2f08" font-weight="200" xml:space="preserve"><tspan>{</tspan></text>
+<text x="336.63" y="526.00" font-family="Arial, Helvetica, sans-serif" font-size="7.80" fill="#3d2f08" text-anchor="middle" xml:space="preserve"><tspan>No. of times REQ_DECEL &gt; θ</tspan><tspan font-size="5.62" baseline-shift="sub">REQ_DECEL</tspan></text>
+<text x="336.63" y="537.00" font-family="Arial, Helvetica, sans-serif" font-size="7.80" fill="#3d2f08" text-anchor="middle" xml:space="preserve"><tspan>per 100k manoeuvres</tspan></text>
+<text x="407.57" y="539.50" font-family="Arial, Helvetica, sans-serif" font-size="23.00" fill="#3d2f08" font-weight="200" xml:space="preserve"><tspan>}</tspan></text>
+<text x="419.25" y="534.50" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#3d2f08" xml:space="preserve"><tspan>&lt; T</tspan><tspan font-size="6.05" baseline-shift="sub">REQ_DECEL</tspan></text>
+<text x="258.00" y="554.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#3d2f08" xml:space="preserve"><tspan>Metric: maximum required deceleration over the</tspan></text>
+<text x="258.00" y="565.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#3d2f08" xml:space="preserve"><tspan>manoeuvre.</tspan></text>
+<polyline points="126.50,572.00 126.50,581.00 363.50,581.00 363.50,572.00" fill="none" stroke="#8a8a8a" stroke-width="1.0"/>
+<polyline points="245.00,581.00 245.00,589.00" fill="none" stroke="#8a8a8a" stroke-width="1.0"/>
+<polygon points="245.00,594.00 242.00,588.00 248.00,588.00" fill="#8a8a8a"/>
+<rect x="14.00" y="594.00" width="462.00" height="48.00" rx="3" ry="3" fill="#dce5f1" stroke="#9fb3cd" stroke-width="0.9"/>
+<text x="21.00" y="610.00" font-family="Arial, Helvetica, sans-serif" font-size="9.00" fill="#1f3b63" font-weight="bold" xml:space="preserve"><tspan>ATTACH TO THE SAFETY CASE</tspan></text>
+<text x="21.00" y="624.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#2c4062" xml:space="preserve"><tspan>GAP_TTC on G2.1 and REQ_DECEL on G2.2 as leading evidence; AEB_ONC as intermediate leading and the ONC</tspan></text>
+<text x="21.00" y="635.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#2c4062" xml:space="preserve"><tspan>collision as lagging evidence on G2, the oncoming-conflict goal.</tspan></text>
+<polyline points="476.00,232.00 485.00,232.00" fill="none" stroke="#9a5650" stroke-width="0.9"/>
+<polyline points="485.00,232.00 485.00,618.00" fill="none" stroke="#9a5650" stroke-width="0.9" stroke-dasharray="3,2.5"/>
+<polyline points="485.00,618.00 482.00,618.00" fill="none" stroke="#9a5650" stroke-width="0.9"/>
+<polygon points="476.00,618.00 481.50,615.25 481.50,620.75" fill="#9a5650"/>
+<g transform="translate(494.00,425.00) rotate(90)"><text x="0.00" y="0.00" font-family="Arial, Helvetica, sans-serif" font-size="7.40" fill="#9a5650" text-anchor="middle" xml:space="preserve"><tspan>AEB_ONC attaches directly, independent of the kinematic tier</tspan></text></g>
+<polyline points="245.00,642.00 245.00,653.00" fill="none" stroke="#8a8a8a" stroke-width="1.0"/>
+<polygon points="245.00,658.00 242.00,652.00 248.00,652.00" fill="#8a8a8a"/>
+<rect x="14.00" y="658.00" width="462.00" height="59.00" rx="3" ry="3" fill="#dce5f1" stroke="#9fb3cd" stroke-width="0.9"/>
+<text x="21.00" y="674.00" font-family="Arial, Helvetica, sans-serif" font-size="9.00" fill="#1f3b63" font-weight="bold" xml:space="preserve"><tspan>VALIDATE</tspan></text>
+<text x="21.00" y="688.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#2c4062" xml:space="preserve"><tspan>Temporal precedence is checked against the ONC collision only. Incidents are attributed by actor identity, so a</tspan></text>
+<text x="21.00" y="699.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#2c4062" xml:space="preserve"><tspan>pedestrian or a rear impact is never counted here. The metric is separated between uneventful and ONC-collision</tspan></text>
+<text x="21.00" y="710.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#2c4062" xml:space="preserve"><tspan>manoeuvres.</tspan></text>
 </svg>
