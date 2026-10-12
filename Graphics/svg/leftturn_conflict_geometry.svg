@@ -82,12 +82,12 @@
       <g
          id="g46">
         <path
-           d="M 256.5,99 V 225"
+           d="M 256.5,99 V 186"
            style="fill:none;stroke:#1a1a1a;stroke-width:1.875;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
            id="path48" />
       </g>
       <path
-         d="m 264.535,208.93 -8.035,18.75 -8.035,-18.75 z"
+         d="m 264.535,169.93 -8.035,18.75 -8.035,-18.75 z"
          style="fill:#1a1a1a;fill-opacity:1;fill-rule:nonzero;stroke:none"
          id="path50" />
       <text
@@ -114,12 +114,12 @@
            id="path62" />
       </g>
       <path
-         d="m 305.25,352.5 h 16.5 c 2.484,0 4.5,2.484 4.5,4.5 v 36 c 0,2.484 -2.016,4.5 -4.5,4.5 h -16.5 c -2.484,0 -4.5,-2.484 -4.5,-4.5 v -36 c 0,-2.484 2.016,-4.5 4.5,-4.5 z"
+         d="m 305.25,315 h 16.5 c 2.484,0 4.5,2.484 4.5,4.5 v 36 c 0,2.484 -2.016,4.5 -4.5,4.5 h -16.5 c -2.484,0 -4.5,-2.484 -4.5,-4.5 v -36 c 0,-2.484 2.016,-4.5 4.5,-4.5 z"
          style="fill:#6e9024;fill-opacity:1;fill-rule:nonzero;stroke:none"
          id="path64" />
       <text
          xml:space="preserve"
-         transform="translate(310.07422,379.5)"
+         transform="translate(310.07422,342)"
          style="font-variant:normal;font-weight:bold;font-size:9.75px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
          id="text68"><tspan
            x="0"
@@ -128,17 +128,17 @@
       <g
          id="g70">
         <path
-           d="m 313.5,352.5 c 0,-45 -9.75,-88.5 -88.5,-93"
+           d="M 313.5,315 C 313.5,255 290,210 230,210"
            style="fill:none;stroke:#6e9024;stroke-width:1.95;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:6, 3.75;stroke-dashoffset:0;stroke-opacity:1"
            id="path72" />
       </g>
       <path
-         d="m 241.211,268.797 -18.992,-9.457 19.945,-7.231 z"
+         d="m 231.5,201.645 -19.5,8.355 19.5,8.355 z"
          style="fill:#6e9024;fill-opacity:1;fill-rule:nonzero;stroke:none"
          id="path74" />
       <text
          xml:space="preserve"
-         transform="translate(450,375)"
+         transform="translate(450,337.5)"
          style="font-variant:normal;font-weight:bold;font-size:10.5px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#6e9024;fill-opacity:1;fill-rule:nonzero;stroke:none"
          id="text78"><tspan
            x="0 7.0035 13.419"
@@ -146,7 +146,7 @@
            id="tspan76">Ego</tspan></text>
       <text
          xml:space="preserve"
-         transform="translate(450,389.25)"
+         transform="translate(450,351.75)"
          style="font-variant:normal;font-weight:normal;font-size:9px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#8a8a8a;fill-opacity:1;fill-rule:nonzero;stroke:none"
          id="text82"><tspan
            x="0 1.998 7.0019999 9.5039997 12.006 15.003 17.504999 22.509001 25.506001 30.51 32.507999 37.512001 45.018002 49.518002 54.521999 59.526001 61.523998 66.024002 68.022003"
@@ -155,7 +155,7 @@
       <g
          id="g84">
         <path
-           d="M 327.75,375 H 444"
+           d="M 327.75,337.5 H 444"
            style="fill:none;stroke:#8a8a8a;stroke-width:0.75;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2.25, 2.25;stroke-dashoffset:0;stroke-opacity:1"
            id="path86" />
       </g>
@@ -204,12 +204,12 @@
       <g
          id="g110">
         <path
-           d="m 313.5,408.75 v -9"
+           d="m 313.5,408.75 v -17"
            style="fill:none;stroke:#8a8a8a;stroke-width:1.95;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
            id="path112" />
       </g>
       <path
-         d="m 305.145,416.465 8.355,-19.5 8.355,19.5 z"
+         d="m 305.145,393 8.355,-19.5 8.355,19.5 z"
          style="fill:#1a1a1a;fill-opacity:1;fill-rule:nonzero;stroke:none"
          id="path114" />
       <text
