@@ -146,20 +146,25 @@ run's seed, so that any run can be regenerated exactly.
 
 \begin{table}[htbp]
     \centering
-    \caption{Environment parameters sampled per run. Cloud cover, precipitation
-    and deposits are drawn together, so wet road surfaces accompany rain.}
+    \caption{Environment parameters sampled per run. All values are drawn from
+    uniform distributions; precipitation, deposits and wetness are conditioned on
+    the preceding draws, so that wet road surfaces accompany rain.}
     \label{tab:environment_parameters}
     \small
-    \begin{tabular}{@{}ll@{}}
+    \begin{tabular}{@{}lll@{}}
         \toprule
-        {\bfseries Parameter} & {\bfseries Range} \\
+        {\bfseries Parameter} & {\bfseries Range} & {\bfseries Condition} \\
         \midrule
-        Cloud cover, precipitation, deposits & 0 to 100\,\%, coupled \\
-        Wind                                 & sampled \\
-        Fog density                          & sampled \\
-        Wetness                              & sampled \\
-        Sun altitude                         & $-20$ to 90\textdegree \\
-        Fog visibility                       & 10 to 200\,m \\
+        Cloud cover            & 0 to 100\,\%            & none \\
+        Precipitation          & 0 to 100\,\%            & only if cloud cover $> 30$\,\%, else 0 \\
+        Precipitation deposits & 0 to 100\,\%            & only if precipitation $> 0$, else 0 \\
+        Wetness                & 0 to 100\,\%            & if precipitation or deposits $> 0$ \\
+                               & 0 to 20\,\%             & otherwise \\
+        Wind intensity         & 0 to 100\,\%            & none \\
+        Fog density            & 0 to 100\,\%            & none \\
+        Fog distance           & 10 to 200\,m            & none \\
+        Sun azimuth            & 0 to 360\textdegree     & none \\
+        Sun altitude           & $-20$ to 90\textdegree  & none \\
         \bottomrule
     \end{tabular}
 \end{table}

@@ -131,9 +131,13 @@ a quantitative instance of it.
 
 Replacing the pedestrian time to collision by the time to the closest point of
 approach was a consequence of Step~4 of the derivation, which selects the
-formulation the geometry admits. The change removed alarms for pedestrians whose
-path misses the vehicle, which is visible in the precision of PED\_CPA, the
-highest of the register at 44.0\,\%. It did not lengthen the warning time,
+formulation the geometry admits. Because PED\_CPA is gated on the miss distance
+$d_\mathrm{CPA}$, it is by construction silent for a pedestrian whose predicted
+path passes clear of the vehicle, and its precision of 44.0\,\% is the highest of
+the register. The two formulations were not evaluated side by side under the
+final collision definition, so the share of this precision that is owed to the
+change of formulation is not quantified here. The change did not lengthen the
+warning time,
 because it does not change what the metric depends on. Any substantially earlier
 warning for a crossing pedestrian would have to come from signals of intention
 such as gait, head pose or dwell at the kerb, and those are perception
