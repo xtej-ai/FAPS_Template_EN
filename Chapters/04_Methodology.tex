@@ -11,9 +11,10 @@ counterfactual prevention test of Why-Because Analysis \cite{ladkin1998}, and
 threshold calibration grounded in precursor-estimation theory \cite{bieryi1995}. The
 derived indicators are modelled in a \ac{GSN} modelling tool and evaluated on
 simulation data generated in the CARLA simulator \cite{dosovitskiy2017carla}. The chapter first gives
-an overview of the seven steps, then describes each step, presents worked examples,
-and closes with the properties of the method that carry over into its instantiation
-in Chapter~\ref{ch:experiment}.
+an overview of the seven steps, then describes Steps~0 to~6, presents worked
+derivations for the three conflicts of the left turn, attaches the resulting
+indicators to the safety case in Step~7, and closes with the properties of the
+method that carry over into its instantiation in Chapter~\ref{ch:experiment}.
 
 \section{Overview of the Causal Chain Derivation Method}
 \label{sec:method_overview}
@@ -314,24 +315,6 @@ here to place the statistical threshold against them; none of them is applied in
 this work, and setting T from one of them is left to
 Section~\ref{sec:outlook}.
 
-\section{Attachment to the Safety Case}
-\label{sec:method_gsn}
-
-Step~7 attaches each derived leading indicator to the \ac{GSN} goal that it monitors,
-attaches the lagging parent indicator to the same goal, records $\theta$ and $T$ as
-dimension elements, and documents the full derivation chain in the traceability field
-of the model in the \ac{GSN} modelling tool. This closes the loop opened in Step~1, since the goal that
-began as a bare assertion now carries a monitorable claim, and a violation invalidates
-that specific claim rather than leaving the safety case silently wrong. Two failure
-modes are avoided explicitly, namely attaching an indicator to a convenient parent
-goal instead of the goal it actually monitors, and omitting the traceability record,
-which is the element that distinguishes a derived indicator from an asserted one. The
-resulting argument structure is consistent with the \ac{GSN} community standard
-\cite{gsncs2021} and with the argument pattern for the use of indicators proposed by
-Ratiu et al. \cite{ratiu2024}. The method does not depend on any particular tool; a
-model-based safety-engineering environment that supports \ac{GSN}, such as SafeTbox, is
-recommended for carrying out the attachment in practice.
-
 \section{Worked Examples}
 \label{sec:method_examples}
 
@@ -420,6 +403,233 @@ Section~\ref{sec:method_thresholds}.
     not observable to the ego vehicle.}
   \label{fig:chain_rear}
 \end{figure}
+\section{Attachment to the Safety Case}
+\label{sec:method_gsn}
+
+Step~7 places every derived indicator in the safety case. An indicator carries a
+safety meaning only relative to the claim that it supports or challenges
+(Section~\ref{sec:fund_spi}), so the goal to which it is attached decides what a
+violation means. This section states the attachment rule, applies it to the
+indicators derived for the left-turn use case in Section~\ref{sec:method_examples},
+and sets out the record that each attachment carries.
+
+The attachment follows the convention of Diaz and Woon, in which safety
+performance indicators are allocated to specific claims of the safety case
+argument tree and the depth of a claim determines the character of its indicator:
+the lower the claim to which an indicator is attached, the more likely the
+indicator is to be leading \cite{diaz2022drspi}. In the method of this thesis the
+depth is not chosen freely but follows from the derivation. The lagging indicator
+registered in Step~1 is attached to the goal that its loss event negates. The
+reaction-tier indicator is attached to the same goal, because it monitors the last
+mitigation before that loss rather than any single cause of it, which is why it
+was positioned above the kinematic decomposition in
+Section~\ref{sec:method_examples}. Each kinematic leading indicator is attached to
+the sub-goal that negates the intermediate cause from which it was derived in
+Step~3.
+
+The sub-goals are obtained directly from the decomposition of Step~3. Every
+intermediate cause states that a required function was not delivered adequately,
+and its negation states that the function is delivered adequately; this negation
+becomes a sub-goal of the goal that the lagging indicator protects. Because the
+decomposition uses an OR gate, each sub-goal is a premise without which the
+proximate cause can arise, so the failure of any one sub-goal puts the parent goal
+in doubt. A branch whose signal is rejected at Step~5 is not removed from the
+argument. It remains as an undeveloped goal, marked as such in the notation
+\cite{gsncs2021}, so that the safety case shows where monitoring is absent instead
+of implying a coverage that does not exist.
+
+Figure~\ref{fig:lti_safety_case} shows the resulting argument for the left-turn
+use case, drawn in the form that Diaz and Woon use for their example argument tree,
+with each indicator attached at the edge of the goal it monitors
+\cite{diaz2022drspi}. The top-level goal G1 is decomposed by the strategy S1 over
+the three conflict chains of the manoeuvre into the chain goals G2, G3 and G4, each
+of which denies the collision of its chain and carries the lagging indicator of
+that chain. The oncoming and pedestrian chain goals additionally carry their
+reaction-tier indicators, AEB\_ONC and AEB\_PED. The four kinematic indicators sit
+one level lower, on the sub-goals G2.1, G2.2, G3.1 and G4.1. The two branches
+rejected at Step~5 appear as the undeveloped goals G3.2 and G4.2: the pedestrian
+detection branch, whose indicator belongs to the architectural tier and is outside
+the empirical scope of this work, and the follower reaction branch, whose signal is
+not observable to the ego vehicle.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[
+    font=\sffamily\scriptsize,
+    every node/.append style={execute at begin node={\setstretch{1}\hyphenpenalty=10000\exhyphenpenalty=10000}},
+    >={Triangle[length=1.8mm,width=1.8mm]},
+    box/.style={draw=FAPSGruen!70!black, line width=0.6pt, align=center,
+        inner sep=3pt, minimum height=0.95cm},
+    goal/.style={box, fill=FAPSGruen!12, text width=#1},
+    goal/.default=2.75cm,
+    undev/.style={box, fill=white, dashed, text width=#1},
+    undev/.default=2.75cm,
+    strat/.style={box, fill=FAPSGruen!12, trapezium, trapezium left angle=75,
+        trapezium right angle=105, trapezium stretches body, text width=4.4cm,
+        minimum height=0.8cm},
+    ctx/.style={box, fill=FAPSGruen!12, rounded corners=0.4cm, text width=3.3cm,
+        minimum height=0.8cm},
+    tag/.style={rounded corners=2pt, font=\sffamily\scriptsize\bfseries,
+        inner sep=2pt, minimum height=0.38cm, draw=black!60, line width=0.4pt},
+    lead/.style={tag, fill=FAPSGruen},
+    lag/.style={tag, fill=black!22},
+    gid/.style={font=\sffamily\scriptsize\bfseries, inner sep=1pt, anchor=south west},
+    sb/.style={->, line width=0.6pt, draw=black!75},
+    ln/.style={line width=0.6pt, draw=black!75},
+    ic/.style={-{Triangle[open,length=1.8mm,width=1.8mm]}, line width=0.6pt, draw=black!75},
+    ud/.style={draw=black!75, fill=white, diamond, aspect=1.6,
+        minimum width=0.4cm, minimum height=0.25cm, inner sep=0pt},
+]
+% ---- top of the argument
+\node[goal=5.0cm] (G1) at (7.0,0) {The ego vehicle completes the unprotected left turn without collision};
+\node[gid] at (G1.north west) {G1};
+\node[ctx] (C1) at (13.2,0) {Unprotected left turn, Town10HD, frozen green signal};
+\node[gid] at (C1.north west) {C1};
+\draw[ic] (G1.east) -- (C1.west);
+\node[strat, below=0.5cm of G1] (S1) {Argument over the three conflict chains of the manoeuvre};
+\node[gid, anchor=east] at (S1.west) {S1};
+\draw[sb] (G1.south) -- (S1.north);
+% ---- chain goals (left edges at 0, 5.4 and 10.8 cm)
+\node[goal=2.95cm, anchor=north west] (G2) at (0.0,-2.75) {No collision with an oncoming vehicle};
+\node[goal=2.95cm, anchor=north west] (G3) at (5.4,-2.75) {No collision with a crossing pedestrian};
+\node[goal=2.95cm, anchor=north west] (G4) at (10.8,-2.75) {No rear-end collision with the following vehicle};
+\foreach \g in {G2,G3,G4}{
+    \node[gid] at (\g.north west) {\g};
+    \draw[sb] (S1.south) -- ++(0,-0.3) -| (\g.north);
+}
+\node[lag,  anchor=west] at ($(G2.east)+(-0.08, 0.22)$) {COLLISION};
+\node[lead, anchor=west] at ($(G2.east)+(-0.08,-0.22)$) {AEB\_ONC};
+\node[lag,  anchor=west] at ($(G3.east)+(-0.08, 0.22)$) {COLLISION};
+\node[lead, anchor=west] at ($(G3.east)+(-0.08,-0.22)$) {AEB\_PED};
+\node[lag,  anchor=west] at ($(G4.east)+(-0.08, 0)$)    {COLLISION};
+% ---- sub-goals, indented below their chain goal
+\node[goal, anchor=north west] (G21) at ($(G2.south west)+(0.55,-0.6)$) {Turn committed only into a sufficient gap};
+\node[goal, anchor=north west] (G22) at ($(G21.south west)+(0,-0.6)$) {Required deceleration over the turn arc stays achievable};
+\node[goal, anchor=north west] (G31) at ($(G3.south west)+(0.55,-0.6)$) {Ego vehicle yields to the pedestrian with sufficient margin};
+\node[undev, anchor=north west] (G32) at ($(G31.south west)+(0,-0.6)$) {Pedestrian detected early enough};
+\node[goal, anchor=north west] (G41) at ($(G4.south west)+(0.55,-0.6)$) {Ego deceleration leaves the follower sufficient margin};
+\node[undev, anchor=north west] (G42) at ($(G41.south west)+(0,-0.6)$) {Follower reacts in time};
+\foreach \g/\t in {G21/G2.1, G22/G2.2, G31/G3.1, G32/G3.2, G41/G4.1, G42/G4.2}{
+    \node[gid] at (\g.north west) {\t};
+}
+\node[lead, anchor=west] at ($(G21.east)+(-0.08,0)$) {GAP\_TTC};
+\node[lead, anchor=west] at ($(G22.east)+(-0.08,0)$) {REQ\_DECEL};
+\node[lead, anchor=west] at ($(G31.east)+(-0.08,0)$) {PED\_CPA};
+\node[lead, anchor=west] at ($(G41.east)+(-0.08,0)$) {REAR\_TTC};
+\node[ud, anchor=north] at (G32.south) {};
+\node[ud, anchor=north] at (G42.south) {};
+% ---- supported-by connectors in the indented form of the argument tree
+\foreach \p/\a/\b in {G2/G21/G22, G3/G31/G32, G4/G41/G42}{
+    \coordinate (sp) at ($(\p.south west)+(0.25,0)$);
+    \draw[ln] (sp) -- (sp |- \b.west);
+    \draw[sb] (sp |- \a.west) -- (\a.west);
+    \draw[sb] (sp |- \b.west) -- (\b.west);
+}
+% ---- legend
+\coordinate (lg) at ($(G22.south west)+(-0.55,-0.75)$);
+\node[lag, anchor=west] (L1) at (lg) {COLLISION};
+\node[anchor=west, inner sep=2pt] (T1) at (L1.east) {lagging SPI};
+\node[lead, anchor=west] (L2) at ($(T1.east)+(0.5,0)$) {GAP\_TTC};
+\node[anchor=west, inner sep=2pt] (T2) at (L2.east) {leading SPI};
+\node[draw=black!75, dashed, minimum width=0.6cm, minimum height=0.38cm, anchor=west] (L3) at ($(T2.east)+(0.5,0)$) {};
+\node[anchor=west, inner sep=2pt] (T3) at (L3.east) {undeveloped goal, no SPI after Step~5};
+\node[ud, anchor=west] (L4) at ($(T3.east)+(0.5,0)$) {};
+\node[anchor=west, inner sep=2pt] at (L4.east) {undeveloped marker};
+\end{tikzpicture}
+\caption{Safety case argument for the unprotected left turn with the derived
+safety performance indicators attached. Each chain goal carries the lagging
+indicator of its chain and, where one exists, the reaction-tier indicator; the
+kinematic leading indicators are attached one level lower to the sub-goals that
+negate the intermediate causes of Step~3; branches rejected at Step~5 remain as
+undeveloped goals (presentation based on \cite{diaz2022drspi}).}
+\label{fig:lti_safety_case}
+\end{figure}
+
+Table~\ref{tab:spi_attachment} states each attached indicator in the form of
+Equation~(\ref{eq:method_spiform}), together with the goal it monitors. The metric
+thresholds are those calibrated in Section~\ref{sec:exp_calibration}. The SPI
+thresholds are given symbolically, because T is evaluated for the number of
+eligible runs in the population being checked
+(Equation~(\ref{eq:exp_spithreshold})) and is therefore not a single constant.
+
+\begin{table}[htbp]
+    \centering
+    \caption{Attachment of the nine indicators of the left-turn register. Each
+    indicator is stated in the form of Equation~(\ref{eq:method_spiform}) and
+    attached to the goal of Figure~\ref{fig:lti_safety_case} that it monitors.}
+    \label{tab:spi_attachment}
+    \small
+    \begin{tabular}{@{}l l l >{\raggedright\arraybackslash}p{8.6cm}@{}}
+        \toprule
+        \textbf{Indicator} & \textbf{Type} & \textbf{Goal} & \textbf{SPI statement} \\
+        \midrule
+        ONC collision & lagging & G2 & runs with a collision with an oncoming vehicle
+        per $10^{5}$ manoeuvres $< T_{\mathrm{ONC}}$ \\[2pt]
+        AEB\_ONC & leading & G2 & runs with an emergency braking event with a gated
+        oncoming vehicle in conflict per $10^{5}$ manoeuvres $< T_{\mathrm{AEB\_ONC}}$ \\[2pt]
+        GAP\_TTC & leading & G2.1 & runs with GAP\_TTC below $\theta = 0.913$\,s per
+        $10^{5}$ manoeuvres $< T_{\mathrm{GAP\_TTC}}$ \\[2pt]
+        REQ\_DECEL & leading & G2.2 & runs with REQ\_DECEL above
+        $\theta = 7.549$\,m/s\textsuperscript{2} per $10^{5}$ manoeuvres
+        $< T_{\mathrm{REQ\_DECEL}}$ \\[2pt]
+        PED collision & lagging & G3 & runs with a collision with a pedestrian per
+        $10^{5}$ manoeuvres $< T_{\mathrm{PED}}$ \\[2pt]
+        AEB\_PED & leading & G3 & runs with an emergency braking event with a corridor
+        pedestrian in conflict per $10^{5}$ manoeuvres $< T_{\mathrm{AEB\_PED}}$ \\[2pt]
+        PED\_CPA & leading & G3.1 & runs with PED\_CPA below $\theta = 1.174$\,s per
+        $10^{5}$ manoeuvres $< T_{\mathrm{PED\_CPA}}$ \\[2pt]
+        REAR collision & lagging & G4 & runs with a collision with the following vehicle
+        per $10^{5}$ manoeuvres $< T_{\mathrm{REAR}}$ \\[2pt]
+        REAR\_TTC & leading & G4.1 & runs with REAR\_TTC below $\theta = 2.679$\,s per
+        $10^{5}$ manoeuvres $< T_{\mathrm{REAR\_TTC}}$ \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+The attachment fixes how a violation is to be read. A GAP\_TTC violation count
+that reaches its SPI threshold challenges G2.1 and, through it, puts G2 in doubt
+while the lagging indicator attached to G2 can still report no collision. The
+leading indicator therefore reports on a premise of the goal before the goal itself
+fails, which is the property illustrated in Figure~\ref{fig:spi_spectrum}. The
+converse reading is equally informative. A lagging violation on a chain goal with
+no preceding violation on any of its sub-goals indicates that the loss arose
+through a cause that no monitored premise covers, so the decomposition of Step~3 is
+incomplete for that loss event and the derivation is to be repeated from Step~2.
+
+Each attachment is recorded in the model of the safety case. The metric threshold
+$\theta$ and the SPI threshold $T$ are stored as dimension elements of the
+indicator, and the full derivation chain, from the lagging indicator through the
+proximate and intermediate causes to the signal and its source, is stored in the
+traceability field. This closes the loop opened in Step~1, since the goal that
+began as a bare assertion now carries a monitorable claim, and a violation
+invalidates that specific claim rather than leaving the safety case silently wrong.
+Two failure modes are avoided explicitly, namely attaching an indicator to a
+convenient parent goal instead of the goal it actually monitors, and omitting the
+traceability record, which is the element that distinguishes a derived indicator
+from an asserted one. The resulting argument structure is consistent with the
+\ac{GSN} community standard \cite{gsncs2021} and with the argument pattern for the
+use of indicators proposed by Ratiu et al.\ \cite{ratiu2024}. The method does not
+depend on any particular tool; a model-based safety-engineering environment that
+supports \ac{GSN}, such as SafeTbox, is suitable for carrying out the attachment in
+practice.
+
+The attachment ends where the \ac{DRSPI} framework begins. Diaz and Woon assume
+indicators that are already attached to safety case sub-arguments, select those
+that can be computed at or near runtime and that change quickly with vehicle
+behaviour, and assign each selected indicator an improvement mechanism, a
+prescribed control action that is taken when the indicator underperforms
+\cite{diaz2022drspi}. The improvement mechanism then enters the argument tree as an
+additional sub-argument below the goal of its indicator and carries an indicator of
+its own, which monitors how often the mechanism is active \cite{diaz2022drspi}. The
+framework leaves open how the attached indicators are obtained in the first place.
+The method of this thesis supplies that step and stops there: it delivers attached
+and traceable indicators of the kind the framework takes as input, and it derives no
+improvement mechanism. The kinematic indicators of
+Figure~\ref{fig:lti_safety_case} are computed from vehicle and scene state and are
+updated in every manoeuvre, which are the properties the framework requires of a
+candidate; whether an improvement mechanism is attached to any of them is a design
+decision for the driving function and is outside the scope of this work.
+
 \section{Instantiation of the Method}
 \label{sec:method_carla}
 
