@@ -1,95 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="500pt" height="699pt" viewBox="0 0 500 699">
-<rect x="0" y="0" width="500" height="699" fill="#ffffff"/>
-<text x="250.00" y="20.00" font-family="Arial, Helvetica, sans-serif" font-size="11.50" fill="#1f3b63" font-weight="bold" text-anchor="middle" xml:space="preserve"><tspan>REAR chain: conflict with a following vehicle</tspan></text>
-<text x="250.00" y="33.00" font-family="Arial, Helvetica, sans-serif" font-size="8.00" fill="#8a8a8a" text-anchor="middle" xml:space="preserve"><tspan>Derivation runs downward, from the collision (lagging SPI) back to the earliest observable signals</tspan></text>
-<rect x="14.00" y="41.00" width="462.00" height="65.00" rx="3" ry="3" fill="#9e4746" stroke="#833938" stroke-width="0.9"/>
-<text x="21.00" y="57.00" font-family="Arial, Helvetica, sans-serif" font-size="9.00" fill="#ffffff" font-weight="bold" xml:space="preserve"><tspan>LAGGING SPI: REAR collision</tspan></text>
-<text x="21.00" y="84.50" font-family="Arial, Helvetica, sans-serif" font-size="23.00" fill="#ffffff" font-weight="200" xml:space="preserve"><tspan>{</tspan></text>
-<text x="94.18" y="71.00" font-family="Arial, Helvetica, sans-serif" font-size="7.80" fill="#ffffff" text-anchor="middle" xml:space="preserve"><tspan>No. of times a REAR collision occurs</tspan></text>
-<text x="94.18" y="82.00" font-family="Arial, Helvetica, sans-serif" font-size="7.80" fill="#ffffff" text-anchor="middle" xml:space="preserve"><tspan>per 100k manoeuvres</tspan></text>
-<text x="159.69" y="84.50" font-family="Arial, Helvetica, sans-serif" font-size="23.00" fill="#ffffff" font-weight="200" xml:space="preserve"><tspan>}</tspan></text>
-<text x="171.37" y="79.50" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#ffffff" xml:space="preserve"><tspan>&lt; T</tspan><tspan font-size="6.05" baseline-shift="sub">REAR</tspan></text>
-<text x="21.00" y="99.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#ffffff" xml:space="preserve"><tspan>Metric: contact between the following vehicle and the ego vehicle.</tspan></text>
-<polyline points="245.00,106.00 245.00,121.00" fill="none" stroke="#8a8a8a" stroke-width="1.0"/>
-<polygon points="245.00,126.00 242.00,120.00 248.00,120.00" fill="#8a8a8a"/>
-<text x="251.00" y="119.00" font-family="Arial, Helvetica, sans-serif" font-size="7.60" fill="#8a8a8a" font-style="italic" xml:space="preserve"><tspan>why</tspan></text>
-<rect x="14.00" y="126.00" width="462.00" height="59.00" rx="3" ry="3" fill="#fbfcfe" stroke="#c3ccd8" stroke-width="0.9"/>
-<text x="21.00" y="142.00" font-family="Arial, Helvetica, sans-serif" font-size="9.00" fill="#1f3b63" font-weight="bold" xml:space="preserve"><tspan>PROXIMATE CAUSE</tspan></text>
-<text x="21.00" y="156.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#1a1a1a" xml:space="preserve"><tspan>The ego vehicle decelerated inside the manoeuvre, at turn entry or at a pedestrian stop, and the follower did not arrest</tspan></text>
-<text x="21.00" y="167.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#1a1a1a" xml:space="preserve"><tspan>its approach within the gap that remained. No third party is involved: the hazard is created by the ego vehicle's own</tspan></text>
-<text x="21.00" y="178.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#1a1a1a" xml:space="preserve"><tspan>deceleration.</tspan></text>
-<polyline points="245.00,185.00 245.00,200.00" fill="none" stroke="#8a8a8a" stroke-width="1.0"/>
-<polygon points="245.00,205.00 242.00,199.00 248.00,199.00" fill="#8a8a8a"/>
-<text x="251.00" y="198.00" font-family="Arial, Helvetica, sans-serif" font-size="7.60" fill="#8a8a8a" font-style="italic" xml:space="preserve"><tspan>reaction tier</tspan></text>
-<rect x="14.00" y="205.00" width="462.00" height="48.00" rx="3" ry="3" fill="#fbfcfe" stroke="#c3ccd8" stroke-width="0.9"/>
-<text x="21.00" y="221.00" font-family="Arial, Helvetica, sans-serif" font-size="9.00" fill="#1f3b63" font-weight="bold" xml:space="preserve"><tspan>NO REACTION-TIER INDICATOR ON THIS CHAIN</tspan></text>
-<text x="21.00" y="235.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#1a1a1a" xml:space="preserve"><tspan>The ego vehicle has no last-resort mitigation directed rearward, so the reaction tier present on the ONC and PED chains</tspan></text>
-<text x="21.00" y="246.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#1a1a1a" xml:space="preserve"><tspan>is empty here.</tspan></text>
-<polyline points="245.00,253.00 245.00,268.00" fill="none" stroke="#8a8a8a" stroke-width="1.0"/>
-<polygon points="245.00,273.00 242.00,267.00 248.00,267.00" fill="#8a8a8a"/>
-<text x="251.00" y="266.00" font-family="Arial, Helvetica, sans-serif" font-size="7.60" fill="#8a8a8a" font-style="italic" xml:space="preserve"><tspan>decompose the proximate cause (kinematic precursor tier)</tspan></text>
-<polygon points="150.00,273.00 340.00,273.00 350.00,283.00 340.00,293.00 150.00,293.00 140.00,283.00" fill="#f2f2f2" stroke="#8a8a8a" stroke-width="0.9"/>
-<text x="245.00" y="286.00" font-family="Arial, Helvetica, sans-serif" font-size="8.20" fill="#1a1a1a" font-weight="bold" text-anchor="middle" xml:space="preserve"><tspan>OR gate: either cause alone is sufficient</tspan></text>
-<polyline points="245.00,293.00 245.00,301.00 126.50,301.00 126.50,312.00" fill="none" stroke="#8a8a8a" stroke-width="1.0"/>
-<polygon points="126.50,317.00 123.50,311.00 129.50,311.00" fill="#8a8a8a"/>
-<polyline points="245.00,293.00 245.00,301.00 363.50,301.00 363.50,312.00" fill="none" stroke="#8a8a8a" stroke-width="1.0"/>
-<polygon points="363.50,317.00 360.50,311.00 366.50,311.00" fill="#8a8a8a"/>
-<rect x="14.00" y="317.00" width="225.00" height="70.00" rx="3" ry="3" fill="#fbfcfe" stroke="#c3ccd8" stroke-width="0.9"/>
-<text x="21.00" y="333.00" font-family="Arial, Helvetica, sans-serif" font-size="9.00" fill="#1f3b63" font-weight="bold" xml:space="preserve"><tspan>CAUSE A</tspan></text>
-<text x="21.00" y="347.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#1a1a1a" xml:space="preserve"><tspan>The gap held by the follower was already too small to</tspan></text>
-<text x="21.00" y="358.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#1a1a1a" xml:space="preserve"><tspan>absorb a deceleration of the magnitude the manoeuvre</tspan></text>
-<text x="21.00" y="369.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#1a1a1a" xml:space="preserve"><tspan>requires.</tspan></text>
-<text x="21.00" y="380.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#1a1a1a" xml:space="preserve"><tspan>Ego planning subsystem, through its speed profile.</tspan></text>
-<rect x="251.00" y="317.00" width="225.00" height="70.00" rx="3" ry="3" fill="#f0f0f0" stroke="#c9c9c9" stroke-width="0.9"/>
-<text x="258.00" y="333.00" font-family="Arial, Helvetica, sans-serif" font-size="9.00" fill="#6b6b6b" font-weight="bold" xml:space="preserve"><tspan>CAUSE B</tspan></text>
-<text x="258.00" y="347.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#6b6b6b" xml:space="preserve"><tspan>The follower responded late, continuing to close for an</tspan></text>
-<text x="258.00" y="358.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#6b6b6b" xml:space="preserve"><tspan>interval after braking began.</tspan></text>
-<text x="258.00" y="369.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#6b6b6b" xml:space="preserve"><tspan>Follower's own driver or control stack.</tspan></text>
-<polyline points="126.50,387.00 126.50,398.00" fill="none" stroke="#8a8a8a" stroke-width="1.0"/>
-<polygon points="126.50,403.00 123.50,397.00 129.50,397.00" fill="#8a8a8a"/>
-<polyline points="363.50,387.00 363.50,398.00" fill="none" stroke="#8a8a8a" stroke-width="1.0"/>
-<polygon points="363.50,403.00 360.50,397.00 366.50,397.00" fill="#8a8a8a"/>
-<rect x="14.00" y="403.00" width="225.00" height="48.00" rx="3" ry="3" fill="#fbfcfe" stroke="#c3ccd8" stroke-width="0.9"/>
-<text x="21.00" y="419.00" font-family="Arial, Helvetica, sans-serif" font-size="9.00" fill="#1f3b63" font-weight="bold" xml:space="preserve"><tspan>SIGNAL A</tspan></text>
-<text x="21.00" y="433.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#1a1a1a" xml:space="preserve"><tspan>Line-of-sight time to collision from the follower to the ego</tspan></text>
-<text x="21.00" y="444.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#1a1a1a" xml:space="preserve"><tspan>vehicle, sampled each frame.</tspan></text>
-<rect x="251.00" y="403.00" width="225.00" height="48.00" rx="3" ry="3" fill="#f0f0f0" stroke="#c9c9c9" stroke-width="0.9"/>
-<text x="258.00" y="419.00" font-family="Arial, Helvetica, sans-serif" font-size="9.00" fill="#6b6b6b" font-weight="bold" xml:space="preserve"><tspan>SIGNAL B</tspan></text>
-<text x="258.00" y="433.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#6b6b6b" xml:space="preserve"><tspan>Reaction delay of the following vehicle, measured from</tspan></text>
-<text x="258.00" y="444.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#6b6b6b" xml:space="preserve"><tspan>brake onset.</tspan></text>
-<polyline points="14.00,464.00 476.00,464.00" fill="none" stroke="#b0b0b0" stroke-width="0.8" stroke-dasharray="3,3"/>
-<rect x="175.57" y="458.00" width="138.86" height="12.00" rx="0" ry="0" fill="#ffffff" stroke="#ffffff" stroke-width="0"/>
-<text x="245.00" y="467.00" font-family="Arial, Helvetica, sans-serif" font-size="7.60" fill="#8a8a8a" font-style="italic" text-anchor="middle" xml:space="preserve"><tspan>observability and independence check</tspan></text>
-<polyline points="126.50,451.00 126.50,474.00" fill="none" stroke="#8a8a8a" stroke-width="1.0"/>
-<polygon points="126.50,479.00 123.50,473.00 129.50,473.00" fill="#8a8a8a"/>
-<polyline points="363.50,451.00 363.50,474.00" fill="none" stroke="#8a8a8a" stroke-width="1.0"/>
-<polygon points="363.50,479.00 360.50,473.00 366.50,473.00" fill="#8a8a8a"/>
-<rect x="14.00" y="479.00" width="225.00" height="76.00" rx="3" ry="3" fill="#dfa640" stroke="#c08f2e" stroke-width="0.9"/>
-<text x="21.00" y="495.00" font-family="Arial, Helvetica, sans-serif" font-size="9.00" fill="#3d2f08" font-weight="bold" xml:space="preserve"><tspan>LEADING SPI: REAR_TTC</tspan></text>
-<text x="21.00" y="522.50" font-family="Arial, Helvetica, sans-serif" font-size="23.00" fill="#3d2f08" font-weight="200" xml:space="preserve"><tspan>{</tspan></text>
-<text x="94.55" y="509.00" font-family="Arial, Helvetica, sans-serif" font-size="7.80" fill="#3d2f08" text-anchor="middle" xml:space="preserve"><tspan>No. of times REAR_TTC &lt; θ</tspan><tspan font-size="5.62" baseline-shift="sub">REAR_TTC</tspan></text>
-<text x="94.55" y="520.00" font-family="Arial, Helvetica, sans-serif" font-size="7.80" fill="#3d2f08" text-anchor="middle" xml:space="preserve"><tspan>per 100k manoeuvres</tspan></text>
-<text x="160.41" y="522.50" font-family="Arial, Helvetica, sans-serif" font-size="23.00" fill="#3d2f08" font-weight="200" xml:space="preserve"><tspan>}</tspan></text>
-<text x="172.10" y="517.50" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#3d2f08" xml:space="preserve"><tspan>&lt; T</tspan><tspan font-size="6.05" baseline-shift="sub">REAR_TTC</tspan></text>
-<text x="21.00" y="537.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#3d2f08" xml:space="preserve"><tspan>Metric: minimum line-of-sight TTC, follower to ego</tspan></text>
-<text x="21.00" y="548.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#3d2f08" xml:space="preserve"><tspan>vehicle.</tspan></text>
-<rect x="251.00" y="479.00" width="225.00" height="76.00" rx="3" ry="3" fill="#f0f0f0" stroke="#c9c9c9" stroke-width="0.9"/>
-<text x="258.00" y="495.00" font-family="Arial, Helvetica, sans-serif" font-size="9.00" fill="#6b6b6b" font-weight="bold" xml:space="preserve"><tspan>REJECTED AT STEP 5</tspan></text>
-<text x="258.00" y="509.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#6b6b6b" xml:space="preserve"><tspan>Not observable to the ego vehicle: the quantity belongs</tspan></text>
-<text x="258.00" y="520.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#6b6b6b" xml:space="preserve"><tspan>to the following driver and is available in simulation only</tspan></text>
-<text x="258.00" y="531.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#6b6b6b" xml:space="preserve"><tspan>because the delay is a sampled parameter.</tspan></text>
-<polyline points="363.50,555.00 363.50,564.00 126.50,564.00" fill="none" stroke="#c9c9c9" stroke-width="0.9" stroke-dasharray="3,3"/>
-<polyline points="126.50,555.00 126.50,572.00" fill="none" stroke="#8a8a8a" stroke-width="1.0"/>
-<polygon points="126.50,577.00 123.50,571.00 129.50,571.00" fill="#8a8a8a"/>
-<rect x="14.00" y="577.00" width="462.00" height="48.00" rx="3" ry="3" fill="#dce5f1" stroke="#9fb3cd" stroke-width="0.9"/>
-<text x="21.00" y="593.00" font-family="Arial, Helvetica, sans-serif" font-size="9.00" fill="#1f3b63" font-weight="bold" xml:space="preserve"><tspan>ATTACH TO THE SAFETY CASE</tspan></text>
-<text x="21.00" y="607.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#2c4062" xml:space="preserve"><tspan>REAR_TTC on G4.1 as leading evidence and the REAR collision as lagging evidence on G4, the following-conflict goal.</tspan></text>
-<text x="21.00" y="618.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#2c4062" xml:space="preserve"><tspan>The rejected branch corresponds to the undeveloped goal G4.2.</tspan></text>
-<polyline points="245.00,625.00 245.00,636.00" fill="none" stroke="#8a8a8a" stroke-width="1.0"/>
-<polygon points="245.00,641.00 242.00,635.00 248.00,635.00" fill="#8a8a8a"/>
-<rect x="14.00" y="641.00" width="462.00" height="48.00" rx="3" ry="3" fill="#dce5f1" stroke="#9fb3cd" stroke-width="0.9"/>
-<text x="21.00" y="657.00" font-family="Arial, Helvetica, sans-serif" font-size="9.00" fill="#1f3b63" font-weight="bold" xml:space="preserve"><tspan>VALIDATE</tspan></text>
-<text x="21.00" y="671.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#2c4062" xml:space="preserve"><tspan>Scored only on runs in which a follower is present, since the hazard cannot arise without one. The acceptance criterion</tspan></text>
-<text x="21.00" y="682.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#2c4062" xml:space="preserve"><tspan>is argued on the baseline-comparison principle, the following driver being a participant in the same traffic system.</tspan></text>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="520pt" height="655pt" viewBox="0 0 520 655">
+<rect x="0" y="0" width="520" height="655" fill="#ffffff"/>
+<text x="260.00" y="20.00" font-family="Arial, Helvetica, sans-serif" font-size="11.50" fill="#1f3b63" font-weight="bold" text-anchor="middle" xml:space="preserve"><tspan>REAR chain: conflict with a following vehicle</tspan></text>
+<text x="260.00" y="33.00" font-family="Arial, Helvetica, sans-serif" font-size="8.00" fill="#8a8a8a" text-anchor="middle" xml:space="preserve"><tspan>Derivation runs downward, from the collision (lagging SPI) back to the earliest observable signals; all SPI counts are per 100k manoeuvres</tspan></text>
+<rect x="10.00" y="41.00" width="486.00" height="49.00" rx="3" ry="3" fill="#9e4746" stroke="#833938" stroke-width="0.9"/>
+<text x="17.00" y="57.00" font-family="Arial, Helvetica, sans-serif" font-size="9.00" fill="#ffffff" font-weight="bold" xml:space="preserve"><tspan>LAGGING SPI: REAR collision</tspan></text>
+<text x="17.00" y="71.50" font-family="Arial, Helvetica, sans-serif" font-size="7.80" fill="#ffffff" xml:space="preserve"><tspan>{No. of times a REAR collision occurs per 100k} &lt; T</tspan><tspan font-size="5.62" baseline-shift="sub">REAR</tspan></text>
+<text x="17.00" y="83.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#ffffff" xml:space="preserve"><tspan>Metric: contact between the following vehicle and the ego vehicle.</tspan></text>
+<polyline points="253.00,90.00 253.00,105.00" fill="none" stroke="#8a8a8a" stroke-width="1.0"/>
+<polygon points="253.00,110.00 250.00,104.00 256.00,104.00" fill="#8a8a8a"/>
+<text x="259.00" y="103.00" font-family="Arial, Helvetica, sans-serif" font-size="7.60" fill="#8a8a8a" font-style="italic" xml:space="preserve"><tspan>why</tspan></text>
+<rect x="10.00" y="110.00" width="486.00" height="48.00" rx="3" ry="3" fill="#fbfcfe" stroke="#c3ccd8" stroke-width="0.9"/>
+<text x="17.00" y="126.00" font-family="Arial, Helvetica, sans-serif" font-size="9.00" fill="#1f3b63" font-weight="bold" xml:space="preserve"><tspan>PROXIMATE CAUSE</tspan></text>
+<text x="17.00" y="140.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#1a1a1a" xml:space="preserve"><tspan>The ego vehicle decelerated inside the manoeuvre, at turn entry or at a pedestrian stop, and the follower did not arrest its</tspan></text>
+<text x="17.00" y="151.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#1a1a1a" xml:space="preserve"><tspan>approach within the gap that remained. No third party is involved: the hazard is created by the ego vehicle's own deceleration.</tspan></text>
+<polyline points="253.00,158.00 253.00,173.00" fill="none" stroke="#8a8a8a" stroke-width="1.0"/>
+<polygon points="253.00,178.00 250.00,172.00 256.00,172.00" fill="#8a8a8a"/>
+<text x="259.00" y="171.00" font-family="Arial, Helvetica, sans-serif" font-size="7.60" fill="#8a8a8a" font-style="italic" xml:space="preserve"><tspan>reaction tier</tspan></text>
+<rect x="10.00" y="178.00" width="486.00" height="48.00" rx="3" ry="3" fill="#fbfcfe" stroke="#c3ccd8" stroke-width="0.9"/>
+<text x="17.00" y="194.00" font-family="Arial, Helvetica, sans-serif" font-size="9.00" fill="#1f3b63" font-weight="bold" xml:space="preserve"><tspan>NO REACTION-TIER INDICATOR ON THIS CHAIN</tspan></text>
+<text x="17.00" y="208.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#1a1a1a" xml:space="preserve"><tspan>The ego vehicle has no last-resort mitigation directed rearward, so the reaction tier present on the ONC and PED chains is</tspan></text>
+<text x="17.00" y="219.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#1a1a1a" xml:space="preserve"><tspan>empty here.</tspan></text>
+<polyline points="253.00,226.00 253.00,241.00" fill="none" stroke="#8a8a8a" stroke-width="1.0"/>
+<polygon points="253.00,246.00 250.00,240.00 256.00,240.00" fill="#8a8a8a"/>
+<text x="259.00" y="239.00" font-family="Arial, Helvetica, sans-serif" font-size="7.60" fill="#8a8a8a" font-style="italic" xml:space="preserve"><tspan>decompose the proximate cause (kinematic precursor tier)</tspan></text>
+<polygon points="158.00,246.00 348.00,246.00 358.00,256.00 348.00,266.00 158.00,266.00 148.00,256.00" fill="#f2f2f2" stroke="#8a8a8a" stroke-width="0.9"/>
+<text x="253.00" y="259.00" font-family="Arial, Helvetica, sans-serif" font-size="8.20" fill="#1a1a1a" font-weight="bold" text-anchor="middle" xml:space="preserve"><tspan>OR gate: either cause alone is sufficient</tspan></text>
+<polyline points="253.00,266.00 253.00,274.00 129.00,274.00 129.00,285.00" fill="none" stroke="#8a8a8a" stroke-width="1.0"/>
+<polygon points="129.00,290.00 126.00,284.00 132.00,284.00" fill="#8a8a8a"/>
+<polyline points="253.00,266.00 253.00,274.00 377.00,274.00 377.00,285.00" fill="none" stroke="#8a8a8a" stroke-width="1.0"/>
+<polygon points="377.00,290.00 374.00,284.00 380.00,284.00" fill="#8a8a8a"/>
+<rect x="10.00" y="290.00" width="238.00" height="70.00" rx="3" ry="3" fill="#fbfcfe" stroke="#c3ccd8" stroke-width="0.9"/>
+<text x="17.00" y="306.00" font-family="Arial, Helvetica, sans-serif" font-size="9.00" fill="#1f3b63" font-weight="bold" xml:space="preserve"><tspan>CAUSE A</tspan></text>
+<text x="17.00" y="320.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#1a1a1a" xml:space="preserve"><tspan>The gap held by the follower was already too small to</tspan></text>
+<text x="17.00" y="331.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#1a1a1a" xml:space="preserve"><tspan>absorb a deceleration of the magnitude the manoeuvre</tspan></text>
+<text x="17.00" y="342.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#1a1a1a" xml:space="preserve"><tspan>requires.</tspan></text>
+<text x="17.00" y="353.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#1a1a1a" xml:space="preserve"><tspan>Ego planning subsystem, through its speed profile.</tspan></text>
+<rect x="258.00" y="290.00" width="238.00" height="70.00" rx="3" ry="3" fill="#f0f0f0" stroke="#c9c9c9" stroke-width="0.9"/>
+<text x="265.00" y="306.00" font-family="Arial, Helvetica, sans-serif" font-size="9.00" fill="#6b6b6b" font-weight="bold" xml:space="preserve"><tspan>CAUSE B</tspan></text>
+<text x="265.00" y="320.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#6b6b6b" xml:space="preserve"><tspan>The follower responded late, continuing to close for an</tspan></text>
+<text x="265.00" y="331.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#6b6b6b" xml:space="preserve"><tspan>interval after braking began.</tspan></text>
+<text x="265.00" y="342.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#6b6b6b" xml:space="preserve"><tspan>Follower's own driver or control stack.</tspan></text>
+<polyline points="129.00,360.00 129.00,371.00" fill="none" stroke="#8a8a8a" stroke-width="1.0"/>
+<polygon points="129.00,376.00 126.00,370.00 132.00,370.00" fill="#8a8a8a"/>
+<polyline points="377.00,360.00 377.00,371.00" fill="none" stroke="#8a8a8a" stroke-width="1.0"/>
+<polygon points="377.00,376.00 374.00,370.00 380.00,370.00" fill="#8a8a8a"/>
+<rect x="10.00" y="376.00" width="238.00" height="48.00" rx="3" ry="3" fill="#fbfcfe" stroke="#c3ccd8" stroke-width="0.9"/>
+<text x="17.00" y="392.00" font-family="Arial, Helvetica, sans-serif" font-size="9.00" fill="#1f3b63" font-weight="bold" xml:space="preserve"><tspan>SIGNAL A</tspan></text>
+<text x="17.00" y="406.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#1a1a1a" xml:space="preserve"><tspan>Line-of-sight time to collision from the follower to the ego</tspan></text>
+<text x="17.00" y="417.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#1a1a1a" xml:space="preserve"><tspan>vehicle, sampled each frame.</tspan></text>
+<rect x="258.00" y="376.00" width="238.00" height="48.00" rx="3" ry="3" fill="#f0f0f0" stroke="#c9c9c9" stroke-width="0.9"/>
+<text x="265.00" y="392.00" font-family="Arial, Helvetica, sans-serif" font-size="9.00" fill="#6b6b6b" font-weight="bold" xml:space="preserve"><tspan>SIGNAL B</tspan></text>
+<text x="265.00" y="406.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#6b6b6b" xml:space="preserve"><tspan>Reaction delay of the following vehicle, measured from</tspan></text>
+<text x="265.00" y="417.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#6b6b6b" xml:space="preserve"><tspan>brake onset.</tspan></text>
+<polyline points="10.00,437.00 496.00,437.00" fill="none" stroke="#b0b0b0" stroke-width="0.8" stroke-dasharray="3,3"/>
+<rect x="183.57" y="431.00" width="138.86" height="12.00" rx="0" ry="0" fill="#ffffff" stroke="#ffffff" stroke-width="0"/>
+<text x="253.00" y="440.00" font-family="Arial, Helvetica, sans-serif" font-size="7.60" fill="#8a8a8a" font-style="italic" text-anchor="middle" xml:space="preserve"><tspan>observability and independence check</tspan></text>
+<polyline points="129.00,424.00 129.00,447.00" fill="none" stroke="#8a8a8a" stroke-width="1.0"/>
+<polygon points="129.00,452.00 126.00,446.00 132.00,446.00" fill="#8a8a8a"/>
+<polyline points="377.00,424.00 377.00,447.00" fill="none" stroke="#8a8a8a" stroke-width="1.0"/>
+<polygon points="377.00,452.00 374.00,446.00 380.00,446.00" fill="#8a8a8a"/>
+<rect x="10.00" y="452.00" width="238.00" height="59.00" rx="3" ry="3" fill="#dfa640" stroke="#c08f2e" stroke-width="0.9"/>
+<text x="17.00" y="468.00" font-family="Arial, Helvetica, sans-serif" font-size="9.00" fill="#3d2f08" font-weight="bold" xml:space="preserve"><tspan>LEADING SPI: REAR_TTC</tspan></text>
+<text x="17.00" y="482.50" font-family="Arial, Helvetica, sans-serif" font-size="7.80" fill="#3d2f08" xml:space="preserve"><tspan>{No. of times REAR_TTC &lt; θ</tspan><tspan font-size="5.62" baseline-shift="sub">REAR_TTC</tspan><tspan> per 100k} &lt; T</tspan><tspan font-size="5.62" baseline-shift="sub">REAR_TTC</tspan></text>
+<text x="17.00" y="494.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#3d2f08" xml:space="preserve"><tspan>Metric: minimum line-of-sight TTC, follower to ego vehicle.</tspan></text>
+<rect x="258.00" y="452.00" width="238.00" height="59.00" rx="3" ry="3" fill="#f0f0f0" stroke="#c9c9c9" stroke-width="0.9"/>
+<text x="265.00" y="468.00" font-family="Arial, Helvetica, sans-serif" font-size="9.00" fill="#6b6b6b" font-weight="bold" xml:space="preserve"><tspan>REJECTED AT STEP 5</tspan></text>
+<text x="265.00" y="482.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#6b6b6b" xml:space="preserve"><tspan>Not observable to the ego vehicle: the quantity belongs to</tspan></text>
+<text x="265.00" y="493.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#6b6b6b" xml:space="preserve"><tspan>the following driver and is available in simulation only</tspan></text>
+<text x="265.00" y="504.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#6b6b6b" xml:space="preserve"><tspan>because the delay is a sampled parameter.</tspan></text>
+<polyline points="377.00,511.00 377.00,520.00 129.00,520.00" fill="none" stroke="#c9c9c9" stroke-width="0.9" stroke-dasharray="3,3"/>
+<polyline points="129.00,511.00 129.00,528.00" fill="none" stroke="#8a8a8a" stroke-width="1.0"/>
+<polygon points="129.00,533.00 126.00,527.00 132.00,527.00" fill="#8a8a8a"/>
+<rect x="10.00" y="533.00" width="486.00" height="48.00" rx="3" ry="3" fill="#dce5f1" stroke="#9fb3cd" stroke-width="0.9"/>
+<text x="17.00" y="549.00" font-family="Arial, Helvetica, sans-serif" font-size="9.00" fill="#1f3b63" font-weight="bold" xml:space="preserve"><tspan>ATTACH TO THE SAFETY CASE</tspan></text>
+<text x="17.00" y="563.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#2c4062" xml:space="preserve"><tspan>REAR_TTC on G4.1 as leading evidence and the REAR collision as lagging evidence on G4, the following-conflict goal. The</tspan></text>
+<text x="17.00" y="574.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#2c4062" xml:space="preserve"><tspan>rejected branch corresponds to the undeveloped goal G4.2.</tspan></text>
+<polyline points="253.00,581.00 253.00,592.00" fill="none" stroke="#8a8a8a" stroke-width="1.0"/>
+<polygon points="253.00,597.00 250.00,591.00 256.00,591.00" fill="#8a8a8a"/>
+<rect x="10.00" y="597.00" width="486.00" height="48.00" rx="3" ry="3" fill="#dce5f1" stroke="#9fb3cd" stroke-width="0.9"/>
+<text x="17.00" y="613.00" font-family="Arial, Helvetica, sans-serif" font-size="9.00" fill="#1f3b63" font-weight="bold" xml:space="preserve"><tspan>VALIDATE</tspan></text>
+<text x="17.00" y="627.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#2c4062" xml:space="preserve"><tspan>Scored only on runs in which a follower is present, since the hazard cannot arise without one. The acceptance criterion is</tspan></text>
+<text x="17.00" y="638.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#2c4062" xml:space="preserve"><tspan>argued on the baseline-comparison principle, the following driver being a participant in the same traffic system.</tspan></text>
 </svg>

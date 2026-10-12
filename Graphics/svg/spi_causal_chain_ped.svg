@@ -1,101 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="500pt" height="683pt" viewBox="0 0 500 683">
-<rect x="0" y="0" width="500" height="683" fill="#ffffff"/>
-<text x="250.00" y="20.00" font-family="Arial, Helvetica, sans-serif" font-size="11.50" fill="#1f3b63" font-weight="bold" text-anchor="middle" xml:space="preserve"><tspan>PED chain: conflict with a crossing pedestrian</tspan></text>
-<text x="250.00" y="33.00" font-family="Arial, Helvetica, sans-serif" font-size="8.00" fill="#8a8a8a" text-anchor="middle" xml:space="preserve"><tspan>Derivation runs downward, from the collision (lagging SPI) back to the earliest observable signals</tspan></text>
-<rect x="14.00" y="41.00" width="462.00" height="65.00" rx="3" ry="3" fill="#9e4746" stroke="#833938" stroke-width="0.9"/>
-<text x="21.00" y="57.00" font-family="Arial, Helvetica, sans-serif" font-size="9.00" fill="#ffffff" font-weight="bold" xml:space="preserve"><tspan>LAGGING SPI: PED collision</tspan></text>
-<text x="21.00" y="84.50" font-family="Arial, Helvetica, sans-serif" font-size="23.00" fill="#ffffff" font-weight="200" xml:space="preserve"><tspan>{</tspan></text>
-<text x="91.37" y="71.00" font-family="Arial, Helvetica, sans-serif" font-size="7.80" fill="#ffffff" text-anchor="middle" xml:space="preserve"><tspan>No. of times a PED collision occurs</tspan></text>
-<text x="91.37" y="82.00" font-family="Arial, Helvetica, sans-serif" font-size="7.80" fill="#ffffff" text-anchor="middle" xml:space="preserve"><tspan>per 100k manoeuvres</tspan></text>
-<text x="154.05" y="84.50" font-family="Arial, Helvetica, sans-serif" font-size="23.00" fill="#ffffff" font-weight="200" xml:space="preserve"><tspan>}</tspan></text>
-<text x="165.73" y="79.50" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#ffffff" xml:space="preserve"><tspan>&lt; T</tspan><tspan font-size="6.05" baseline-shift="sub">PED</tspan></text>
-<text x="21.00" y="99.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#ffffff" xml:space="preserve"><tspan>Metric: contact between the ego vehicle and a pedestrian.</tspan></text>
-<polyline points="245.00,106.00 245.00,121.00" fill="none" stroke="#8a8a8a" stroke-width="1.0"/>
-<polygon points="245.00,126.00 242.00,120.00 248.00,120.00" fill="#8a8a8a"/>
-<text x="251.00" y="119.00" font-family="Arial, Helvetica, sans-serif" font-size="7.60" fill="#8a8a8a" font-style="italic" xml:space="preserve"><tspan>why</tspan></text>
-<rect x="14.00" y="126.00" width="462.00" height="37.00" rx="3" ry="3" fill="#fbfcfe" stroke="#c3ccd8" stroke-width="0.9"/>
-<text x="21.00" y="142.00" font-family="Arial, Helvetica, sans-serif" font-size="9.00" fill="#1f3b63" font-weight="bold" xml:space="preserve"><tspan>PROXIMATE CAUSE</tspan></text>
-<text x="21.00" y="156.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#1a1a1a" xml:space="preserve"><tspan>The ego vehicle entered the crossing of the exit leg while a pedestrian was on it, and no stop was completed in time.</tspan></text>
-<polyline points="245.00,163.00 245.00,178.00" fill="none" stroke="#8a8a8a" stroke-width="1.0"/>
-<polygon points="245.00,183.00 242.00,177.00 248.00,177.00" fill="#8a8a8a"/>
-<text x="251.00" y="176.00" font-family="Arial, Helvetica, sans-serif" font-size="7.60" fill="#8a8a8a" font-style="italic" xml:space="preserve"><tspan>reaction tier (last resort, nearest the loss)</tspan></text>
-<rect x="14.00" y="183.00" width="462.00" height="65.00" rx="3" ry="3" fill="#b26a63" stroke="#9a5650" stroke-width="0.9"/>
-<text x="21.00" y="199.00" font-family="Arial, Helvetica, sans-serif" font-size="9.00" fill="#ffffff" font-weight="bold" xml:space="preserve"><tspan>INTERMEDIATE LEADING SPI: AEB_PED</tspan></text>
-<text x="21.00" y="226.50" font-family="Arial, Helvetica, sans-serif" font-size="23.00" fill="#ffffff" font-weight="200" xml:space="preserve"><tspan>{</tspan></text>
-<text x="90.72" y="213.00" font-family="Arial, Helvetica, sans-serif" font-size="7.80" fill="#ffffff" text-anchor="middle" xml:space="preserve"><tspan>No. of times AEB_PED is triggered</tspan></text>
-<text x="90.72" y="224.00" font-family="Arial, Helvetica, sans-serif" font-size="7.80" fill="#ffffff" text-anchor="middle" xml:space="preserve"><tspan>per 100k manoeuvres</tspan></text>
-<text x="152.76" y="226.50" font-family="Arial, Helvetica, sans-serif" font-size="23.00" fill="#ffffff" font-weight="200" xml:space="preserve"><tspan>}</tspan></text>
-<text x="164.45" y="221.50" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#ffffff" xml:space="preserve"><tspan>&lt; T</tspan><tspan font-size="6.05" baseline-shift="sub">AEB_PED</tspan></text>
-<text x="21.00" y="241.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#ffffff" xml:space="preserve"><tspan>Metric: hard emergency brake while a corridor pedestrian was near the closest point of approach.</tspan></text>
-<polyline points="245.00,248.00 245.00,263.00" fill="none" stroke="#8a8a8a" stroke-width="1.0"/>
-<polygon points="245.00,268.00 242.00,262.00 248.00,262.00" fill="#8a8a8a"/>
-<text x="251.00" y="261.00" font-family="Arial, Helvetica, sans-serif" font-size="7.60" fill="#8a8a8a" font-style="italic" xml:space="preserve"><tspan>decompose the proximate cause (kinematic precursor tier)</tspan></text>
-<polygon points="150.00,268.00 340.00,268.00 350.00,278.00 340.00,288.00 150.00,288.00 140.00,278.00" fill="#f2f2f2" stroke="#8a8a8a" stroke-width="0.9"/>
-<text x="245.00" y="281.00" font-family="Arial, Helvetica, sans-serif" font-size="8.20" fill="#1a1a1a" font-weight="bold" text-anchor="middle" xml:space="preserve"><tspan>OR gate: either cause alone is sufficient</tspan></text>
-<polyline points="245.00,288.00 245.00,296.00 126.50,296.00 126.50,307.00" fill="none" stroke="#8a8a8a" stroke-width="1.0"/>
-<polygon points="126.50,312.00 123.50,306.00 129.50,306.00" fill="#8a8a8a"/>
-<polyline points="245.00,288.00 245.00,296.00 363.50,296.00 363.50,307.00" fill="none" stroke="#8a8a8a" stroke-width="1.0"/>
-<polygon points="363.50,312.00 360.50,306.00 366.50,306.00" fill="#8a8a8a"/>
-<rect x="14.00" y="312.00" width="225.00" height="59.00" rx="3" ry="3" fill="#fbfcfe" stroke="#c3ccd8" stroke-width="0.9"/>
-<text x="21.00" y="328.00" font-family="Arial, Helvetica, sans-serif" font-size="9.00" fill="#1f3b63" font-weight="bold" xml:space="preserve"><tspan>CAUSE A</tspan></text>
-<text x="21.00" y="342.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#1a1a1a" xml:space="preserve"><tspan>The turn was committed without enough time to stop for</tspan></text>
-<text x="21.00" y="353.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#1a1a1a" xml:space="preserve"><tspan>a pedestrian whose path crosses the exit leg.</tspan></text>
-<text x="21.00" y="364.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#1a1a1a" xml:space="preserve"><tspan>Planning subsystem.</tspan></text>
-<rect x="251.00" y="312.00" width="225.00" height="59.00" rx="3" ry="3" fill="#f0f0f0" stroke="#c9c9c9" stroke-width="0.9"/>
-<text x="258.00" y="328.00" font-family="Arial, Helvetica, sans-serif" font-size="9.00" fill="#6b6b6b" font-weight="bold" xml:space="preserve"><tspan>CAUSE B</tspan></text>
-<text x="258.00" y="342.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#6b6b6b" xml:space="preserve"><tspan>Occupancy of the crossing was not established before</tspan></text>
-<text x="258.00" y="353.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#6b6b6b" xml:space="preserve"><tspan>the manoeuvre was committed.</tspan></text>
-<text x="258.00" y="364.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#6b6b6b" xml:space="preserve"><tspan>Perception subsystem.</tspan></text>
-<polyline points="126.50,371.00 126.50,382.00" fill="none" stroke="#8a8a8a" stroke-width="1.0"/>
-<polygon points="126.50,387.00 123.50,381.00 129.50,381.00" fill="#8a8a8a"/>
-<polyline points="363.50,371.00 363.50,382.00" fill="none" stroke="#8a8a8a" stroke-width="1.0"/>
-<polygon points="363.50,387.00 360.50,381.00 366.50,381.00" fill="#8a8a8a"/>
-<rect x="14.00" y="387.00" width="225.00" height="48.00" rx="3" ry="3" fill="#fbfcfe" stroke="#c3ccd8" stroke-width="0.9"/>
-<text x="21.00" y="403.00" font-family="Arial, Helvetica, sans-serif" font-size="9.00" fill="#1f3b63" font-weight="bold" xml:space="preserve"><tspan>SIGNAL A</tspan></text>
-<text x="21.00" y="417.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#1a1a1a" xml:space="preserve"><tspan>Time to the closest point of approach between ego</tspan></text>
-<text x="21.00" y="428.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#1a1a1a" xml:space="preserve"><tspan>vehicle and pedestrian, gated on the miss distance.</tspan></text>
-<rect x="251.00" y="387.00" width="225.00" height="48.00" rx="3" ry="3" fill="#f0f0f0" stroke="#c9c9c9" stroke-width="0.9"/>
-<text x="258.00" y="403.00" font-family="Arial, Helvetica, sans-serif" font-size="9.00" fill="#6b6b6b" font-weight="bold" xml:space="preserve"><tspan>SIGNAL B</tspan></text>
-<text x="258.00" y="417.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#6b6b6b" xml:space="preserve"><tspan>Confidence of the crosswalk-occupancy estimate,</tspan></text>
-<text x="258.00" y="428.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#6b6b6b" xml:space="preserve"><tspan>sampled each frame.</tspan></text>
-<polyline points="14.00,448.00 476.00,448.00" fill="none" stroke="#b0b0b0" stroke-width="0.8" stroke-dasharray="3,3"/>
-<rect x="175.57" y="442.00" width="138.86" height="12.00" rx="0" ry="0" fill="#ffffff" stroke="#ffffff" stroke-width="0"/>
-<text x="245.00" y="451.00" font-family="Arial, Helvetica, sans-serif" font-size="7.60" fill="#8a8a8a" font-style="italic" text-anchor="middle" xml:space="preserve"><tspan>observability and independence check</tspan></text>
-<polyline points="126.50,435.00 126.50,458.00" fill="none" stroke="#8a8a8a" stroke-width="1.0"/>
-<polygon points="126.50,463.00 123.50,457.00 129.50,457.00" fill="#8a8a8a"/>
-<polyline points="363.50,435.00 363.50,458.00" fill="none" stroke="#8a8a8a" stroke-width="1.0"/>
-<polygon points="363.50,463.00 360.50,457.00 366.50,457.00" fill="#8a8a8a"/>
-<rect x="14.00" y="463.00" width="225.00" height="65.00" rx="3" ry="3" fill="#dfa640" stroke="#c08f2e" stroke-width="0.9"/>
-<text x="21.00" y="479.00" font-family="Arial, Helvetica, sans-serif" font-size="9.00" fill="#3d2f08" font-weight="bold" xml:space="preserve"><tspan>LEADING SPI: PED_CPA</tspan></text>
-<text x="21.00" y="506.50" font-family="Arial, Helvetica, sans-serif" font-size="23.00" fill="#3d2f08" font-weight="200" xml:space="preserve"><tspan>{</tspan></text>
-<text x="89.75" y="493.00" font-family="Arial, Helvetica, sans-serif" font-size="7.80" fill="#3d2f08" text-anchor="middle" xml:space="preserve"><tspan>No. of times PED_CPA &lt; θ</tspan><tspan font-size="5.62" baseline-shift="sub">PED_CPA</tspan></text>
-<text x="89.75" y="504.00" font-family="Arial, Helvetica, sans-serif" font-size="7.80" fill="#3d2f08" text-anchor="middle" xml:space="preserve"><tspan>per 100k manoeuvres</tspan></text>
-<text x="150.82" y="506.50" font-family="Arial, Helvetica, sans-serif" font-size="23.00" fill="#3d2f08" font-weight="200" xml:space="preserve"><tspan>}</tspan></text>
-<text x="162.50" y="501.50" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#3d2f08" xml:space="preserve"><tspan>&lt; T</tspan><tspan font-size="6.05" baseline-shift="sub">PED_CPA</tspan></text>
-<text x="21.00" y="521.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#3d2f08" xml:space="preserve"><tspan>Metric: minimum time to the closest point of approach.</tspan></text>
-<rect x="251.00" y="463.00" width="225.00" height="65.00" rx="3" ry="3" fill="#f0f0f0" stroke="#c9c9c9" stroke-width="0.9"/>
-<text x="258.00" y="479.00" font-family="Arial, Helvetica, sans-serif" font-size="9.00" fill="#6b6b6b" font-weight="bold" xml:space="preserve"><tspan>NOT CARRIED FORWARD</tspan></text>
-<text x="258.00" y="493.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#6b6b6b" xml:space="preserve"><tspan>Architectural tier: the signal is internal to the perception</tspan></text>
-<text x="258.00" y="504.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#6b6b6b" xml:space="preserve"><tspan>subsystem, which the simulation does not expose.</tspan></text>
-<text x="258.00" y="515.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#6b6b6b" xml:space="preserve"><tspan>Derived, but outside the empirical scope.</tspan></text>
-<polyline points="363.50,528.00 363.50,537.00 126.50,537.00" fill="none" stroke="#c9c9c9" stroke-width="0.9" stroke-dasharray="3,3"/>
-<polyline points="126.50,528.00 126.50,545.00" fill="none" stroke="#8a8a8a" stroke-width="1.0"/>
-<polygon points="126.50,550.00 123.50,544.00 129.50,544.00" fill="#8a8a8a"/>
-<rect x="14.00" y="550.00" width="462.00" height="48.00" rx="3" ry="3" fill="#dce5f1" stroke="#9fb3cd" stroke-width="0.9"/>
-<text x="21.00" y="566.00" font-family="Arial, Helvetica, sans-serif" font-size="9.00" fill="#1f3b63" font-weight="bold" xml:space="preserve"><tspan>ATTACH TO THE SAFETY CASE</tspan></text>
-<text x="21.00" y="580.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#2c4062" xml:space="preserve"><tspan>PED_CPA on G3.1 as leading evidence; AEB_PED as intermediate leading and the PED collision as lagging evidence</tspan></text>
-<text x="21.00" y="591.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#2c4062" xml:space="preserve"><tspan>on G3, the pedestrian-conflict goal. The perception branch corresponds to the undeveloped goal G3.2.</tspan></text>
-<polyline points="476.00,215.50 485.00,215.50" fill="none" stroke="#9a5650" stroke-width="0.9"/>
-<polyline points="485.00,215.50 485.00,574.00" fill="none" stroke="#9a5650" stroke-width="0.9" stroke-dasharray="3,2.5"/>
-<polyline points="485.00,574.00 482.00,574.00" fill="none" stroke="#9a5650" stroke-width="0.9"/>
-<polygon points="476.00,574.00 481.50,571.25 481.50,576.75" fill="#9a5650"/>
-<g transform="translate(494.00,394.75) rotate(90)"><text x="0.00" y="0.00" font-family="Arial, Helvetica, sans-serif" font-size="7.40" fill="#9a5650" text-anchor="middle" xml:space="preserve"><tspan>AEB_PED attaches directly, independent of the kinematic tier</tspan></text></g>
-<polyline points="245.00,598.00 245.00,609.00" fill="none" stroke="#8a8a8a" stroke-width="1.0"/>
-<polygon points="245.00,614.00 242.00,608.00 248.00,608.00" fill="#8a8a8a"/>
-<rect x="14.00" y="614.00" width="462.00" height="59.00" rx="3" ry="3" fill="#dce5f1" stroke="#9fb3cd" stroke-width="0.9"/>
-<text x="21.00" y="630.00" font-family="Arial, Helvetica, sans-serif" font-size="9.00" fill="#1f3b63" font-weight="bold" xml:space="preserve"><tspan>VALIDATE</tspan></text>
-<text x="21.00" y="644.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#2c4062" xml:space="preserve"><tspan>Temporal precedence is checked against the PED collision only. Incidents are attributed by actor identity, so an</tspan></text>
-<text x="21.00" y="655.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#2c4062" xml:space="preserve"><tspan>oncoming or a rear impact is never counted here. The acceptance criterion for this chain is argued on minimum</tspan></text>
-<text x="21.00" y="666.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#2c4062" xml:space="preserve"><tspan>endogenous mortality, since a pedestrian neither selects the vehicle nor benefits from it.</tspan></text>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="520pt" height="645pt" viewBox="0 0 520 645">
+<rect x="0" y="0" width="520" height="645" fill="#ffffff"/>
+<text x="260.00" y="20.00" font-family="Arial, Helvetica, sans-serif" font-size="11.50" fill="#1f3b63" font-weight="bold" text-anchor="middle" xml:space="preserve"><tspan>PED chain: conflict with a crossing pedestrian</tspan></text>
+<text x="260.00" y="33.00" font-family="Arial, Helvetica, sans-serif" font-size="8.00" fill="#8a8a8a" text-anchor="middle" xml:space="preserve"><tspan>Derivation runs downward, from the collision (lagging SPI) back to the earliest observable signals; all SPI counts are per 100k manoeuvres</tspan></text>
+<rect x="10.00" y="41.00" width="486.00" height="49.00" rx="3" ry="3" fill="#9e4746" stroke="#833938" stroke-width="0.9"/>
+<text x="17.00" y="57.00" font-family="Arial, Helvetica, sans-serif" font-size="9.00" fill="#ffffff" font-weight="bold" xml:space="preserve"><tspan>LAGGING SPI: PED collision</tspan></text>
+<text x="17.00" y="71.50" font-family="Arial, Helvetica, sans-serif" font-size="7.80" fill="#ffffff" xml:space="preserve"><tspan>{No. of times a PED collision occurs per 100k} &lt; T</tspan><tspan font-size="5.62" baseline-shift="sub">PED</tspan></text>
+<text x="17.00" y="83.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#ffffff" xml:space="preserve"><tspan>Metric: contact between the ego vehicle and a pedestrian.</tspan></text>
+<polyline points="253.00,90.00 253.00,105.00" fill="none" stroke="#8a8a8a" stroke-width="1.0"/>
+<polygon points="253.00,110.00 250.00,104.00 256.00,104.00" fill="#8a8a8a"/>
+<text x="259.00" y="103.00" font-family="Arial, Helvetica, sans-serif" font-size="7.60" fill="#8a8a8a" font-style="italic" xml:space="preserve"><tspan>why</tspan></text>
+<rect x="10.00" y="110.00" width="486.00" height="37.00" rx="3" ry="3" fill="#fbfcfe" stroke="#c3ccd8" stroke-width="0.9"/>
+<text x="17.00" y="126.00" font-family="Arial, Helvetica, sans-serif" font-size="9.00" fill="#1f3b63" font-weight="bold" xml:space="preserve"><tspan>PROXIMATE CAUSE</tspan></text>
+<text x="17.00" y="140.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#1a1a1a" xml:space="preserve"><tspan>The ego vehicle entered the crossing of the exit leg while a pedestrian was on it, and no stop was completed in time.</tspan></text>
+<polyline points="253.00,147.00 253.00,162.00" fill="none" stroke="#8a8a8a" stroke-width="1.0"/>
+<polygon points="253.00,167.00 250.00,161.00 256.00,161.00" fill="#8a8a8a"/>
+<text x="259.00" y="160.00" font-family="Arial, Helvetica, sans-serif" font-size="7.60" fill="#8a8a8a" font-style="italic" xml:space="preserve"><tspan>reaction tier (last resort, nearest the loss)</tspan></text>
+<rect x="10.00" y="167.00" width="486.00" height="49.00" rx="3" ry="3" fill="#b26a63" stroke="#9a5650" stroke-width="0.9"/>
+<text x="17.00" y="183.00" font-family="Arial, Helvetica, sans-serif" font-size="9.00" fill="#ffffff" font-weight="bold" xml:space="preserve"><tspan>INTERMEDIATE LEADING SPI: AEB_PED</tspan></text>
+<text x="17.00" y="197.50" font-family="Arial, Helvetica, sans-serif" font-size="7.80" fill="#ffffff" xml:space="preserve"><tspan>{No. of times AEB_PED is triggered per 100k} &lt; T</tspan><tspan font-size="5.62" baseline-shift="sub">AEB_PED</tspan></text>
+<text x="17.00" y="209.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#ffffff" xml:space="preserve"><tspan>Metric: hard emergency brake while a corridor pedestrian was near the closest point of approach.</tspan></text>
+<polyline points="253.00,216.00 253.00,231.00" fill="none" stroke="#8a8a8a" stroke-width="1.0"/>
+<polygon points="253.00,236.00 250.00,230.00 256.00,230.00" fill="#8a8a8a"/>
+<text x="259.00" y="229.00" font-family="Arial, Helvetica, sans-serif" font-size="7.60" fill="#8a8a8a" font-style="italic" xml:space="preserve"><tspan>decompose the proximate cause (kinematic precursor tier)</tspan></text>
+<polygon points="158.00,236.00 348.00,236.00 358.00,246.00 348.00,256.00 158.00,256.00 148.00,246.00" fill="#f2f2f2" stroke="#8a8a8a" stroke-width="0.9"/>
+<text x="253.00" y="249.00" font-family="Arial, Helvetica, sans-serif" font-size="8.20" fill="#1a1a1a" font-weight="bold" text-anchor="middle" xml:space="preserve"><tspan>OR gate: either cause alone is sufficient</tspan></text>
+<polyline points="253.00,256.00 253.00,264.00 129.00,264.00 129.00,275.00" fill="none" stroke="#8a8a8a" stroke-width="1.0"/>
+<polygon points="129.00,280.00 126.00,274.00 132.00,274.00" fill="#8a8a8a"/>
+<polyline points="253.00,256.00 253.00,264.00 377.00,264.00 377.00,275.00" fill="none" stroke="#8a8a8a" stroke-width="1.0"/>
+<polygon points="377.00,280.00 374.00,274.00 380.00,274.00" fill="#8a8a8a"/>
+<rect x="10.00" y="280.00" width="238.00" height="59.00" rx="3" ry="3" fill="#fbfcfe" stroke="#c3ccd8" stroke-width="0.9"/>
+<text x="17.00" y="296.00" font-family="Arial, Helvetica, sans-serif" font-size="9.00" fill="#1f3b63" font-weight="bold" xml:space="preserve"><tspan>CAUSE A</tspan></text>
+<text x="17.00" y="310.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#1a1a1a" xml:space="preserve"><tspan>The turn was committed without enough time to stop for a</tspan></text>
+<text x="17.00" y="321.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#1a1a1a" xml:space="preserve"><tspan>pedestrian whose path crosses the exit leg.</tspan></text>
+<text x="17.00" y="332.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#1a1a1a" xml:space="preserve"><tspan>Planning subsystem.</tspan></text>
+<rect x="258.00" y="280.00" width="238.00" height="59.00" rx="3" ry="3" fill="#f0f0f0" stroke="#c9c9c9" stroke-width="0.9"/>
+<text x="265.00" y="296.00" font-family="Arial, Helvetica, sans-serif" font-size="9.00" fill="#6b6b6b" font-weight="bold" xml:space="preserve"><tspan>CAUSE B</tspan></text>
+<text x="265.00" y="310.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#6b6b6b" xml:space="preserve"><tspan>Occupancy of the crossing was not established before the</tspan></text>
+<text x="265.00" y="321.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#6b6b6b" xml:space="preserve"><tspan>manoeuvre was committed.</tspan></text>
+<text x="265.00" y="332.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#6b6b6b" xml:space="preserve"><tspan>Perception subsystem.</tspan></text>
+<polyline points="129.00,339.00 129.00,350.00" fill="none" stroke="#8a8a8a" stroke-width="1.0"/>
+<polygon points="129.00,355.00 126.00,349.00 132.00,349.00" fill="#8a8a8a"/>
+<polyline points="377.00,339.00 377.00,350.00" fill="none" stroke="#8a8a8a" stroke-width="1.0"/>
+<polygon points="377.00,355.00 374.00,349.00 380.00,349.00" fill="#8a8a8a"/>
+<rect x="10.00" y="355.00" width="238.00" height="48.00" rx="3" ry="3" fill="#fbfcfe" stroke="#c3ccd8" stroke-width="0.9"/>
+<text x="17.00" y="371.00" font-family="Arial, Helvetica, sans-serif" font-size="9.00" fill="#1f3b63" font-weight="bold" xml:space="preserve"><tspan>SIGNAL A</tspan></text>
+<text x="17.00" y="385.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#1a1a1a" xml:space="preserve"><tspan>Time to the closest point of approach between ego vehicle</tspan></text>
+<text x="17.00" y="396.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#1a1a1a" xml:space="preserve"><tspan>and pedestrian, gated on the miss distance.</tspan></text>
+<rect x="258.00" y="355.00" width="238.00" height="48.00" rx="3" ry="3" fill="#f0f0f0" stroke="#c9c9c9" stroke-width="0.9"/>
+<text x="265.00" y="371.00" font-family="Arial, Helvetica, sans-serif" font-size="9.00" fill="#6b6b6b" font-weight="bold" xml:space="preserve"><tspan>SIGNAL B</tspan></text>
+<text x="265.00" y="385.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#6b6b6b" xml:space="preserve"><tspan>Confidence of the crosswalk-occupancy estimate, sampled</tspan></text>
+<text x="265.00" y="396.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#6b6b6b" xml:space="preserve"><tspan>each frame.</tspan></text>
+<polyline points="10.00,416.00 496.00,416.00" fill="none" stroke="#b0b0b0" stroke-width="0.8" stroke-dasharray="3,3"/>
+<rect x="183.57" y="410.00" width="138.86" height="12.00" rx="0" ry="0" fill="#ffffff" stroke="#ffffff" stroke-width="0"/>
+<text x="253.00" y="419.00" font-family="Arial, Helvetica, sans-serif" font-size="7.60" fill="#8a8a8a" font-style="italic" text-anchor="middle" xml:space="preserve"><tspan>observability and independence check</tspan></text>
+<polyline points="129.00,403.00 129.00,426.00" fill="none" stroke="#8a8a8a" stroke-width="1.0"/>
+<polygon points="129.00,431.00 126.00,425.00 132.00,425.00" fill="#8a8a8a"/>
+<polyline points="377.00,403.00 377.00,426.00" fill="none" stroke="#8a8a8a" stroke-width="1.0"/>
+<polygon points="377.00,431.00 374.00,425.00 380.00,425.00" fill="#8a8a8a"/>
+<rect x="10.00" y="431.00" width="238.00" height="59.00" rx="3" ry="3" fill="#dfa640" stroke="#c08f2e" stroke-width="0.9"/>
+<text x="17.00" y="447.00" font-family="Arial, Helvetica, sans-serif" font-size="9.00" fill="#3d2f08" font-weight="bold" xml:space="preserve"><tspan>LEADING SPI: PED_CPA</tspan></text>
+<text x="17.00" y="461.50" font-family="Arial, Helvetica, sans-serif" font-size="7.80" fill="#3d2f08" xml:space="preserve"><tspan>{No. of times PED_CPA &lt; θ</tspan><tspan font-size="5.62" baseline-shift="sub">PED_CPA</tspan><tspan> per 100k} &lt; T</tspan><tspan font-size="5.62" baseline-shift="sub">PED_CPA</tspan></text>
+<text x="17.00" y="473.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#3d2f08" xml:space="preserve"><tspan>Metric: minimum time to the closest point of approach.</tspan></text>
+<rect x="258.00" y="431.00" width="238.00" height="59.00" rx="3" ry="3" fill="#f0f0f0" stroke="#c9c9c9" stroke-width="0.9"/>
+<text x="265.00" y="447.00" font-family="Arial, Helvetica, sans-serif" font-size="9.00" fill="#6b6b6b" font-weight="bold" xml:space="preserve"><tspan>NOT CARRIED FORWARD</tspan></text>
+<text x="265.00" y="461.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#6b6b6b" xml:space="preserve"><tspan>Architectural tier: the signal is internal to the perception</tspan></text>
+<text x="265.00" y="472.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#6b6b6b" xml:space="preserve"><tspan>subsystem, which the simulation does not expose. Derived,</tspan></text>
+<text x="265.00" y="483.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#6b6b6b" xml:space="preserve"><tspan>but outside the empirical scope.</tspan></text>
+<polyline points="377.00,490.00 377.00,499.00 129.00,499.00" fill="none" stroke="#c9c9c9" stroke-width="0.9" stroke-dasharray="3,3"/>
+<polyline points="129.00,490.00 129.00,507.00" fill="none" stroke="#8a8a8a" stroke-width="1.0"/>
+<polygon points="129.00,512.00 126.00,506.00 132.00,506.00" fill="#8a8a8a"/>
+<rect x="10.00" y="512.00" width="486.00" height="48.00" rx="3" ry="3" fill="#dce5f1" stroke="#9fb3cd" stroke-width="0.9"/>
+<text x="17.00" y="528.00" font-family="Arial, Helvetica, sans-serif" font-size="9.00" fill="#1f3b63" font-weight="bold" xml:space="preserve"><tspan>ATTACH TO THE SAFETY CASE</tspan></text>
+<text x="17.00" y="542.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#2c4062" xml:space="preserve"><tspan>PED_CPA on G3.1 as leading evidence; AEB_PED as intermediate leading and the PED collision as lagging evidence on G3,</tspan></text>
+<text x="17.00" y="553.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#2c4062" xml:space="preserve"><tspan>the pedestrian-conflict goal. The perception branch corresponds to the undeveloped goal G3.2.</tspan></text>
+<polyline points="496.00,191.50 505.00,191.50" fill="none" stroke="#9a5650" stroke-width="0.9"/>
+<polyline points="505.00,191.50 505.00,536.00" fill="none" stroke="#9a5650" stroke-width="0.9" stroke-dasharray="3,2.5"/>
+<polyline points="505.00,536.00 502.00,536.00" fill="none" stroke="#9a5650" stroke-width="0.9"/>
+<polygon points="496.00,536.00 501.50,533.25 501.50,538.75" fill="#9a5650"/>
+<g transform="translate(514.00,363.75) rotate(90)"><text x="0.00" y="0.00" font-family="Arial, Helvetica, sans-serif" font-size="7.40" fill="#9a5650" text-anchor="middle" xml:space="preserve"><tspan>AEB_PED attaches directly, independent of the kinematic tier</tspan></text></g>
+<polyline points="253.00,560.00 253.00,571.00" fill="none" stroke="#8a8a8a" stroke-width="1.0"/>
+<polygon points="253.00,576.00 250.00,570.00 256.00,570.00" fill="#8a8a8a"/>
+<rect x="10.00" y="576.00" width="486.00" height="59.00" rx="3" ry="3" fill="#dce5f1" stroke="#9fb3cd" stroke-width="0.9"/>
+<text x="17.00" y="592.00" font-family="Arial, Helvetica, sans-serif" font-size="9.00" fill="#1f3b63" font-weight="bold" xml:space="preserve"><tspan>VALIDATE</tspan></text>
+<text x="17.00" y="606.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#2c4062" xml:space="preserve"><tspan>Temporal precedence is checked against the PED collision only. Incidents are attributed by actor identity, so an oncoming or a</tspan></text>
+<text x="17.00" y="617.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#2c4062" xml:space="preserve"><tspan>rear impact is never counted here. The acceptance criterion for this chain is argued on minimum endogenous mortality, since a</tspan></text>
+<text x="17.00" y="628.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#2c4062" xml:space="preserve"><tspan>pedestrian neither selects the vehicle nor benefits from it.</tspan></text>
 </svg>
