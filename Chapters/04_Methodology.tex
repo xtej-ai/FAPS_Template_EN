@@ -34,7 +34,7 @@ Section~\ref{sec:method_signal}.
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=13cm]{spi_derivation_flow}
+    \includegraphics[width=10.5cm]{spi_derivation_flow}
     \caption{The seven-step causal-chain derivation method. Steps~2 to~7 are executed
     once for each lagging safety performance indicator in the register produced by
     Step~1, and the loop terminates when the register is exhausted.}
@@ -222,7 +222,7 @@ Empirical percentile & no & uneventful runs represent normal driving & collision
 ROC curve, Youden index & yes & labelled collisions are representative & labelled collisions (the evaluation set) & not used: circular \\
 Extreme value theory & no & a parametric tail model holds & long tails of the metric & future work \\
 Kinematic bounds & no & friction and actuator limits are known per run & road and vehicle parameters & not used \\
-Human-driver baselines & no & careful human driving is the reference & naturalistic data (inD, SIND) & future work \\
+Human-driver baselines & no & careful human driving is the reference & naturalistic data (inD, SinD) & future work \\
 \bottomrule
 \end{tabular}
 \par\smallskip\footnotesize\raggedright Qualitative comparison by requirements, not a numerical benchmark.
@@ -282,7 +282,7 @@ itself a choice, and a sensitivity sweep over the percentile remains open.
 
 The threshold depends on the configuration from which it is calibrated. Between
 Campaign~1 and the realistic-driving campaigns the threshold of REQ\_DECEL shifts
-by 21.5\,\% and that of PED\_CPA by 37.9\,\%. It is therefore calibrated once and
+by 21.52\,\% and that of PED\_CPA by 37.90\,\%. It is therefore calibrated once and
 applied unchanged to every campaign rather than refitted per campaign, so that
 the same decision rule is applied to every run of the evaluation.
 

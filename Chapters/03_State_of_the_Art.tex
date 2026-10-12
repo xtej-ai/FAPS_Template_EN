@@ -265,10 +265,10 @@ precursors before an accident occurs. This is the same lagging-to-leading
 transformation that the present work systematises for automated driving, and it is
 widely regarded as the origin of the \ac{SPI} concept later adopted by ANSI/UL~4600.
 Within automated driving, the equivalent sentinel signal is the activation of
-Autonomous Emergency Braking, a last-resort intervention triggered when normal control
+automatic emergency braking (AEB), a last-resort intervention triggered when normal control
 has failed to preserve an adequate margin, typically parameterised by time-to-collision
 \cite{eNCAP_aeb}. A rising activation rate is an early-warning precursor of collision
-risk. The published treatment of Autonomous Emergency Braking is, however, oriented
+risk. The published treatment of automatic emergency braking is, however, oriented
 towards component testing under rating protocols rather than towards a monitored fleet
 indicator with a calibrated threshold feeding a safety case.
 
@@ -438,7 +438,7 @@ This thesis addresses these deficiencies with a systematic causal-chain derivati
 method that takes a lagging \ac{SPI}, identifies its proximate cause through a
 counterfactual prevention test, decomposes it with fault-tree gate logic to the
 subsystem level, extracts the earliest observable signals, checks their observability
-and independence, calibrates signal-level and rate-level thresholds, and attaches the
+and independence, calibrates the metric threshold $\theta$ and the SPI threshold $T$, and attaches the
 resulting leading \acp{SPI} to a \ac{GSN} safety case modelled in a \ac{GSN} modelling tool.
 The indicators are evaluated from simulation data generated in the CARLA simulator
 \cite{dosovitskiy2017carla} with an explicit distinction between detection and
