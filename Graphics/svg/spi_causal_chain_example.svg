@@ -1,0 +1,661 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg2"
+   width="820"
+   height="1015"
+   viewBox="0 0 820 1015"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs6" />
+  <g
+     id="g8"
+     transform="matrix(1.3333333,0,0,1.3333333,0,2.5375e-5)">
+    <g
+       id="g10" />
+    <g
+       id="g12">
+      <path
+         d="M 0,0 H 615 V 761.25 H 0 Z"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="path14" />
+      <text
+         xml:space="preserve"
+         transform="translate(185.23437,22.5)"
+         style="font-variant:normal;font-weight:bold;font-size:11.25px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#2f4b7c;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text18"><tspan
+           x="0 8.7524996 16.875 28.125 34.380001 41.25375 47.508751 50.63625 57.509998 64.383751 70.638748 77.512497 84.386253 88.1325 91.260002 94.387497 100.6425 107.51625 116.26875 119.39625 123.1425 133.14375 139.39874 149.39999 156.27374 163.14751 169.4025 176.27625 186.2775 189.405 196.27875 206.28 212.535 218.78999 225.66376 228.79124 235.04625 238.17375"
+           y="0"
+           id="tspan16">ONCchain:conflictwithanoncomingvehicle</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="translate(130.32031,39)"
+         style="font-variant:normal;font-weight:normal;font-size:8.25px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#8a8a8a;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text22"><tspan
+           x="0 5.9565001 10.5435 13.29075 15.12225 19.24725 23.834249 26.12775 27.959249 32.546249 39.42675 42.174 46.761002 51.348 57.766499 62.3535 66.940498 72.897003 77.484001 83.440498 88.027496 90.77475 95.361748 99.948753 102.24225 104.9895 109.5765 118.74225 121.03575 125.62275 132.50325 136.62825 141.21526 143.04675 144.87825 146.70975 150.83475 152.66624 157.25325 164.13374 166.881 168.71249 173.2995 177.88651 182.4735 184.30499 188.892 195.77251 201.27525 206.778 209.0715 214.11224 218.69925 223.28625 227.41125 233.82974 236.12325 243.00375 245.29726 249.88425 256.76474 261.35175 265.93875 268.686 270.51749 272.349 276.936 281.061 285.64801 290.23499 294.82199 298.94699 303.534 306.28125 310.40625 314.99326 319.58026 321.41174 328.29224 332.41724 334.24875 338.83575 343.42276 348.00974 349.84125"
+           y="0"
+           id="tspan20">Derivationrunsdownward,fromthecollision(laggingSPI)backtotheearliestobservablesignals</tspan></text>
+      <g
+         id="g24">
+        <path
+           d="m 34.5,54 h 546 c 2.484,0 4.5,2.484 4.5,4.5 V 105 c 0,2.484 -2.016,4.5 -4.5,4.5 H 34.5 C 32.016,109.5 30,107.016 30,105 V 58.5 C 30,56.016 32.016,54 34.5,54 Z"
+           style="fill:#a9433f;fill-opacity:1;fill-rule:nonzero;stroke:#a9433f;stroke-width:0.975;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path26" />
+      </g>
+      <text
+         xml:space="preserve"
+         transform="translate(39,68.25)"
+         style="font-variant:normal;font-weight:bold;font-size:8.25px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text30"><tspan
+           x="0 5.04075 10.99725 17.415751 23.834249 26.12775 32.084251 40.796249 46.299 51.80175 56.388748"
+           y="0"
+           id="tspan28">LAGGINGSPI7</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="translate(39,81)"
+         style="font-variant:normal;font-weight:normal;font-size:7.875px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text36"><tspan
+           x="0 2.622375 8.3081245 12.686625 17.065125 21.443624 25.822124 28.011375 29.759624 36.3195 40.698002 46.824749 49.447124 55.573875 61.259624 66.945374 71.323875 77.009628 83.136375 87.514877 91.893372 96.705002 101.0835 105.462 110.27363 114.65212 119.03062 123.40913 129.53587 136.09575 140.47424 144.85275 149.23125 153.60976 157.98825 161.92575 164.54813 168.92662 172.86412 177.67575 184.464 189.27562 193.65413 199.78087 205.46663"
+           y="0"
+           id="tspan32">(No.oftimes(ONC_COLL)per100kmanoeuvres)&lt;T_ONC</tspan><tspan
+           x="0 6.559875 10.938375 13.127625 15.75 17.498249 21.435749 25.814251 29.751751 34.130249 35.878502 37.626751 39.375 43.3125 45.060749 49.439251 53.817749 59.9445 65.630249 67.378502 69.567749 76.135498 80.514 87.081749 91.460251 95.838753 99.776253 104.15475 110.71462 112.46288 116.84138 123.40913 127.34663 131.72513 136.10362 137.85187 141.78937 143.53763 147.91612 152.29463 156.67313 161.05162 165.86325 170.24174 174.62025 178.99875 185.1255 191.68538 196.06387 200.44237 204.82088 209.19937 213.57788 217.51538 220.13776 224.51625 228.45375 232.83224 237.64388 242.02237 244.64474 249.02325 252.96075 257.33926 261.71774 263.466 267.84451 272.22299 277.03464 281.41312 287.53989 293.22562 298.91138"
+           y="11.249997"
+           id="tspan34">Metric:collisionswithanoncomingvehicle,per100kmanoeuvres.Threshold:T_ONC.</tspan></text>
+      <g
+         id="g38">
+        <path
+           d="m 307.5,109.5 v 18"
+           style="fill:none;stroke:#8a8a8a;stroke-width:1.2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path40" />
+      </g>
+      <path
+         d="m 312.129,118.242 -4.629,10.801 -4.629,-10.801 z"
+         style="fill:#8a8a8a;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="path42" />
+      <text
+         xml:space="preserve"
+         transform="translate(312,120.75)"
+         style="font-variant:normal;font-weight:normal;font-size:7.5px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#8a8a8a;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text46"><tspan
+           x="0 5.415 9.585"
+           y="0"
+           id="tspan44">why</tspan></text>
+      <g
+         id="g48">
+        <path
+           d="m 34.5,127.5 h 546 c 2.484,0 4.5,2.484 4.5,4.5 v 37.5 c 0,2.484 -2.016,4.5 -4.5,4.5 H 34.5 C 32.016,174 30,171.516 30,169.5 V 132 c 0,-2.484 2.016,-4.5 4.5,-4.5 z"
+           style="fill:#fbfbfb;fill-opacity:1;fill-rule:nonzero;stroke:#c2c2c2;stroke-width:0.975;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path50" />
+      </g>
+      <text
+         xml:space="preserve"
+         transform="translate(39,141.75)"
+         style="font-variant:normal;font-weight:bold;font-size:8.25px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#2f4b7c;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text54"><tspan
+           x="0 5.5027499 11.45925 17.87775 23.380501 25.674 32.546249 38.50275 43.543499 51.339748 57.296249 63.25275 69.209251 74.711998"
+           y="0"
+           id="tspan52">PROXIMATECAUSE</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="translate(39,154.5)"
+         style="font-variant:normal;font-weight:normal;font-size:7.875px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#1a1a1a;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text60"><tspan
+           x="0 4.811625 9.1901255 15.757875 20.136375 24.514875 31.082624 35.461124 39.398624 43.336124 47.714626 52.093124 53.841373 58.219875 64.787628 66.976875 71.355377 77.923126 81.860626 86.239128 90.617622 92.806877 94.555122 96.303375 100.24088 104.61938 108.99787 111.62025 115.99875 122.5665 128.25224 132.63075 134.379 136.12724 142.69501 147.0735 153.64125 158.01974 162.39825 166.33575 170.71425 177.27412 179.02237 183.40088 189.96863 193.90613 198.28462 202.66313 204.41138 208.34888 210.09712 216.66487 222.35063 226.72913 232.85588 236.79338 238.54163 242.92012 246.85762 248.60588 252.98438 259.55212 263.93063 270.49838 272.24661 274.43588 278.81436 283.19287 287.57138 294.13913 298.51764"
+           y="0"
+           id="tspan56">Theegooccupiedtheconflictareawhileanoncomingvehiclewasclosingonit,andno</tspan><tspan
+           x="0 4.3785 8.316 12.6945 14.44275 18.821251 23.199751 27.578251 31.515751 38.0835 42.462002 46.399502 48.588749 50.337002 54.7155 61.283249 65.220749 69.599251 73.536751 77.474251 81.852753 86.231247 90.609749 94.988251 101.556 103.30425 109.872 112.06125 113.8095 120.36938 124.74787"
+           y="11.249997"
+           id="tspan58">avoidanceactionsucceededintime.</tspan></text>
+      <g
+         id="g62">
+        <path
+           d="m 307.5,174 v 18"
+           style="fill:none;stroke:#8a8a8a;stroke-width:1.2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path64" />
+      </g>
+      <path
+         d="m 312.129,182.742 -4.629,10.801 -4.629,-10.801 z"
+         style="fill:#8a8a8a;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="path66" />
+      <text
+         xml:space="preserve"
+         transform="translate(312,185.25)"
+         style="font-variant:normal;font-weight:normal;font-size:7.5px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#8a8a8a;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text70"><tspan
+           x="0 2.4974999 6.6675 10.8375 14.5875 16.672501 18.3375 22.5075 28.762501 30.8475 32.512501 36.682499 41.264999 43.762501 45.427502 49.5975 53.3475 55.432499 57.93 60.427502 64.597504 68.347504 72.517502 75.014999 77.099998 81.269997 85.440002 89.610001 93.779999 96.277496 100.4475 104.1975 108.3675 110.4525 114.6225 120.8775 122.5425 126.7125 130.46249 134.21249"
+           y="0"
+           id="tspan68">reactiontier(last-resort,nearesttheloss)</tspan></text>
+      <g
+         id="g72">
+        <path
+           d="m 34.5,193.5 h 546 c 2.484,0 4.5,2.484 4.5,4.5 v 46.5 c 0,2.484 -2.016,4.5 -4.5,4.5 H 34.5 C 32.016,249 30,246.516 30,244.5 V 198 c 0,-2.484 2.016,-4.5 4.5,-4.5 z"
+           style="fill:#b26a63;fill-opacity:1;fill-rule:nonzero;stroke:#b26a63;stroke-width:0.975;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path74" />
+      </g>
+      <text
+         xml:space="preserve"
+         transform="translate(39,207.75)"
+         style="font-variant:normal;font-weight:bold;font-size:8.25px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text78"><tspan
+           x="0 2.2934999 8.25 13.29075 18.793501 24.75 31.62225 37.125 43.081501 45.375 51.331501 56.37225 64.168503 69.209251 74.711998 80.668503 86.625 88.918503 94.875 103.587 109.08975 114.5925 119.1795"
+           y="0"
+           id="tspan76">INTERMEDIATELEADINGSPI5</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="translate(39,220.5)"
+         style="font-variant:normal;font-weight:normal;font-size:7.875px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text86"><tspan
+           x="0 2.622375 8.3081245 12.686625 17.065125 21.443624 25.822124 28.011375 29.759624 36.3195 40.698002 46.824749 49.447124 54.699749 59.952374 65.205002 69.583504 75.710251 81.396004 87.081749 91.893372 96.271873 100.65038 105.462 109.8405 114.219 118.5975 122.535 127.34663 134.13487 138.9465 143.325 148.57762 153.83025 159.08287 163.46138 169.58812 175.27388"
+           y="0"
+           id="tspan80">(No.oftimes(AEB_ONC)per100k)&lt;T_AEB_ONC</tspan><tspan
+           x="0 6.559875 10.938375 13.127625 15.75 17.498249 21.435749 25.814251 32.374126 36.752625 41.131126 45.509624 49.888126 54.266624 58.204124 60.8265 65.205002 71.331749 77.017502 78.765747 80.955002 87.522751 94.0905 98.469002 102.8475 105.46987 112.03763 116.41612 122.976 127.3545 129.97687 134.35538 138.73387 143.11238 147.04988 153.17662 157.55513 160.17751 164.556 168.4935 175.06125 180.74699 185.1255 186.87375 188.62199 195.18974 199.56825 206.136 210.5145 214.89301 218.83051 223.209 229.76888 231.51712 235.89563 242.46338 246.40088 250.77937 255.15787 256.90613 260.84363 262.59189 269.15964 274.84537 279.22388 285.35062 291.03638 292.78464 294.97388 299.35239 301.10062 307.66837 309.85764 314.23611 320.80386 324.74136 329.11987 330.86813 332.61636 334.36462 338.30212 340.05038 344.42886 350.99661 355.37512 359.75363 362.37601 364.12424 368.06174 372.44025 376.81876"
+           y="11.249997"
+           id="tspan82">Metric:manoeuvreswithahardemergencybrakewhileanoncomingvehiclewaswithinthecollisionhorizon.</tspan><tspan
+           x="0 6.559875 8.3081245 10.497375 12.245625 16.624125 21.002625 23.191875 24.940125 29.318624 35.886375 40.264874 42.454124 44.643375 49.021873 55.581749 59.960251 62.149502 66.528 70.906502 75.285004 79.222504 83.600998 85.349251 87.097504 88.845749 92.783249 94.531502 98.910004 105.47775 109.85625 114.23475 118.61325 122.55075 126.92925 131.30775 133.93013 138.30862 142.68712 144.43538 146.18362 150.12112 154.49962 158.87813"
+           y="22.499992"
+           id="tspan84">Mitigationattempted,collisionnotyetrealised.</tspan></text>
+      <g
+         id="g88">
+        <path
+           d="m 307.5,249 v 18"
+           style="fill:none;stroke:#8a8a8a;stroke-width:1.2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path90" />
+      </g>
+      <path
+         d="m 312.129,257.742 -4.629,10.801 -4.629,-10.801 z"
+         style="fill:#8a8a8a;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="path92" />
+      <text
+         xml:space="preserve"
+         transform="translate(312,260.25)"
+         style="font-variant:normal;font-weight:normal;font-size:7.5px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#8a8a8a;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text96"><tspan
+           x="0 4.1700001 8.3400002 12.09 16.26 22.5075 26.6775 30.8475 34.5975 40.852501 42.9375 47.107498 53.362499 57.532501 60.029999 64.199997 67.949997 69.614998 75.862503 80.032501 82.1175 88.372498 92.122498 96.292503 100.4625 104.2125 110.4675 112.965 116.715 118.38 122.55 126.72 132.9675 137.1375 139.2225 140.8875 146.7225 150.8925 153.39 157.56 161.31 165.48 167.97749 171.72749 175.89751 180.48 182.565 184.23 188.39999 190.89751"
+           y="0"
+           id="tspan94">decomposetheproximatecause(kinematicprecursortier)</tspan></text>
+      <g
+         id="g98">
+        <path
+           d="m 225,270 h 165 l 15,16.5 -15,16.5 H 225 l -15,-16.5 z"
+           style="fill:#ececec;fill-opacity:1;fill-rule:nonzero;stroke:#c2c2c2;stroke-width:0.975;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path100" />
+      </g>
+      <text
+         xml:space="preserve"
+         transform="translate(226.07031,289.5)"
+         style="font-variant:normal;font-weight:bold;font-size:7.875px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#1a1a1a;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text104"><tspan
+           x="0 6.12675 14.00175 20.1285 25.814251 30.625875 38.067749 48.132 52.510502 54.699749 57.322124 62.133751 66.512253 71.764877 76.143372 80.521873 85.333504 89.711998 96.279747 100.65825 102.8475 107.65913 112.47075 119.0385 121.22775 127.7955 132.174 136.98563 139.608 142.23038 144.41963 148.79813 150.98738 155.36588 160.17751"
+           y="0"
+           id="tspan102">ORGATE—eithercausealoneissufficient</tspan></text>
+      <g
+         id="g106">
+        <path
+           d="m 247.5,303 -86.25,25.5"
+           style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#8a8a8a;stroke-width:1.2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path108" />
+      </g>
+      <path
+         d="m 171.441,330.312 -11.671,-1.374 9.046,-7.5 z"
+         style="fill:#8a8a8a;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="path110" />
+      <g
+         id="g112">
+        <path
+           d="m 367.5,303 78.75,25.5"
+           style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#8a8a8a;stroke-width:1.2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path114" />
+      </g>
+      <path
+         d="m 438.867,321.246 8.852,7.731 -11.703,1.074 z"
+         style="fill:#8a8a8a;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="path116" />
+      <g
+         id="g118">
+        <path
+           d="M 34.5,330 H 288 c 2.484,0 4.5,2.484 4.5,4.5 v 69 c 0,2.484 -2.016,4.5 -4.5,4.5 H 34.5 c -2.484,0 -4.5,-2.484 -4.5,-4.5 v -69 c 0,-2.484 2.016,-4.5 4.5,-4.5 z"
+           style="fill:#fbfbfb;fill-opacity:1;fill-rule:nonzero;stroke:#c2c2c2;stroke-width:0.975;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path120" />
+      </g>
+      <text
+         xml:space="preserve"
+         transform="translate(39,344.25)"
+         style="font-variant:normal;font-weight:bold;font-size:8.25px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#2f4b7c;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text124"><tspan
+           x="0 5.9565001 11.913 17.869499 23.37225 31.168501"
+           y="0"
+           id="tspan122">CAUSEA</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="translate(39,357)"
+         style="font-variant:normal;font-weight:normal;font-size:7.875px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#1a1a1a;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text134"><tspan
+           x="0 4.811625 9.1901255 15.757875 20.136375 24.073875 28.011375 32.389874 36.768375 38.957626 43.336124 49.903873 54.282375 58.660873 65.228622 70.914375 75.292877 81.419624 85.798126 87.546371 90.168747 94.547249 98.925751 103.30425"
+           y="0"
+           id="tspan126">Theacceptedgapwasalready</tspan><tspan
+           x="0 1.74825 6.12675 10.06425 14.44275 16.632 18.821251 20.5695 24.507 26.255251 30.633751 35.012249 39.390751 45.0765 49.455002 53.8335 60.401249 62.5905 66.969002 73.536751 80.096626 84.475128 88.853622 93.232124 97.610626 101.98913 105.92663 108.549"
+           y="11.249997"
+           id="tspan128">insufficientwhenthemanoeuvre</tspan><tspan
+           x="0 4.3785 8.757 13.1355 17.514 21.8925"
+           y="22.499992"
+           id="tspan130">began.</tspan><tspan
+           x="0 5.252625 7.000875 11.379375 15.757875 20.136375 21.884624 26.263124 32.830875 36.768375 41.146873 45.525375 49.462875 53.400375 57.337875 59.527126 63.905624 70.4655"
+           y="33.749989"
+           id="tspan132">Planningsubsystem.</tspan></text>
+      <g
+         id="g136">
+        <path
+           d="m 312,330 h 268.5 c 2.484,0 4.5,2.484 4.5,4.5 v 69 c 0,2.484 -2.016,4.5 -4.5,4.5 H 312 c -2.484,0 -4.5,-2.484 -4.5,-4.5 v -69 c 0,-2.484 2.016,-4.5 4.5,-4.5 z"
+           style="fill:#fbfbfb;fill-opacity:1;fill-rule:nonzero;stroke:#c2c2c2;stroke-width:0.975;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path138" />
+      </g>
+      <text
+         xml:space="preserve"
+         transform="translate(316.5,344.25)"
+         style="font-variant:normal;font-weight:bold;font-size:8.25px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#2f4b7c;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text142"><tspan
+           x="0 5.9565001 11.913 17.869499 23.37225 31.168501"
+           y="0"
+           id="tspan140">CAUSEB</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="translate(316.5,357)"
+         style="font-variant:normal;font-weight:normal;font-size:7.875px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#1a1a1a;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text154"><tspan
+           x="0 5.68575 7.434 11.8125 15.75 17.498249 21.876751 28.4445 32.382 36.760502 41.139 45.517502 52.085251 56.463749 60.401249 64.338753 68.717247 73.095749 77.474251 81.852753 88.420502 94.106247 98.484749 102.86325 107.24175 109.431 113.8095 120.37725 122.5665 126.945 129.56737"
+           y="0"
+           id="tspan144">Closingspeedexceededwhattheturn</tspan><tspan
+           x="0 4.3785 7.000875 13.127625 17.506124 19.254375 21.002625 25.381124 31.066875 35.445374 42.013126 46.391624 50.770126 54.707626 59.086124 63.464626 67.402122 73.969872 78.348373 82.726875 84.475128 88.853622 92.791122 95.413498 99.792 104.1705 108.108 112.4865"
+           y="11.249997"
+           id="tspan146">arcallowedbecauseofincreased</tspan><tspan
+           x="0 4.3785 8.757 12.6945 17.073 23.632875 25.381124 29.759624 36.327374 40.264874 44.643375 46.391624 50.770126 54.707626 56.455875 58.645126 62.582626 66.961128 70.898628 77.466377 79.655624 84.034126 90.601875 94.980377 99.358871 103.29637 107.67487 109.42313 113.80163 116.424 120.8025 122.99175 124.74 129.1185"
+           y="22.499992"
+           id="tspan148">oncomingvelocity,sothedeceleration</tspan><tspan
+           x="0 4.3785 8.757 13.1355 17.514 21.8925 28.460251 31.082624 35.461124 39.398624 45.966373 50.344875 54.723373 58.660873 63.039375 67.417877 73.985626 78.364128 82.742622 85.364998 91.924873 96.303375 100.24088 104.61938 107.24175 111.62025 115.55775 117.306 121.6845 126.063"
+           y="33.749989"
+           id="tspan150">neededrosebeyondnormalbraking.</tspan><tspan
+           x="0 5.252625 7.875 12.2535 16.632 18.380251 22.317751 24.507 26.255251 30.633751 37.2015 41.139 45.517502 49.896 53.8335 57.771 61.7085 63.897751 68.276253 74.836128"
+           y="44.999985"
+           id="tspan152">Predictionsubsystem.</tspan></text>
+      <g
+         id="g156">
+        <path
+           d="m 161.25,408 v 18"
+           style="fill:none;stroke:#8a8a8a;stroke-width:1.2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path158" />
+      </g>
+      <path
+         d="m 165.879,416.742 -4.629,10.801 -4.629,-10.801 z"
+         style="fill:#8a8a8a;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="path160" />
+      <g
+         id="g162">
+        <path
+           d="m 446.25,408 v 18"
+           style="fill:none;stroke:#8a8a8a;stroke-width:1.2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path164" />
+      </g>
+      <path
+         d="m 450.879,416.742 -4.629,10.801 -4.629,-10.801 z"
+         style="fill:#8a8a8a;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="path166" />
+      <g
+         id="g168">
+        <path
+           d="M 34.5,427.5 H 288 c 2.484,0 4.5,2.484 4.5,4.5 v 39 c 0,2.484 -2.016,4.5 -4.5,4.5 H 34.5 c -2.484,0 -4.5,-2.484 -4.5,-4.5 v -39 c 0,-2.484 2.016,-4.5 4.5,-4.5 z"
+           style="fill:#fbfbfb;fill-opacity:1;fill-rule:nonzero;stroke:#c2c2c2;stroke-width:0.975;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path170" />
+      </g>
+      <text
+         xml:space="preserve"
+         transform="translate(39,441.75)"
+         style="font-variant:normal;font-weight:bold;font-size:8.25px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#2f4b7c;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text174"><tspan
+           x="0 5.5027499 7.7962499 14.21475 20.171249 26.12775 33.462002"
+           y="0"
+           id="tspan172">SIGNALA</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="translate(39,454.5)"
+         style="font-variant:normal;font-weight:normal;font-size:7.875px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#1a1a1a;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text180"><tspan
+           x="0 4.811625 9.62325 17.498249 19.6875 26.255251 28.4445 32.823002 39.390751 43.769249 48.147751 52.526249 55.148624 59.527126 63.464626 67.843124 71.780624 73.528877 77.907372 81.844872 83.593124 87.971626 94.539375 98.917877 103.29637 107.23387 111.61237 118.17225 119.9205 124.299"
+           y="0"
+           id="tspan176">TTCtothenearestclosingoncoming</tspan><tspan
+           x="0 3.9375 8.316 12.6945 14.44275 18.380251 20.1285 24.507 28.8855 32.823002 37.2015 43.761375 48.139874 49.888126 54.266624 60.834373 65.212875 69.591377 73.528877 80.096626 82.285873 84.908249 89.286751 95.846626 100.22513"
+           y="11.249997"
+           id="tspan178">vehicle,sampledeachframe.</tspan></text>
+      <g
+         id="g182">
+        <path
+           d="m 312,427.5 h 268.5 c 2.484,0 4.5,2.484 4.5,4.5 v 39 c 0,2.484 -2.016,4.5 -4.5,4.5 H 312 c -2.484,0 -4.5,-2.484 -4.5,-4.5 v -39 c 0,-2.484 2.016,-4.5 4.5,-4.5 z"
+           style="fill:#fbfbfb;fill-opacity:1;fill-rule:nonzero;stroke:#c2c2c2;stroke-width:0.975;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path184" />
+      </g>
+      <text
+         xml:space="preserve"
+         transform="translate(316.5,441.75)"
+         style="font-variant:normal;font-weight:bold;font-size:8.25px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#2f4b7c;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text188"><tspan
+           x="0 5.5027499 7.7962499 14.21475 20.171249 26.12775 33.462002"
+           y="0"
+           id="tspan186">SIGNALB</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="translate(316.5,454.5)"
+         style="font-variant:normal;font-weight:normal;font-size:7.875px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#1a1a1a;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text194"><tspan
+           x="0 5.68575 10.06425 14.00175 18.380251 20.1285 24.507 27.129375 31.507875 33.697124 35.445374 39.823875 46.391624 49.014 53.392502 57.771 62.149502 63.897751 66.520126 70.898628 77.466377 79.655624 86.223373 90.160873 92.350128 96.728622 103.29637 107.23387 111.61237 115.99088 118.61325 122.99175 127.37025 131.74875 133.938 138.3165"
+           y="0"
+           id="tspan190">Decelerationrequiredtostopshortofthe</tspan><tspan
+           x="0 3.9375 8.316 12.6945 14.88375 16.632 18.380251 22.317751 26.696251 31.074751 33.697124 38.075626 44.643375 49.021873 53.400375 55.589626 59.968124 66.535873 70.473373 74.851875 77.474251 80.096626 84.475128 88.853622 93.232124 97.169624 101.54813 105.92663 110.30512 114.68362"
+           y="11.249997"
+           id="tspan192">conflictareaatthecurrentspeed.</tspan></text>
+      <g
+         id="g196">
+        <path
+           d="M 30,492 H 585"
+           style="fill:none;stroke:#c2c2c2;stroke-width:0.75;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.75, 3;stroke-dashoffset:0;stroke-opacity:1"
+           id="path198" />
+      </g>
+      <text
+         xml:space="preserve"
+         transform="translate(240.59766,489)"
+         style="font-variant:normal;font-weight:normal;font-size:7.875px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#8a8a8a;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text202"><tspan
+           x="0 4.3785 8.757 12.6945 17.073 19.695375 23.632875 28.011375 32.389874 34.138126 35.886375 37.634624 39.823875 45.950626 50.329124 54.707626 61.275375 63.023624 67.402122 71.780624 76.159126 80.537628 84.916122 89.294624 93.673126 98.051628 102.43012 106.36762 112.93537 116.87287 121.25137 125.62988 129.56737"
+           y="0"
+           id="tspan200">observabilityandindependencecheck</tspan></text>
+      <g
+         id="g204">
+        <path
+           d="M 161.25,475.5 V 504"
+           style="fill:none;stroke:#8a8a8a;stroke-width:1.2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path206" />
+      </g>
+      <path
+         d="m 165.879,494.742 -4.629,10.801 -4.629,-10.801 z"
+         style="fill:#8a8a8a;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="path208" />
+      <g
+         id="g210">
+        <path
+           d="M 446.25,475.5 V 504"
+           style="fill:none;stroke:#8a8a8a;stroke-width:1.2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path212" />
+      </g>
+      <path
+         d="m 450.879,494.742 -4.629,10.801 -4.629,-10.801 z"
+         style="fill:#8a8a8a;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="path214" />
+      <g
+         id="g216">
+        <path
+           d="M 34.5,505.5 H 288 c 2.484,0 4.5,2.484 4.5,4.5 v 79.5 c 0,2.484 -2.016,4.5 -4.5,4.5 H 34.5 C 32.016,594 30,591.516 30,589.5 V 510 c 0,-2.484 2.016,-4.5 4.5,-4.5 z"
+           style="fill:#e0a23a;fill-opacity:1;fill-rule:nonzero;stroke:#e0a23a;stroke-width:0.975;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path218" />
+      </g>
+      <text
+         xml:space="preserve"
+         transform="translate(39,519.75)"
+         style="font-variant:normal;font-weight:bold;font-size:8.25px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#5f4410;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text222"><tspan
+           x="0 5.04075 10.5435 16.5 22.456499 24.75 30.706499 39.418499 44.921249 50.424 55.011002"
+           y="0"
+           id="tspan220">LEADINGSPI1</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="translate(39,532.5)"
+         style="font-variant:normal;font-weight:normal;font-size:7.875px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#1a1a1a;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text226"><tspan
+           x="0 2.622375 8.3081245 12.686625 17.065125 21.443624 25.822124 28.011375 29.759624 36.3195 40.698002 46.824749 49.447124 55.573875 59.952374 64.330872 68.709373 73.521004 78.332626 86.207626"
+           y="0"
+           id="tspan224">(No.oftimes(Gap_TTC&lt;</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="translate(131.99587,532.5)"
+         style="font-variant:normal;font-weight:normal;font-size:7.875px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#1a1a1a;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text230"><tspan
+           x="0"
+           y="0"
+           id="tspan228">θ</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="translate(136.57125,532.5)"
+         style="font-variant:normal;font-weight:normal;font-size:7.875px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#1a1a1a;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text242"><tspan
+           x="0 4.3785 10.50525 15.757875 21.0105"
+           y="0"
+           id="tspan232">_GAP)</tspan><tspan
+           x="-97.571251 -93.192749 -88.814247 -84.002625 -79.624123 -75.245628 -70.867126 -66.929626 -62.118 -55.32975 -50.518124 -46.139626 -40.012875 -34.76025"
+           y="11.249997"
+           id="tspan234">per100k)&lt;T_GAP</tspan><tspan
+           x="-97.571251 -91.011375 -86.632874 -84.443626 -81.821251 -80.072998 -76.135498 -71.757004 -65.197128 -63.448875 -59.070374 -57.322124 -50.762249 -46.383751 -37.634624 -33.256126 -28.877625 -22.309875 -17.498249 -12.686625 -4.811625 -0.43312499 3.504375 7.882875 12.6945 14.88375 19.262251"
+           y="22.499992"
+           id="tspan236">Metric:minimumgapTTCoverthe</tspan><tspan
+           x="-97.571251 -91.011375 -86.632874 -82.254372 -77.875877 -73.497375 -69.118874 -65.181374 -62.558998 -58.1805"
+           y="33.749989"
+           id="tspan238">manoeuvre.</tspan><tspan
+           x="-97.571251 -92.318626 -88.381126 -84.002625 -79.624123"
+           y="44.999985"
+           id="tspan240">Event</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="translate(61.325625,577.49999)"
+         style="font-variant:normal;font-weight:normal;font-size:7.875px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#1a1a1a;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text246"><tspan
+           x="0"
+           y="0"
+           id="tspan244">θ</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="translate(65.901,577.49999)"
+         style="font-variant:normal;font-weight:normal;font-size:7.875px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#1a1a1a;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text250"><tspan
+           x="0 4.3785 10.50525 15.757875 23.199751 25.822124 27.570375 31.948875 37.634624 42.013126 46.824749 49.014 53.392502 55.140751 56.889 59.511375 63.889874 69.575623 73.954124 76.143372 82.711128 87.522751 91.901253 98.028 103.28062 108.53325"
+           y="0"
+           id="tspan248">_GAP(lowertail);RateT_GAP.</tspan></text>
+      <g
+         id="g252">
+        <path
+           d="m 312,505.5 h 268.5 c 2.484,0 4.5,2.484 4.5,4.5 v 79.5 c 0,2.484 -2.016,4.5 -4.5,4.5 H 312 c -2.484,0 -4.5,-2.484 -4.5,-4.5 V 510 c 0,-2.484 2.016,-4.5 4.5,-4.5 z"
+           style="fill:#e0a23a;fill-opacity:1;fill-rule:nonzero;stroke:#e0a23a;stroke-width:0.975;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path254" />
+      </g>
+      <text
+         xml:space="preserve"
+         transform="translate(316.5,519.75)"
+         style="font-variant:normal;font-weight:bold;font-size:8.25px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#5f4410;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text258"><tspan
+           x="0 5.04075 10.5435 16.5 22.456499 24.75 30.706499 39.418499 44.921249 50.424 55.011002"
+           y="0"
+           id="tspan256">LEADINGSPI2</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="translate(316.5,532.5)"
+         style="font-variant:normal;font-weight:normal;font-size:7.875px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#1a1a1a;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text262"><tspan
+           x="0 2.622375 8.3081245 12.686625 17.065125 21.443624 25.822124 28.011375 29.759624 36.3195 40.698002 46.824749 49.447124 55.132874 59.511375 63.889874 68.268372 73.954124 78.332626 82.270126 86.648628 90.586128"
+           y="0"
+           id="tspan260">(No.oftimes(Req_Decel&gt;</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="translate(413.87437,532.5)"
+         style="font-variant:normal;font-weight:normal;font-size:7.875px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#1a1a1a;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text266"><tspan
+           x="0"
+           y="0"
+           id="tspan264">θ</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="translate(418.44975,532.5)"
+         style="font-variant:normal;font-weight:normal;font-size:7.875px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#1a1a1a;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text278"><tspan
+           x="0 4.3785 10.06425 14.44275 18.821251 24.507"
+           y="0"
+           id="tspan268">_ReqD)</tspan><tspan
+           x="-101.94975 -97.571251 -93.192749 -88.381126 -84.002625 -79.624123 -75.245628 -71.308128 -66.496498 -59.708248 -54.896626 -50.518124 -44.832375 -40.453876 -36.075375"
+           y="11.249997"
+           id="tspan270">per100k)&lt;T_ReqD</tspan><tspan
+           x="-101.94975 -95.389877 -91.011375 -88.822128 -86.199753 -84.4515 -80.514 -76.135498 -69.575623 -65.197128 -61.259624 -59.511375 -52.9515 -48.573002 -39.823875 -37.2015 -32.823002 -28.4445 -24.066 -22.317751 -19.695375 -15.316875 -8.7491245 -4.370625 0.0078750001 3.945375 8.3238754 10.072125 14.450625 17.073 21.4515 23.640751 25.389 29.7675"
+           y="22.499992"
+           id="tspan272">Metric:maximumrequireddeceleration</tspan><tspan
+           x="-101.94975 -97.571251 -93.633751 -89.255249 -84.443626 -82.254372 -77.875877 -71.308128 -64.748253 -60.369751 -55.991249 -51.612751 -47.234249 -42.855751 -38.918251 -36.295876 -31.917376"
+           y="33.749989"
+           id="tspan274">overthemanoeuvre.</tspan><tspan
+           x="-101.94975 -96.697128 -92.759628 -88.381126 -84.002625"
+           y="44.999985"
+           id="tspan276">Event</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="translate(338.82562,577.49999)"
+         style="font-variant:normal;font-weight:normal;font-size:7.875px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#1a1a1a;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text282"><tspan
+           x="0"
+           y="0"
+           id="tspan280">θ</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="translate(343.401,577.49999)"
+         style="font-variant:normal;font-weight:normal;font-size:7.875px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#1a1a1a;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text286"><tspan
+           x="0 4.3785 10.06425 14.44275 18.821251 26.696251 29.318624 33.697124 38.075626 42.454124 46.832626 51.644249 53.8335 58.212002 59.960251 61.7085 64.330872 68.709373 74.395126 78.773628 80.962875 87.530624 92.342247 96.720749 102.4065 106.785 111.1635 116.84925"
+           y="0"
+           id="tspan284">_ReqD(uppertail);RateT_ReqD.</tspan></text>
+      <g
+         id="g288">
+        <path
+           d="m 161.25,594 v 17.25"
+           style="fill:none;stroke:#8a8a8a;stroke-width:1.2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path290" />
+      </g>
+      <g
+         id="g292">
+        <path
+           d="m 446.25,594 v 17.25"
+           style="fill:none;stroke:#8a8a8a;stroke-width:1.2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path294" />
+      </g>
+      <g
+         id="g296">
+        <path
+           d="m 161.25,611.25 h 285"
+           style="fill:none;stroke:#8a8a8a;stroke-width:1.2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path298" />
+      </g>
+      <g
+         id="g300">
+        <path
+           d="M 307.5,611.25 V 628.5"
+           style="fill:none;stroke:#8a8a8a;stroke-width:1.2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path302" />
+      </g>
+      <path
+         d="m 312.129,619.242 -4.629,10.801 -4.629,-10.801 z"
+         style="fill:#8a8a8a;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="path304" />
+      <g
+         id="g306">
+        <path
+           d="m 585,221.25 h 16.5"
+           style="fill:none;stroke:#b26a63;stroke-width:1.05;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path308" />
+      </g>
+      <g
+         id="g310">
+        <path
+           d="m 601.5,221.25 v 418.5"
+           style="fill:none;stroke:#b26a63;stroke-width:1.05;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3, 2.25;stroke-dashoffset:0;stroke-opacity:1"
+           id="path312" />
+      </g>
+      <g
+         id="g314">
+        <path
+           d="m 601.5,639.75 h -15"
+           style="fill:none;stroke:#b26a63;stroke-width:1.05;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path316" />
+      </g>
+      <path
+         d="m 594.602,643.801 -9.454,-4.051 9.454,-4.051 z"
+         style="fill:#b26a63;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="path318" />
+      <text
+         xml:space="preserve"
+         transform="rotate(90,134.14453,465.10547)"
+         style="font-variant:normal;font-weight:normal;font-size:7.125px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#b26a63;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text322"><tspan
+           x="0 4.7523751 9.5047503 13.46625 19.408501 23.370001 25.35075 27.331499 31.292999 34.855499 38.817001 42.7785 48.321751 52.283249 53.865002 56.237625 60.199123 63.761623 65.742378 67.324127 70.886627 74.848122 76.429878 80.391373 84.352875 88.314377 92.275871 96.237373 100.19888 104.16038 108.12187 112.08337 116.04488 120.00638 123.96787 125.94862 129.91013 135.85237 139.41487 140.99663 144.95813 148.91963 154.85475 158.81625 160.797 162.37875 167.922 169.90276 171.4845 175.446"
+           y="0"
+           id="tspan320">SPI5attachesdirectly,independentofthekinematictier</tspan></text>
+      <g
+         id="g324">
+        <path
+           d="m 34.5,630 h 546 c 2.484,0 4.5,2.484 4.5,4.5 V 672 c 0,2.484 -2.016,4.5 -4.5,4.5 h -546 c -2.484,0 -4.5,-2.484 -4.5,-4.5 v -37.5 c 0,-2.484 2.016,-4.5 4.5,-4.5 z"
+           style="fill:#dce5f2;fill-opacity:1;fill-rule:nonzero;stroke:#c2c2c2;stroke-width:0.975;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path326" />
+      </g>
+      <text
+         xml:space="preserve"
+         transform="translate(39,644.25)"
+         style="font-variant:normal;font-weight:bold;font-size:8.25px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#2f4b7c;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text330"><tspan
+           x="0 5.9565001 10.99725 16.038 21.994499 27.951 36.201 41.241749 49.953751 54.994499 60.951 68.747253 74.25 80.206497 85.247253 90.75 95.790749 103.587 109.5435 115.5 121.00275"
+           y="0"
+           id="tspan328">ATTACHTOTHESAFETYCASE</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="translate(39,657)"
+         style="font-variant:normal;font-weight:normal;font-size:7.875px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#2f4b7c;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text336"><tspan
+           x="0 5.252625 10.50525 14.88375 21.4515 25.83 30.2085 36.776249 42.028873 47.281502 51.66 58.227749 62.606251 68.733002 70.481247 74.859749 79.238251 83.616753 85.364998 89.7435 96.311249 100.68975 104.62725 106.3755 110.754 115.1325 119.511 123.4485 130.01625 134.39474 140.96249 143.15175 147.53024 154.09801 158.4765 162.855 166.7925 171.17101 177.73088 179.47913 183.85762 188.23613 190.85851 194.79601 199.1745 203.55299 205.74225 207.49049 209.23875 213.17625 217.55475 221.93324 226.31175 230.69025 232.43851"
+           y="0"
+           id="tspan332">SPI1andSPI2asleadingevidenceontheoncoming-conflictgoal.</tspan><tspan
+           x="0 5.252625 10.50525 14.88375 21.4515 25.83 31.956751 33.705002 38.0835 40.272751 44.651249 47.273624 53.8335 58.212002 62.5905 64.338753 68.717247 70.906502 77.474251 79.222504 83.600998 87.9795 92.358002 94.106247 98.484749 105.0525 109.431 113.8095 120.37725 125.62988 130.88251 135.261 141.82875 146.20724 152.334 154.08224 158.46075 162.83925 167.21774 168.966 173.3445 179.91225 184.29076 188.22826 189.9765 194.355 198.73351 203.112 207.0495 213.61725 217.99574 224.56351 226.75275 231.13126 237.69901 241.63651 246.015 252.57487 259.14264 263.52112 267.89963 272.27814 274.02637"
+           y="11.249997"
+           id="tspan334">SPI5asintermediateleadingandSPI7aslaggingevidenceonthesamegoal.</tspan></text>
+      <g
+         id="g338">
+        <path
+           d="M 307.5,676.5 V 693"
+           style="fill:none;stroke:#8a8a8a;stroke-width:1.2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path340" />
+      </g>
+      <path
+         d="m 312.129,683.742 -4.629,10.801 -4.629,-10.801 z"
+         style="fill:#8a8a8a;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="path342" />
+      <g
+         id="g344">
+        <path
+           d="m 34.5,694.5 h 546 c 2.484,0 4.5,2.484 4.5,4.5 v 49.5 c 0,2.484 -2.016,4.5 -4.5,4.5 H 34.5 C 32.016,753 30,750.516 30,748.5 V 699 c 0,-2.484 2.016,-4.5 4.5,-4.5 z"
+           style="fill:#dce5f2;fill-opacity:1;fill-rule:nonzero;stroke:#c2c2c2;stroke-width:0.975;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path346" />
+      </g>
+      <text
+         xml:space="preserve"
+         transform="translate(39,708.75)"
+         style="font-variant:normal;font-weight:bold;font-size:8.25px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#2f4b7c;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text350"><tspan
+           x="0 5.5027499 11.45925 16.5 18.793501 24.75 30.706499 35.74725"
+           y="0"
+           id="tspan348">VALIDATE</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="translate(39,721.5)"
+         style="font-variant:normal;font-weight:normal;font-size:7.875px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#2f4b7c;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text358"><tspan
+           x="0 4.811625 9.1901255 15.75 20.1285 24.507 27.129375 31.507875 35.445374 39.823875 42.446251 46.824749 50.762249 55.140751 59.519249 63.897751 68.276253 72.213753 78.781502 82.719002 87.097504 91.475998 95.413498 99.350998 103.7295 110.29725 114.67575 119.05425 123.43275 125.181 129.55949 133.49699 137.8755 143.12813 148.38075 152.75925 159.327 163.70551 168.084 169.83224 173.76974 178.14825 180.33749 184.716 188.6535 190.40175 194.78024 199.15875 203.53725 205.7265 211.85326 216.23175 218.85413 225.42188 229.80037 231.98962 234.17888 236.80125 238.5495 242.92799 247.3065 249.49574 253.87425 260.44199 264.8205 270.94724 275.32574 279.26324 281.45251 285.83099 290.64264 292.39087 296.76938 301.14789 305.52637 307.71564 309.46387 311.65314 315.59064 319.96912 323.90662 330.47437"
+           y="0"
+           id="tspan352">TemporalprecedencecheckedagainstSPI7only.Incidentsareattributedbyactoridentity,soa</tspan><tspan
+           x="0 4.3785 8.757 13.1355 17.514 21.4515 23.640751 26.263124 28.011375 32.389874 38.957626 43.336124 48.147751 54.7155 57.337875 61.716373 66.094872 70.906502 72.654747 79.214622 83.593124 87.971626 91.909126 96.287628 98.035873 104.16263 108.54112 112.91962 116.85712 121.23563 126.04725 129.98476 134.36325 138.74174 143.12025 145.30949 149.688 156.25575 160.63425 165.01276 167.63513 172.01363 176.39212 181.20375 185.58224 192.14999 198.70987 203.08838 205.27762 207.89999 209.64825 215.77499 217.52325 223.64999 227.58749 231.966 236.3445 240.72301 243.34537 247.72388 249.91313 254.29163 260.85938 265.23788 269.61636 271.80563 277.49136 281.86987 286.24838 292.81613 296.75363 301.13211 303.32138 309.88913 314.26764 318.64612"
+           y="11.249997"
+           id="tspan354">pedestrianorarearimpactisnevercountedhere.Themetricisseparatedbetweensafeand</tspan><tspan
+           x="0 6.12675 11.8125 17.498249 20.120625 24.058125 28.436625 30.184875 31.933125 33.681374 37.618874 39.367126 43.745625 50.313374 56.873249 61.251751 65.630249 70.008751 74.387253 78.765747 82.703247 85.325623 89.704124 93.641624"
+           y="22.499992"
+           id="tspan356">ONC-collisionmanoeuvres.</tspan></text>
+    </g>
+  </g>
+</svg>

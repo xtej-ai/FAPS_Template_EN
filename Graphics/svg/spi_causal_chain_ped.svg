@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg2"
+   width="900"
+   height="900"
+   viewBox="0 0 900 900"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs6" />
+  <g
+     id="g8"
+     transform="matrix(1.3333333,0,0,1.3333333,0,2.25e-5)">
+    <g
+       id="g10">
+      <path
+         d="M 0,0 H 675 V 675 H 0 Z"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="path12" />
+      <text
+         xml:space="preserve"
+         transform="translate(217.78125,19.5)"
+         style="font-variant:normal;font-weight:bold;font-size:10.875px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#1f3b63;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text16"><tspan
+           x="0 7.2536249 14.50725 25.38225 31.428749 38.073376 44.119877 47.143124 53.78775 60.432377 66.478874 73.123497 79.768127 83.389503 86.41275 89.435997 95.482498 102.12713 110.58788 113.61112 117.2325 126.90038 135.97012 142.01663 146.24699 152.89163 158.93813 164.98462 168.00787 174.6525 184.32037 190.965 197.01151 203.65613 209.70262 215.74913 219.3705 223.60088 226.62413 232.67062"
+           y="0"
+           id="tspan14">PEDchain:conflictwithacrossingpedestrian</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="translate(179.64844,33.75)"
+         style="font-variant:normal;font-weight:normal;font-size:7.35px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#8a8a8a;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text20"><tspan
+           x="0 5.3067002 9.3933001 11.84085 13.47255 17.147551 21.23415 23.277451 24.909149 28.99575 35.125648 37.5732 41.659801 45.746399 51.464699 55.5513 59.637901 64.944603 69.031197 74.337898 78.4245 80.872047 84.958649 89.04525 91.088547 93.536102 97.622704 105.78855 107.83185 111.91845 118.04835 121.72335 125.80995 127.44165 129.07335 130.70505 134.38005 136.01175 140.09834 146.22826 148.6758 150.3075 154.3941 158.4807 162.56731 164.19901 168.2856 174.4155 179.31795 184.2204 186.2637 190.75455 194.84116 198.92775 202.60275 208.32104 210.36435 216.49425 218.53755 222.62415 228.75404 232.84065 236.92725 239.3748 241.0065 242.6382 246.72479 250.3998 254.4864 258.573 262.65961 266.33459 270.4212 272.86874 276.54376 280.63034 284.71695 286.34866 292.47855 296.15356 297.78525 301.87186 305.95844 310.04504 311.67676"
+           y="0"
+           id="tspan18">Derivationrunsdownward,fromthecollision(laggingSPI)backtotheearliestobservablesignals</tspan></text>
+      <g
+         id="g22">
+        <path
+           d="m 32.25,43.5 h 610.5 c 1.242,0 2.25,1.242 2.25,2.25 v 42 c 0,1.242 -1.008,2.25 -2.25,2.25 H 32.25 C 31.008,90 30,88.758 30,87.75 v -42 c 0,-1.242 1.008,-2.25 2.25,-2.25 z"
+           style="fill:#9e4746;fill-opacity:1;fill-rule:nonzero;stroke:#833938;stroke-width:0.9;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path24" />
+      </g>
+      <text
+         xml:space="preserve"
+         transform="translate(40.5,57.75)"
+         style="font-variant:normal;font-weight:bold;font-size:7.875px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text28"><tspan
+           x="0 5.2605 11.395125 17.970751 24.554251 27.192375 33.327 42.540749 48.242249 53.943748 59.227875"
+           y="0"
+           id="tspan26">LAGGINGSPI8</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="translate(40.5,69.75)"
+         style="font-variant:normal;font-weight:normal;font-size:7.2px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#f4e6e6;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text34"><tspan
+           x="0 2.3975999 7.5960002 11.5992 15.6024 19.6056 23.608801 25.610399 27.208799 33.206402 37.209599 42.811199 45.208801 50.0112 54.813599 60.012001 64.015198 69.2136 74.815201 78.818398 82.821602 87.220802 91.223999 95.227203 99.626404 103.6296 107.6328 111.636 117.2376 123.2352 127.2384 131.24159 135.2448 139.248 143.25121 146.8512 149.24879 153.252 156.85201 161.25121 167.4576 171.8568 175.86 180.6624 185.4648"
+           y="0"
+           id="tspan30">(No.oftimes(PED_COLL)per100kmanoeuvres)&lt;T_PED</tspan><tspan
+           x="0 5.9976001 10.0008 12.0024 14.4 15.9984 19.5984 23.601601 27.201599 31.2048 35.208 37.209599 41.212799 44.812801 48.816002 52.819199 56.822399 58.824001 64.0224 68.025597 72.028801 78.0336 80.035202 84.038399 90.043198 94.046402 98.049599 104.0544 107.6544 111.6576 115.6608 117.2592 120.8592 122.4576 128.4624 132.46561 136.4688 142.4736 148.47839 152.4816 156.4848 160.48801 164.4912 168.0912 170.0928 172.4904 174.08881 178.092 182.0952 186.0984 190.10159 194.1048 198.504 202.5072 206.51041 210.5136 216.1152 222.11279 226.116 230.1192 234.12241 238.1256 242.1288 245.72881 248.1264 252.12959 255.7296 259.73279 264.13199 268.13519 270.53281 274.53601 278.13599 282.13919 286.1424 287.74081 291.74399 295.74719 300.14639 304.1496 308.952 313.75439 318.95279"
+           y="10.125"
+           id="tspan32">Metric:contactbetweentheegovehicleandapedestrian,per100kmanoeuvres.Threshold:T_PED.</tspan></text>
+      <g
+         id="g36">
+        <path
+           d="m 337.5,90 v 22.5"
+           style="fill:none;stroke:#8a8a8a;stroke-width:0.975;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path38" />
+      </g>
+      <path
+         d="m 341.887,103.727 -4.387,8.773 -4.387,-8.773 z"
+         style="fill:#8a8a8a;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="path40" />
+      <text
+         xml:space="preserve"
+         transform="translate(343.5,103.875)"
+         style="font-variant:normal;font-weight:normal;font-size:6.75px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#8a8a8a;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text44"><tspan
+           x="0 4.8734999 8.6265001"
+           y="0"
+           id="tspan42">why</tspan></text>
+      <g
+         id="g46">
+        <path
+           d="m 32.25,114 h 610.5 c 1.242,0 2.25,1.242 2.25,2.25 v 37.5 c 0,1.242 -1.008,2.25 -2.25,2.25 H 32.25 C 31.008,156 30,154.758 30,153.75 v -37.5 c 0,-1.242 1.008,-2.25 2.25,-2.25 z"
+           style="fill:#fbfcfe;fill-opacity:1;fill-rule:nonzero;stroke:#c3ccd8;stroke-width:0.9;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path48" />
+      </g>
+      <text
+         xml:space="preserve"
+         transform="translate(40.5,128.25)"
+         style="font-variant:normal;font-weight:bold;font-size:7.875px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#1f3b63;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text52"><tspan
+           x="0 5.7014999 11.836125 18.411751 24.121124 26.759251 33.768002 39.902626 45.163124 53.510624 59.637375 65.779877 71.914497 77.615997"
+           y="0"
+           id="tspan50">PROXIMATECAUSE</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="translate(40.5,140.25)"
+         style="font-variant:normal;font-weight:normal;font-size:7.2px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#1a1a1a;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text58"><tspan
+           x="0 4.3992 8.4024 14.4072 18.4104 22.413601 28.4184 32.018398 36.021599 40.024799 41.623199 45.223202 46.821602 52.826401 56.829601 60.832802 62.8344 66.837601 69.235199 73.238403 79.243202 81.244797 85.248001 91.2528 94.852798 97.250397 101.2536 104.8536 108.4536 110.052 114.0552 120.06 124.0632 128.06641 130.06799 134.0712 140.076 144.07919 147.6792 149.2776 153.28081 154.8792 158.8824 164.88721 170.0856 174.08881 175.68719 177.2856 183.29041 189.2952 193.2984 197.30161 201.30479 205.308 208.908 210.90961 213.30721 214.90559 218.9088 224.9136 230.112 234.1152 239.7168 243.72 249.72479 251.3232 253.3248"
+           y="0"
+           id="tspan54">Theegovehicleenteredthecrossingoftheexitlegwhileapedestrianwasonit,</tspan><tspan
+           x="0 4.0032001 8.0064001 14.0112 18.0144 24.019199 27.6192 29.6208 33.624001 39.628799 44.827202 48.830399 54.431999 58.032001 62.035198 68.032799 72.036003 73.634399 77.637604 79.639198 83.642403 89.647202 91.245598 97.250397 99.251999 100.8504 106.848 110.8512"
+           y="10.125"
+           id="tspan56">andnostopwascompletedintime.</tspan></text>
+      <g
+         id="g60">
+        <path
+           d="m 337.5,156 v 24"
+           style="fill:none;stroke:#8a8a8a;stroke-width:0.975;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path62" />
+      </g>
+      <path
+         d="M 341.887,171.227 337.5,180 l -4.387,-8.773 z"
+         style="fill:#8a8a8a;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="path64" />
+      <text
+         xml:space="preserve"
+         transform="translate(343.5,170.625)"
+         style="font-variant:normal;font-weight:normal;font-size:6.75px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#8a8a8a;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text68"><tspan
+           x="0 2.24775 6.0007501 9.7537498 13.12875 15.00525 16.50375 20.25675 25.88625 27.762751 29.26125 33.014252 37.1385 39.38625 40.88475 44.637749 48.012749 49.889252 52.137001 54.38475 58.137749 61.512749 65.265747 67.513496 69.389999 73.142998 76.896004 80.649002 84.402 86.64975 90.402748 93.777748 97.530746 99.407249 103.16025 108.78975 110.28825 114.04125 117.41625 120.79125"
+           y="0"
+           id="tspan66">reactiontier(last-resort,nearesttheloss)</tspan></text>
+      <g
+         id="g70">
+        <path
+           d="m 32.25,181.5 h 610.5 c 1.242,0 2.25,1.242 2.25,2.25 v 42 c 0,1.242 -1.008,2.25 -2.25,2.25 H 32.25 C 31.008,228 30,226.758 30,225.75 v -42 c 0,-1.242 1.008,-2.25 2.25,-2.25 z"
+           style="fill:#9e4746;fill-opacity:1;fill-rule:nonzero;stroke:#833938;stroke-width:0.9;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path72" />
+      </g>
+      <text
+         xml:space="preserve"
+         transform="translate(40.5,195.75)"
+         style="font-variant:normal;font-weight:bold;font-size:7.875px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text76"><tspan
+           x="0 2.6381249 8.7727499 14.03325 19.734751 25.877251 32.886002 38.587502 44.722126 47.360249 53.50275 58.763248 67.102875 72.363373 78.064873 84.199501 90.334122 92.980125 99.114754 108.3285 114.03 119.7315 125.01562"
+           y="0"
+           id="tspan74">INTERMEDIATELEADINGSPI6</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="translate(40.5,207.75)"
+         style="font-variant:normal;font-weight:normal;font-size:7.2px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#f4e6e6;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text82"><tspan
+           x="0 2.3975999 7.5960002 11.5992 15.6024 19.6056 23.608801 25.610399 27.208799 33.206402 37.209599 42.811199 45.208801 50.0112 54.813599 59.616001 63.619202 68.4216 73.223999 78.422401 82.821602 86.824799 90.828003 95.227203 99.2304 103.2336 107.2368 112.8384 118.836 122.8392 126.8424 130.8456 134.8488 138.85201 142.452 144.84959 148.8528 152.4528 156.85201 163.0584 167.4576 171.4608 176.2632 181.0656 185.868 189.8712 194.6736 199.476"
+           y="0"
+           id="tspan78">(No.oftimes(AEB_PED)per100kmanoeuvres)&lt;T_AEB_PED</tspan><tspan
+           x="0 5.9976001 10.0008 12.0024 14.4 15.9984 19.5984 23.601601 29.599199 33.602402 37.605598 41.608799 45.612 49.6152 53.215199 55.612801 59.616001 65.217598 70.416 72.014397 74.015999 80.020798 86.025597 90.028801 94.031998 96.429604 102.4344 106.4376 112.4352 116.4384 118.836 122.8392 126.8424 130.8456 134.4456 140.0472 144.0504 146.448 150.4512 154.05119 160.056 165.25439 169.2576 170.856 172.45441 178.4592 184.464 188.46719 192.4704 196.4736 200.47681 204.0768 206.0784 208.476 210.0744 214.07761 220.0824 225.28081 229.284 234.8856 238.88879 242.892 246.8952 251.2944 253.29601 257.29919 263.30399 266.90399 268.50241 272.50562 276.10559 280.1088 283.7088 287.71201 291.71521 295.71841 297.3168 301.32001 305.32321 309.32639 313.32959 317.33279 321.336 325.3392 327.73679 331.73999 335.74319 339.3432 343.34641"
+           y="10.125"
+           id="tspan80">Metric:manoeuvreswithahardemergencybrakewhileapedestrianwasneartheclosestpointofapproach.</tspan></text>
+      <g
+         id="g84">
+        <path
+           d="m 337.5,228 v 28.5"
+           style="fill:none;stroke:#8a8a8a;stroke-width:0.975;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path86" />
+      </g>
+      <path
+         d="m 341.887,247.727 -4.387,8.773 -4.387,-8.773 z"
+         style="fill:#8a8a8a;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="path88" />
+      <text
+         xml:space="preserve"
+         transform="translate(343.5,244.875)"
+         style="font-variant:normal;font-weight:normal;font-size:6.75px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#8a8a8a;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text92"><tspan
+           x="0 3.753 7.506 10.881 14.634 20.25675 24.00975 27.762751 31.137751 36.76725 38.643749 42.396751 48.026249 51.779251 54.027 57.779999 61.154999 62.6535 68.276253 72.029251 73.905746 79.535248 82.910248 86.663254 90.416252 93.791252 99.420753 101.6685 105.0435 106.542 110.295 114.048 119.67075 123.42375 125.30025 126.79875 132.05025 135.80325 138.05099 141.804 145.179 148.93201 151.17975 154.55475 158.30775 162.43201 164.3085 165.80701 169.56 171.80775"
+           y="0"
+           id="tspan90">decomposetheproximatecause(kinematicprecursortier)</tspan></text>
+      <g
+         id="g94">
+        <path
+           d="m 237,258 h 201 l 12,11.25 -12,11.25 H 237 l -12,-11.25 z"
+           style="fill:#f2f2f2;fill-opacity:1;fill-rule:nonzero;stroke:#8a8a8a;stroke-width:0.9;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path96" />
+      </g>
+      <text
+         xml:space="preserve"
+         transform="translate(263.48828,272.25)"
+         style="font-variant:normal;font-weight:bold;font-size:7.5px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#1a1a1a;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text100"><tspan
+           x="0 5.835 13.335 19.17 24.584999 29.1675 34.169998 38.752499 42.922501 45.0075 47.505001 52.087502 56.2575 61.259998 65.43 69.599998 74.182503 78.352501 84.607498 88.777496 90.862503 95.445 100.0275 106.2825 108.3675 114.6225 118.7925 123.375 125.8725 128.37 130.455 134.625 136.71001 140.88 145.46249"
+           y="0"
+           id="tspan98">ORGATE:eithercausealoneissufficient</tspan></text>
+      <g
+         id="g102">
+        <path
+           d="m 337.5,280.5 v 15.75 H 176.25 V 312"
+           style="fill:none;stroke:#8a8a8a;stroke-width:0.975;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path104" />
+      </g>
+      <path
+         d="M 180.637,303.227 176.25,312 171.863,303.227 Z"
+         style="fill:#8a8a8a;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="path106" />
+      <g
+         id="g108">
+        <path
+           d="m 337.5,280.5 v 15.75 H 498.75 V 312"
+           style="fill:none;stroke:#8a8a8a;stroke-width:0.975;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path110" />
+      </g>
+      <path
+         d="M 503.137,303.227 498.75,312 494.363,303.227 Z"
+         style="fill:#8a8a8a;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="path112" />
+      <g
+         id="g114">
+        <path
+           d="m 32.25,313.5 h 288 c 1.242,0 2.25,1.242 2.25,2.25 v 60 c 0,1.242 -1.008,2.25 -2.25,2.25 h -288 C 31.008,378 30,376.758 30,375.75 v -60 c 0,-1.242 1.008,-2.25 2.25,-2.25 z"
+           style="fill:#fbfcfe;fill-opacity:1;fill-rule:nonzero;stroke:#c3ccd8;stroke-width:0.9;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path116" />
+      </g>
+      <text
+         xml:space="preserve"
+         transform="translate(40.5,327.75)"
+         style="font-variant:normal;font-weight:bold;font-size:7.875px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#1f3b63;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text120"><tspan
+           x="0 6.134625 12.277125 18.403875 24.113251 32.452873"
+           y="0"
+           id="tspan118">CAUSEA</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="translate(40.5,339.75)"
+         style="font-variant:normal;font-weight:normal;font-size:7.2px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#1a1a1a;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text130"><tspan
+           x="0 4.3992 8.4024 14.4072 16.4088 20.412001 22.809601 28.8144 34.012798 38.015999 43.617599 47.217602 51.220798 57.218399 63.216 64.8144 66.816002 68.817596 72.820801 78.8256 84.024002 85.622398 87.624001 91.627197 95.630402 99.633598 103.6368 107.64 111.6432 115.6464 119.6496 123.6528 129.65759 131.65919 133.2576 139.2552"
+           y="0"
+           id="tspan122">Theturnwascommittedwithoutenoughtime</tspan><tspan
+           x="0 2.0016 8.0064001 11.6064 13.608 17.6112 23.615999 25.617599 29.6208 34.02 40.024799 44.028 48.0312 52.034401 56.037601 59.6376 61.639198 64.036797 65.635201 69.638397 75.643204 80.841599 84.844803 88.848 92.447998 98.452797 102.456 106.4592 108.4608 114.4656 118.0656 120.4632 124.4664 128.06641 131.6664 135.6696"
+           y="10.125"
+           id="tspan124">tostopforapedestrianwhosepathcrosses</tspan><tspan
+           x="0 2.0016 6.0047998 12.0096 16.0128 19.612801 21.211201 25.214399 26.812799 30.816 34.819199"
+           y="20.25"
+           id="tspan126">theexitleg.</tspan><tspan
+           x="0 4.8024001 6.4008002 10.404 14.4072 18.4104 20.008801 24.011999 30.0168 33.616798 37.619999 41.623199 45.223202 48.8232 52.423199 54.424801 58.428001 64.425598"
+           y="30.375"
+           id="tspan128">Planningsubsystem.</tspan></text>
+      <g
+         id="g132">
+        <path
+           d="m 354.75,313.5 h 288 c 1.242,0 2.25,1.242 2.25,2.25 v 60 c 0,1.242 -1.008,2.25 -2.25,2.25 h -288 c -1.242,0 -2.25,-1.242 -2.25,-2.25 v -60 c 0,-1.242 1.008,-2.25 2.25,-2.25 z"
+           style="fill:#f0f0f0;fill-opacity:1;fill-rule:nonzero;stroke:#c9c9c9;stroke-width:0.9;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path134" />
+      </g>
+      <text
+         xml:space="preserve"
+         transform="translate(363,327.75)"
+         style="font-variant:normal;font-weight:bold;font-size:7.875px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#6b6b6b;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text138"><tspan
+           x="0 6.134625 12.277125 18.403875 24.113251 32.452873"
+           y="0"
+           id="tspan136">CAUSEB</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="translate(363,339.75)"
+         style="font-variant:normal;font-weight:normal;font-size:7.2px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#6b6b6b;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text146"><tspan
+           x="0 5.6016002 9.2016001 12.8016 16.8048 20.808001 24.811199 28.8144 32.414398 38.015999 42.019199 46.0224 48.023998 52.027199 58.032001 61.632 64.029602 68.032799 71.632797 75.232803 76.8312 80.834396 86.839203 92.037598 96.040802 101.6424 105.6456 109.6488 113.652 117.6552 121.2552 123.2568 127.26 131.2632 132.8616 134.46001 138.06 142.0632 146.06641"
+           y="0"
+           id="tspan140">Occupancyofthecrossingwasnotestablished</tspan><tspan
+           x="0 4.0032001 8.0064001 10.008 14.0112 16.4088 22.413601 24.415199 28.4184 34.423199 40.420799 44.424 48.4272 52.430401 56.433601 60.436798 64.036797 66.434402 72.439201 77.637604 81.6408 87.242401 90.8424 94.845596 100.8432 106.8408 108.4392 110.4408 112.4424 116.4456 120.4488"
+           y="10.125"
+           id="tspan142">beforethemanoeuvrewascommitted.</tspan><tspan
+           x="0 4.8024001 8.8056002 11.2032 14.8032 18.8064 22.809601 24.811199 26.409599 30.4128 36.417599 40.017601 44.020802 48.023998 51.624001 55.223999 58.824001 60.8256 64.828796 70.826401"
+           y="20.25"
+           id="tspan144">Perceptionsubsystem.</tspan></text>
+      <g
+         id="g148">
+        <path
+           d="m 32.25,390 h 288 c 1.242,0 2.25,1.242 2.25,2.25 v 42 c 0,1.242 -1.008,2.25 -2.25,2.25 h -288 c -1.242,0 -2.25,-1.242 -2.25,-2.25 v -42 c 0,-1.242 1.008,-2.25 2.25,-2.25 z"
+           style="fill:#fbfcfe;fill-opacity:1;fill-rule:nonzero;stroke:#c3ccd8;stroke-width:0.9;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path150" />
+      </g>
+      <text
+         xml:space="preserve"
+         transform="translate(40.5,404.25)"
+         style="font-variant:normal;font-weight:bold;font-size:7.875px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#1f3b63;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text154"><tspan
+           x="0 5.7014999 8.3474998 14.91525 21.057751 27.192375 35.091"
+           y="0"
+           id="tspan152">SIGNALA</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="translate(40.5,416.25)"
+         style="font-variant:normal;font-weight:normal;font-size:7.2px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#1a1a1a;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text160"><tspan
+           x="0 4.3992 5.9976001 11.9952 18 20.0016 26.006399 28.007999 32.0112 38.015999 41.616001 43.214401 47.217602 50.8176 54.820801 58.420799 62.424 66.4272 70.430397 72.028801 76.031998 80.035202 84.038399 88.041603 92.0448 96.047997 100.0512 102.4488 106.452 110.4552 114.0552 120.06 124.0632 128.06641 130.06799 135.2664 139.26961 143.2728"
+           y="0"
+           id="tspan156">Timetotheclosestpointofapproachbetween</tspan><tspan
+           x="0 4.0032001 8.0064001 14.0112 17.6112 21.614401 25.617599 27.216 30.816 32.414398 38.419201 42.422401 46.425598 52.430401 56.433601 60.436798 64.440002 68.443199 72.043198 74.0448 76.442398 78.040802 82.043999 86.047203 90.0504 94.053596 98.056801 100.0584 104.0616 110.0664 114.0696 120.0744 126.072 127.6704 131.2704 136.87199 140.8752 142.4736 146.07359 148.0752 152.0784 156.0816 159.68159 163.6848"
+           y="10.125"
+           id="tspan158">egovehicleandpedestrian,gatedonmissdistance.</tspan></text>
+      <g
+         id="g162">
+        <path
+           d="m 354.75,390 h 288 c 1.242,0 2.25,1.242 2.25,2.25 v 42 c 0,1.242 -1.008,2.25 -2.25,2.25 h -288 c -1.242,0 -2.25,-1.242 -2.25,-2.25 v -42 c 0,-1.242 1.008,-2.25 2.25,-2.25 z"
+           style="fill:#f0f0f0;fill-opacity:1;fill-rule:nonzero;stroke:#c9c9c9;stroke-width:0.9;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path164" />
+      </g>
+      <text
+         xml:space="preserve"
+         transform="translate(363,404.25)"
+         style="font-variant:normal;font-weight:bold;font-size:7.875px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#6b6b6b;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text168"><tspan
+           x="0 5.7014999 8.3474998 14.91525 21.057751 27.192375 35.091"
+           y="0"
+           id="tspan166">SIGNALB</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="translate(363,416.25)"
+         style="font-variant:normal;font-weight:normal;font-size:7.2px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#6b6b6b;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text174"><tspan
+           x="0 5.1984 9.2016001 13.2048 15.2064 16.8048 20.808001 24.811199 28.8144 32.414398 38.419201 42.422401 46.425598 48.4272 52.430401 58.4352 62.035198 64.4328 68.435997 72.036003 75.636002 80.834396 84.837601 86.435997 90.036003 92.433601 96.436798 100.0368 103.6368 107.64 111.6432 115.6464 119.6496 123.2496 128.8512 132.8544 136.45441 138.45599 140.0544 146.052 150.05521 152.05679 156.06"
+           y="0"
+           id="tspan170">Confidenceofthecrosswalk-occupancyestimate,</tspan><tspan
+           x="0 3.5999999 7.6032 13.6008 17.604 19.2024 23.205601 29.2104 33.2136 37.216801 40.816799 46.821602 48.8232 51.220798 55.223999 61.2216 65.2248"
+           y="10.125"
+           id="tspan172">sampledeachframe.</tspan></text>
+      <g
+         id="g176">
+        <path
+           d="M 30,447 H 645"
+           style="fill:none;stroke:#8a8a8a;stroke-width:0.75;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3, 3;stroke-dashoffset:0;stroke-opacity:1"
+           id="path178" />
+      </g>
+      <text
+         xml:space="preserve"
+         transform="translate(280.15625,444)"
+         style="font-variant:normal;font-weight:normal;font-size:6.75px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#8a8a8a;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text182"><tspan
+           x="0 3.753 7.506 10.881 14.634 16.88175 20.25675 24.00975 27.762751 29.26125 30.75975 32.258251 34.13475 39.38625 43.139252 46.89225 52.521751 54.020248 57.773251 61.526249 65.279251 69.032249 72.785248 76.538254 80.291252 84.04425 87.797249 91.172249 96.80175 100.17675 103.92975 107.68275 111.05775"
+           y="0"
+           id="tspan180">observabilityandindependencecheck</tspan></text>
+      <g
+         id="g184">
+        <path
+           d="m 32.25,454.5 h 288 c 1.242,0 2.25,1.242 2.25,2.25 v 54 c 0,1.242 -1.008,2.25 -2.25,2.25 h -288 C 31.008,513 30,511.758 30,510.75 v -54 c 0,-1.242 1.008,-2.25 2.25,-2.25 z"
+           style="fill:#dfa640;fill-opacity:1;fill-rule:nonzero;stroke:#c08f2e;stroke-width:0.9;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path186" />
+      </g>
+      <text
+         xml:space="preserve"
+         transform="translate(40.5,468.75)"
+         style="font-variant:normal;font-weight:bold;font-size:7.875px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#3d2f08;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text190"><tspan
+           x="0 5.2605 10.962 17.1045 23.231251 25.877251 32.011875 41.225624 46.927124 52.636501 57.91275"
+           y="0"
+           id="tspan188">LEADINGSPI3</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="translate(40.5,480.75)"
+         style="font-variant:normal;font-weight:normal;font-size:7.2px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#3d2f08;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text194"><tspan
+           x="0 2.3975999 7.5960002 11.5992 15.6024 19.6056 23.608801 25.610399 27.208799 33.206402 37.209599 42.811199 45.208801 50.0112 54.813599 60.012001 64.015198 68.414398 73.612801 78.415199 85.2192"
+           y="0"
+           id="tspan192">(No.oftimes(PED_TCPA&lt;</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="translate(131.9256,480.75)"
+         style="font-variant:normal;font-weight:normal;font-size:7.2px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#3d2f08;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text198"><tspan
+           x="0"
+           y="0"
+           id="tspan196">θ</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="translate(136.1088,480.75)"
+         style="font-variant:normal;font-weight:normal;font-size:7.2px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#3d2f08;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text206"><tspan
+           x="0 4.0032001 8.4024 13.6008 18.4032 23.205601 27.604799 31.608 35.611198 40.010399 44.013599 48.0168 52.02 55.619999 60.019199 66.225601 70.624802 74.627998 79.027199 84.225601 89.028"
+           y="0"
+           id="tspan200">_TCPA)per100k)&lt;T_TCPA</tspan><tspan
+           x="-95.608803 -89.611198 -85.608002 -83.6064 -81.208801 -79.610397 -76.010399 -72.007202 -66.009598 -64.411201 -60.408001 -58.809601 -52.812 -48.8088 -40.809601 -38.807999 -37.209599 -31.212 -25.207199 -23.205601 -17.2008 -13.6008 -12.0024 -7.9991999 -4.3992 -0.396 3.204 7.2072001 11.2104 15.2136 16.812 20.815201 24.818399 28.8216 32.824799 36.827999 40.8312 44.8344 47.231998 51.235199 55.2384 58.838402 62.841599"
+           y="10.125"
+           id="tspan202">Metric:minimumtimetoclosestpointofapproach.</tspan><tspan
+           x="-95.608803 -90.806396 -87.206398 -83.203201 -79.199997"
+           y="20.25"
+           id="tspan204">Event</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="translate(60.912,501)"
+         style="font-variant:normal;font-weight:normal;font-size:7.2px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#3d2f08;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text210"><tspan
+           x="0"
+           y="0"
+           id="tspan208">θ</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="translate(65.0952,501)"
+         style="font-variant:normal;font-weight:normal;font-size:7.2px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#3d2f08;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text214"><tspan
+           x="0 4.0032001 8.4024 13.6008 18.4032 25.207199 27.604799 29.203199 33.206402 38.4048 42.408001 46.807201 48.8088 52.812 54.4104 56.008801 58.406399 62.409599 67.608002 71.611198 73.612801 79.617599 84.0168 88.019997 92.419197 97.617599 102.42 107.2224"
+           y="0"
+           id="tspan212">_TCPA(lowertail);RateT_TCPA.</tspan></text>
+      <g
+         id="g216">
+        <path
+           d="m 354.75,454.5 h 288 c 1.242,0 2.25,1.242 2.25,2.25 v 54 c 0,1.242 -1.008,2.25 -2.25,2.25 h -288 c -1.242,0 -2.25,-1.242 -2.25,-2.25 v -54 c 0,-1.242 1.008,-2.25 2.25,-2.25 z"
+           style="fill:#f0f0f0;fill-opacity:1;fill-rule:nonzero;stroke:#c9c9c9;stroke-width:0.9;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path218" />
+      </g>
+      <text
+         xml:space="preserve"
+         transform="translate(363,468.75)"
+         style="font-variant:normal;font-weight:bold;font-size:7.875px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#6b6b6b;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text222"><tspan
+           x="0 6.134625 12.71025 20.616751 26.751375 32.886002 39.020626 45.155251 47.793373 53.50275 62.275501 67.536003 74.111626 80.246246 88.129128 94.263748 100.40625"
+           y="0"
+           id="tspan220">NOTCARRIEDFORWARD</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="translate(363,480.75)"
+         style="font-variant:normal;font-weight:normal;font-size:7.2px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#6b6b6b;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text230"><tspan
+           x="0 4.8024001 7.1999998 10.8 14.8032 16.4016 18.4032 22.406401 26.006399 28.007999 32.0112 34.408798 38.411999 42.012001 44.013599 45.612 49.6152 52.012798 56.015999 58.017601 62.020802 68.025597 71.625603 73.223999 77.227203 81.2304 85.233597 88.833603 90.431999 96.0336 97.632004 101.6352 103.6368 107.64 110.0376 114.0408 118.044 121.644 123.6456 129.65041 131.65199 135.6552"
+           y="0"
+           id="tspan224">Architecturaltier:thesignalisinternaltothe</tspan><tspan
+           x="0 4.0032001 8.0064001 10.404 14.004 18.0072 22.010401 24.011999 25.610399 29.6136 35.618401 39.218399 43.2216 47.2248 50.824799 54.424801 58.024799 60.026402 64.029602 70.027199 74.030403 79.228798 83.232002 84.830399 88.430397 94.435204 96.436798 100.44 106.4448 110.0448 111.6432 117.6408 121.644 123.2424 127.2456 129.24719 130.8456 134.8488 140.85361 144.8568 148.86 152.8632 158.4648 162.468 166.47121"
+           y="10.125"
+           id="tspan226">perceptionsubsystem,whichthesimulationdoesnot</tspan><tspan
+           x="0 4.0032001 7.6032 11.6064 15.6096 19.2096 23.212799 27.216 32.414398 36.417599 38.815201 40.413601 44.013599 48.0168 52.02 56.023201 60.026402 64.029602 68.032799 72.036003 76.0392 78.040802 81.6408 83.239197 87.242401 93.2472 95.248802 99.251999 105.2568 109.26 115.2576 119.2608 120.8592 123.2568 124.8552 128.4552 132.4584 136.0584 139.6584 143.25841 147.2616 151.2648 155.26801"
+           y="20.25"
+           id="tspan228">expose.Derived,butoutsidetheempiricalscope.</tspan></text>
+      <g
+         id="g232">
+        <path
+           d="m 176.25,513 v 24"
+           style="fill:none;stroke:#8a8a8a;stroke-width:0.975;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path234" />
+      </g>
+      <path
+         d="M 180.637,528.227 176.25,537 171.863,528.227 Z"
+         style="fill:#8a8a8a;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="path236" />
+      <g
+         id="g238">
+        <path
+           d="m 498.75,513 v 12 h -322.5"
+           style="fill:none;stroke:#c9c9c9;stroke-width:0.9;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3, 3;stroke-dashoffset:0;stroke-opacity:1"
+           id="path240" />
+      </g>
+      <g
+         id="g242">
+        <path
+           d="m 32.25,538.5 h 610.5 c 1.242,0 2.25,1.242 2.25,2.25 v 34.5 c 0,1.242 -1.008,2.25 -2.25,2.25 H 32.25 c -1.242,0 -2.25,-1.242 -2.25,-2.25 v -34.5 c 0,-1.242 1.008,-2.25 2.25,-2.25 z"
+           style="fill:#dce5f1;fill-opacity:1;fill-rule:nonzero;stroke:#9fb3cd;stroke-width:0.9;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path244" />
+      </g>
+      <text
+         xml:space="preserve"
+         transform="translate(40.5,552.75)"
+         style="font-variant:normal;font-weight:bold;font-size:7.875px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#1f3b63;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text248"><tspan
+           x="0 6.134625 11.395125 16.6635 22.790251 28.932751 37.705502 42.966 52.179749 57.448124 63.582748 71.922379 77.623878 83.758499 89.026878 94.728378 99.988876 108.3285 114.46313 120.59775 126.29925"
+           y="0"
+           id="tspan246">ATTACHTOTHESAFETYCASE</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="translate(40.5,564.75)"
+         style="font-variant:normal;font-weight:normal;font-size:7.2px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#2c4062;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text254"><tspan
+           x="0 4.8024001 9.6048002 13.608 19.612801 23.615999 29.2176 30.816 34.819199 38.822399 42.8256 44.424 48.4272 54.431999 58.4352 62.035198 63.633598 67.636803 71.639999 75.643204 79.243202 85.248001 89.251198 95.255997 97.257599 101.2608 107.2656 111.2688 115.272 119.2752 123.2784 126.8784 128.88 131.2776 132.87601 136.8792 140.8824 143.28 146.88 150.88319 154.8864 156.888 158.4864 160.08479 163.6848 167.688 171.69119 175.6944 179.6976 181.29601"
+           y="0"
+           id="tspan250">SPI3asleadingevidenceonthepedestrian-conflictgoal.</tspan><tspan
+           x="0 4.8024001 9.6048002 13.608 19.612801 23.615999 29.2176 30.816 34.819199 36.820801 40.824001 43.2216 49.2192 53.222401 57.225601 58.824001 62.827202 64.828796 70.833603 72.431999 76.435204 80.4384 84.441597 86.040001 90.043198 96.047997 100.0512 104.0544 110.0592 114.8616 119.664 123.6672 129.672 133.6752 139.27679 140.8752 144.8784 148.88161 152.8848 154.4832 158.4864 164.4912 168.4944 172.09441 173.69279 177.696 181.6992 185.70239 189.3024 195.30721 199.31039 205.3152 207.3168 211.32001 217.3248 220.9248 224.92799 230.9256 236.9304 240.93359 244.9368 248.94 250.53841"
+           y="10.125"
+           id="tspan252">SPI6asintermediateleadingandSPI8aslaggingevidenceonthesamegoal.</tspan></text>
+      <g
+         id="g256">
+        <path
+           d="m 337.5,577.5 v 15"
+           style="fill:none;stroke:#8a8a8a;stroke-width:0.975;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path258" />
+      </g>
+      <path
+         d="m 341.887,583.727 -4.387,8.773 -4.387,-8.773 z"
+         style="fill:#8a8a8a;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="path260" />
+      <g
+         id="g262">
+        <path
+           d="m 32.25,594 h 610.5 c 1.242,0 2.25,1.242 2.25,2.25 v 45 c 0,1.242 -1.008,2.25 -2.25,2.25 H 32.25 c -1.242,0 -2.25,-1.242 -2.25,-2.25 v -45 c 0,-1.242 1.008,-2.25 2.25,-2.25 z"
+           style="fill:#dce5f1;fill-opacity:1;fill-rule:nonzero;stroke:#9fb3cd;stroke-width:0.9;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path264" />
+      </g>
+      <text
+         xml:space="preserve"
+         transform="translate(40.5,608.25)"
+         style="font-variant:normal;font-weight:bold;font-size:7.875px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#1f3b63;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text268"><tspan
+           x="0 5.7014999 11.836125 17.1045 19.734751 25.877251 32.011875 37.272373"
+           y="0"
+           id="tspan266">VALIDATE</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="translate(40.5,620.25)"
+         style="font-variant:normal;font-weight:normal;font-size:7.2px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#2c4062;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text276"><tspan
+           x="0 4.3992 8.4024 14.4 18.4032 22.406401 24.804001 28.807199 32.4072 36.4104 38.807999 42.811199 46.411201 50.414398 54.417599 58.420799 62.424 66.024002 72.028801 75.628799 79.632004 83.635201 87.235199 90.835197 94.838402 100.8432 104.8464 108.8496 112.8528 114.4512 118.4544 122.0544 126.0576 130.86 135.6624 139.6656 145.67039 149.6736 153.6768 155.27521 158.8752 162.8784 168.48 172.4832 174.4848 178.08479 182.088 188.0856 192.08881 197.6904 201.6936 204.0912 210.09599 214.0992 216.1008 218.1024 220.5 222.0984 226.10159 230.1048 232.1064 236.1096 242.1144 246.1176 251.71919 255.7224 259.32239 261.32401 265.32721 269.72641 271.3248 275.328 279.33121 283.33441 285.336 286.93439 288.936 292.53601 296.53922 300.13919 306.14401 310.14719"
+           y="0"
+           id="tspan270">TemporalprecedencecheckedagainstSPI8only.Outcomesareattributedbyactoridentity,soan</tspan><tspan
+           x="0 4.0032001 8.0064001 11.6064 15.6096 21.607201 23.205601 27.208799 33.2136 37.216801 41.616001 44.013599 48.0168 52.02 56.419201 60.019199 64.0224 68.025597 70.027199 74.030403 77.630402 81.633598 83.232002 88.833603 92.8368 96.839996 100.44 104.4432 108.8424 112.4424 116.4456 120.4488 124.452 126.4536 130.4568 136.46159 140.4648 144.468 146.8656 150.8688 154.87199 159.27119 163.2744 169.27921 173.28239 176.8824 180.48241 184.4856 188.4888 190.4904 194.49361 198.4968 202.0968 208.10159 211.7016 214.0992 215.6976 217.6992 221.70239 224.10001 225.69839 229.7016 235.70641 237.70799 241.7112 246.1104 248.112 252.1152 253.71359 259.31519 262.91519 266.9184 270.9216 272.51999 278.52481 280.1232 285.72479 289.728 292.12561 296.12881 300.13199 304.13519 310.14001 314.14319"
+           y="10.125"
+           id="tspan272">oncomingorrearcontactisnevercountedhere.Theacceptancecriterionforthischainisarguedon</tspan><tspan
+           x="0 5.9976001 7.5960002 11.5992 13.1976 19.1952 23.1984 31.197599 35.200802 39.203999 43.207199 47.2104 51.2136 55.216801 59.220001 63.223202 67.226402 72.828003 78.8256 82.828796 85.226402 87.227997 91.231201 92.829597 94.428001 96.429604 100.0296 104.0328 107.6328 109.2312 113.2344 116.8344 122.8392 128.84399 132.8472 136.8504 140.85361 144.8568 148.4568 150.4584 152.856 154.45441 158.4576 164.4624 168.46561 172.4688 174.0672 176.0688 180.07201 184.0752 188.4744 192.0744 196.07761 197.67599 201.6792 205.27921 207.28081 212.8824 214.884 218.88721 224.892 228.492 232.49519 236.4984 238.0968 241.69679 243.2952 249.3 253.30321 257.3064 261.7056 265.7088 269.71201 273.71521 277.71841 279.72 281.31839 283.32001 288.9216 290.92319 293.3208 297.32401 305.32321 306.9216 308.92319"
+           y="20.25"
+           id="tspan274">minimumendogenousmortality,sinceapedestrianneitherselectsthevehiclenorbenefitsfromit.</tspan></text>
+      <g
+         id="g278">
+        <path
+           d="m 651,204.75 h 12 V 558 h -12"
+           style="fill:none;stroke:#833938;stroke-width:0.75;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3, 2.25;stroke-dashoffset:0;stroke-opacity:1"
+           id="path280" />
+      </g>
+      <path
+         d="M 657.75,561.375 651,558 l 6.75,-3.375 z"
+         style="fill:#833938;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="path282" />
+      <text
+         xml:space="preserve"
+         transform="rotate(-90,558.35352,-101.64648)"
+         style="font-variant:normal;font-weight:normal;font-size:6.375px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#833938;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="text286"><tspan
+           x="0 3.5445001 5.31675 7.0890002 10.6335 13.821 17.365499 20.91 26.226749 27.642 31.186501 34.730999 38.275501 41.82 45.364498 48.909 52.453499 55.998001 59.5425 61.314751 62.73 67.689751 71.234253 74.778748 76.551003 80.095497 85.412247 88.599747 90.014999 93.559502 97.103996 102.41438 105.95888 107.73112 109.14638 114.10612 117.65063 119.7735 123.318 126.8625 130.05"
+           y="0"
+           id="tspan284">attachedindependentlyofthekinematicbranch</tspan></text>
+    </g>
+  </g>
+</svg>
