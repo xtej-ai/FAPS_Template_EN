@@ -15,6 +15,8 @@
 \usepackage{setspace}
 \setstretch{1.2}
 \setlength{\parindent}{0pt} % Sets paragraph indent to 0
+\raggedbottom
+\setlength{\emergencystretch}{3em}
 
 % --- PAGE LAYOUT (Word guidelines) ---
 \usepackage[
@@ -62,6 +64,10 @@
     autolang=other
 ]{biblatex}
 \addbibresource{references.bib}
+\setcounter{biburlnumpenalty}{100}
+\setcounter{biburlucpenalty}{100}
+\setcounter{biburllcpenalty}{100}
+\appto{\bibsetup}{\hbadness=1500\relax}
 
 % --- ADDITIONAL PACKAGES ---
 \usepackage{graphicx}
@@ -69,7 +75,7 @@
 \usepackage[absolute,overlay]{textpos} 
 \usepackage{calc} 
 \usepackage[nointegrals]{wasysym}
-\usepackage{acronym} 
+\usepackage[nohyperlinks]{acronym}
 \usepackage{csquotes}
 \usepackage[hidelinks]{hyperref}
 \usepackage{booktabs}
@@ -125,13 +131,13 @@ functionality using Field-Data for Operational Safety Assurance}
 
 % --- TITLE PAGE ---
 \begin{titlepage}
-    \begin{textblock*}{0cm}[0,0](0.85cm, 2.9cm + 0.02cm)
+    \begin{textblock*}{1.5cm}[0,0](0.85cm, 2.9cm + 0.02cm)
         \includegraphics[height=0.53cm,width=1.5cm]{BalkenFAPSGruen}
     \end{textblock*}
     \begin{textblock*}{13.2cm}[0,0](2.5cm, 2.9cm - 0.65cm)
-        {\singlespacing\large\bfseries\Title}
+        {\singlespacing\raggedright\large\bfseries\Title\par}
     \end{textblock*}
-    \begin{textblock*}{0cm}[0,0](16.38cm, 1.4cm)
+    \begin{textblock*}{3cm}[0,0](16.38cm, 1.4cm)
         \includegraphics[height=3cm,width=3cm]{LogoFAPS}
     \end{textblock*}
     \begin{textblock*}{13cm}[0,0](2.5cm, 2.9cm + 3.6cm)
