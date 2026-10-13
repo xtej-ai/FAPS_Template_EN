@@ -13,8 +13,8 @@ that builds on these foundations is reviewed in Chapter~\ref{ch:sota}.
 \section{Automated Driving Systems and the Operational Design Domain}
 \label{sec:fund_ads}
 
-An \ac{ADS} is the combination of hardware and software that performs the entire
-dynamic driving task on a sustained basis. The taxonomy of SAE~J3016 distinguishes
+An \ac{ADS} denotes the hardware and software that together carry out the whole
+driving task over sustained periods \cite{saej3016}. The taxonomy of SAE~J3016 distinguishes
 six levels of driving automation, from no automation at Level~0 to full automation at
 Level~5, and reserves the term \ac{ADS} for the systems at Levels~3 to~5 that perform
 the dynamic driving task without the constant supervision of a human driver
@@ -24,9 +24,9 @@ the operating conditions. This functional decomposition is used throughout the t
 because it names the tasks that any driving system must perform, independently of the
 particular software architecture that performs them.
 
-The \ac{DDT} comprises the sustained lateral and longitudinal control of the vehicle
-together with the monitoring of the driving environment and the response to objects
-and events within it \cite{saej3016}. The distinction between the levels therefore
+The \ac{DDT} covers steering, acceleration and braking of the vehicle as well as
+observing its surroundings and reacting to the objects and events found there
+\cite{saej3016}. The distinction between the levels therefore
 lies in who performs which part of this task and who acts when the system can no
 longer perform it. Up to Level~2 a human driver monitors the environment at all times;
 from Level~3 onwards the system monitors it, and from Level~4 onwards the system also
@@ -46,10 +46,11 @@ reason why the indicators of this thesis distinguish between signals taken from 
 behaviour of the vehicle and signals taken from inside a function, a distinction that
 Chapter~\ref{ch:methodology} formalises as two indicator tiers.
 
-Every \ac{ADS} is specified to operate only within a defined \ac{ODD}, that is, the
-set of operating conditions under which it is designed to function, including
-environmental, geographical, and time-of-day constraints as well as the presence or
-absence of certain traffic and road features \cite{saej3016}. The \ac{ODD} is central
+Every \ac{ADS} is specified to operate only within a defined \ac{ODD}. The \ac{ODD}
+delimits the conditions for which the system is designed, such as the weather and
+lighting it tolerates, the road types and regions it serves, the times of day at which
+it may drive and the traffic participants and road features that must or must not be
+present \cite{saej3016}. The \ac{ODD} is central
 to safety assurance, because a claim of safety holds only within the declared
 conditions, and a departure from those conditions is itself a hazard. Thresholds on
 the indicators derived in this thesis are therefore conditioned on the \ac{ODD}, so
@@ -70,13 +71,14 @@ configurations is tested explicitly in Chapter~\ref{ch:results}.
 \label{sec:fund_safety}
 
 Two complementary standards frame the safety of an \ac{ADS}. ISO~26262 addresses
-functional safety, defined as the absence of unreasonable risk due to hazards caused
-by malfunctioning behaviour of electrical and electronic systems, and provides a
-risk-based development process organised around automotive safety integrity levels
-\cite{iso26262}. Its scope is the fault, that is, a component that fails to behave as
-specified. ISO~21448 addresses the \ac{SOTIF}, defined as the absence of unreasonable
-risk due to hazards resulting from functional insufficiencies of the intended
-functionality or from reasonably foreseeable misuse, when no component has failed
+functional safety, which it defines as the ``absence of unreasonable risk due to
+hazards caused by malfunctioning behaviour of E/E systems'', that is, of electrical and electronic
+systems, and it prescribes a development process in
+which the rigour of each activity follows the automotive safety integrity level of the
+function concerned \cite{iso26262}. Its scope is the fault, that is, a component that fails to behave as
+specified. ISO~21448 covers the \ac{SOTIF}, which concerns risk that remains even
+though no component has failed, because the intended function itself is insufficient
+for some situations or because the system is misused in a reasonably foreseeable way
 \cite{iso21448}. Its scope is the situation in which every component operates as
 specified yet the specification itself is inadequate, which is characteristic of the
 perception and machine-learning elements of an \ac{ADS}.
@@ -92,11 +94,11 @@ to the safety goals and to the requirements derived from them. The scheme presum
 that a hazard can be traced to a malfunction, and it measures risk through
 categories that are assigned before operation rather than observed during it.
 
-ISO~21448 addresses the hazards that this scheme leaves out. A \ac{SOTIF}-related
-hazard requires two conditions to coincide: a triggering condition in the
-environment, such as extreme weather, an unusual road layout or an unexpected
-manoeuvre of another road user, and a performance limitation of the system in
-sensing, perception, decision-making or execution, or a deficiency of its
+ISO~21448 addresses the hazards that this scheme leaves out. A hazard in the sense of
+\ac{SOTIF} arises only when two things meet. Something in the situation, for instance
+heavy rain, an unusual junction layout or an unexpected move by another road user,
+acts as a triggering condition, and it meets a weakness of the system itself, either a
+limitation in sensing, perception, decision-making or actuation or a gap in its
 specification \cite{iso21448} \cite{wang2024sotif}. Neither condition is a fault in
 the sense of ISO~26262. A perception function can operate exactly as trained and
 still misjudge a situation that its training did not cover, and a planner can follow
@@ -136,17 +138,16 @@ analysed and a scenario that has not been met cannot be tested.
     \end{tabular}
 \end{table}
 
-The residual risk that remains after development is consequently carried into
-operation. Analyses, improvements and verification during development cannot remove
-it entirely, and the operation phase has to observe whether triggering conditions and
-the internal state of the system combine into hazardous behaviour that development
-did not anticipate \cite{wang2024sotif}. Wang et al. also identify the definition of
-acceptance criteria as an open problem and list the comparison with traffic
-statistics, the comparison with experienced and cautious human drivers, and
-risk-acceptance principles such as GAMAB and ALARP as candidate bases
-\cite{wang2024sotif}. Both points recur in this thesis: the first motivates indicators
-that are monitored after release, and the second marks the boundary of what the
-statistical thresholds of Chapter~\ref{ch:methodology} can claim.
+Some residual risk is therefore still present when the system is released. Because
+development activities can reduce this risk but not eliminate it, monitoring during
+operation has to detect combinations of situation and system state that lead to
+hazardous behaviour and were missed during development \cite{wang2024sotif}. The same
+survey names the choice of acceptance criteria as unresolved and mentions three
+possible references: accident statistics, the behaviour of careful human drivers, and
+risk-acceptance principles such as GAMAB and ALARP \cite{wang2024sotif}. Both points
+recur in this thesis. The first motivates indicators that are monitored after release,
+and the second explains why the SPI threshold of Chapter~\ref{ch:methodology} is left
+to a risk-acceptance decision.
 
 The distinction matters for the present work because the two paradigms call for
 different reasoning. A fault-based hazard is well captured by the failure logic of
@@ -167,16 +168,16 @@ which the indicators of this thesis are to be used.
 \section{Safety Assurance Cases and the Goal Structuring Notation}
 \label{sec:fund_gsn}
 
-A \ac{SAC} is a structured argument, supported by a body of evidence, that a system is
-acceptably safe to operate in a defined context \cite{bishop2000methodology}. It makes
+A \ac{SAC} combines an argument with the evidence behind it in order to show that a
+system is acceptably safe for a stated use in a stated environment
+\cite{bishop2000methodology}. It makes
 the reasoning from evidence to a top-level safety claim explicit and reviewable, rather
-than leaving it implicit in a collection of documents. Kelly and Weaver require of such
-a case that it communicate a clear, comprehensive and defensible argument, and they
-identify three principal elements: the safety requirements and objectives, the safety
-argument, and the safety evidence \cite{kelly2004gsn}. Argument and evidence depend on
-each other. An argument without evidence is unfounded and therefore unconvincing,
-whereas evidence without an argument leaves unexplained how it satisfies the
-objectives \cite{kelly2004gsn}.
+than leaving it implicit in a collection of documents. Kelly and Weaver state that a
+safety case ``should communicate a clear, comprehensive and defensible argument''
+\cite{kelly2004gsn}, and they build it from requirements, argument and evidence. The
+last two are useless in isolation: a claim that no evidence backs does not persuade,
+and evidence that no argument interprets does not show which safety objective it
+meets \cite{kelly2004gsn}.
 
 Bishop and Bloomfield describe the same structure in terms of claims, arguments and
 evidence, with an inference rule connecting evidence to the claim it supports
@@ -191,8 +192,8 @@ Evidence may itself be a sub-claim supported by a subsidiary argument, and a cla
 supported by two independent arguments tolerates a flaw in either of them
 \cite{bishop2000methodology}.
 
-The \ac{GSN} is a graphical notation for expressing such arguments and is widely used
-in safety-critical domains \cite{kelly2004gsn}. Its community standard defines the core
+The \ac{GSN} represents such arguments as diagrams and has become a common choice for
+safety cases in safety-critical industries \cite{kelly2004gsn}. Its community standard defines the core
 element types used in this thesis \cite{gsncs2021}, which are summarised in
 Figure~\ref{fig:gsn_notation}: a goal states a claim to be established, a strategy
 explains how a goal is decomposed into sub-goals, a solution provides the evidence that
@@ -243,13 +244,14 @@ eight stages, from the assurance of the operating context to the assurance of
 verification, and it states its top-level claim as the system being sufficiently safe
 throughout its operational life \cite{hawkins2022sace}. It marks the points at which a
 confidence argument is required with assurance claim points, and it requires that a
-runtime monitor be independent of the components it monitors, noting that trends in
-monitored behaviour can act as a leading indicator of future unsafe behaviour
+runtime monitor be independent of the components it monitors, and observes that a trend
+in the monitored behaviour can warn of unsafe behaviour before it occurs
 \cite{hawkins2022sace}. For automated vehicles, Loba et al.\ derive structural
-requirements for a \ac{GSN}-based argumentation and propose a generic structure that
-separates a product argument, a process argument, a conformance argument, a context
-argument and a soundness argument, with explicit concern for how valid the
-assumptions of the argument remain during field operation \cite{loba2025harmonized}.
+requirements for a \ac{GSN}-based argumentation and propose a generic structure with
+separate argument branches for the product, the development process, conformance with
+standards, the context of use and the soundness of the argument itself, and they ask
+in particular whether its assumptions still hold once the vehicle is in the field
+\cite{loba2025harmonized}.
 
 The \ac{GSN} is adopted here for two reasons. First, its decomposition of a top-level
 goal into sub-goals produces the claim hierarchy to which safety performance indicators
@@ -653,10 +655,11 @@ that depend on the internal outputs of a perception module cannot be observed wh
 ego vehicle is driven by a rule-based agent on ground truth.
 
 Simulation does not by itself remove the rarity of safety-critical events. Feng et al.\
-observe that, owing to the high dimensionality of the driving environment and the
-rareness of safety-critical events, testing in a naturalistic driving environment requires
-hundreds of millions of miles to demonstrate the safety performance of an
-automated vehicle, even in simulation \cite{feng2021nade}. They show that sparse
+point out that a driving environment has very many dimensions and that safety-critical
+events in it are rare, so that a convincing statement about the safety of an automated
+vehicle from naturalistic driving alone needs a test distance in the order of hundreds
+of millions of miles, and this applies to simulated driving as well
+\cite{feng2021nade}. They show that sparse
 adversarial adjustments of the naturalistic environment reduce the required test
 distance by orders of magnitude without biasing the evaluation, provided that the
 adjustments are learned and the resulting estimates are corrected by importance

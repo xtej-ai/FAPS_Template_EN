@@ -61,9 +61,9 @@ mechanism, in which claims are recursively challenged by doubts, termed defeater
 and confidence in a claim increases as these defeaters are resolved by additional
 argumentation or evidence \cite{goodenough2015ea}. Three types of defeater are
 distinguished, namely rebutting, undermining, and undercutting defeaters
-\cite{laxman2025}. Diemert et al. build on this notion with incremental assurance, in
-which confidence in an eliminative argument is raised by supplying additional
-evidence that resolves the recorded defeaters \cite{diemert2023incremental}. Hawkins
+\cite{laxman2025}. Diemert et al. extend the idea to incremental assurance: an eliminative
+argument gains confidence step by step as new evidence removes defeaters that were
+recorded earlier \cite{diemert2023incremental}. Hawkins
 and Ryan Conmy complement design-time argumentation with dialectic analysis, which
 identifies how an argument may be challenged at runtime and derives corresponding
 runtime monitoring requirements in a systematic manner \cite{hawkins2023dialectic}.
@@ -127,12 +127,12 @@ namely that the rationale by which a chosen set of \acp{SPI} contributes to safe
 often left implicit. They propose an explicit argument pattern for the use of
 \acp{SPI}, analyse the defeaters that can undermine confidence in a chosen indicator
 set, and introduce meta-indicators that monitor whether the indicators themselves
-continue to perform as intended \cite{ratiu2024}. The systematic derivation of
-indicators from an assurance case is addressed most directly by Laxman et al., whose
-four-step approach represents the uncertainty of assurance-case claims using
-Dempster-Shafer theory, propagates this uncertainty to the top goal, resolves claims
-through eliminative argumentation, and defines \acp{SPI} for those claims that cannot
-be resolved without runtime data \cite{laxman2025}. To the knowledge reported in that
+continue to perform as intended \cite{ratiu2024}. Laxman et al. come closest to deriving
+indicators systematically from an assurance case. Their approach has four steps: the
+uncertainty of each claim is expressed with Dempster-Shafer theory and carried up to
+the top goal, claims are then settled where possible by eliminative argumentation, and
+\acp{SPI} are defined for the claims that remain open until runtime data is available
+\cite{laxman2025}. To the knowledge reported in that
 work, no standard or otherwise widely used systematic approach for specifying
 \acp{SPI} exists \cite{laxman2025}. The open aspect is that the derivation of a
 \emph{leading} indicator from a \emph{lagging} one is not itself formalised, and the
@@ -200,9 +200,9 @@ a leading indicator monitors sitting on the preventive side.
 \end{figure}
 
 The third family is the systemic, control-theoretic model. The Systems-Theoretic
-Accident Model and Processes reframes safety as the enforcement of constraints within
-a hierarchical control structure rather than as a chain of component failures
-\cite{leveson2011}. Its hazard-analysis technique, System-Theoretic Process Analysis,
+Accident Model and Processes treats safety as a control problem: accidents occur when
+the controllers of a hierarchical structure fail to keep the system within its safety
+constraints, and not only when components fail in sequence \cite{leveson2011}. Its hazard-analysis technique, System-Theoretic Process Analysis,
 identifies unsafe control actions and their causal scenarios \cite{stpahandbook}, and
 its investigation counterpart, Causal Analysis based on System Theory, reconstructs
 the control-structure failures behind an accident \cite{casthandbook}. Unsafe control
