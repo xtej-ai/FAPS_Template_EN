@@ -192,30 +192,9 @@
            x="0"
            y="0"
            id="tspan100">6</tspan></text>
-      <text
-         xml:space="preserve"
-         transform="translate(165,344.25)"
-         style="font-variant:normal;font-weight:normal;font-size:9.75px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#1a1a1a;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text106"><tspan
-           x="0 5.9572501 11.37825 14.625 20.046 24.921 30.341999 35.763 37.927502 46.058998 50.933998 56.355 58.519501 60.683998 66.105003 69.351753 74.772751 77.483253 79.647751 85.068748 93.200249"
-           y="0"
-           id="tspan104">Thresholdcalibration(</tspan></text>
-      <text
-         xml:space="preserve"
-         transform="translate(261.447,344.25)"
-         style="font-variant:normal;font-weight:normal;font-size:9.75px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#1a1a1a;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text110"><tspan
-           x="0"
-           y="0"
-           id="tspan108">θ</tspan></text>
-      <text
-         xml:space="preserve"
-         transform="translate(267.11175,344.25)"
-         style="font-variant:normal;font-weight:normal;font-size:9.75px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#1a1a1a;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text114"><tspan
-           x="0 5.421 11.37825"
-           y="0"
-           id="tspan112">,T)</tspan></text>
+      <text xml:space="preserve" transform="translate(165,344.25)" style="font-variant:normal;font-weight:normal;font-size:9.75px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#1a1a1a;fill-opacity:1;fill-rule:nonzero;stroke:none" id="text106"><tspan x="0" y="0" id="tspan104">Metric threshold θ and SPI threshold T</tspan></text>
+      
+      
       <g
          id="g116">
         <path

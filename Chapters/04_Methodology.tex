@@ -307,7 +307,7 @@ reference system or naturalistic human driving data. T is therefore kept
 symbolic throughout this work. Its derivation from a risk-acceptance principle
 is not part of this thesis and is left to future work, as set out in
 Section~\ref{sec:outlook}. The evaluation in Chapter~\ref{ch:results} accordingly
-assesses the indicators at the level of the metric threshold, that is, whether a
+assesses the indicators against the metric threshold $\theta$, that is, whether a
 violation precedes the loss event and how early.
 
 \section{Worked Examples}
@@ -558,24 +558,24 @@ is not taken in this work (Section~\ref{sec:method_spithreshold}).
         \textbf{Indicator} & \textbf{Type} & \textbf{Goal} & \textbf{SPI statement} \\
         \midrule
         ONC collision & lagging & G2 & runs with a collision with an oncoming vehicle
-        per $10^{5}$ manoeuvres $< T_{\mathrm{ONC}}$ \\[2pt]
+        per 100k manoeuvres $< T_{\mathrm{ONC}}$ \\[2pt]
         AEB\_ONC & leading & G2 & runs with an emergency braking event with a gated
-        oncoming vehicle in conflict per $10^{5}$ manoeuvres $< T_{\mathrm{AEB\_ONC}}$ \\[2pt]
+        oncoming vehicle in conflict per 100k manoeuvres $< T_{\mathrm{AEB\_ONC}}$ \\[2pt]
         GAP\_TTC & leading & G2.1 & runs with GAP\_TTC below $\theta = 0.913$\,s per
-        $10^{5}$ manoeuvres $< T_{\mathrm{GAP\_TTC}}$ \\[2pt]
+        100k manoeuvres $< T_{\mathrm{GAP\_TTC}}$ \\[2pt]
         REQ\_DECEL & leading & G2.2 & runs with REQ\_DECEL above
-        $\theta = 7.549$\,m/s\textsuperscript{2} per $10^{5}$ manoeuvres
+        $\theta = 7.549$\,m/s\textsuperscript{2} per 100k manoeuvres
         $< T_{\mathrm{REQ\_DECEL}}$ \\[2pt]
         PED collision & lagging & G3 & runs with a collision with a pedestrian per
-        $10^{5}$ manoeuvres $< T_{\mathrm{PED}}$ \\[2pt]
+        100k manoeuvres $< T_{\mathrm{PED}}$ \\[2pt]
         AEB\_PED & leading & G3 & runs with an emergency braking event with a corridor
-        pedestrian in conflict per $10^{5}$ manoeuvres $< T_{\mathrm{AEB\_PED}}$ \\[2pt]
+        pedestrian in conflict per 100k manoeuvres $< T_{\mathrm{AEB\_PED}}$ \\[2pt]
         PED\_CPA & leading & G3.1 & runs with PED\_CPA below $\theta = 1.174$\,s per
-        $10^{5}$ manoeuvres $< T_{\mathrm{PED\_CPA}}$ \\[2pt]
+        100k manoeuvres $< T_{\mathrm{PED\_CPA}}$ \\[2pt]
         REAR collision & lagging & G4 & runs with a collision with the following vehicle
-        per $10^{5}$ manoeuvres $< T_{\mathrm{REAR}}$ \\[2pt]
+        per 100k manoeuvres $< T_{\mathrm{REAR}}$ \\[2pt]
         REAR\_TTC & leading & G4.1 & runs with REAR\_TTC below $\theta = 2.679$\,s per
-        $10^{5}$ manoeuvres $< T_{\mathrm{REAR\_TTC}}$ \\
+        100k manoeuvres $< T_{\mathrm{REAR\_TTC}}$ \\
         \bottomrule
     \end{tabular}
 \end{table}
@@ -586,9 +586,14 @@ while the lagging indicator attached to G2 can still report no collision. The
 leading indicator therefore reports on a premise of the goal before the goal itself
 fails, which is the property illustrated in Figure~\ref{fig:spi_spectrum}. The
 converse reading is equally informative. A lagging violation on a chain goal with
-no preceding violation on any of its sub-goals indicates that the loss arose
-through a cause that no monitored premise covers, so the decomposition of Step~3 is
-incomplete for that loss event and the derivation is to be repeated from Step~2.
+no preceding violation on any of its sub-goals indicates either that the loss arose
+through a cause that no monitored premise covers, or that a monitored premise
+failed to register it, for example because its metric threshold, its eligibility
+gate or the recorded data did not capture the event in time. The first case means
+that the decomposition of Step~3 is incomplete for that loss event and the
+derivation is to be repeated from Step~2; the second means that the indicator
+itself is to be reviewed. The loss event is therefore first checked against the
+indicators of its chain before the decomposition is revised.
 
 Each attachment is recorded in the model of the safety case. The metric threshold
 $\theta$ and the SPI threshold $T$ are stored as dimension elements of the

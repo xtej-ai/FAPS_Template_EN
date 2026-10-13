@@ -285,9 +285,9 @@ a required review has been carried out. Because context governs acceptability, t
 threshold is frequently conditioned on the operating conditions, so that the value
 regarded as acceptable in one part of the \ac{ODD} differs from that in another. The
 threshold itself has two distinct roles that are developed in
-Chapter~\ref{ch:methodology}: a per-event threshold defines what counts as a single
-violation, and a rate-level threshold defines how often such violations may occur
-before the violation rate itself is anomalous.
+Chapter~\ref{ch:methodology}: a metric threshold $\theta$ defines what counts as a
+single violation, and an SPI threshold $T$ defines how often such violations may
+occur before the argued behaviour is no longer accepted.
 
 The property that matters most for this thesis is whether an indicator is leading or
 lagging, according to whether it is observed before or after a loss event. A lagging
@@ -338,19 +338,19 @@ arise once per manoeuvre rather than continuously along a route.
 A concrete example makes the structure explicit. Consider the assurance-case goal that
 the vehicle keeps a safe separation from a leading vehicle. A candidate leading \ac{SPI}
 for this goal pairs the time-to-collision metric of Section~\ref{sec:fund_metrics} with
-a per-event threshold $\theta$ and a rate-level threshold $T$, and conditions the goal
+a metric threshold $\theta$ and an SPI threshold $T$, and conditions the goal
 in the form given in Equation~\ref{eq:spi_example}.
 
 \begin{equation}
-    \mathrm{count}\!\left(\mathrm{TTC}_{\min} < \theta\right)\ \mathrm{per}\ N\ \mathrm{manoeuvres}\ <\ T
+    \mathrm{count}\!\left(\mathrm{TTC}_{\min} < \theta\right)\ \mathrm{per}\ 100\mathrm{k}\ \mathrm{manoeuvres}\ <\ T
     \label{eq:spi_example}
 \end{equation}
 \equationentry{Example leading safety performance indicator on time-to-collision}
 
 where $\mathrm{TTC}_{\min}$ is the minimum time-to-collision observed during a
-manoeuvre, $\theta$ is the per-event threshold below which the manoeuvre counts as a
-violation, $N$ is a fixed number of manoeuvres over which the count is taken, and $T$
-is the rate-level threshold. A measured violation rate at or above $T$ challenges the
+manoeuvre, $\theta$ is the metric threshold below which the manoeuvre counts as a
+violation, and $T$ is the SPI threshold on the number of violations per 100k
+manoeuvres. A measured violation rate at or above $T$ challenges the
 safe-separation goal and, within an operational safety assurance process, triggers a
 review of that part of the assurance case rather than waiting for a collision to be
 recorded. The concept, its origin in the aviation safety management systems of the
