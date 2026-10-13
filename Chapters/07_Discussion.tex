@@ -98,6 +98,21 @@ its chain fall from several hundred to zero cannot, on its own, signal that the
 argued property has changed, however well it separates dangerous from uneventful
 runs within one configuration.
 
+The poolability check of Section~\ref{sec:results_poolability} refuses pooling for
+REQ\_DECEL and PED\_CPA, whose metric thresholds shift by 21.52\,\% and by
+37.90\,\% and 37.74\,\% between Campaign~1 and the realistic-driving campaigns.
+The refusal does not lead to a recalibration, by design: $\theta$ is calibrated
+once on Campaign~1 and applied unchanged to every run
+(Section~\ref{sec:method_metricthreshold}), so that one decision rule scores every
+campaign and no indicator is tuned on the population against which it is later
+evaluated. What the refusal changes is the reading of the comparison between
+campaigns. For these two indicators the uneventful behaviour itself differs between
+the configurations, so their violation-rate ratios of 3.59 and 8.25 combine a
+change in how the conflict is handled with a shift of the reference distribution
+against which $\theta$ was set, and neither cause can be separated from the other.
+For GAP\_TTC and REAR\_TTC, whose thresholds remain within the criterion, the
+ratios of 1.56 and 1.2 are read against a common reference.
+
 This distinction matters for the safety engineers who set the SPI threshold T
 (Section~\ref{sec:method_spithreshold}). Because T bounds the violation rate per
 exposure unit, an indicator whose rate is dominated by exposure moves little
