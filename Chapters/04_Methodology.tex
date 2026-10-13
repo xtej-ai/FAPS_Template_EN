@@ -174,8 +174,8 @@ internal degradation usually precedes its kinematic consequence.
 Steps~1 to~5 produce a signal and a source. A signal alone is not yet an
 indicator: a quantity becomes a safety performance indicator only once a
 threshold decides when its value is to be treated as a violation, and a second
-threshold decides when the frequency of such violations is to be treated as a
-departure from the argued behaviour. Step~6 sets both, and the general form of an
+threshold decides how frequent such violations may become before the argued
+behaviour is no longer accepted. Step~6 addresses both, and the general form of an
 SPI used throughout this work is given in Equation~(\ref{eq:method_spiform}).
 
 \begin{equation}
@@ -194,9 +194,11 @@ SPI used throughout this work is given in Equation~(\ref{eq:method_spiform}).
 SPI threshold, as a count per exposure unit.
 
 The two thresholds answer different questions and are set by different means.
-The metric threshold decides a single run and is calibrated from observed
-behaviour; the SPI threshold bounds the violation count of a population of runs
-and is set statistically. Neither is a risk-acceptance criterion.
+The metric threshold decides a single run and is calibrated in this work from
+observed behaviour. The SPI threshold bounds the violation rate per exposure unit
+and expresses how much of that behaviour is acceptable; it is therefore a
+risk-acceptance decision to be taken by safety engineers for the system under
+assessment, and it is not set in this work.
 
 \subsection{Setting the Metric Threshold}
 \label{sec:method_metricthreshold}
@@ -289,31 +291,24 @@ the same decision rule is applied to every run of the evaluation.
 \subsection{Setting the SPI Threshold}
 \label{sec:method_spithreshold}
 
-The metric threshold leaves open how many violations are too many. The SPI
-threshold answers that, and it is set statistically because the inputs for a
-risk-based answer are not available in this work.
+The metric threshold leaves open how many violations are too many. That question
+is one of risk acceptance and not of statistics: T states the violation rate per
+exposure unit that the safety argument is prepared to accept, and reaching it
+means that the claim to which the indicator is attached is no longer supported.
+Setting T therefore requires an acceptance criterion and the judgement of the
+safety engineers who are responsible for the system and its safety case.
 
-T is the exact one-sided binomial limit at a significance level of
-$\alpha = 0.01$ on the violation rate observed in Campaigns~2 and~3, evaluated
-for the number of eligible runs in the window being checked. It is the smallest
-violation count whose probability under that baseline rate falls to or below
-$\alpha$; Equation~(\ref{eq:exp_spithreshold}) in
-Section~\ref{sec:exp_criteria} states it formally. The rate is checked over
-monitoring windows of 200 runs. The window is the unit over which the check is
-performed and not the unit of T, which is stated per exposure unit in
-Equation~(\ref{eq:method_spiform}).
-
-A threshold set this way bounds departure from a measured baseline. Reaching T
-means that the violation count of a window has become improbable under the
-behaviour the baseline campaigns demonstrated; it does not mean that a level of
-risk has been exceeded, because no level of risk has been stated. A
-risk-acceptance SPI threshold would instead be derived from a principle such as
-ALARP \cite{hse2001r2p2}, GAMAB, which EN~50126-2 terms GAME, or MEM
-\cite{en50126}, or from the benchmark of a careful and competent human driver
-\cite{wang2024sotif} \cite{avsc2023human}. Those principles are named
-here to place the statistical threshold against them; none of them is applied in
-this work, and setting T from one of them is left to
-Section~\ref{sec:outlook}.
+Such a criterion can be derived from a principle such as ALARP
+\cite{hse2001r2p2}, GAMAB, which EN~50126-2 terms GAME, or MEM \cite{en50126},
+or from the benchmark of a careful and competent human driver
+\cite{wang2024sotif} \cite{avsc2023human}. Each of these principles requires
+inputs that lie outside a simulation study, such as a tolerable risk level, a
+reference system or naturalistic human driving data. T is therefore kept
+symbolic throughout this work. Its derivation from a risk-acceptance principle
+is not part of this thesis and is left to future work, as set out in
+Section~\ref{sec:outlook}. The evaluation in Chapter~\ref{ch:results} accordingly
+assesses the indicators at the level of the metric threshold, that is, whether a
+violation precedes the loss event and how early.
 
 \section{Worked Examples}
 \label{sec:method_examples}
@@ -548,9 +543,8 @@ undeveloped goals (presentation based on \cite{diaz2022drspi}).}
 Table~\ref{tab:spi_attachment} states each attached indicator in the form of
 Equation~(\ref{eq:method_spiform}), together with the goal it monitors. The metric
 thresholds are those calibrated in Section~\ref{sec:exp_calibration}. The SPI
-thresholds are given symbolically, because T is evaluated for the number of
-eligible runs in the population being checked
-(Equation~(\ref{eq:exp_spithreshold})) and is therefore not a single constant.
+thresholds are given symbolically, because T is a risk-acceptance decision that
+is not taken in this work (Section~\ref{sec:method_spithreshold}).
 
 \begin{table}[htbp]
     \centering

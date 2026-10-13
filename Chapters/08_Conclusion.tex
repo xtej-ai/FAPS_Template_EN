@@ -29,8 +29,9 @@ unprotected left turns across three campaigns, in which the violations of six
 leading indicators are set against the 540 oncoming-vehicle, 815 pedestrian and
 101 following-vehicle collisions of the same runs. The third is a monitoring register of all nine indicators, presented in a
 dashboard built on the same results, which demonstrates the form in which a
-derived register is consumed and keeps the metric threshold and the SPI threshold
-of each indicator together with its baseline.
+derived register is consumed and keeps the metric threshold of each indicator
+together with its baseline, as the reference against which the SPI threshold is
+later set.
 
 Table~\ref{tab:rq_answers} states what the evaluation establishes for each
 research question.
@@ -76,10 +77,12 @@ indicator: the violation rate of PED\_CPA in Campaign~1 is 8.25 times its rate i
 Campaigns~2 and~3, against 1.56 for GAP\_TTC. Which of the two readings applies
 depends on what the indicator is monitored for, and the register records it.
 
-Three statements bound every result reported here. The evaluation validates the
-derivation method and the evaluation itself, not the safety of a driving
-function. The metric threshold marks unusual behaviour rather than unacceptable
-behaviour, and the SPI threshold is statistical for the same reason. And where
+Four statements bound every result reported here. The data are simulation data
+that stand in for the field data for which the method is designed. The evaluation
+validates the derivation method and the evaluation itself, not the safety of a
+driving function. The metric threshold marks unusual behaviour rather than unacceptable
+behaviour, and the SPI threshold, which would express acceptable risk, is not
+set in this work. And where
 collisions are too rare to count, as in the 75,509 runs of the realistic-driving
 campaigns, the leading SPIs are what remains to be monitored.
 
@@ -98,11 +101,12 @@ or a genuine warning, and would decide whether the reaction tier of the
 pedestrian chain carries any timing information at all. Both could be done
 without new simulation.
 
-Beyond the present data, the SPI threshold could be derived from a risk
-acceptance principle rather than from a statistical baseline. Setting T from
-ALARP, GAMAB, MEM or a careful and competent human driver benchmark would require
-a stated level of acceptable risk, and would have to be done with safety
-engineers rather than from the data alone.
+The SPI threshold T is the most important step left open. It is a
+risk-acceptance decision and was not addressed in this thesis. Setting T from
+ALARP, GAMAB, MEM or a careful and competent human driver benchmark requires a
+stated level of acceptable risk and has to be done by the safety engineers
+responsible for the system, with the baselines of Table~\ref{tab:dashboard_register}
+as reference rather than as the threshold itself.
 
 The register could be extended to the architectural tier. The indicators
 evaluated here all measure kinematics or the vehicle's reaction to them, whereas

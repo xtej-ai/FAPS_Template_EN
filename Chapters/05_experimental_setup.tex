@@ -97,8 +97,8 @@ Table~\ref{tab:campaigns} gives their composition.
         Total      &                                                 & 94,816 \\
         \bottomrule
     \end{tabular}
-    \par\smallskip\footnotesize\raggedright Campaign~3 is statistically
-    indistinguishable from Campaign~2; see Section~\ref{sec:results_poolability}.
+    \par\smallskip\footnotesize\raggedright Campaign~3 shows no significant
+    difference from Campaign~2 in the metric distributions; see Section~\ref{sec:results_poolability}.
 \end{table}
 
 \section{Sampled Parameters}
@@ -338,29 +338,10 @@ added to every cell before the interval is computed, which is the
 Haldane-Anscombe correction \cite{haldane1956} \cite{anscombe1956}. Where FN is zero the corrected relative risk is
 reported as a lower bound rather than as a point estimate.
 
-The SPI threshold T is defined on the violation count of a monitoring window
-rather than on a single run. For a window of eligible runs, T is the smallest
-count at which the observed number of violations becomes improbable under the
-violation rate of the realistic-driving campaigns, as given in
-Equation~(\ref{eq:exp_spithreshold}).
-
-\begin{equation}
-    T = \min \left\{ k \in \mathbb{N} \;:\;
-        P(X \geq k) \leq \alpha,\quad X \sim \mathrm{Bin}(n, p_0) \right\}
-    \label{eq:exp_spithreshold}
-\end{equation}
-\equationentry{SPI threshold as an exact one-sided binomial limit}
-
-\textbf{Variable key:} $k$, violation count of the window, dimensionless; $n$,
-number of eligible runs in the window, dimensionless; $p_0$, violation rate of
-Campaigns~2 and~3 for the indicator, dimensionless; $\alpha$, significance level,
-here 0.01, dimensionless.
-
-Monitoring windows hold 200 consecutive runs. The window is the unit over which
-the rate is checked; it is not the unit of T, which is stated in the general SPI
-form of Section~\ref{sec:method_thresholds}. Because T is an exact limit at
-$\alpha = 0.01$, about one window in a hundred exceeds it in the campaigns from
-which it is derived, by construction.
+All measures in this section are computed at the level of the metric threshold
+$\theta$. The SPI threshold T is not evaluated, because it is a risk-acceptance
+decision that is outside the scope of this work
+(Section~\ref{sec:method_spithreshold}).
 
 \section{Calibration of the Metric Thresholds}
 \label{sec:exp_calibration}

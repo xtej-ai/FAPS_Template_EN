@@ -98,13 +98,13 @@ its chain fall from several hundred to zero cannot, on its own, signal that the
 argued property has changed, however well it separates dangerous from uneventful
 runs within one configuration.
 
-This distinction carries over directly to the SPI threshold T defined in
-Section~\ref{sec:method_spithreshold}. Because T bounds the violation count of a
-population of runs against a baseline rate, an indicator whose rate is dominated
-by exposure moves little against T when the configuration changes, whereas an
-indicator whose rate tracks the configuration moves strongly. The ratios above
-therefore indicate which entries of the register are suited to rate-level
-monitoring and which are suited mainly to the per-run detection reported in
+This distinction matters for the safety engineers who set the SPI threshold T
+(Section~\ref{sec:method_spithreshold}). Because T bounds the violation rate per
+exposure unit, an indicator whose rate is dominated by exposure moves little
+against any T when the configuration changes, whereas an indicator whose rate
+tracks the configuration moves strongly. The ratios above therefore indicate which
+entries of the register are suited to rate-level monitoring once T has been set,
+and which are suited mainly to the per-run detection reported in
 Section~\ref{sec:results_statistics}.
 
 \section{Geometry Decides the Warning Time}
@@ -254,11 +254,11 @@ threshold is crossed by about one tenth of uneventful runs by construction, whic
 is the origin of the false-alarm rate of 8.97\,\% for GAP\_TTC and 13.35\,\% for
 REAR\_TTC. The metric threshold marks behaviour that is unusual relative to the
 calibration population; it does not mark behaviour that is unacceptable, and
-nothing in the calibration establishes a level of risk. The same holds for the
-SPI threshold, which is an exact binomial limit on departure from a measured
-baseline and not a risk-acceptance criterion. Deriving either from ALARP, GAMAB,
-MEM or a careful and competent human driver benchmark would require inputs that
-this work does not have.
+nothing in the calibration establishes a level of risk. The SPI threshold is
+the place where a level of risk enters, and it is deliberately not set in this
+work. Deriving it, or a risk-based metric threshold, from ALARP, GAMAB, MEM or a
+careful and competent human driver benchmark requires inputs that this work does
+not have and a decision that belongs to the safety engineers of the system.
 
 \section{Limitations}
 \label{sec:disc_limitations}
@@ -279,6 +279,10 @@ would address it.
         \toprule
         {\bfseries Limitation} & {\bfseries Consequence} & {\bfseries Next step} \\
         \midrule
+        Simulation data in place of field data &
+        Results hold for the behaviour models of CARLA and the sampled scenario
+        design; sampling uncertainty is quantified, modelling uncertainty is not &
+        Application of the register to field data of a deployed fleet \\
         Traffic Manager ego without gap acceptance &
         Oncoming conflicts arise from a missing capability rather than from a
         functional insufficiency in the sense of ISO~21448 \cite{iso21448} &
@@ -290,9 +294,10 @@ would address it.
         Narrow exposure &
         One scenario, one map, oncoming partners that do not yield &
         Naturalistic data; responsive partners \\
-        Statistical thresholds &
-        $\theta$ and T bound demonstrated behaviour; ALARP, GAMAB, MEM and the
-        careful and competent human driver benchmark are named but not applied &
+        Thresholds &
+        $\theta$ bounds demonstrated behaviour and T is not set; ALARP, GAMAB, MEM
+        and the careful and competent human driver benchmark are named but not
+        applied &
         A risk-acceptance SPI threshold set with safety engineers \\
         Campaign comparison &
         The campaigns differ in scenario generator as well as controller, so the

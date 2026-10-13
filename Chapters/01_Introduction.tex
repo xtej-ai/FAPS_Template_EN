@@ -110,6 +110,19 @@ these three geometries, or whether they do not, is itself informative about the
 assumptions the method makes, and Chapter~\ref{ch:results} reports this comparison
 directly.
 
+The evaluation uses simulation data in place of field data. The method and its
+indicators are formulated for field data, that is, the operational records of a
+deployed fleet, but field data containing loss events at the scale needed to score
+leading indicators against them is not available to this work. A simulation
+provides what a fleet cannot yet provide: a large number of manoeuvres with known
+ground truth, controlled variation of the operating conditions and enough
+collisions to evaluate each indicator against. The CARLA campaigns therefore
+stand in for field data. Every step that consumes data, namely the calibration of
+the metric threshold, the scoring against collisions and the monitoring register,
+is applied to the simulation records in the same way as it would be applied to
+field records, and the step from simulation to field data is treated as a
+limitation in Section~\ref{sec:disc_limitations}.
+
 \section{Structure of the Thesis}
 \label{sec:intro_structure}
 
