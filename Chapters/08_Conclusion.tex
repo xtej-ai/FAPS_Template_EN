@@ -15,7 +15,7 @@ safety performance indicator. ANSI/UL~4600 \cite{ul4600} and PAS~1881
 ISO~21448 \cite{iso21448} requires that functional insufficiencies be monitored
 in operation without saying which quantities carry that information; and the
 assurance frameworks that consume indicator values take the indicators as given.
-The step from an unresolved doubt in a safety case to a defined \ac{SPI}, that is, a
+The step from an unresolved defeater in a safety case to a defined \ac{SPI}, that is, a
 metric, the data from which it is computed and its thresholds, was the gap this thesis
 addressed.
 
@@ -109,15 +109,15 @@ as reference rather than as the threshold itself.
 
 The register could be extended to the architectural tier. The indicators
 evaluated here all measure kinematics or the vehicle's reaction to them, whereas
-the doubts an automated driving system's safety case most often leaves open
-concern the components that build its world model. Deriving an indicator from a
-doubt about a perception component would require a signal observable at runtime
+the unresolved defeaters in the safety case of an automated driving system most
+often concern the components that build its world model. Deriving an indicator from
+a defeater that concerns a perception component would require a signal observable at runtime
 and informative about that component's state, and a confidence-based candidate
 would require the model's confidence to be calibrated before a threshold on it
 could carry meaning.
 
-The exposure could be widened. A gap-accepting driving function with responsive
-conflict partners would produce oncoming conflicts that arise from a functional
+The exposure could be widened. A gap-accepting driving function with reactive
+conflicting road users would produce oncoming conflicts that arise from a functional
 insufficiency rather than from a missing capability, and naturalistic trajectory
 data such as the inD and SinD datasets \cite{bock2020ind} \cite{xu2022sind}
 would place

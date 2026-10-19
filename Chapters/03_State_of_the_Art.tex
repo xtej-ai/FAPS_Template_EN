@@ -22,7 +22,7 @@ Section~\ref{sec:fund_gsn}; this section reviews how they are treated in current
 research on automated driving. Among the available notations, namely the
 Claims-Arguments-Evidence notation, the Structured Assurance Case Metamodel, and the
 \ac{GSN}, the \ac{GSN} is the most widely used in safety-critical domains, and its
-decomposition of a top-level goal into sub-goals provides the claim hierarchy to
+decomposition of a top-level goal into sub-goals provides the goal structure to
 which indicators are attached in this work \cite{kelly2004gsn}.
 
 The assurance case for an \ac{ADS} is valid at the time of its submission to a
@@ -66,7 +66,7 @@ recorded earlier \cite{diemert2023incremental}. Hawkins
 and Ryan Conmy complement design-time argumentation with dialectic analysis, which
 identifies how an argument may be challenged at runtime and derives corresponding
 runtime monitoring requirements in a systematic manner \cite{hawkins2023dialectic}.
-The common contribution of these approaches is a structured record of doubt. The open
+The common contribution of these approaches is a structured record of defeaters. The open
 aspect is that the resolution of many defeaters requires operational data that are
 unavailable before deployment.
 
@@ -98,8 +98,8 @@ The distinction between leading and lagging indicators (Section~\ref{sec:fund_sp
 the organising property of the research. Diaz and Woon observe that the lower the level
 of the safety-case claim to which an indicator is attached, the more likely it is to be
 a leading indicator, because low-level claims are violated earlier than the high-level
-outcomes they support \cite{diaz2022drspi}. This relationship between claim depth and
-indicator lead time is illustrated in Figure~\ref{fig:spi_spectrum} and is central to
+outcomes they support \cite{diaz2022drspi}. This relationship between the level of a goal in the goal structure and the
+lead time of its indicator is illustrated in Figure~\ref{fig:spi_spectrum} and is central to
 the derivation strategy pursued in this work. ANSI/UL~4600 reflects the same priority,
 stating in its guidance that reliance on lagging indicators alone is not acceptable,
 yet the standard provides only examples of indicators and leaves their derivation to
@@ -126,7 +126,7 @@ continue to perform as intended \cite{ratiu2024}. Laxman et~al.\ come closest to
 indicators systematically from an assurance case. Their approach has four steps: the
 uncertainty of each claim is expressed with Dempster-Shafer theory and carried up to
 the top goal, claims are then settled where possible by eliminative argumentation, and
-\acp{SPI} are defined for the claims that remain open until runtime data are available
+\acp{SPI} are defined for the claims whose defeaters cannot be resolved before runtime data are available
 \cite{laxman2025}. To the knowledge reported in that
 work, no standard or otherwise widely used systematic approach for specifying
 \acp{SPI} exists \cite{laxman2025}. The open aspect is that the derivation of a

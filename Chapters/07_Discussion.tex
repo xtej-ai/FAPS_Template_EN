@@ -72,7 +72,7 @@ also the conclusion of the empirical critique of the fixed-ratio pyramid
 Every leading SPI in the register is associated with the collisions of its own
 chain, yet they do not all respond to a change in the configuration. The
 distinction matters because an indicator that is attached to a safety case is
-expected to move when the argued property changes.
+expected to move when the property claimed in its goal changes.
 
 PED\_CPA responds. Its violation count falls from 1,268 in Campaign~1 to 527 in
 Campaigns~2 and~3, and the pedestrian collisions fall with it, from 814 to one.
@@ -93,7 +93,7 @@ Campaigns~2 and~3, whereas the corresponding ratio is 1.56 for GAP\_TTC and 1.2
 for REAR\_TTC. REQ\_DECEL, AEB\_ONC and AEB\_PED lie between these extremes, at
 3.59, 3.54 and 4.44. An indicator whose rate barely moves while the collisions of
 its chain fall from several hundred to zero cannot, on its own, signal that the
-argued property has changed, however well it separates dangerous from uneventful
+property claimed in its goal has changed, however well it separates dangerous from uneventful
 runs within one configuration.
 
 The poolability check of Section~\ref{sec:results_poolability} refuses pooling for
@@ -126,14 +126,14 @@ Section~\ref{sec:results_statistics}.
 The lead times in Table~\ref{tab:lead_time} divide the register along the
 conflict geometry rather than along the indicator design, which is the most
 consequential finding for the timeliness question of
-Section~\ref{sec:intro_objective}. In the two crossing conflicts the partner moves across the ego vehicle's line of
+Section~\ref{sec:intro_objective}. In the two crossing conflicts the conflicting road user moves across the ego vehicle's line of
 sight. Time to collision and time to the closest point of approach both depend on
 the closing component of the relative motion, so they change slowly while the
 paths are still separated and fall quickly only once the paths almost meet. The
 median lead times of 0.60\,s for GAP\_TTC and 0.50\,s for PED\_CPA follow from
 that geometry, and so does the fact that only 38 of 540 oncoming-vehicle and two
 of 815 pedestrian collisions are preceded by a violation at least one second
-ahead. In the following conflict the partner closes along the line of sight, the
+ahead. In the following conflict the following vehicle closes along the line of sight, the
 same quantity changes monotonically throughout the approach, and 87 of 101
 collisions are preceded by a violation at least one second ahead. The dependence
 of a criticality metric on the geometry it is applied to is the point made in the
@@ -163,7 +163,7 @@ quantities, outside the behavioural tier that this work evaluates.
 
 The rule of Section~\ref{sec:exp_collision}, under which a pedestrian contact
 counts as a collision only when the ego vehicle is moving, is a decision about
-the reference event rather than about an indicator, and it is defended as such
+the definition of the loss event rather than about an indicator, and it is defended as such
 here. Without the rule the two realistic-driving campaigns would appear to produce 481
 pedestrian collisions rather than one. The appearance would be an artefact: 480
 of those 481 contacts occur with a standing ego vehicle, which a CARLA walker
@@ -236,14 +236,14 @@ collision, so neither indicator can be expected to cover the collisions of the
 other.
 
 The formulation of REQ\_DECEL carries two assumptions that make it optimistic.
-The required deceleration treats the conflict partner as stationary, so a partner
+The required deceleration treats the conflicting road user as stationary, so a road user
 that is itself closing is not accounted for, and the range entering the
 denominator is clamped at a minimum value so that the expression stays finite at
 short range. The clamp produces a cluster of values near 5.41\,m/s\textsuperscript{2},
 which is visible in the distribution of the metric and is an artefact of the
 formulation rather than a property of the conflicts. Both assumptions bias the
 required deceleration downwards and therefore make violations less frequent than
-a partner-aware formulation would produce.
+a formulation that accounts for the motion of the road user would produce.
 
 \section{The Choice of Metric Threshold}
 \label{sec:disc_threshold}
@@ -272,13 +272,13 @@ not have and a decision that belongs to the safety engineers of the system.
 \section{Relation to the State of the Art}
 \label{sec:disc_sota}
 
-The research gap of Section~\ref{sec:sota_gap} was that the step from an open claim
-to a defined leading indicator is left to expert judgement, and the results allow
+The research gap of Section~\ref{sec:sota_gap} was that the step from a goal with
+unresolved defeaters to a defined leading \ac{SPI} is left to expert judgement, and the results allow
 the contribution of this work to be placed against the approaches that frame that
 gap. Laxman et~al.\ identify, through uncertainty propagation and eliminative
-argumentation, the claims that remain open until runtime data are available and
-define \acp{SPI} for them \cite{laxman2025}. The method of this thesis takes such
-an open claim as its input and supplies the construction of the indicator itself,
+argumentation, the claims whose defeaters cannot be resolved before runtime data are
+available and define \acp{SPI} for them \cite{laxman2025}. The method of this thesis takes such
+a claim and its unresolved defeater as its input and supplies the construction of the indicator itself,
 from the lagging \ac{SPI} through the proximate cause to a signal with a calibrated
 metric threshold. The two approaches are therefore consecutive rather than
 competing: the first decides where an indicator is needed, the second how it is
@@ -335,9 +335,9 @@ would address it.
         only &
         Perception in the loop; architectural-tier indicators \\
         Narrow exposure &
-        One scenario and one map; oncoming partners yield according to a sampled flag
+        One scenario and one map; oncoming vehicles yield according to a sampled flag
         rather than in response to the ego vehicle &
-        Naturalistic data; responsive partners \\
+        Naturalistic data; reactive road users \\
         Thresholds &
         $\theta$ bounds demonstrated behaviour and $T$ is not set; ALARP, GAMAB, MEM
         and the careful and competent human driver benchmark are named but not
@@ -350,7 +350,7 @@ would address it.
         Controlled variation of one factor \\
         Lead-time definition &
         Lead time is measured from the first violation anywhere in the run &
-        Attribution of violations to the conflict partner \\
+        Attribution of violations to the conflicting road user \\
         \bottomrule
     \end{tabular}
 \end{table}

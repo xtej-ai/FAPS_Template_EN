@@ -248,10 +248,10 @@ in particular whether its assumptions still hold once the vehicle is in the fiel
 \cite{loba2025harmonized}.
 
 The \ac{GSN} is adopted here for two reasons. First, its decomposition of a top-level
-goal into sub-goals produces the claim hierarchy to which safety performance indicators
-are attached in Chapter~\ref{ch:methodology}. Second, a goal that is expressed as a
-bare assertion can be turned into a monitorable claim by attaching an indicator to it,
-which is the mechanism by which the assurance case is connected to operational data.
+goal into sub-goals produces the goal structure to which safety performance indicators
+are attached in Chapter~\ref{ch:methodology}. Second, a goal that development-time evidence cannot support completely receives
+operational evidence when an \ac{SPI} is attached to it, which is the mechanism by which
+the assurance case is connected to operational data.
 In the terms of Bishop and Bloomfield, such an indicator supplies a probabilistic
 argument from simulated or field experience to a goal that development evidence alone
 cannot discharge. The safety case of this thesis is expressed in the \ac{GSN} and
@@ -270,7 +270,7 @@ is compared. The third is the claim, the specific statement in the assurance cas
 the comparison is taken to support or to challenge. A metric on its own does not
 constitute an \ac{SPI}, because the same numerical value can be acceptable in one
 operating context and unacceptable in another; only when the metric is paired with a
-threshold and tied to a claim does it carry a safety meaning
+threshold and tied to a claim does it provide evidence for or against that claim
 \cite{laxman2024, koopman2022howsafe}.
 
 Metrics may be quantitative or qualitative. A quantitative metric is a measured or
@@ -282,7 +282,7 @@ regarded as acceptable in one part of the \ac{ODD} differs from that in another.
 threshold itself has two distinct roles that are developed in
 Chapter~\ref{ch:methodology}: a metric threshold $\theta$ defines what counts as a
 single violation, and an SPI threshold $T$ defines how often such violations may
-occur before the argued behaviour is no longer accepted.
+occur before the behaviour claimed in the goal is no longer accepted.
 
 The property that matters most for this thesis is whether an indicator is leading or
 lagging, according to whether it is observed before or after a loss event. A lagging
@@ -474,7 +474,7 @@ Equation~\eqref{eq:areq} treats the obstacle as stationary at the end of the ava
 distance. It therefore states the braking needed to stop short of a point, not the
 braking needed to avoid a road user who is itself moving,
 and it grows without bound as the distance approaches zero. Both properties matter for
-an implementation, because a moving partner makes the true demand different from the
+an implementation, because a moving road user makes the true demand different from the
 computed one and a very short distance makes the value numerically unstable.
 
 For the following conflict the time headway is the established complement to the

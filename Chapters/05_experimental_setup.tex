@@ -34,12 +34,12 @@ intersection and the three conflict geometries.
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=11.5cm]{leftturn_conflict_geometry.pdf}
-    \caption[Unprotected left turn on Town10HD]{Unprotected left turn on Town10HD with the ego vehicle and its three conflict partners.}
+    \caption[Unprotected left turn on Town10HD]{Unprotected left turn on Town10HD with the ego vehicle and its three conflicting road users.}
     \label{fig:5_1_scenario}
 \end{figure}
 
 The three conflicts differ in the way they close. In the oncoming-vehicle chain
-(ONC) the partner crosses the turn arc at an angle, which is the geometry
+(ONC) the conflicting vehicle crosses the turn arc at an angle, which is the geometry
 classified as left turn across path, opposite direction. In the pedestrian chain
 (PED) walkers cross the leg that the ego vehicle turns into, late in the turn, so
 the conflict closes laterally. In the following-vehicle chain (REAR) a follower
@@ -107,7 +107,7 @@ run's seed, so that any run can be regenerated exactly.
 
 \begin{table}[htbp]
     \centering
-    \caption[Actor parameters sampled per run]{Actor parameters sampled per run. Number, appearance and behaviour of the conflict partners.}
+    \caption[Actor parameters sampled per run]{Actor parameters sampled per run. Number, appearance and behaviour of the conflicting road users.}
     \label{tab:actor_parameters}
     \small
     \begin{tabular}{@{}lll@{}}
@@ -200,8 +200,8 @@ from.
 \section{Collision Definition}
 \label{sec:exp_collision}
 
-The reference event of the whole evaluation is the collision, so its definition
-decides what every leading SPI is scored against. For the two vehicle
+The collision is the loss event against which every leading SPI is scored, so its
+definition decides the outcome of the whole evaluation. For the two vehicle
 chains the definition is immediate: any recorded contact with the oncoming
 vehicle or with the following vehicle counts. For the pedestrian chain it is not,
 because CARLA walkers follow a planned path and do not avoid vehicles. A walker
@@ -264,9 +264,8 @@ standing ego vehicle.
 Not every run can produce every conflict, so each chain is scored only on the runs
 in which its conflict can arise. A run is eligible for the oncoming chain if at least
 one oncoming vehicle passes the conflict gate, which admits an oncoming vehicle as a
-conflict partner only if its path intersects the conflict area of the ego vehicle's
-turn; vehicles that turn away or pass clear of the turn arc are not partners of the
-conflict. A run is eligible for the pedestrian chain if at least one pedestrian
+conflicting road user only if its path intersects the conflict area of the ego vehicle's
+turn; vehicles that turn away or pass clear of the turn arc are not conflicting road users. A run is eligible for the pedestrian chain if at least one pedestrian
 crosses in the corridor of the leg into which the ego vehicle turns, and for the
 following-vehicle chain if a following vehicle is present. GAP\_TTC, REQ\_DECEL and
 AEB\_ONC are computed only towards gated oncoming vehicles, and PED\_CPA and AEB\_PED
@@ -427,6 +426,6 @@ reports the shift for every indicator.
 
 Two reaction-tier indicators carry no calibrated metric threshold. AEB\_ONC and AEB\_PED
 fire on an event, namely a brake command of at least 0.8 together with a
-line-of-sight time to collision of at most 1.5\,s to the gated partner of the
+line-of-sight time to collision of at most 1.5\,s to the gated conflicting road user of the
 chain in the same simulation step. Their calibration population of 16,950 runs is
 used only to establish that the event is rare under uneventful driving.

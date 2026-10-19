@@ -148,7 +148,7 @@ give lower diagnostic resolution, since they reveal that a margin is eroding rat
 than which subsystem caused it, and they typically provide shorter lead time, since
 internal degradation usually precedes its kinematic consequence. A third group, the
 reaction tier, does not result from the check but from the register of Step~1: an
-emergency-braking activation with a conflict partner present is the last-resort
+emergency-braking activation with a conflicting road user present is the last-resort
 mitigation nearest the loss, and it is placed above the kinematic decomposition
 (Section~\ref{sec:method_examples}).
 
@@ -176,8 +176,8 @@ mitigation nearest the loss, and it is placed above the kinematic decomposition
 Steps~1 to~5 produce a signal and a source. A signal alone is not yet an
 indicator: a quantity becomes a safety performance indicator only once a
 threshold decides when its value is to be treated as a violation, and a second
-threshold decides how frequent such violations may become before the argued
-behaviour is no longer accepted. Step~6 addresses both, and the general form of an
+threshold decides how frequent such violations may become before the behaviour
+claimed in the goal is no longer accepted. Step~6 addresses both, and the general form of an
 SPI used throughout this work is given in Equation~\eqref{eq:method_spiform}.
 
 \begin{equation}
@@ -391,16 +391,16 @@ times are reported in Chapter~\ref{ch:results}.
 \section{Attachment to the Safety Case}
 \label{sec:method_gsn}
 
-Step~7 places every derived indicator in the safety case. An indicator carries a
-safety meaning only relative to the claim that it supports or challenges
+Step~7 places every derived indicator in the safety case. An \ac{SPI} provides
+evidence only for the goal that it supports or challenges
 (Section~\ref{sec:fund_spi}), so the goal to which it is attached decides what a
 violation means. This section states the attachment rule, applies it to the
 indicators derived for the left-turn use case in Section~\ref{sec:method_examples},
 and sets out the record that each attachment carries.
 
 The attachment adopts the approach of Diaz and Woon, who assign each safety
-performance indicator to one claim of the argument tree and relate the character of
-the indicator to how deep that claim sits:
+performance indicator to one claim of the goal structure and relate the character of
+the indicator to the level of that claim:
 the lower the claim to which an indicator is attached, the more likely the
 indicator is to be leading \cite{diaz2022drspi}. In the method of this thesis the
 depth is not chosen freely but follows from the derivation. The lagging SPI
@@ -417,14 +417,14 @@ intermediate cause states that a required function was not delivered adequately,
 and its negation states that the function is delivered adequately; this negation
 becomes a sub-goal of the goal that the lagging SPI protects. Because the
 decomposition uses an OR gate, the failure of any one sub-goal is on its own
-sufficient for the proximate cause, so the failure of any one sub-goal puts the
-parent goal in doubt. A branch whose signal is rejected at Step~5 is not removed from the
+sufficient for the proximate cause, so the failure of any one sub-goal challenges the
+parent goal. A branch whose signal is rejected at Step~5 is not removed from the
 argument. It remains as an undeveloped goal, marked as such in the notation
 \cite{gsncs2021}, so that the safety case shows where monitoring is absent instead
 of implying a coverage that does not exist.
 
 Figure~\ref{fig:lti_safety_case} shows the resulting argument for the left-turn
-use case, drawn in the form that Diaz and Woon use for their example argument tree,
+use case, drawn in the form that Diaz and Woon use for their example goal structure,
 with each indicator attached at the edge of the goal it monitors
 \cite{diaz2022drspi}. The top-level goal G1 is decomposed by the strategy S1 over
 the three conflict chains of the manoeuvre into the chain goals G2, G3 and G4, each
@@ -564,14 +564,14 @@ is not taken in this work (Section~\ref{sec:method_spithreshold}).
 \end{table}
 
 The attachment fixes how a violation is to be read. A GAP\_TTC violation count
-that reaches its SPI threshold challenges G2.1 and, through it, puts G2 in doubt
+that reaches its SPI threshold challenges G2.1 and, through it, G2
 while the lagging SPI attached to G2 can still report no collision. The
-leading SPI therefore reports on a premise of the goal before the goal itself
+leading SPI therefore reports on a sub-goal before the parent goal itself
 fails, which is the property illustrated in Figure~\ref{fig:spi_spectrum}. The
 converse reading is equally informative. A lagging violation on a chain goal with
 no preceding violation on any of its sub-goals indicates either that the loss arose
-through a cause that no monitored premise covers, or that a monitored premise
-failed to register it, for example because its metric threshold, its eligibility
+through a cause that no monitored sub-goal covers, or that the SPI of a monitored
+sub-goal failed to register it, for example because its metric threshold, its eligibility
 gate or the recorded data did not capture the event in time. The first case means
 that the decomposition of Step~3 is incomplete for that loss event and the
 derivation is to be repeated from Step~2; the second means that the indicator
@@ -583,8 +583,8 @@ SPI threshold $T$ belong to the indicator, and the full derivation chain, from t
 lagging SPI through the proximate and intermediate causes to the signal and its
 source, is kept as its traceability record, as shown for the three chains in
 Figures~\ref{fig:causal_chain_example} to~\ref{fig:chain_rear}. This closes the loop opened in Step~1, since the goal that
-began as a bare assertion now carries a monitorable claim, and a violation
-invalidates that specific claim rather than leaving the safety case silently wrong.
+was supported only by development-time evidence now carries an SPI as operational
+evidence, and a violation challenges that specific goal rather than leaving the safety case silently wrong.
 Two failure modes are avoided explicitly, namely attaching an indicator to a
 convenient parent goal instead of the goal it actually monitors, and omitting the
 traceability record, which is the element that distinguishes a derived indicator
@@ -600,7 +600,7 @@ indicators that are already attached to safety case sub-arguments, select those
 that can be computed at or near runtime and that change quickly with vehicle
 behaviour, and assign each selected indicator an improvement mechanism, a
 prescribed control action that is taken when the indicator underperforms
-\cite{diaz2022drspi}. The improvement mechanism then enters the argument tree as an
+\cite{diaz2022drspi}. The improvement mechanism then enters the goal structure as an
 additional sub-argument below the goal of its indicator and carries an indicator of
 its own, which monitors how often the mechanism is active \cite{diaz2022drspi}. The
 framework leaves open how the attached indicators are obtained in the first place.

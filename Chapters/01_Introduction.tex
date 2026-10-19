@@ -16,7 +16,7 @@ has argued that it is acceptably safe within its \ac{ODD}, using the structured,
 evidence-based argument introduced in Chapter~\ref{ch:fundamentals}. This argument is
 constructed and reviewed before deployment, whereas the traffic in which the system
 later operates, and the behaviour of the other road users in it, cannot be described
-completely at design time. Some of the assumptions and doubts recorded while the
+completely at design time. Some of the assumptions and defeaters recorded while the
 argument is built therefore cannot be resolved by development-time testing alone.
 Evidence collected during operation helps to confirm or to challenge these
 unresolved assumptions, so that the validity of the safety case can be checked after
@@ -43,14 +43,14 @@ wider literature does not supply either, is a procedure for constructing such an
 indicator in the first place. Existing work is well developed at locating where in a
 safety argument an indicator is needed and at specifying how a system should respond
 once one is violated, but the step in between, deriving the indicator itself from a
-specific, unresolved doubt in the argument, is left to engineering judgement exercised
+specific unresolved defeater in the argument, is left to engineering judgement exercised
 case by case. Deriving an indicator means fixing three things: the metric that is
 measured, for example a time to collision, the data from which this metric is computed,
 and the thresholds that decide when a measured value counts as a violation. This thesis develops a systematic procedure for that
 step, the \ac{CCDM} presented in Chapter~\ref{ch:methodology},
-which takes an unresolved doubt surviving the eliminative elaboration of a Goal
-Structuring Notation claim and derives from it a leading \ac{SPI} whose metric, data
-and thresholds are all traceable back to the claim it addresses. The method is developed
+which takes a defeater that remains unresolved after the eliminative argumentation
+of a Goal Structuring Notation goal and derives from it a leading \ac{SPI} whose
+metric, data and thresholds are all traceable back to the goal it supports. The method is developed
 generically and then validated empirically against the criteria set out in the same
 chapter.
 
@@ -61,7 +61,7 @@ The gap addressed in this thesis is narrow and specific. It is not the
 absence of a requirement to monitor, which the standards already impose, nor the
 absence of a place in the argument at which an indicator belongs, which the
 assurance-case literature already supplies. It is the absence of a reproducible
-procedure that turns a named, unresolved doubt into a named, calibrated quantity. In
+procedure that turns an identified unresolved defeater into a calibrated \ac{SPI}. In
 the absence of such a procedure the derivation is performed anew by each engineer for
 each claim, which makes the resulting indicator set neither reviewable nor
 transferable, and leaves the connection between an indicator and the claim it is
@@ -85,7 +85,7 @@ The objective of this thesis is to develop this derivation procedure and to esta
 whether the indicators it produces are usable for the operational safety assurance of
 an automated driving system. Three research questions structure the work. The first,
 RQ1 (derivation), asks how a leading \ac{SPI}, comprising a metric, the data from which it is computed
-and its thresholds, can be derived systematically and traceably from an unresolved doubt in a
+and its thresholds, can be derived systematically and traceably from an unresolved defeater in a
 Goal Structuring Notation safety case. The second, RQ2 (timeliness), asks whether the indicators so
 derived detect a developing violation early enough to permit a response, rather than
 merely confirming that a violation has occurred. The third, RQ3 (scalability), asks whether a single
