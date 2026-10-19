@@ -116,10 +116,7 @@ analysed and a scenario that has not been met cannot be tested.
 
 \begin{table}[htbp]
     \centering
-    \caption{Scenario areas of ISO~21448. The four areas classify the scenarios of a
-    system by whether they are known and whether the behaviour of the system in them
-    is safe, together with the activity that provides evidence about each area
-    (based on \cite{iso21448}).}
+    \caption[Scenario areas of ISO~21448]{Scenario areas of ISO~21448. Scenarios are classified by whether they are known and whether they are safe (based on \cite{iso21448}).}
     \label{tab:sotif_areas}
     \small
     \begin{tabular}{@{}>{\raggedright\arraybackslash}p{2.9cm} >{\raggedright\arraybackslash}p{4.6cm} >{\raggedright\arraybackslash}p{6.3cm}@{}}
@@ -205,10 +202,7 @@ discharged by a solution.
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=15cm]{gsn_notation}
-    \caption{Core element types of the Goal Structuring Notation used in this thesis:
-    goal, strategy, solution, context, assumption, and justification, together with
-    the supported-by and in-context-of connectors (based on the GSN community standard
-    \cite{gsncs2021}).}
+    \caption[Core element types of the Goal Structuring Notation]{Core element types of the Goal Structuring Notation (based on \cite{gsncs2021}).}
     \label{fig:gsn_notation}
 \end{figure}
 
@@ -378,7 +372,7 @@ same path, the \ac{TTC} is given by Equation~\ref{eq:ttc}.
 \end{equation}
 \equationentry{Time-to-collision}
 
-where:
+where:\nopagebreak
 \begin{tabbing}
     \hspace{2.2cm} \= \kill
     $d_\mathrm{rel}$ \> relative distance between the two road users in m \\
@@ -398,7 +392,7 @@ range rate whenever the range is decreasing, as given in Equation~\ref{eq:ttc_lo
 \end{equation}
 \equationentry{Line-of-sight time-to-collision}
 
-where:
+where:\nopagebreak
 \begin{tabbing}
     \hspace{2.2cm} \= \kill
     $\Delta\mathbf{p}$ \> position of the other road user relative to the ego vehicle in m \\
@@ -429,7 +423,7 @@ Equation~\ref{eq:cpa}.
 \end{equation}
 \equationentry{Time and distance at the closest point of approach}
 
-where:
+where:\nopagebreak
 \begin{tabbing}
     \hspace{2.2cm} \= \kill
     $t_\mathrm{CPA}$ \> time until the closest point of approach in s \\
@@ -464,7 +458,7 @@ of the vehicle indicates a critical situation.
 \end{equation}
 \equationentry{Required deceleration to avoid a collision}
 
-where:
+where:\nopagebreak
 \begin{tabbing}
     \hspace{2.2cm} \= \kill
     $a_\mathrm{req}$ \> required deceleration in m/s\textsuperscript{2} \\
@@ -491,12 +485,11 @@ undefined.
 \end{equation}
 \equationentry{Time headway}
 
-where:
+where:\nopagebreak
 \begin{tabbing}
     \hspace{2.2cm} \= \kill
     $\mathrm{THW}$ \> time headway in s \\
-    $d_\mathrm{gap}$ \> distance between the rear of the vehicle ahead and the front of the
-    following vehicle in m \\
+    $d_\mathrm{gap}$ \> gap from the vehicle ahead to the following vehicle in m \\
     $v_\mathrm{f}$ \> speed of the following vehicle in m/s
 \end{tabbing}
 
@@ -516,7 +509,7 @@ distance-based threshold.
 \end{equation}
 \equationentry{Responsibility-Sensitive Safety minimum safe longitudinal distance}
 
-where:
+where:\nopagebreak
 \begin{tabbing}
     \hspace{2.2cm} \= \kill
     $v_r,\ v_f$ \> speed of the rear and the front vehicle in m/s \\
@@ -543,9 +536,7 @@ selection in Chapter~\ref{ch:methodology}.
 
 \begin{table}[htbp]
     \centering
-    \caption{Surrogate safety metrics used as candidate indicator signals, with the
-    conflict geometry for which each is defined, the quantity it returns, and the
-    tail in which a critical value lies.}
+    \caption[Surrogate safety metrics]{Surrogate safety metrics. Conflict geometry, returned quantity and critical tail of each metric.}
     \label{tab:surrogate_metrics}
     \small
     \begin{tabular}{@{}>{\raggedright\arraybackslash}p{3.5cm} >{\raggedright\arraybackslash}p{3.3cm} >{\raggedright\arraybackslash}p{3.4cm} >{\raggedright\arraybackslash}p{3.2cm}@{}}
@@ -581,11 +572,7 @@ is examined further in Chapter~\ref{ch:sota}.
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=15cm]{surrogate_metrics_geometry}
-    \caption{Geometry of the surrogate safety metrics used in this work. Left: a
-    following conflict, in which the relative distance and closing speed define the
-    time-to-collision and the required deceleration. Right: a crossing conflict, in
-    which the post-encroachment time is the interval between the first road user
-    leaving and the second entering the shared conflict area.}
+    \caption[Geometry of the surrogate safety metrics]{Geometry of the surrogate safety metrics. Left: following conflict; right: crossing conflict.}
     \label{fig:metrics_geometry}
 \end{figure}
 
@@ -691,7 +678,7 @@ informative for counts of zero and for counts close to $n$
 \end{equation}
 \equationentry{Wilson score interval of a proportion}
 
-where:
+where:\nopagebreak
 \begin{tabbing}
     \hspace{2.2cm} \= \kill
     $\hat{p}$ \> observed proportion $k/n$, dimensionless \\

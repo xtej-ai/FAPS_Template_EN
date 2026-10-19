@@ -22,7 +22,7 @@ method that carry over into its instantiation in Chapter~\ref{ch:experiment}.
 The method is defined to be use-case-agnostic, so that it applies without change to a
 left-turn, construction-zone, or pedestrian-crossing use case, or to any future one.
 It consists of a preparatory step and seven derivation steps, of which
-Steps~2 to~7 form a loop executed once for every lagging indicator in the register
+Steps~2 to~7 form a loop executed once for every lagging SPI in the register
 built in Step~1. The complete sequence is shown in
 Figure~\ref{fig:derivation_flow}. The method is architecture-independent in its
 reasoning, because the subsystem decomposition in Step~3 names the functions that any
@@ -35,9 +35,7 @@ Section~\ref{sec:method_signal}.
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=10.5cm]{spi_derivation_flow}
-    \caption{The seven-step causal-chain derivation method. Steps~2 to~7 are executed
-    once for each lagging safety performance indicator in the register produced by
-    Step~1, and the loop terminates when the register is exhausted.}
+    \caption[The seven steps of the Causal Chain Derivation Method]{The seven steps of the Causal Chain Derivation Method. Steps~2 to~7 are repeated for each lagging SPI in the register.}
     \label{fig:derivation_flow}
 \end{figure}
 
@@ -55,20 +53,20 @@ domain violations. Near-miss and last-resort response events are the preferred
 starting point, because they occur more frequently than collisions yet carry the same
 causal information, which mirrors the precursor rationale of
 Section~\ref{sec:sota_reactive_proactive}. A selection rule governs the register: each
-lagging indicator must resolve to exactly one proximate cause in Step~2, and a
+lagging SPI must resolve to exactly one proximate cause in Step~2, and a
 candidate that resolves to several unrelated causes is defined too broadly and is
 split before proceeding.
 
 \section{Proximate Cause by the Prevention Test}
 \label{sec:method_proximate}
 
-Step~2 identifies the proximate cause of each lagging indicator by applying the
+Step~2 identifies the proximate cause of each lagging SPI by applying the
 prevention test, which asks whether the loss event would have been prevented if one
 condition had been corrected at the last possible moment. This test is the
 counterfactual test of Why-Because Analysis applied prospectively
 \cite{ladkin1998}. The answer is expressed as a functional impossibility in passive
 form, of the type that the system could not perform a required action, and exactly one
-proximate cause is admitted per lagging indicator. The boundary between a proximate
+proximate cause is admitted per lagging SPI. The boundary between a proximate
 and an intermediate cause is set by whether a response window remained after the
 failure. If a detection failure left no time for any response, the detection failure
 is the proximate cause, whereas if a response window remained and was not used, the
@@ -80,7 +78,7 @@ proximate cause.
 
 Step~3 decomposes the proximate cause into intermediate causes using the gate logic of
 Fault Tree Analysis \cite{iec61025}. An OR gate applies when any one cause is
-sufficient on its own, which requires a separate leading indicator for each branch and
+sufficient on its own, which requires a separate leading SPI for each branch and
 is the common case for perception and planning failures. An AND gate applies when the
 causes must co-occur because redundancy is present, in which case a single shared
 indicator can suffice. The gate for a pair of candidate causes is determined by asking
@@ -151,8 +149,7 @@ internal degradation usually precedes its kinematic consequence.
 
 \begin{table}[htbp]
     \centering
-    \caption{The two indicator tiers produced by the observability and independence
-    check of Step~5.}
+    \caption[The two indicator tiers produced by the observability and independence check of Step~5]{The two indicator tiers produced by the observability and independence check of Step~5.}
     \label{tab:tiers}
     \begin{tabular}{@{}lll@{}}
         \toprule
@@ -212,7 +209,7 @@ between the five was run, and none is implied.
 
 \begin{table}[htbp]
 \centering
-\caption{Options for the metric threshold. Five ways to set the metric threshold $\theta$ compared by the data and assumptions they require.}
+\caption[Options for the metric threshold]{Options for the metric threshold. Five ways to set the metric threshold $\theta$ compared by the data and assumptions they require.}
 \label{tab:threshold_methods}
 \footnotesize
 \setlength{\tabcolsep}{4pt}
@@ -320,17 +317,17 @@ of the evaluation; only the left-turn case is carried into the empirical work of
 Chapter~\ref{ch:results}, in line with the scope set in
 Section~\ref{sec:intro_scope}. Each example begins from a lagging
 indicator, identifies a single proximate cause, decomposes it with an OR gate into two
-intermediate causes attributed to distinct subsystems, and yields one leading indicator
+intermediate causes attributed to distinct subsystems, and yields one leading SPI
 per branch. The left-turn example is developed in full in
-Figure~\ref{fig:causal_chain_example}. Its lagging indicator is the rate of collisions
+Figure~\ref{fig:causal_chain_example}. Its lagging SPI is the rate of collisions
 with an oncoming vehicle, its proximate cause is that the ego vehicle occupied the
 conflict area while an oncoming vehicle was closing on it and no avoidance action
 succeeded in time, and its two branches are a gap that was already insufficient at the
 moment of commitment, attributed to planning, and a closing speed that exceeded what
 the turn arc allowed, attributed to prediction. The example also illustrates the
 placement of the reaction tier. An emergency-braking activation with an oncoming
-vehicle inside the collision horizon is not a lagging indicator, because no loss has
-yet occurred; it is an intermediate leading indicator, the last-resort mitigation
+vehicle inside the collision horizon is not a lagging SPI, because no loss has
+yet occurred; it is an intermediate leading SPI, the last-resort mitigation
 nearest the loss, and it is therefore positioned above the kinematic decomposition and
 attached to the safety case independently of it rather than being derived from the
 kinematic branches. The two kinematic branches
@@ -340,14 +337,12 @@ Section~\ref{sec:method_thresholds}.
 
 \begin{table}[htbp]
     \centering
-    \caption{Three worked derivations, one per use case, from a lagging indicator
-    through its proximate cause to a pair of leading indicators, each attributed to the
-    functional subsystem in which its cause originates.}
+    \caption[Worked derivations for three use cases]{Worked derivations for three use cases. Lagging SPI, proximate cause and leading SPIs with the subsystem of origin.}
     \label{tab:examples}
     \small
     \begin{tabular}{@{}>{\raggedright\arraybackslash}p{2.6cm} >{\raggedright\arraybackslash}p{5.4cm} >{\raggedright\arraybackslash}p{5.6cm}@{}}
         \toprule
-        \textbf{Use case} & \textbf{Lagging indicator and proximate cause} & \textbf{Leading indicators (subsystem)} \\
+        \textbf{Use case} & \textbf{Lagging SPI and proximate cause} & \textbf{Leading SPIs (subsystem)} \\
         \midrule
         Left turn & collision with an oncoming vehicle; the
         conflict area was occupied while an oncoming vehicle was closing and no
@@ -366,36 +361,21 @@ Section~\ref{sec:method_thresholds}.
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=15cm,height=0.86\textheight,keepaspectratio]{spi_causal_chain_example}
-    \caption{Worked causal-chain derivation for the left-turn use case. The lagging
-    indicator, a collision with an oncoming vehicle, is decomposed through its proximate
-    cause and an OR gate into two subsystem-level intermediate causes, each yielding a
-    leading indicator with its own earliest observable signal and lead time. The
-    emergency-braking activation is the intermediate leading indicator of the reaction
-    tier and attaches to the safety case independently of the kinematic branches.}
+    \caption[Causal-chain derivation for the oncoming-vehicle conflict]{Causal-chain derivation for the oncoming-vehicle conflict, from the lagging SPI to the leading SPIs of the ONC chain.}
     \label{fig:causal_chain_example}
 \end{figure}
 
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=15cm,height=0.86\textheight,keepaspectratio]{spi_causal_chain_ped}
-  \caption{Worked causal-chain derivation for the pedestrian-crossing
-    conflict. The lagging indicator, a collision with a crossing pedestrian,
-    is decomposed through its proximate cause and an OR gate into two
-    subsystem-level intermediate causes. Only the planning branch yields an
-    indicator that survives Step~5; the perception branch is derived but is
-    of the architectural tier and therefore outside the empirical scope of
-    this work.}
+  \caption[Causal-chain derivation for the pedestrian-crossing conflict]{Causal-chain derivation for the pedestrian-crossing conflict, from the lagging SPI to the leading SPIs of the PED chain.}
   \label{fig:chain_ped}
 \end{figure}
 
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=15cm,height=0.86\textheight,keepaspectratio]{spi_causal_chain_rear}
-  \caption{Worked causal-chain derivation for the following-vehicle conflict.
-    The chain carries no reaction-tier indicator, because the ego vehicle has
-    no last-resort mitigation directed rearward, and the branch attributing
-    the conflict to the follower's reaction delay is rejected at Step~5 as
-    not observable to the ego vehicle.}
+  \caption[Causal-chain derivation for the following-vehicle conflict]{Causal-chain derivation for the following-vehicle conflict, from the lagging SPI to the leading SPI of the REAR chain.}
   \label{fig:chain_rear}
 \end{figure}
 \section{Attachment to the Safety Case}
@@ -413,19 +393,19 @@ performance indicator to one claim of the argument tree and relate the character
 the indicator to how deep that claim sits:
 the lower the claim to which an indicator is attached, the more likely the
 indicator is to be leading \cite{diaz2022drspi}. In the method of this thesis the
-depth is not chosen freely but follows from the derivation. The lagging indicator
+depth is not chosen freely but follows from the derivation. The lagging SPI
 registered in Step~1 is attached to the goal that its loss event negates. The
 reaction-tier indicator is attached to the same goal, because it monitors the last
 mitigation before that loss rather than any single cause of it, which is why it
 was positioned above the kinematic decomposition in
-Section~\ref{sec:method_examples}. Each kinematic leading indicator is attached to
+Section~\ref{sec:method_examples}. Each kinematic leading SPI is attached to
 the sub-goal that negates the intermediate cause from which it was derived in
 Step~3.
 
 The sub-goals are obtained directly from the decomposition of Step~3. Every
 intermediate cause states that a required function was not delivered adequately,
 and its negation states that the function is delivered adequately; this negation
-becomes a sub-goal of the goal that the lagging indicator protects. Because the
+becomes a sub-goal of the goal that the lagging SPI protects. Because the
 decomposition uses an OR gate, each sub-goal is a premise without which the
 proximate cause can arise, so the failure of any one sub-goal puts the parent goal
 in doubt. A branch whose signal is rejected at Step~5 is not removed from the
@@ -438,7 +418,7 @@ use case, drawn in the form that Diaz and Woon use for their example argument tr
 with each indicator attached at the edge of the goal it monitors
 \cite{diaz2022drspi}. The top-level goal G1 is decomposed by the strategy S1 over
 the three conflict chains of the manoeuvre into the chain goals G2, G3 and G4, each
-of which denies the collision of its chain and carries the lagging indicator of
+of which denies the collision of its chain and carries the lagging SPI of
 that chain. The oncoming and pedestrian chain goals additionally carry their
 reaction-tier indicators, AEB\_ONC and AEB\_PED. The four kinematic indicators sit
 one level lower, on the sub-goals G2.1, G2.2, G3.1 and G4.1. The two branches
@@ -531,12 +511,7 @@ not observable to the ego vehicle.
 \node[ud, anchor=west] (L4) at ($(T3.east)+(0.5,0)$) {};
 \node[anchor=west, inner sep=2pt] at (L4.east) {undeveloped marker};
 \end{tikzpicture}
-\caption{Safety case argument for the unprotected left turn with the derived
-safety performance indicators attached. Each chain goal carries the lagging
-indicator of its chain and, where one exists, the reaction-tier indicator; the
-kinematic leading indicators are attached one level lower to the sub-goals that
-negate the intermediate causes of Step~3; branches rejected at Step~5 remain as
-undeveloped goals (presentation based on \cite{diaz2022drspi}).}
+\caption[Safety case for the unprotected left turn]{Safety case for the unprotected left turn with the attached SPIs (presentation based on \cite{diaz2022drspi}).}
 \label{fig:lti_safety_case}
 \end{figure}
 
@@ -548,9 +523,7 @@ is not taken in this work (Section~\ref{sec:method_spithreshold}).
 
 \begin{table}[htbp]
     \centering
-    \caption{Attachment of the nine indicators of the left-turn register. Each
-    indicator is stated in the form of Equation~(\ref{eq:method_spiform}) and
-    attached to the goal of Figure~\ref{fig:lti_safety_case} that it monitors.}
+    \caption[Attachment of the nine SPIs]{Attachment of the nine SPIs. Each SPI in the form of Equation~(\ref{eq:method_spiform}) and the goal of Figure~\ref{fig:lti_safety_case} it monitors.}
     \label{tab:spi_attachment}
     \small
     \begin{tabular}{@{}l l l >{\raggedright\arraybackslash}p{8.6cm}@{}}
@@ -582,8 +555,8 @@ is not taken in this work (Section~\ref{sec:method_spithreshold}).
 
 The attachment fixes how a violation is to be read. A GAP\_TTC violation count
 that reaches its SPI threshold challenges G2.1 and, through it, puts G2 in doubt
-while the lagging indicator attached to G2 can still report no collision. The
-leading indicator therefore reports on a premise of the goal before the goal itself
+while the lagging SPI attached to G2 can still report no collision. The
+leading SPI therefore reports on a premise of the goal before the goal itself
 fails, which is the property illustrated in Figure~\ref{fig:spi_spectrum}. The
 converse reading is equally informative. A lagging violation on a chain goal with
 no preceding violation on any of its sub-goals indicates either that the loss arose
@@ -597,7 +570,7 @@ indicators of its chain before the decomposition is revised.
 
 Each attachment is recorded in the model of the safety case. The metric threshold
 $\theta$ and the SPI threshold $T$ are stored as dimension elements of the
-indicator, and the full derivation chain, from the lagging indicator through the
+indicator, and the full derivation chain, from the lagging SPI through the
 proximate and intermediate causes to the signal and its source, is stored in the
 traceability field. This closes the loop opened in Step~1, since the goal that
 began as a bare assertion now carries a monitorable claim, and a violation

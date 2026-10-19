@@ -109,11 +109,7 @@ the practitioner \cite{ul4600}.
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=15cm]{spi_leading_lagging_spectrum}
-    \caption{Relationship between the depth of a safety-case goal and the leading or
-    lagging character of the attached safety performance indicator. Indicators on deep
-    sub-goals tend to be leading and provide earlier warning, whereas indicators on
-    high-level goals tend to be lagging (based on \cite{diaz2022drspi} and
-    \cite{koopman2022howsafe}).}
+    \caption[Goal depth and the character of the attached indicator]{Goal depth and the character of the attached indicator (based on \cite{diaz2022drspi} and \cite{koopman2022howsafe}).}
     \label{fig:spi_spectrum}
 \end{figure}
 
@@ -167,9 +163,7 @@ indicators are drawn.
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=13cm]{fault_tree_example}
-    \caption{Deductive top-down structure of a fault tree: an undesired top event is
-    decomposed through OR and AND gates into intermediate events and basic events
-    (recreated, based on the fault-tree method of IEC~61025 \cite{iec61025}).}
+    \caption[Structure of a fault tree]{Structure of a fault tree with OR and AND gates (based on \cite{iec61025}).}
     \label{fig:fault_tree}
 \end{figure}
 
@@ -191,11 +185,7 @@ a leading indicator monitors sitting on the preventive side.
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=15cm]{swiss_cheese_bowtie}
-    \caption{Barrier-based accident model. Left: the Swiss Cheese view, in which a loss
-    event occurs when weaknesses in successive defensive layers align. Right: the
-    bowtie, combining a fault tree of threats and an event tree of consequences around
-    a central loss event, with preventive and mitigating barriers made explicit
-    (recreated, based on \cite{reason2000} and \cite{ccps2018bowties}).}
+    \caption[Barrier-based accident models]{Barrier-based accident models. Left: Swiss Cheese model; right: bowtie (based on \cite{reason2000} and \cite{ccps2018bowties}).}
     \label{fig:bowtie}
 \end{figure}
 
@@ -219,10 +209,7 @@ an unsafe control action, and hence a candidate leading indicator, can be locate
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=11cm]{stamp_control_structure}
-    \caption{Hierarchical control structure of the Systems-Theoretic Accident Model and
-    Processes. Safety is treated as the enforcement of constraints through control
-    actions, with feedback informing each controller; inadequate control actions are
-    the candidate sites for leading indicators (recreated, based on \cite{leveson2011}).}
+    \caption[Hierarchical control structure of STAMP]{Hierarchical control structure of the Systems-Theoretic Accident Model and Processes (based on \cite{leveson2011}).}
     \label{fig:stamp}
 \end{figure}
 
@@ -309,9 +296,7 @@ structure and the common omission visible in one view.
 
 \begin{table}[htbp]
     \centering
-    \caption{Pairing of leading and lagging indicators across mature safety domains,
-    showing the source of the leading indicator in each domain and whether a
-    reproducible derivation procedure is published.}
+    \caption[Leading and lagging indicators across safety domains]{Leading and lagging indicators across safety domains. Source of the leading indicator and availability of a published derivation procedure.}
     \label{tab:crossdomain}
     \small
     \begin{tabular}{@{}>{\raggedright\arraybackslash}p{2.7cm} >{\raggedright\arraybackslash}p{3.1cm} >{\raggedright\arraybackslash}p{4.0cm} >{\raggedright\arraybackslash}p{3.4cm}@{}}
@@ -442,17 +427,17 @@ and independence, calibrates the metric threshold $\theta$ while leaving the SPI
 resulting leading \acp{SPI} to a \ac{GSN} safety case modelled in a \ac{GSN} modelling tool.
 The indicators are evaluated from simulation data generated in the CARLA simulator
 \cite{dosovitskiy2017carla} with an explicit distinction between detection and
-lead-time adequacy, separated by conflict actor. The continuous assurance loop within
-which the derived indicators operate is summarised in
-Figure~\ref{fig:assurance_loop} and frames the methodology that follows.
+lead-time adequacy, separated by conflict actor. The derived indicators operate
+within the continuous assurance loop shown in Figure~\ref{fig:assurance_loop}. The
+\acp{SPI} are derived from the claims of the assurance case and monitored against field
+or simulation data. A violation challenges the claim to which the \ac{SPI} is attached
+and triggers a change-impact analysis, which identifies the affected claims and
+evidence, and an update of the assurance case with the new evidence or
+counter-evidence. This loop frames the methodology that follows.
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=15cm]{spi_assurance_loop}
-    \caption{Continuous operational safety assurance loop. Safety performance
-    indicators derived from the claims of the assurance case are monitored against
-    field or simulation data; a threshold violation triggers a change-impact analysis
-    and an update of the assurance case within a SafetyDevOps process (based on
-    \cite{laxman2024} and \cite{laxman2025}).}
+    \caption[Continuous operational safety assurance loop]{Continuous operational safety assurance loop (based on \cite{laxman2024} and \cite{laxman2025}).}
     \label{fig:assurance_loop}
 \end{figure}

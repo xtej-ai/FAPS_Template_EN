@@ -5,7 +5,7 @@ Chapter~\ref{ch:results} states what the register does on 94,816 simulated left
 turns. This chapter asks what those findings establish and what they do not.
 
 Section~\ref{sec:disc_scope} fixes the scope of the claim. The three sections
-that follow interpret the main findings: why leading indicators are needed at all
+that follow interpret the main findings: why leading SPIs are needed at all
 (Section~\ref{sec:disc_leading}), what separates an indicator that tracks the
 configuration from one that tracks exposure (Section~\ref{sec:disc_exposure}),
 and why the conflict geometry decides the warning time
@@ -33,10 +33,10 @@ reproducible exposure. It shows nothing about how safe the simulated vehicle is,
 and a collision count obtained under a generator built to provoke collisions
 carries no information about collision frequency in operation.
 
-\section{Why Leading Indicators Are Needed}
+\section{Why Leading SPIs Are Needed}
 \label{sec:disc_leading}
 
-The argument for leading indicators is usually made in principle, by observing
+The argument for leading SPIs is usually made in principle, by observing
 that losses are too rare to count. The two configurations evaluated here allow it
 to be made with measurements instead, because they place the same register in
 both regimes.
@@ -44,16 +44,16 @@ both regimes.
 In Campaign~1 the leading SPIs and the collisions are of comparable size. The
 oncoming chain records 3.8 GAP\_TTC violations, 1.9 REQ\_DECEL violations and 1.2
 AEB\_ONC events per collision, and the pedestrian chain 1.6 PED\_CPA violations
-and 1.0 AEB\_PED events per collision. In that regime the lagging indicator is
+and 1.0 AEB\_PED events per collision. In that regime the lagging SPI is
 itself countable, and a monitoring process would gain little from the leading
 one.
 
 In Campaigns~2 and~3 the position reverses. Across 75,509 runs a single collision
 occurs, while the leading SPIs continue to be violated between 527 and 9,841
-times. A process that monitored only the lagging indicator would have almost
+times. A process that monitored only the lagging SPI would have almost
 nothing to observe, whereas every leading SPI still produces a measurable
 quantity. This is the regime in which operational monitoring actually takes
-place, and it is the regime in which the leading indicator is the only thing left
+place, and it is the regime in which the leading SPI is the only thing left
 to measure.
 
 The pattern is the precursor relation that underlies pyramid models of accident
@@ -172,7 +172,7 @@ of those 481 contacts occur with a standing ego vehicle, which a CARLA walker
 does not avoid. The low-collision configuration would then look dangerous for a
 reason that has nothing to do with the driving behaviour under observation, and
 every pedestrian indicator would be scored against the wrong events. A lagging
-indicator that counts the wrong events corrupts every leading indicator derived
+indicator that counts the wrong events corrupts every leading SPI derived
 from it, so the first step of the derivation carries at least as much weight as
 the steps that follow it.
 
@@ -285,8 +285,7 @@ would address it.
 
 \begin{table}[htbp]
     \centering
-    \caption{Limitations of the evaluation. The table states each limitation,
-    the consequence it has for the results and the step that would address it.}
+    \caption[Limitations of the evaluation]{Limitations of the evaluation, their consequence for the results and the step that would address them.}
     \label{tab:limitations}
     \footnotesize
     \setlength{\tabcolsep}{4pt}

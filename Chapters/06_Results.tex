@@ -28,9 +28,7 @@ Section~\ref{sec:exp_collision}.
 
 \begin{table}[htbp]
     \centering
-    \caption{Collisions per conflict chain. The table counts the collision runs
-    of each chain per campaign under the collision definition of
-    Section~\ref{sec:exp_collision}.}
+    \caption[Collisions per conflict chain]{Collisions per conflict chain and campaign under the collision definition of Section~\ref{sec:exp_collision}.}
     \label{tab:collisions_per_chain}
     \small
     \begin{tabular}{@{}lrrrr@{}}
@@ -57,18 +55,22 @@ The question this section answers is how often each leading SPI was violated,
 set against how often its chain produced a collision, and whether that relation
 survives the change from the provoked configuration to realistic driving.
 Figure~\ref{fig:6_1_violations_collisions} and
-Table~\ref{tab:violations_collisions} give the counts.
+Table~\ref{tab:violations_collisions} give the counts. In the figure, the bars give
+the number of eligible runs in which each leading SPI was violated and, hatched, the
+number of collision runs of the chain, separately for Campaign~1 and for Campaigns~2
+and~3. The metric thresholds are calibrated on Campaign~1 and applied unchanged to all
+94,816 runs.
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=16cm]{fig_6_1_violations_collisions.pdf}
-\caption{Leading SPI violations and collisions per conflict chain. Bars give the number of eligible runs in which each leading SPI was violated and the number of collision runs of the chain (hatched), split into Campaign 1 and Campaigns 2 and 3; the metric thresholds are calibrated on Campaign 1 and applied unchanged to all 94,816 runs.}
+\caption[Leading SPI violations and collisions per conflict chain]{Leading SPI violations and collisions per conflict chain, for Campaign~1 and for Campaigns~2 and~3.}
 \label{fig:6_1_violations_collisions}
 \end{figure}
 
 \begin{table}[htbp]
 \centering
-\caption{Violations and collisions. The table gives the number of runs per configuration in which each leading SPI was violated, and the collision runs of its chain.}
+\caption[Violations and collisions]{Violations and collisions. Runs per configuration with a violation of each leading SPI and collision runs of its chain.}
 \label{tab:violations_collisions}
 \small
 \begin{tabular}{@{}llrrrrr@{}}
@@ -116,25 +118,29 @@ time by which it precedes it bounds any response. This section reports both.
 Figure~\ref{fig:6_2_detection} gives the share of collision runs with an earlier
 violation, Figure~\ref{fig:6_3_lead_time} the distribution of the lead time, and
 Table~\ref{tab:lead_time} both as counts. Lead time is measured from the first
-violation in the run to the collision.
+violation in the run to the collision. In Figure~\ref{fig:6_3_lead_time} the markers
+give the median and the bars the interquartile range of the lead time, and the numbers
+at the right count the collisions warned at least 1\,s ahead. AEB\_PED is not shown,
+because its interval does not measure a warning time
+(Section~\ref{sec:disc_aebped}).
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=16cm]{fig_6_2_detection.pdf}
-\caption{Collision runs with a violation before the collision. For each leading SPI, the bar divides the collision runs of its chain into runs in which the SPI was violated before the collision and runs without such a violation, over all 94,816 analysed runs.}
+\caption[Collision runs with a violation before the collision]{Collision runs with a violation before the collision, per leading SPI over all analysed runs.}
 \label{fig:6_2_detection}
 \end{figure}
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=16cm]{fig_6_3_lead_time.pdf}
-\caption{Lead time of the leading SPIs. Markers give the median and bars the interquartile range of the time from the first violation to the collision in collision runs with an earlier violation; the numbers at the right count collisions warned at least 1\,s ahead. AEB\_PED is omitted because its lead time does not measure a warning.}
+\caption[Lead time of the leading SPIs]{Lead time of the leading SPIs. Median and interquartile range of the time from the first violation to the collision.}
 \label{fig:6_3_lead_time}
 \end{figure}
 
 \begin{table}[htbp]
 \centering
-\caption{Detection and lead time. The table counts collision runs with an earlier violation and gives the time from the first violation to the collision.}
+\caption[Detection and lead time]{Detection and lead time. Collision runs with an earlier violation and time from the first violation to the collision.}
 \label{tab:lead_time}
 \small
 \begin{tabular}{@{}llrrrr@{}}
@@ -187,7 +193,7 @@ Table~\ref{tab:detection_statistics} the measures derived from it.
 
 \begin{table}[htbp]
 \centering
-\caption{Confusion counts. The table classifies every eligible run by whether the SPI was violated before any collision and whether a collision of the chain occurred.}
+\caption[Confusion counts]{Confusion counts. Eligible runs classified by violation before any collision and by collision of the chain.}
 \label{tab:confusion_counts}
 \small
 \begin{tabular}{@{}llrrrr@{}}
@@ -207,7 +213,7 @@ REAR\_TTC & REAR & 101 & 11,983 & 0 & 77,798 \\
 
 \begin{table}[htbp]
 \centering
-\caption{Detection statistics. Precision, recall, false-alarm rate and relative risk of each leading SPI over all eligible runs, with 95\,\% intervals.}
+\caption[Detection statistics]{Detection statistics. Precision, recall, false-alarm rate and relative risk of each leading SPI over all eligible runs, with 95\,\% intervals.}
 \label{tab:detection_statistics}
 \footnotesize
 \setlength{\tabcolsep}{4pt}
@@ -256,7 +262,7 @@ without the gate. Table~\ref{tab:conflict_gate} gives the comparison.
 
 \begin{table}[htbp]
 \centering
-\caption{Oncoming conflict gate. The table compares the oncoming chain without and with the conflict gate.}
+\caption[Oncoming conflict gate]{Oncoming conflict gate. The table compares the oncoming chain without and with the conflict gate.}
 \label{tab:conflict_gate}
 \small
 \begin{tabular}{@{}lrrr@{}}
@@ -288,7 +294,7 @@ a relative shift of 15\,\%.
 
 \begin{table}[htbp]
 \centering
-\caption{Threshold poolability. Metric thresholds calibrated separately per campaign and their relative shift.}
+\caption[Threshold poolability]{Threshold poolability. Metric thresholds calibrated separately per campaign and their relative shift.}
 \label{tab:poolability}
 \small
 \begin{tabular}{@{}lrrrrrr@{}}
@@ -327,11 +333,7 @@ on a vehicle.
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=16cm]{fig_6_5_dashboard.png}
-    \caption{The SPI register under monitoring. The dashboard presents each
-    indicator with its metric threshold, the baseline violations of
-    Campaigns~2 and~3, a detection scorecard per chain and a funnel from
-    eligible runs to collisions, over the same results as the preceding
-    sections.}
+    \caption[The SPI register in the monitoring dashboard]{The SPI register in the monitoring dashboard.}
     \label{fig:6_5_dashboard}
 \end{figure}
 
@@ -345,7 +347,7 @@ operating-condition breakdown.
 
 \begin{table}[htbp]
 \centering
-\caption{SPI register as monitored. Identifier, type and metric threshold of each SPI, together with its baseline violations in Campaigns~2 and~3.}
+\caption[SPI register as monitored]{SPI register as monitored. Identifier, type and metric threshold of each SPI, together with its baseline violations in Campaigns~2 and~3.}
 \label{tab:dashboard_register}
 \small
 \begin{tabular}{@{}llrr@{}}
@@ -374,7 +376,7 @@ chain.
 
 \begin{table}[htbp]
 \centering
-\caption{Chain detection scorecard. Collision runs of each chain with a violation before the collision, for each SPI and for any SPI of the chain.}
+\caption[Chain detection scorecard]{Chain detection scorecard. Collision runs of each chain with a violation before the collision, for each SPI and for any SPI of the chain.}
 \label{tab:dashboard_scorecard}
 \small
 \begin{tabular}{@{}llrrrr@{}}
@@ -405,7 +407,7 @@ the pedestrian chain.
 
 \begin{table}[htbp]
 \centering
-\caption{Leading-to-lagging funnel. Eligible runs of each chain with at least one kinematic leading violation, an emergency braking event and a collision.}
+\caption[Leading-to-lagging funnel]{Leading-to-lagging funnel. Eligible runs of each chain with at least one kinematic leading violation, an emergency braking event and a collision.}
 \label{tab:dashboard_funnel}
 \small
 \begin{tabular}{@{}lrrrr@{}}

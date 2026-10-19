@@ -1,4 +1,4 @@
-\chapter[Introduction]{Introduction to Leading Indicators for Operational Safety Assurance}
+\chapter[Introduction]{Introduction to the Operational Safety Assurance of Automated Driving Systems}
 \label{ch:introduction}
 
 This chapter sets out why the operational safety assurance of an automated driving
@@ -11,17 +11,16 @@ follow.
 \section{Motivation}
 \label{sec:intro_motivation}
 
-An automated driving system reaches public roads only once a safety case has argued
-that it is acceptably safe for a stated operating domain, built around the kind of
-structured, evidence-supported argument introduced in Chapter~\ref{ch:fundamentals}.
-That argument is constructed and reviewed before deployment, yet its subject keeps
-producing evidence about itself only once it is operating among road users whose
-behaviour was never fully enumerable at design time. Some of the doubts an engineer
-raises while building the argument cannot be closed through development-time testing
-at all, because the evidence that would close them is precisely the evidence that
-operation itself produces. A safety case for such a system is therefore not a document
-that is completed once at approval. It remains open on specific, identifiable points,
-and those points stay open until operational evidence closes them.
+An automated driving system is released for public roads only after a safety case
+has argued that it is acceptably safe within its \ac{ODD}, using the structured,
+evidence-based argument introduced in Chapter~\ref{ch:fundamentals}. This argument is
+constructed and reviewed before deployment, whereas the traffic in which the system
+later operates, and the behaviour of the other road users in it, cannot be described
+completely at design time. Some of the assumptions and doubts recorded while the
+argument is built therefore cannot be resolved by development-time testing alone.
+Evidence collected during operation would help to confirm or to challenge these
+unresolved assumptions, so that the validity of the safety case can be checked after
+release instead of being taken as settled at approval.
 
 The scale of the difficulty is not small. Demonstrating, from observed outcomes alone,
 that an automated driving system achieves a fatality rate meaningfully better than the
@@ -29,8 +28,8 @@ human baseline would require, by established estimates, on the order of hundreds
 millions to billions of kilometres of driving \cite{kalra2016driving}, a volume no
 fleet reaches within a commercially relevant timeframe. Waiting for lagging evidence,
 meaning evidence recorded only once a hazardous outcome has already occurred, is
-consequently not a workable basis for closing the open points in an operational safety
-case. Both ANSI/UL~4600 and PAS~1881 address this directly: a deployed system is
+consequently not a workable basis for resolving these assumptions in an operational
+safety case. Both ANSI/UL~4600 and PAS~1881 address this directly: a deployed system is
 required to be monitored through indicators that anticipate a hazardous outcome rather
 than merely record it, and reliance on lagging indicators alone is explicitly ruled out
 \cite{ul4600, pas1881}. Koopman and Wagner make a closely related argument from the
@@ -43,20 +42,22 @@ What neither standard supplies, and what the review in Chapter~\ref{ch:sota} sho
 wider literature does not supply either, is a procedure for constructing such an
 indicator in the first place. Existing work is well developed at locating where in a
 safety argument an indicator is needed and at specifying how a system should respond
-once one is violated, but the step in between, deriving the indicator's signal, source
-and threshold from a specific, unresolved doubt in the argument, is left to engineering
-judgement exercised case by case. This thesis develops a systematic procedure for that
+once one is violated, but the step in between, deriving the indicator itself from a
+specific, unresolved doubt in the argument, is left to engineering judgement exercised
+case by case. Deriving an indicator means fixing three things: the metric that is
+measured, for example a time to collision, the data from which this metric is computed,
+and the thresholds that decide when a measured value counts as a violation. This thesis develops a systematic procedure for that
 step, the Causal Chain Derivation Method (CCDM) presented in Chapter~\ref{ch:methodology},
 which takes an unresolved doubt surviving the eliminative elaboration of a Goal
-Structuring Notation claim and derives from it a leading indicator whose signal, source
-and threshold are all traceable back to the claim it addresses. The method is developed
+Structuring Notation claim and derives from it a leading \ac{SPI} whose metric, data
+and thresholds are all traceable back to the claim it addresses. The method is developed
 generically and then validated empirically against the criteria set out in the same
 chapter.
 
 \section{Problem Statement}
 \label{sec:intro_problem}
 
-The gap that this thesis addresses is therefore narrow and specific. It is not the
+The gap addressed in this thesis is narrow and specific. It is not the
 absence of a requirement to monitor, which the standards already impose, nor the
 absence of a place in the argument at which an indicator belongs, which the
 assurance-case literature already supplies. It is the absence of a reproducible
@@ -72,7 +73,7 @@ vehicles with autonomous driving functions already imposes operational monitorin
 obligations on deployed systems, and the assessment method under development at the
 United Nations Economic Commission for Europe points toward comparable in-service
 monitoring and reporting expectations at the international level \cite{afgbv2022,
-natm2021}. A method that derives leading indicators traceably from a safety case,
+natm2021}. A method that derives leading \acp{SPI} traceably from a safety case,
 rather than one that depends on an individual engineer's judgement repeated anew for
 every claim, is accordingly not only a methodological convenience but a step toward
 meeting an obligation that regulation is moving to require outright.
@@ -83,16 +84,14 @@ meeting an obligation that regulation is moving to require outright.
 The objective of this thesis is to develop this derivation procedure and to establish
 whether the indicators it produces are usable for the operational safety assurance of
 an automated driving system. Three research questions structure the work. The first
-asks how a leading safety performance indicator, comprising a signal, a source, and a
-threshold, can be derived systematically and traceably from an unresolved doubt in a
+asks how a leading \ac{SPI}, comprising a metric, the data from which it is computed
+and its thresholds, can be derived systematically and traceably from an unresolved doubt in a
 Goal Structuring Notation safety case. The second asks whether the indicators so
 derived detect a developing violation early enough to permit a response, rather than
 merely confirming that a violation has occurred. The third asks whether a single
 derivation method transfers across conflicts of different character, namely an
 angular crossing conflict with oncoming traffic, a lateral crossing conflict with a
-pedestrian and a longitudinal following conflict, within one manoeuvre. The first
-question is addressed by the method of Chapter~\ref{ch:methodology}, and the second and
-third by its empirical evaluation in Chapter~\ref{ch:results}.
+pedestrian and a longitudinal following conflict, within one manoeuvre.
 
 \section{Scope of the Empirical Validation}
 \label{sec:intro_scope}
@@ -100,7 +99,7 @@ third by its empirical evaluation in Chapter~\ref{ch:results}.
 The empirical validation is carried out on an unprotected left turn at an urban
 intersection, in which the ego vehicle must negotiate oncoming traffic and a crossing
 pedestrian without a protected signal phase, while separately maintaining a safe
-separation from traffic following behind it. The left turn across the path of oncoming traffic is treated in the literature as
+separation from traffic following behind it. The left turn across the path of oncoming traffic is considered
 one of the most demanding interactions an automated vehicle meets at an
 intersection, as reviewed in Section~\ref{sec:sota_conflicts}. The scenario is a demanding one for a single
 derivation method to be tested against, precisely because it folds together three
@@ -115,7 +114,7 @@ directly.
 The evaluation uses simulation data in place of field data. The method and its
 indicators are formulated for field data, that is, the operational records of a
 deployed fleet, but field data containing loss events at the scale needed to score
-leading indicators against them is not available to this work. A simulation
+leading \acp{SPI} against them is not available to this work. A simulation
 provides what a fleet cannot yet provide: a large number of manoeuvres with known
 ground truth, controlled variation of the operating conditions and enough
 collisions to evaluate each indicator against. The CARLA campaigns therefore
