@@ -87,5 +87,5 @@
 <rect x="10.00" y="610.00" width="486.00" height="48.00" rx="3" ry="3" fill="#dce5f1" stroke="#9fb3cd" stroke-width="0.9"/>
 <text x="17.00" y="626.00" font-family="Arial, Helvetica, sans-serif" font-size="9.00" fill="#1f3b63" font-weight="bold" xml:space="preserve"><tspan>VALIDATE</tspan></text>
 <text x="17.00" y="640.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#2c4062" xml:space="preserve"><tspan>Temporal precedence is checked against the ONC collision only. Incidents are attributed by actor identity, so a pedestrian or a</tspan></text>
-<text x="17.00" y="651.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#2c4062" xml:space="preserve"><tspan>rear impact is never counted here. The metric is separated between uneventful and ONC-collision manoeuvres.</tspan></text>
+<text x="17.00" y="651.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#2c4062" xml:space="preserve"><tspan>rear impact is never counted here. Only runs with a gated oncoming vehicle are scored.</tspan></text>
 </svg>

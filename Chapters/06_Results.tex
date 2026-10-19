@@ -85,6 +85,7 @@ AEB\_PED & PED & 37,309 & 851 & 657 & 1,508 & 814 / 1 \\
 REAR\_TTC & REAR & 89,882 & 2,243 & 9,841 & 12,084 & 101 / 0 \\
 \bottomrule
 \end{tabular}
+\par\smallskip\footnotesize\raggedright C1: Campaign~1; C2, 3: Campaigns~2 and~3.
 \end{table}
 
 The eligible populations differ between the two configurations. For the oncoming
@@ -158,7 +159,7 @@ REAR\_TTC & REAR & 101 of 101 & 1.15\,s & 1.05 to 3.30\,s & 87 of 101 \\
 \par\smallskip\footnotesize\raggedright Lead time is measured from the first violation in the run.
 \end{table}
 
-The two kinematic indicators that watch the first branch of their chain precede
+The three kinematic indicators that watch the first branch of their chain precede
 nearly every collision of that chain: GAP\_TTC 527 of 540 oncoming-vehicle
 collisions, PED\_CPA 790 of 815 pedestrian collisions and REAR\_TTC all 101
 following-vehicle collisions. REQ\_DECEL precedes 317 of 540 and AEB\_ONC 286 of
@@ -213,7 +214,7 @@ REAR\_TTC & REAR & 101 & 11,983 & 0 & 77,798 \\
 
 \begin{table}[htbp]
 \centering
-\caption[Detection statistics]{Detection statistics. Precision, recall, false-alarm rate and relative risk of each leading SPI over all eligible runs, with 95\,\% intervals.}
+\caption[Detection statistics]{Detection statistics. Precision, recall, false-alarm rate and relative risk of each leading SPI over all eligible runs, with 95\,\% intervals for precision, recall and relative risk.}
 \label{tab:detection_statistics}
 \footnotesize
 \setlength{\tabcolsep}{4pt}
@@ -254,9 +255,9 @@ least 1,097.4 for REAR\_TTC.
 \section{Effect of the Oncoming Conflict Gate}
 \label{sec:results_gate}
 
-Step~5 of the derivation requires that an indicator be computed only where its
-conflict can arise. For the oncoming chain this is implemented by the conflict
-gate defined in Chapter~\ref{ch:methodology}, and its effect is isolated by scoring the
+Each chain is scored only on the runs in which its conflict can arise. For the
+oncoming chain this is implemented by the conflict gate defined in
+Section~\ref{sec:exp_criteria}, and its effect is isolated by scoring the
 three oncoming-vehicle indicators twice on the same runs, once with and once
 without the gate. Table~\ref{tab:conflict_gate} gives the comparison.
 
@@ -289,8 +290,9 @@ The metric thresholds are calibrated on Campaign~1 and applied to all three
 campaigns, which is defensible only if the underlying distributions are close
 enough for one value to stand for all of them. To test this, each threshold was
 recalibrated separately on each campaign and the pairwise relative shift
-examined. Table~\ref{tab:poolability} gives the result; pooling is refused above
-a relative shift of 15\,\%.
+examined against the criterion of Section~\ref{sec:exp_calibration}, under which
+pooling is refused above a relative shift of 15\,\%. Table~\ref{tab:poolability}
+gives the result.
 
 \begin{table}[htbp]
 \centering
@@ -307,7 +309,7 @@ PED\_CPA & 1.174 & 1.619 & 1.617 & 37.90\,\%, no & 37.74\,\%, no & 0.12\,\% \\
 REAR\_TTC & 2.679 & 2.517 & 2.500 & 6.08\,\% & 6.71\,\% & 0.67\,\% \\
 \bottomrule
 \end{tabular}
-\par\smallskip\footnotesize\raggedright Pooling is refused above 15\,\% relative shift (marked no).
+\par\smallskip\footnotesize\raggedright C1, C2, C3: Campaigns~1, 2 and~3; $\theta$ in the unit of Table~\ref{tab:metric_thresholds}. Pooling is refused above 15\,\% relative shift (marked no).
 \end{table}
 
 Campaigns~2 and~3 agree on every metric threshold to within 0.67\,\%, and a
@@ -333,15 +335,16 @@ on a vehicle.
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=16cm]{fig_6_5_dashboard.png}
-    \caption[The SPI register in the monitoring dashboard]{The SPI register in the monitoring dashboard.}
+    \caption[The SPI register in the monitoring dashboard]{The SPI register in the monitoring dashboard. Register, detection scorecard per chain, funnel from eligible runs to collisions and violations per operating condition.}
     \label{fig:6_5_dashboard}
 \end{figure}
 
 The dashboard presents the register itself, a detection scorecard per chain, a
 funnel from eligible runs to collisions, and tables of violations and collisions
 per operating condition.
-Tables~\ref{tab:dashboard_register} to~\ref{tab:dashboard_funnel} give the three
-of these that bear on the register as a whole;
+Table~\ref{tab:dashboard_register}, Table~\ref{tab:dashboard_scorecard} and
+Table~\ref{tab:dashboard_funnel} give the three of these that bear on the register
+as a whole;
 Table~\ref{tab:dashboard_odd}, in Appendix~\ref{app:statistics}, gives the
 operating-condition breakdown.
 
@@ -365,11 +368,11 @@ LTI-PED-O1-COLLISION & lagging & -- & 1 of 28,885 \\
 LTI-REAR-O1-COLLISION & lagging & -- & 0 of 75,509 \\
 \bottomrule
 \end{tabular}
-\par\smallskip\footnotesize\raggedright Baseline: eligible runs of Campaigns~2 and~3 with a violation of the SPI; lagging rows count collisions. The baseline is a reference for the safety engineers who set T; T itself is not set in this work (Section~\ref{sec:method_spithreshold}).
+\par\smallskip\footnotesize\raggedright Baseline: eligible runs of Campaigns~2 and~3 with a violation of the SPI; lagging rows count collisions. The baseline is a reference for the safety engineers who set $T$; $T$ itself is not set in this work (Section~\ref{sec:method_spithreshold}).
 \end{table}
 
 The register holds nine SPIs, six leading and three lagging, each identified by
-use case, chain, tier and signal. In the baseline of Campaigns~2 and~3 the six
+use case, chain, dashboard code and signal. In the baseline of Campaigns~2 and~3 the six
 leading SPIs record between 527 and 9,841 violating runs, whereas the three
 lagging SPIs record one collision in total, which belongs to the pedestrian
 chain.
@@ -394,16 +397,17 @@ REAR & REAR\_TTC & 101 & 101 & 87 & 1.15\,s \\
 REAR & any REAR & 101 & 101 & 87 & 1.15\,s \\
 \bottomrule
 \end{tabular}
-\par\smallskip\footnotesize\raggedright \emph{any}: earliest violation among the chain's indicators.
+\par\smallskip\footnotesize\raggedright \emph{any}: earliest violation among the chain's indicators. The AEB\_PED intervals are not established as warning times (Section~\ref{sec:results_leadtime}) and enter the \emph{any PED} row.
 \end{table}
 
-Taking the earliest violation among the indicators of a chain raises the
-detection beyond that of any single indicator for the oncoming and pedestrian
-chains: 538 of 540 oncoming-vehicle collisions and 791 of 815 pedestrian
+Table~\ref{tab:dashboard_scorecard} combines the indicators of each chain. Taking the
+earliest violation among them raises the detection beyond that of any single
+indicator for the oncoming and pedestrian chains: 538 of 540 oncoming-vehicle collisions and 791 of 815 pedestrian
 collisions are preceded by a violation of at least one indicator of the chain,
 against 527 and 790 for the best single indicator. The number warned at least one
-second ahead rises from 57 to 92 for the oncoming chain and from two to 110 for
-the pedestrian chain.
+second ahead rises from 57 to 92 for the oncoming chain. For the pedestrian chain
+it rises from two to 110, and this rise comes from the AEB\_PED intervals, which
+are not reported as warning times (Section~\ref{sec:results_leadtime}).
 
 \begin{table}[htbp]
 \centering

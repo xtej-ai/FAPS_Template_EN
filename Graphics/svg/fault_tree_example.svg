@@ -1,285 +1,35 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
-
-<svg
-   version="1.1"
-   id="svg2"
-   width="740"
-   height="450"
-   viewBox="0 0 740 450"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg">
-  <defs
-     id="defs6" />
-  <g
-     id="g8"
-     transform="matrix(1.3333333,0,0,1.3333333,0,1.125e-5)">
-    <g
-       id="g10" />
-    <g
-       id="g12">
-      <path
-         d="M 0,0 H 555 V 337.5 H 0 Z"
-         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="path14" />
-      <g
-         id="g16">
-        <path
-           d="m 210,19.5 h 135 v 39 H 210 Z"
-           style="fill:#e8efe0;fill-opacity:1;fill-rule:nonzero;stroke:#6e9024;stroke-width:1.05;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           id="path18" />
-      </g>
-      <text
-         xml:space="preserve"
-         transform="translate(259.16797,39)"
-         style="font-variant:normal;font-weight:normal;font-size:8.25px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#1a1a1a;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text24"><tspan
-           x="0 5.04075 9.6277504 16.508249 21.095249 25.220249 29.807249 34.394249"
-           y="0"
-           id="tspan20">Topevent</tspan><tspan
-           x="-2.9687459 -0.221496 1.6100039 6.1970038 10.322004 16.740503 21.327503 25.452503 30.039503 34.626503 36.920006"
-           y="9.7499981"
-           id="tspan22">(lossevent)</tspan></text>
-      <g
-         id="g26">
-        <path
-           d="M 277.5,58.5 V 72"
-           style="fill:none;stroke:#1a1a1a;stroke-width:1.05;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           id="path28" />
-      </g>
-      <g
-         id="g30">
-        <path
-           d="m 258,96 c 13,-21 26,-21 39,0 -13,-6 -26,-6 -39,0 z"
-           style="fill:#e8efe0;fill-opacity:1;fill-rule:nonzero;stroke:#6e9024;stroke-width:1.125;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           id="path32" />
-      </g>
-      <text
-         xml:space="preserve"
-         transform="translate(273.5,93)"
-         style="font-variant:normal;font-weight:normal;font-size:7.5px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#1a1a1a;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text36"><tspan
-           x="0"
-           y="0"
-           id="tspan34">≥</tspan></text>
-      <text
-         xml:space="preserve"
-         transform="translate(277.88,93)"
-         style="font-variant:normal;font-weight:normal;font-size:7.5px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#1a1a1a;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text40"><tspan
-           x="0"
-           y="0"
-           id="tspan38">1</tspan></text>
-      <text
-         xml:space="preserve"
-         transform="translate(313.5,88.5)"
-         style="font-variant:normal;font-weight:normal;font-size:8.25px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#8a8a8a;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text44"><tspan
-           x="0 6.4184999"
-           y="0"
-           id="tspan42">OR</tspan></text>
-      <g
-         id="g46">
-        <path
-           d="M 264,91.5 135,126"
-           style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#1a1a1a;stroke-width:1.05;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           id="path48" />
-      </g>
-      <g
-         id="g50">
-        <path
-           d="M 291,91.5 420,126"
-           style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#1a1a1a;stroke-width:1.05;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           id="path52" />
-      </g>
-      <g
-         id="g54">
-        <path
-           d="m 67.5,127.5 h 135 V 162 h -135 z"
-           style="fill:#e8efe0;fill-opacity:1;fill-rule:nonzero;stroke:#6e9024;stroke-width:1.05;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           id="path56" />
-      </g>
-      <text
-         xml:space="preserve"
-         transform="translate(95.667969,147.75)"
-         style="font-variant:normal;font-weight:normal;font-size:8.25px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#1a1a1a;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text60"><tspan
-           x="0 2.2934999 6.8804998 9.1739998 13.761 16.508249 23.380501 27.967501 32.554501 34.386002 38.973 41.266499 48.146999 52.271999 56.859001 61.445999 65.570999 72.4515"
-           y="0"
-           id="tspan58">IntermediatecauseA</tspan></text>
-      <g
-         id="g62">
-        <path
-           d="m 352.5,127.5 h 135 V 162 h -135 z"
-           style="fill:#e8efe0;fill-opacity:1;fill-rule:nonzero;stroke:#6e9024;stroke-width:1.05;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           id="path64" />
-      </g>
-      <text
-         xml:space="preserve"
-         transform="translate(380.79297,147.75)"
-         style="font-variant:normal;font-weight:normal;font-size:8.25px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#1a1a1a;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text68"><tspan
-           x="0 2.2934999 6.8804998 9.1739998 13.761 16.508249 23.380501 27.967501 32.554501 34.386002 38.973 41.266499 48.146999 52.271999 56.859001 61.445999 65.570999 72.4515"
-           y="0"
-           id="tspan66">IntermediatecauseB</tspan></text>
-      <g
-         id="g70">
-        <path
-           d="m 135,162 v 16.5"
-           style="fill:none;stroke:#1a1a1a;stroke-width:1.05;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           id="path72" />
-      </g>
-      <g
-         id="g74">
-        <path
-           d="m 117,201 v -12 c 0,-6.43 3.43,-12.375 9,-15.59 5.57,-3.215 12.43,-3.215 18,0 5.57,3.215 9,9.16 9,15.59 v 12 z"
-           style="fill:#e8efe0;fill-opacity:1;fill-rule:nonzero;stroke:#6e9024;stroke-width:1.125;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           id="path76" />
-      </g>
-      <text
-         xml:space="preserve"
-         transform="translate(132.67578,198.75)"
-         style="font-variant:normal;font-weight:normal;font-size:6.75px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#1a1a1a;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text80"><tspan
-           x="0"
-           y="0"
-           id="tspan78">&amp;</tspan></text>
-      <text
-         xml:space="preserve"
-         transform="translate(166.5,193.5)"
-         style="font-variant:normal;font-weight:normal;font-size:8.25px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#8a8a8a;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text84"><tspan
-           x="0 5.5027499 11.45925"
-           y="0"
-           id="tspan82">AND</tspan></text>
-      <g
-         id="g86">
-        <path
-           d="M 121.5,196.5 82.5,225"
-           style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#1a1a1a;stroke-width:1.05;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           id="path88" />
-      </g>
-      <g
-         id="g90">
-        <path
-           d="m 148.5,196.5 39,28.5"
-           style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#1a1a1a;stroke-width:1.05;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           id="path92" />
-      </g>
-      <g
-         id="g94">
-        <path
-           d="M 102,244.5 C 102,255.27 93.27,264 82.5,264 71.73,264 63,255.27 63,244.5 63,233.73 71.73,225 82.5,225 c 10.77,0 19.5,8.73 19.5,19.5 z"
-           style="fill:#eef4e6;fill-opacity:1;fill-rule:nonzero;stroke:#6e9024;stroke-width:1.05;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           id="path96" />
-      </g>
-      <text
-         xml:space="preserve"
-         transform="translate(73.632812,247.5)"
-         style="font-variant:normal;font-weight:normal;font-size:7.5px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#1a1a1a;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text100"><tspan
-           x="0 4.1700001 8.3400002 12.09 13.755"
-           y="0"
-           id="tspan98">basic</tspan></text>
-      <g
-         id="g102">
-        <path
-           d="m 207,244.5 c 0,10.77 -8.73,19.5 -19.5,19.5 -10.77,0 -19.5,-8.73 -19.5,-19.5 0,-10.77 8.73,-19.5 19.5,-19.5 10.77,0 19.5,8.73 19.5,19.5 z"
-           style="fill:#eef4e6;fill-opacity:1;fill-rule:nonzero;stroke:#6e9024;stroke-width:1.05;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           id="path104" />
-      </g>
-      <text
-         xml:space="preserve"
-         transform="translate(178.63281,247.5)"
-         style="font-variant:normal;font-weight:normal;font-size:7.5px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#1a1a1a;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text108"><tspan
-           x="0 4.1700001 8.3400002 12.09 13.755"
-           y="0"
-           id="tspan106">basic</tspan></text>
-      <g
-         id="g110">
-        <path
-           d="m 420,162 v 63"
-           style="fill:none;stroke:#1a1a1a;stroke-width:1.05;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           id="path112" />
-      </g>
-      <g
-         id="g114">
-        <path
-           d="m 420,180 -67.5,45"
-           style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#1a1a1a;stroke-width:1.05;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           id="path116" />
-      </g>
-      <g
-         id="g118">
-        <path
-           d="m 372,244.5 c 0,10.77 -8.73,19.5 -19.5,19.5 -10.77,0 -19.5,-8.73 -19.5,-19.5 0,-10.77 8.73,-19.5 19.5,-19.5 10.77,0 19.5,8.73 19.5,19.5 z"
-           style="fill:#eef4e6;fill-opacity:1;fill-rule:nonzero;stroke:#6e9024;stroke-width:1.05;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           id="path120" />
-      </g>
-      <text
-         xml:space="preserve"
-         transform="translate(343.63281,247.5)"
-         style="font-variant:normal;font-weight:normal;font-size:7.5px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#1a1a1a;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text124"><tspan
-           x="0 4.1700001 8.3400002 12.09 13.755"
-           y="0"
-           id="tspan122">basic</tspan></text>
-      <g
-         id="g126">
-        <path
-           d="m 439.5,244.5 c 0,10.77 -8.73,19.5 -19.5,19.5 -10.77,0 -19.5,-8.73 -19.5,-19.5 0,-10.77 8.73,-19.5 19.5,-19.5 10.77,0 19.5,8.73 19.5,19.5 z"
-           style="fill:#eef4e6;fill-opacity:1;fill-rule:nonzero;stroke:#6e9024;stroke-width:1.05;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           id="path128" />
-      </g>
-      <text
-         xml:space="preserve"
-         transform="translate(411.13281,247.5)"
-         style="font-variant:normal;font-weight:normal;font-size:7.5px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#1a1a1a;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text132"><tspan
-           x="0 4.1700001 8.3400002 12.09 13.755"
-           y="0"
-           id="tspan130">basic</tspan></text>
-      <text
-         xml:space="preserve"
-         transform="translate(114.68359,307.5)"
-         style="font-variant:normal;font-weight:normal;font-size:8.25px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#8a8a8a;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text136"><tspan
-           x="0 4.5869999 9.1739998 13.299 15.1305 21.549 26.136 30.261 34.848 39.435001 41.7285 48.146999 50.894249 55.019249 59.606251 66.4785 71.065498 75.652496 80.239502 84.8265 89.413498 91.707001 94.454247 96.285751 100.87275 104.99775 109.58475 111.41625"
-           y="0"
-           id="tspan134">basicevents(component-level)</tspan></text>
-      <text
-         xml:space="preserve"
-         transform="translate(231.14059,307.5)"
-         style="font-variant:normal;font-weight:normal;font-size:8.25px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#8a8a8a;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text140"><tspan
-           x="0"
-           y="0"
-           id="tspan138">→</tspan></text>
-      <text
-         xml:space="preserve"
-         transform="translate(241.68409,307.5)"
-         style="font-variant:normal;font-weight:normal;font-size:8.25px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#8a8a8a;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text144"><tspan
-           x="0 6.8722501 8.7037497 13.29075 15.12225 21.994499 26.581499 30.706499 34.831501 39.418499 44.005501 48.130501 52.717499 55.011002"
-           y="0"
-           id="tspan142">minimalcutsets</tspan></text>
-      <text
-         xml:space="preserve"
-         transform="translate(303.11359,307.5)"
-         style="font-variant:normal;font-weight:normal;font-size:8.25px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#8a8a8a;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text148"><tspan
-           x="0"
-           y="0"
-           id="tspan146">→</tspan></text>
-      <text
-         xml:space="preserve"
-         transform="translate(313.65709,307.5)"
-         style="font-variant:normal;font-weight:normal;font-size:8.25px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#8a8a8a;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text152"><tspan
-           x="0 4.125 8.7119999 13.299 17.886 19.717501 24.304501 28.8915 31.184999 38.065498 39.896999 44.484001 49.070999 53.658001 55.489498 60.0765 64.663498 67.410751 69.242249 73.829247 78.416252 80.247749 84.372749 88.959747 91.25325 95.840248 100.881 105.006 106.8375 111.4245 116.0115 120.5985 122.43"
-           y="0"
-           id="tspan150">candidateleading-indicatorsignals</tspan></text>
-    </g>
-  </g>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="368pt" height="222pt" viewBox="0 0 368 222">
+<rect x="0" y="0" width="368" height="222" fill="#ffffff"/>
+<rect x="124.00" y="8.00" width="120.00" height="30.00" rx="0" ry="0" fill="#e8efe0" stroke="#6e9024" stroke-width="1.0"/>
+<text x="184.00" y="20.00" font-family="Arial, Helvetica, sans-serif" font-size="8.00" fill="#1a1a1a" text-anchor="middle" xml:space="preserve"><tspan>Top event</tspan></text>
+<text x="184.00" y="31.00" font-family="Arial, Helvetica, sans-serif" font-size="8.00" fill="#1a1a1a" text-anchor="middle" xml:space="preserve"><tspan>(loss event)</tspan></text>
+<polyline points="184.00,38.00 184.00,50.00" fill="none" stroke="#1a1a1a" stroke-width="0.9"/>
+<path d="M 169.00,72.00 Q 184.00,65.00 199.00,72.00 Q 197.00,56.00 184.00,50.00 Q 171.00,56.00 169.00,72.00 Z" fill="#e8efe0" stroke="#6e9024" stroke-width="1.0"/>
+<text x="204.00" y="64.00" font-family="Arial, Helvetica, sans-serif" font-size="8.00" fill="#404040" xml:space="preserve"><tspan>OR</tspan></text>
+<polyline points="184.00,70.00 184.00,80.00 84.00,80.00 84.00,92.00" fill="none" stroke="#1a1a1a" stroke-width="0.9"/>
+<polyline points="184.00,80.00 284.00,80.00 284.00,92.00" fill="none" stroke="#1a1a1a" stroke-width="0.9"/>
+<rect x="24.00" y="92.00" width="120.00" height="26.00" rx="0" ry="0" fill="#e8efe0" stroke="#6e9024" stroke-width="1.0"/>
+<text x="84.00" y="108.50" font-family="Arial, Helvetica, sans-serif" font-size="8.00" fill="#1a1a1a" text-anchor="middle" xml:space="preserve"><tspan>Intermediate cause A</tspan></text>
+<polyline points="84.00,118.00 84.00,128.00" fill="none" stroke="#1a1a1a" stroke-width="0.9"/>
+<rect x="224.00" y="92.00" width="120.00" height="26.00" rx="0" ry="0" fill="#e8efe0" stroke="#6e9024" stroke-width="1.0"/>
+<text x="284.00" y="108.50" font-family="Arial, Helvetica, sans-serif" font-size="8.00" fill="#1a1a1a" text-anchor="middle" xml:space="preserve"><tspan>Intermediate cause B</tspan></text>
+<polyline points="284.00,118.00 284.00,128.00" fill="none" stroke="#1a1a1a" stroke-width="0.9"/>
+<path d="M 70.00,150.00 L 70.00,142.00 A 14.00,14.00 0 0 1 98.00,142.00 L 98.00,150.00 Z" fill="#e8efe0" stroke="#6e9024" stroke-width="1.0"/>
+<text x="104.00" y="142.00" font-family="Arial, Helvetica, sans-serif" font-size="8.00" fill="#404040" xml:space="preserve"><tspan>AND</tspan></text>
+<path d="M 269.00,150.00 Q 284.00,143.00 299.00,150.00 Q 297.00,134.00 284.00,128.00 Q 271.00,134.00 269.00,150.00 Z" fill="#e8efe0" stroke="#6e9024" stroke-width="1.0"/>
+<text x="304.00" y="142.00" font-family="Arial, Helvetica, sans-serif" font-size="8.00" fill="#404040" xml:space="preserve"><tspan>OR</tspan></text>
+<polyline points="84.00,150.00 84.00,158.00 50.00,158.00 50.00,162.00" fill="none" stroke="#1a1a1a" stroke-width="0.9"/>
+<polyline points="84.00,158.00 118.00,158.00 118.00,162.00" fill="none" stroke="#1a1a1a" stroke-width="0.9"/>
+<circle cx="50" cy="176" r="14" fill="#e8efe0" stroke="#6e9024" stroke-width="1"/>
+<text x="50.00" y="179.00" font-family="Arial, Helvetica, sans-serif" font-size="8.00" fill="#1a1a1a" text-anchor="middle" xml:space="preserve"><tspan>basic</tspan></text>
+<circle cx="118" cy="176" r="14" fill="#e8efe0" stroke="#6e9024" stroke-width="1"/>
+<text x="118.00" y="179.00" font-family="Arial, Helvetica, sans-serif" font-size="8.00" fill="#1a1a1a" text-anchor="middle" xml:space="preserve"><tspan>basic</tspan></text>
+<polyline points="284.00,150.00 284.00,158.00 250.00,158.00 250.00,162.00" fill="none" stroke="#1a1a1a" stroke-width="0.9"/>
+<polyline points="284.00,158.00 318.00,158.00 318.00,162.00" fill="none" stroke="#1a1a1a" stroke-width="0.9"/>
+<circle cx="250" cy="176" r="14" fill="#e8efe0" stroke="#6e9024" stroke-width="1"/>
+<text x="250.00" y="179.00" font-family="Arial, Helvetica, sans-serif" font-size="8.00" fill="#1a1a1a" text-anchor="middle" xml:space="preserve"><tspan>basic</tspan></text>
+<circle cx="318" cy="176" r="14" fill="#e8efe0" stroke="#6e9024" stroke-width="1"/>
+<text x="318.00" y="179.00" font-family="Arial, Helvetica, sans-serif" font-size="8.00" fill="#1a1a1a" text-anchor="middle" xml:space="preserve"><tspan>basic</tspan></text>
+<text x="184.00" y="214.00" font-family="Arial, Helvetica, sans-serif" font-size="8.00" fill="#404040" text-anchor="middle" xml:space="preserve"><tspan>basic events (component level) → minimal cut sets → candidate leading-indicator signals</tspan></text>
 </svg>

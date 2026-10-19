@@ -17,8 +17,8 @@ An \ac{ADS} denotes the hardware and software that together carry out the whole
 driving task over sustained periods \cite{saej3016}. The taxonomy of SAE~J3016 distinguishes
 six levels of driving automation, from no automation at Level~0 to full automation at
 Level~5, and reserves the term \ac{ADS} for the systems at Levels~3 to~5 that perform
-the dynamic driving task without the constant supervision of a human driver
-\cite{saej3016}. The dynamic driving task is commonly decomposed into the functions of
+the \ac{DDT} without the constant supervision of a human driver
+\cite{saej3016}. In this thesis the \ac{DDT} is decomposed into the functions of
 perception, prediction, planning, and control, together with a function that monitors
 the operating conditions. This functional decomposition is used throughout the thesis
 because it names the tasks that any driving system must perform, independently of the
@@ -74,7 +74,7 @@ Two complementary standards frame the safety of an \ac{ADS}. ISO~26262 addresses
 functional safety, which it defines as the ``absence of unreasonable risk due to
 hazards caused by malfunctioning behaviour of E/E systems'', that is, of electrical and electronic
 systems, and it prescribes a development process in
-which the rigour of each activity follows the automotive safety integrity level of the
+which the rigour of each activity follows the \ac{ASIL} of the
 function concerned \cite{iso26262}. Its scope is the fault, that is, a component that fails to behave as
 specified. ISO~21448 covers the \ac{SOTIF}, which concerns risk that remains even
 though no component has failed, because the intended function itself is insufficient
@@ -141,7 +141,7 @@ operation has to detect combinations of situation and system state that lead to
 hazardous behaviour and were missed during development \cite{wang2024sotif}. The same
 survey names the choice of acceptance criteria as unresolved and mentions three
 possible references: accident statistics, the behaviour of careful human drivers, and
-risk-acceptance principles such as GAMAB and ALARP \cite{wang2024sotif}. Both points
+risk-acceptance principles such as \ac{GAMAB} and \ac{ALARP} \cite{wang2024sotif}. Both points
 recur in this thesis. The first motivates indicators that are monitored after release,
 and the second explains why the SPI threshold of Chapter~\ref{ch:methodology} is left
 to a risk-acceptance decision.
@@ -240,7 +240,7 @@ throughout its operational life \cite{hawkins2022sace}. It marks the points at w
 confidence argument is required with assurance claim points, and it requires that a
 runtime monitor be independent of the components it monitors, and observes that a trend
 in the monitored behaviour can warn of unsafe behaviour before it occurs
-\cite{hawkins2022sace}. For automated vehicles, Loba et al.\ derive structural
+\cite{hawkins2022sace}. For automated vehicles, Loba et~al.\ derive structural
 requirements for a \ac{GSN}-based argumentation and propose a generic structure with
 separate argument branches for the product, the development process, conformance with
 standards, the context of use and the soundness of the argument itself, and they ask
@@ -254,14 +254,13 @@ bare assertion can be turned into a monitorable claim by attaching an indicator 
 which is the mechanism by which the assurance case is connected to operational data.
 In the terms of Bishop and Bloomfield, such an indicator supplies a probabilistic
 argument from simulated or field experience to a goal that development evidence alone
-cannot discharge. The assurance cases of this thesis are modelled in a model-based
-safety-engineering environment that supports the construction of \ac{GSN} arguments
-and their linkage to other safety artefacts.
+cannot discharge. The safety case of this thesis is expressed in the \ac{GSN} and
+drawn as an argument diagram in Chapter~\ref{ch:methodology}.
 
 \section{Safety Performance Indicators}
 \label{sec:fund_spi}
 
-A \ac{SPI} is a metric, supported by evidence, that uses a threshold comparison to
+An \ac{SPI} is a metric, supported by evidence, that uses a threshold comparison to
 condition a claim within a safety assurance case; it is a metric-threshold pair that
 measures a specific aspect of safety \cite{laxman2024}. Three parts therefore make up
 every \ac{SPI}, and all three are needed. The first is the metric, a quantity computed
@@ -290,14 +289,14 @@ lagging, according to whether it is observed before or after a loss event. A lag
 \ac{SPI} reports an outcome after the fact; the collision rate, the injury rate, and
 the count of automation disengagements are lagging indicators of an \ac{ADS}. A leading
 \ac{SPI} observes a condition that precedes a loss event and therefore offers the
-opportunity to act before it occurs; the rate at which the time-to-collision falls
-below a set value, the rate of activation of automatic emergency braking, and the rate
+opportunity to act before it occurs; the rate at which the time to collision falls
+below a set value, the rate of activation of \ac{AEB}, and the rate
 at which a following gap drops below a safe distance are leading indicators
 \cite{koopman2022howsafe}. An effective programme combines both, but only leading
 indicators enable a proactive response, which is why their systematic construction is
 the central concern of this work.
 
-The framework for measuring automated vehicle safety by Fraade-Blanar et al.\ gives
+The framework for measuring automated vehicle safety by Fraade-Blanar et~al.\ gives
 the same distinction a precise footing. Lagging measures are observations of safety
 outcomes involving harm, such as crashes, injuries and deaths, whereas leading
 measures reflect performance, activity and prevention and act as proxies for the
@@ -333,20 +332,25 @@ arise once per manoeuvre rather than continuously along a route.
 
 A concrete example makes the structure explicit. Consider the assurance-case goal that
 the vehicle keeps a safe separation from a leading vehicle. A candidate leading \ac{SPI}
-for this goal pairs the time-to-collision metric of Section~\ref{sec:fund_metrics} with
+for this goal pairs the time to collision metric of Section~\ref{sec:fund_metrics} with
 a metric threshold $\theta$ and an SPI threshold $T$, and conditions the goal
-in the form given in Equation~\ref{eq:spi_example}.
+in the form given in Equation~\eqref{eq:spi_example}.
 
 \begin{equation}
     \mathrm{count}\!\left(\mathrm{TTC}_{\min} < \theta\right)\ \mathrm{per}\ 100\mathrm{k}\ \mathrm{manoeuvres}\ <\ T
     \label{eq:spi_example}
 \end{equation}
-\equationentry{Example leading safety performance indicator on time-to-collision}
+\equationentry{Example leading safety performance indicator on the time to collision}
 
-where $\mathrm{TTC}_{\min}$ is the minimum time-to-collision observed during a
-manoeuvre, $\theta$ is the metric threshold below which the manoeuvre counts as a
-violation, and $T$ is the SPI threshold on the number of violations per 100k
-manoeuvres. A measured violation rate at or above $T$ challenges the
+where:\nopagebreak
+\begin{tabbing}
+    \hspace{2.2cm} \= \kill
+    $\mathrm{TTC}_{\min}$ \> minimum time to collision during a manoeuvre in s \\
+    $\theta$ \> metric threshold below which the manoeuvre counts as a violation in s \\
+    $T$ \> SPI threshold on the number of violations per 100k manoeuvres
+\end{tabbing}
+
+A measured violation rate at or above $T$ challenges the
 safe-separation goal and, within an operational safety assurance process, triggers a
 review of that part of the assurance case rather than waiting for a collision to be
 recorded. The concept, its origin in the aviation safety management systems of the
@@ -364,13 +368,13 @@ signal component of the indicators derived later. The most established is the
 \ac{TTC}, introduced by Hayward, which expresses the time remaining before two road
 users on a collision course would collide if their velocities remained unchanged
 \cite{hayward1972ttc}. For a following vehicle approaching a leading vehicle along the
-same path, the \ac{TTC} is given by Equation~\ref{eq:ttc}.
+same path, the \ac{TTC} is given by Equation~\eqref{eq:ttc}.
 
 \begin{equation}
     \mathrm{TTC} = \frac{d_\mathrm{rel}}{v_\mathrm{rel}}, \qquad v_\mathrm{rel} > 0
     \label{eq:ttc}
 \end{equation}
-\equationentry{Time-to-collision}
+\equationentry{Time to collision}
 
 where:\nopagebreak
 \begin{tabbing}
@@ -379,18 +383,18 @@ where:\nopagebreak
     $v_\mathrm{rel}$ \> relative closing speed, positive when the gap is closing, in m/s
 \end{tabbing}
 
-Equation~\ref{eq:ttc} presumes that both road users move along one line. When they
+Equation~\eqref{eq:ttc} presumes that both road users move along one line. When they
 move in a plane, as at an intersection, the same idea is expressed along the line of
 sight between them: the range is the distance between the two reference points, the
 range rate is its derivative, and the \ac{TTC} is the range divided by the negative
-range rate whenever the range is decreasing, as given in Equation~\ref{eq:ttc_los}.
+range rate whenever the range is decreasing, as given in Equation~\eqref{eq:ttc_los}.
 
 \begin{equation}
     \mathrm{TTC}_\mathrm{LOS} = -\frac{r}{\dot{r}}, \qquad
     \dot{r} = \frac{\Delta\mathbf{p} \cdot \Delta\mathbf{v}}{r}, \qquad \dot{r} < 0
     \label{eq:ttc_los}
 \end{equation}
-\equationentry{Line-of-sight time-to-collision}
+\equationentry{Line-of-sight time to collision}
 
 where:\nopagebreak
 \begin{tabbing}
@@ -409,11 +413,11 @@ a rapidly falling value once their paths almost meet. It also takes no account o
 whether the extrapolated paths actually intersect, so a road user that closes in range
 but passes at a safe lateral distance still produces a finite value.
 
-The second of these limitations is removed by the closest point of approach, which
+The second of these limitations is removed by the \ac{CPA}, which
 asks not when the range reaches zero but when it is smallest and how small it becomes.
 Under the same constant-velocity assumption, the time until the \ac{CPA} and the
 distance at that moment follow from the relative position and velocity as given in
-Equation~\ref{eq:cpa}.
+Equation~\eqref{eq:cpa}.
 
 \begin{equation}
     t_\mathrm{CPA} = -\frac{\Delta\mathbf{p} \cdot \Delta\mathbf{v}}{\lvert \Delta\mathbf{v} \rvert^{2}},
@@ -429,7 +433,7 @@ where:\nopagebreak
     $t_\mathrm{CPA}$ \> time until the closest point of approach in s \\
     $d_\mathrm{CPA}$ \> distance between the two road users at that time in m \\
     $\Delta\mathbf{p}$, $\Delta\mathbf{v}$ \> relative position in m and relative velocity in m/s, as in
-    Equation~\ref{eq:ttc_los}
+    Equation~\eqref{eq:ttc_los}
 \end{tabbing}
 
 A positive $t_\mathrm{CPA}$ together with a small $d_\mathrm{CPA}$ describes a road
@@ -440,7 +444,7 @@ property required for a crossing pedestrian whose walking line may or may not
 intersect the path of the vehicle. The pedestrian indicator PED\_CPA of this thesis is
 built on this quantity.
 
-A related time-based measure is the \ac{PET}, introduced by Allen et al., which
+A related time-based measure is the \ac{PET}, introduced by Allen et~al., which
 applies to crossing conflicts and measures the time between the moment the first road
 user leaves a shared conflict area and the moment the second enters it
 \cite{allen1978pet}. A small \ac{PET} indicates that two road users occupied nearly
@@ -448,7 +452,7 @@ the same space at nearly the same time. Unlike the \ac{TTC} and the closest poin
 approach, the \ac{PET} is known only once both road users have passed the conflict
 area, so it describes how close an encounter came rather than how close it is about
 to come. Where a required response is of interest rather than the time available, the
-required deceleration to avoid a collision, given in Equation~\ref{eq:areq}, expresses
+required deceleration to avoid a collision, given in Equation~\eqref{eq:areq}, expresses
 how hard the vehicle has to brake, and a value approaching the physical limit
 of the vehicle indicates a critical situation.
 
@@ -466,7 +470,7 @@ where:\nopagebreak
     $d_\mathrm{rel}$ \> relative distance in m
 \end{tabbing}
 
-Equation~\ref{eq:areq} treats the obstacle as stationary at the end of the available
+Equation~\eqref{eq:areq} treats the obstacle as stationary at the end of the available
 distance. It therefore states the braking needed to stop short of a point, not the
 braking needed to avoid a road user who is itself moving,
 and it grows without bound as the distance approaches zero. Both properties matter for
@@ -475,7 +479,7 @@ computed one and a very short distance makes the value numerically unstable.
 
 For the following conflict the time headway is the established complement to the
 \ac{TTC}. It is the time a following vehicle needs to reach the current position of
-the vehicle ahead at its own current speed, as given in Equation~\ref{eq:thw} \cite{westhofen2023}, and it
+the vehicle ahead at its own current speed, as given in Equation~\eqref{eq:thw} \cite{westhofen2023}, and it
 remains defined when the two vehicles travel at the same speed, where the \ac{TTC} is
 undefined.
 
@@ -494,10 +498,10 @@ where:\nopagebreak
 \end{tabbing}
 
 A formal alternative defines a safe distance from explicit assumptions about
-behaviour. The Responsibility-Sensitive Safety model of Shalev-Shwartz et al. defines
+behaviour. The Responsibility-Sensitive Safety model of Shalev-Shwartz et~al.\ defines
 the minimum safe longitudinal distance behind a leading vehicle from the response time
 and the assumed acceleration and braking capabilities, as given in
-Equation~\ref{eq:rss} \cite{shalev2017rss}. A distance below this value denotes a state
+Equation~\eqref{eq:rss} \cite{shalev2017rss}. A distance below this value denotes a state
 that the model regards as unsafe, which makes the model a natural source of a
 distance-based threshold.
 
@@ -529,8 +533,8 @@ threshold therefore depends entirely on parameters such as the response time and
 braking capabilities, which have to be fixed for every vehicle and every road
 condition before the distance can be computed.
 
-The six measures differ in the conflict geometry for which each is defined and in the
-quantity each returns, and Table~\ref{tab:surrogate_metrics} summarises these
+The six measures therefore differ in the conflict geometry for which each is defined and in
+the quantity each returns. Table~\ref{tab:surrogate_metrics} summarises these
 differences, since the suitability of a signal for a given conflict is what governs its
 selection in Chapter~\ref{ch:methodology}.
 
@@ -543,7 +547,7 @@ selection in Chapter~\ref{ch:methodology}.
         \toprule
         \textbf{Metric} & \textbf{Conflict geometry} & \textbf{Quantity returned} & \textbf{Critical tail} \\
         \midrule
-        Time-to-collision & following, or any conflict with a closing range rate
+        Time to collision & following, or any conflict with a closing range rate
         & time remaining to contact & lower \\[2pt]
         Time to closest point of approach & crossing, gated on the miss distance &
         time until the smallest separation & lower \\[2pt]
@@ -560,13 +564,13 @@ selection in Chapter~\ref{ch:methodology}.
 \end{table}
 
 Beyond time- and distance-based measures, model-predictive metrics such as the Model
-Predictive Instantaneous Safety Metric of Weng et al. assess safety by predicting the
+Predictive Instantaneous Safety Metric of Weng et~al.\ assess safety by predicting the
 evolution of a scene under a control model \cite{weng2020mprism}. The geometry of the
-two representative conflicts, a following conflict for time-to-collision and required
+two representative conflicts, a following conflict for time to collision and required
 deceleration and a crossing conflict for post-encroachment time, is shown in
 Figure~\ref{fig:metrics_geometry}. The suitability of each metric depends on this
 geometry, and a comprehensive survey of criticality metrics and their applicability is
-provided by Westhofen et al. \cite{westhofen2023}. This dependence on conflict geometry
+provided by Westhofen et~al.\ \cite{westhofen2023}. This dependence on conflict geometry
 is examined further in Chapter~\ref{ch:sota}.
 
 \begin{figure}[htbp]
@@ -588,7 +592,7 @@ calibration of every metric threshold in Chapter~\ref{ch:methodology}.
 \section{Simulation-Based Safety Assessment}
 \label{sec:fund_sim}
 
-Because field data on rare safety-critical events is sparse and reporting is
+Because field data on rare safety-critical events are sparse and reporting is
 inconsistent, safety-critical behaviour is studied in simulation, where scenarios can
 be generated in large numbers and with controlled parameters. CARLA is an open-source
 simulator for automated driving research that provides sensor models, traffic
@@ -641,7 +645,7 @@ the evaluation, which is discussed in Chapter~\ref{ch:methodology}, because sign
 that depend on the internal outputs of a perception module cannot be observed when the
 ego vehicle is driven by a rule-based agent on ground truth.
 
-Simulation does not by itself remove the rarity of safety-critical events. Feng et al.\
+Simulation does not by itself remove the rarity of safety-critical events. Feng et~al.\
 point out that a driving environment has very many dimensions and that safety-critical
 events in it are rare, so that a convincing statement about the safety of an automated
 vehicle from naturalistic driving alone needs a test distance in the order of hundreds
@@ -669,7 +673,7 @@ interval centres on $k/n$ and collapses to a single point when $k$ is zero, whic
 claims certainty precisely where the data are weakest. The score interval of Wilson
 avoids this by inverting the score test rather than the estimate, and it remains
 informative for counts of zero and for counts close to $n$
-\cite{wilson1927probable}. It is given in Equation~\ref{eq:wilson}.
+\cite{wilson1927probable}. It is given in Equation~\eqref{eq:wilson}.
 
 \begin{equation}
     \frac{\hat{p} + \dfrac{z^{2}}{2n} \pm z\sqrt{\dfrac{\hat{p}\,(1-\hat{p})}{n} + \dfrac{z^{2}}{4n^{2}}}}
@@ -686,7 +690,7 @@ where:\nopagebreak
     $z$ \> standard normal quantile, 1.96 for a two-sided 95\,\% interval, dimensionless
 \end{tabbing}
 
-For $k = 0$ the lower limit of Equation~\ref{eq:wilson} is zero and the upper limit
+For $k = 0$ the lower limit of Equation~\eqref{eq:wilson} is zero and the upper limit
 is positive, so a campaign without any collision still yields an upper bound on the
 collision probability per run. This bound shrinks only as $n$ grows, which is the
 statistical form of the argument of Kalra and Paddock that the absence of failures
@@ -698,12 +702,12 @@ that it anticipates. The natural measure of that change is the relative risk, th
 ratio of the probability of the loss among runs with a violation to the probability
 among runs without one. It is the measure used in cohort studies, where a group
 exposed to a factor is compared with an unexposed group, and its logarithm is
-approximately normally distributed, which gives the interval of Katz et al.\
+approximately normally distributed, which gives the interval of Katz et~al.\
 \cite{katz1978risk}. A relative risk of one means that a violation carries no
 information about the loss, and an interval that excludes one means that the
 association is unlikely to arise by chance.
 
-The relative risk and the interval of Katz et al.\ are undefined when one cell of the
+The relative risk and the interval of Katz et~al.\ are undefined when one cell of the
 underlying two-by-two classification is zero, which occurs whenever every loss is
 preceded by a violation or no loss occurs at all. A count of zero in such a table is
 not evidence of an infinite or a zero ratio but of a sample too small to resolve it,

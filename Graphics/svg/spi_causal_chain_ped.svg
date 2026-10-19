@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="520pt" height="645pt" viewBox="0 0 520 645">
-<rect x="0" y="0" width="520" height="645" fill="#ffffff"/>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="520pt" height="634pt" viewBox="0 0 520 634">
+<rect x="0" y="0" width="520" height="634" fill="#ffffff"/>
 <text x="260.00" y="20.00" font-family="Arial, Helvetica, sans-serif" font-size="11.50" fill="#1f3b63" font-weight="bold" text-anchor="middle" xml:space="preserve"><tspan>PED chain: conflict with a crossing pedestrian</tspan></text>
 <text x="260.00" y="33.00" font-family="Arial, Helvetica, sans-serif" font-size="8.00" fill="#8a8a8a" text-anchor="middle" xml:space="preserve"><tspan>Derivation runs downward, from the collision (lagging SPI) back to the earliest observable signals; all SPI counts are per 100k manoeuvres</tspan></text>
 <rect x="10.00" y="41.00" width="486.00" height="49.00" rx="3" ry="3" fill="#9e4746" stroke="#833938" stroke-width="0.9"/>
@@ -81,9 +81,8 @@
 <g transform="translate(514.00,363.75) rotate(90)"><text x="0.00" y="0.00" font-family="Arial, Helvetica, sans-serif" font-size="7.40" fill="#9a5650" text-anchor="middle" xml:space="preserve"><tspan>AEB_PED attaches directly, independent of the kinematic tier</tspan></text></g>
 <polyline points="253.00,560.00 253.00,571.00" fill="none" stroke="#8a8a8a" stroke-width="1.0"/>
 <polygon points="253.00,576.00 250.00,570.00 256.00,570.00" fill="#8a8a8a"/>
-<rect x="10.00" y="576.00" width="486.00" height="59.00" rx="3" ry="3" fill="#dce5f1" stroke="#9fb3cd" stroke-width="0.9"/>
+<rect x="10.00" y="576.00" width="486.00" height="48.00" rx="3" ry="3" fill="#dce5f1" stroke="#9fb3cd" stroke-width="0.9"/>
 <text x="17.00" y="592.00" font-family="Arial, Helvetica, sans-serif" font-size="9.00" fill="#1f3b63" font-weight="bold" xml:space="preserve"><tspan>VALIDATE</tspan></text>
 <text x="17.00" y="606.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#2c4062" xml:space="preserve"><tspan>Temporal precedence is checked against the PED collision only. Incidents are attributed by actor identity, so an oncoming or a</tspan></text>
-<text x="17.00" y="617.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#2c4062" xml:space="preserve"><tspan>rear impact is never counted here. The acceptance criterion for this chain is argued on minimum endogenous mortality, since a</tspan></text>
-<text x="17.00" y="628.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#2c4062" xml:space="preserve"><tspan>pedestrian neither selects the vehicle nor benefits from it.</tspan></text>
+<text x="17.00" y="617.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#2c4062" xml:space="preserve"><tspan>rear impact is never counted here. Only runs with a pedestrian in the crossing corridor of the exit leg are scored.</tspan></text>
 </svg>

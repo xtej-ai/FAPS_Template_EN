@@ -80,6 +80,6 @@
 <polygon points="253.00,597.00 250.00,591.00 256.00,591.00" fill="#8a8a8a"/>
 <rect x="10.00" y="597.00" width="486.00" height="48.00" rx="3" ry="3" fill="#dce5f1" stroke="#9fb3cd" stroke-width="0.9"/>
 <text x="17.00" y="613.00" font-family="Arial, Helvetica, sans-serif" font-size="9.00" fill="#1f3b63" font-weight="bold" xml:space="preserve"><tspan>VALIDATE</tspan></text>
-<text x="17.00" y="627.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#2c4062" xml:space="preserve"><tspan>Scored only on runs in which a follower is present, since the hazard cannot arise without one. The acceptance criterion is</tspan></text>
-<text x="17.00" y="638.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#2c4062" xml:space="preserve"><tspan>argued on the baseline-comparison principle, the following driver being a participant in the same traffic system.</tspan></text>
+<text x="17.00" y="627.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#2c4062" xml:space="preserve"><tspan>Scored only on runs in which a follower is present, since the hazard cannot arise without one. Incidents are attributed by actor</tspan></text>
+<text x="17.00" y="638.00" font-family="Arial, Helvetica, sans-serif" font-size="8.40" fill="#2c4062" xml:space="preserve"><tspan>identity, so an oncoming or a pedestrian impact is never counted here.</tspan></text>
 </svg>

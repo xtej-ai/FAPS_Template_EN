@@ -1,15 +1,15 @@
 \chapter[Causal Chain Derivation Method]{Method for Causal Chain Derivation of Safety Performance Indicators}
 \label{ch:methodology}
 
-This chapter presents the core contribution of the thesis, a systematic Causal Chain
-Derivation Method (CCDM) that produces calibrated leading safety performance indicators
+This chapter presents the core contribution of the thesis, the \ac{CCDM}, a systematic
+procedure that produces calibrated leading safety performance indicators
 from lagging ones and attaches them to a \ac{GSN} safety case. As established in
 Chapter~\ref{ch:sota}, the reasoning components already exist in separate literatures
 but are not integrated into a reproducible procedure. The method combines three of
 them, namely the top-down decomposition of Fault Tree Analysis \cite{iec61025}, the
 counterfactual prevention test of Why-Because Analysis \cite{ladkin1998}, and
 threshold calibration grounded in precursor-estimation theory \cite{bieryi1995}. The
-derived indicators are modelled in a \ac{GSN} modelling tool and evaluated on
+derived indicators are attached to a \ac{GSN} safety case and evaluated on
 simulation data generated in the CARLA simulator \cite{dosovitskiy2017carla}. The chapter first gives
 an overview of the seven steps, then describes Steps~0 to~6, presents worked
 derivations for the three conflicts of the left turn, attaches the resulting
@@ -43,16 +43,18 @@ Section~\ref{sec:method_signal}.
 \label{sec:method_register}
 
 The preparatory step, Step~0, defines the use case in terms of the function the system
-performs, the actors present, and the operational design domain. Step~1 then builds
+performs, the actors present, and the \ac{ODD}. Step~1 then builds
 the lagging-indicator register by listing every loss event for the use case as a
 lagging \ac{SPI}, each with a single loss-event type and a single unit of measurement.
 This register is the set over which the derivation loop iterates. Candidate loss events
-are drawn from a catalogue of twelve families, ranging from collision and contact events,
-through near-miss and last-resort response events, to control-handover and operating-
-domain violations. Near-miss and last-resort response events are the preferred
-starting point, because they occur more frequently than collisions yet carry the same
-causal information, which mirrors the precursor rationale of
-Section~\ref{sec:sota_reactive_proactive}. A selection rule governs the register: each
+range from collision and contact events, through near-miss and last-resort response
+events, to control-handover and operating-domain violations. An event enters the
+register as a lagging \ac{SPI} only if a loss has occurred when it is recorded. A
+last-resort response, such as an emergency-braking activation, occurs more often than a
+collision and carries similar causal information, which mirrors the precursor rationale
+of Section~\ref{sec:sota_reactive_proactive}, but no loss has yet occurred when it
+fires; it is therefore attached as a reaction-tier indicator next to the lagging
+\ac{SPI} that it precedes (Section~\ref{sec:method_examples}). A selection rule governs the register: each
 lagging SPI must resolve to exactly one proximate cause in Step~2, and a
 candidate that resolves to several unrelated causes is defined too broadly and is
 split before proceeding.
@@ -90,7 +92,7 @@ Deeper decomposition is deliberately avoided, because it reaches algorithm-speci
 sensor-specific detail and breaks the implementation-agnostic character of the method.
 A supplementary System-Theoretic Process Analysis cross-check is recommended for
 control-loop and non-failure hazards that Fault Tree Analysis does not capture under
-the safety of the intended functionality \cite{iso21448,stpahandbook}.
+\ac{SOTIF} \cite{iso21448,stpahandbook}.
 
 The use of gate logic requires reconciliation with the criticism of Fault Tree Analysis
 made in Chapter~\ref{ch:sota}, namely that binary component-failure logic does not
@@ -103,8 +105,7 @@ Step~6 rather than by a binary health state. A gate therefore records which func
 shortfalls are jointly or severally sufficient to produce the proximate cause, while the
 continuous quantity is carried by the signal and its threshold rather than by the gate.
 This preserves the deductive structure that makes the derivation reproducible and places
-the continuity where it belongs. One limitation remains and is stated rather than
-concealed: a cause arising only from the interaction of two functions, neither of which
+the continuity where it belongs. One limitation remains: a cause arising only from the interaction of two functions, neither of which
 is individually inadequate, is not expressible in this logic, and the System-Theoretic
 Process Analysis cross-check is the intended remedy for that class of cause.
 
@@ -114,14 +115,14 @@ Process Analysis cross-check is the intended remedy for that class of cause.
 Step~4 names, for each intermediate cause, the earliest measurable quantity with units
 that tracks the development of that cause before it fully manifests, together with the
 lead time by which it does so. Step~5 then subjects each candidate signal to two tests
-that both must pass. The first is computability, meaning that the signal can be
+that both must pass. The first is observability, meaning that the signal can be
 computed at runtime or from available logged data at a sufficient frequency. The
 second is independence, meaning that the source of the signal is not the subsystem
 being monitored, since a degraded subsystem that reports on itself would appear
 healthy at exactly the moment monitoring is required. A signal that fails either test
-is unusable regardless of how well it correlates with the loss event, and the requirement to
-state signal provenance explicitly is claimed as a contribution, because published
-indicator sets rarely record it.
+is unusable regardless of how well it correlates with the loss event. The requirement to
+state the provenance of every signal explicitly is part of the contribution of the
+method.
 
 The independence claimed for the behavioural tier requires one qualification, because it
 governs how the results of this work transfer to a deployed system. In the simulation
@@ -145,18 +146,22 @@ require a signal exposed from inside a subsystem and therefore presuppose a modu
 pipeline. The trade-off is explicit: behavioural-tier indicators buy portability but
 give lower diagnostic resolution, since they reveal that a margin is eroding rather
 than which subsystem caused it, and they typically provide shorter lead time, since
-internal degradation usually precedes its kinematic consequence.
+internal degradation usually precedes its kinematic consequence. A third group, the
+reaction tier, does not result from the check but from the register of Step~1: an
+emergency-braking activation with a conflict partner present is the last-resort
+mitigation nearest the loss, and it is placed above the kinematic decomposition
+(Section~\ref{sec:method_examples}).
 
 \begin{table}[htbp]
     \centering
-    \caption[The two indicator tiers produced by the observability and independence check of Step~5]{The two indicator tiers produced by the observability and independence check of Step~5.}
+    \caption[Indicator tiers of the observability and independence check]{Indicator tiers of the observability and independence check. Signal source, architecture dependence, diagnostic resolution and lead time of the two tiers produced in Step~5.}
     \label{tab:tiers}
     \begin{tabular}{@{}lll@{}}
         \toprule
         \textbf{Property} & \textbf{Behavioural tier} & \textbf{Architectural tier} \\
         \midrule
         Signal source     & vehicle kinematics, scene state & internal subsystem output \\
-        Examples          & time-to-collision, closing speed, & detection confidence, \\
+        Examples          & time to collision, closing speed, & detection confidence, \\
                           & required deceleration, PET & time-of-first-detection \\
         Architecture      & portable across any design & modular pipeline required \\
         Diagnostic resolution & margin erosion only & subsystem attribution \\
@@ -173,7 +178,7 @@ indicator: a quantity becomes a safety performance indicator only once a
 threshold decides when its value is to be treated as a violation, and a second
 threshold decides how frequent such violations may become before the argued
 behaviour is no longer accepted. Step~6 addresses both, and the general form of an
-SPI used throughout this work is given in Equation~(\ref{eq:method_spiform}).
+SPI used throughout this work is given in Equation~\eqref{eq:method_spiform}.
 
 \begin{equation}
     \left\{
@@ -187,8 +192,12 @@ SPI used throughout this work is given in Equation~(\ref{eq:method_spiform}).
 \end{equation}
 \equationentry{General form of a safety performance indicator}
 
-\textbf{Variable key:} $\theta$, metric threshold, in the unit of the metric; T,
-SPI threshold, as a count per exposure unit.
+where:\nopagebreak
+\begin{tabbing}
+    \hspace{2.2cm} \= \kill
+    $\theta$ \> metric threshold in the unit of the metric \\
+    $T$ \> SPI threshold as a count per exposure unit
+\end{tabbing}
 
 The two thresholds answer different questions and are set by different means.
 The metric threshold decides a single run and is calibrated in this work from
@@ -279,9 +288,8 @@ intervals confirm that the resulting values are stable;
 Section~\ref{sec:exp_calibration} reports them. The width of the two tails is
 itself a choice, and a sensitivity sweep over the percentile remains open.
 
-The threshold depends on the configuration from which it is calibrated. Between
-Campaign~1 and the realistic-driving campaigns the threshold of REQ\_DECEL shifts
-by 21.52\,\% and that of PED\_CPA by 37.90\,\%. It is therefore calibrated once and
+The threshold depends on the configuration from which it is calibrated, as
+Section~\ref{sec:exp_calibration} shows. It is therefore calibrated once and
 applied unchanged to every campaign rather than refitted per campaign, so that
 the same decision rule is applied to every run of the evaluation.
 
@@ -289,18 +297,18 @@ the same decision rule is applied to every run of the evaluation.
 \label{sec:method_spithreshold}
 
 The metric threshold leaves open how many violations are too many. That question
-is one of risk acceptance and not of statistics: T states the violation rate per
+is one of risk acceptance and not of statistics: $T$ states the violation rate per
 exposure unit that the safety argument is prepared to accept, and reaching it
 means that the claim to which the indicator is attached is no longer supported.
-Setting T therefore requires an acceptance criterion and the judgement of the
+Setting $T$ therefore requires an acceptance criterion and the judgement of the
 safety engineers who are responsible for the system and its safety case.
 
 Such a criterion can be derived from a principle such as ALARP
-\cite{hse2001r2p2}, GAMAB, which EN~50126-2 terms GAME, or MEM \cite{en50126},
+\cite{hse2001r2p2}, GAMAB, which EN~50126-2 terms GAME, or \ac{MEM} \cite{en50126},
 or from the benchmark of a careful and competent human driver
 \cite{wang2024sotif} \cite{avsc2023human}. Each of these principles requires
 inputs that lie outside a simulation study, such as a tolerable risk level, a
-reference system or naturalistic human driving data. T is therefore kept
+reference system or naturalistic human driving data. $T$ is therefore kept
 symbolic throughout this work. Its derivation from a risk-acceptance principle
 is not part of this thesis and is left to future work, as set out in
 Section~\ref{sec:outlook}. The evaluation in Chapter~\ref{ch:results} accordingly
@@ -317,9 +325,11 @@ of the evaluation; only the left-turn case is carried into the empirical work of
 Chapter~\ref{ch:results}, in line with the scope set in
 Section~\ref{sec:intro_scope}. Each example begins from a lagging
 indicator, identifies a single proximate cause, decomposes it with an OR gate into two
-intermediate causes attributed to distinct subsystems, and yields one leading SPI
-per branch. The left-turn example is developed in full in
-Figure~\ref{fig:causal_chain_example}. Its lagging SPI is the rate of collisions
+intermediate causes, each attributed to a functional subsystem, and yields one leading
+SPI per branch. The left-turn example is developed in full in
+Figure~\ref{fig:causal_chain_example}, and the pedestrian and following-vehicle chains of
+the same manoeuvre are derived in the same way in Figure~\ref{fig:chain_ped} and
+Figure~\ref{fig:chain_rear}. Its lagging SPI is the rate of collisions
 with an oncoming vehicle, its proximate cause is that the ego vehicle occupied the
 conflict area while an oncoming vehicle was closing on it and no avoidance action
 succeeded in time, and its two branches are a gap that was already insufficient at the
@@ -330,10 +340,10 @@ vehicle inside the collision horizon is not a lagging SPI, because no loss has
 yet occurred; it is an intermediate leading SPI, the last-resort mitigation
 nearest the loss, and it is therefore positioned above the kinematic decomposition and
 attached to the safety case independently of it rather than being derived from the
-kinematic branches. The two kinematic branches
-carry different lead times, of the order of three to eight seconds and of half a second
-to three seconds respectively, which demonstrates the spanning property described in
-Section~\ref{sec:method_thresholds}.
+kinematic branches. The two kinematic branches are expected to differ in when they
+can be observed: an insufficient gap exists from the moment the turn is committed,
+whereas an excessive closing speed develops only during the turn. The measured lead
+times are reported in Chapter~\ref{ch:results}.
 
 \begin{table}[htbp]
     \centering
@@ -346,7 +356,7 @@ Section~\ref{sec:method_thresholds}.
         \midrule
         Left turn & collision with an oncoming vehicle; the
         conflict area was occupied while an oncoming vehicle was closing and no
-        avoidance succeeded in time & gap TTC at commitment (planning);
+        avoidance succeeded in time & gap TTC to the oncoming vehicle (planning);
         required deceleration over the arc (prediction) \\[2pt]
         Pedestrian crossing & collision with a crossing pedestrian; the turn was
         committed without time to stop & time to closest point of approach
@@ -406,9 +416,9 @@ The sub-goals are obtained directly from the decomposition of Step~3. Every
 intermediate cause states that a required function was not delivered adequately,
 and its negation states that the function is delivered adequately; this negation
 becomes a sub-goal of the goal that the lagging SPI protects. Because the
-decomposition uses an OR gate, each sub-goal is a premise without which the
-proximate cause can arise, so the failure of any one sub-goal puts the parent goal
-in doubt. A branch whose signal is rejected at Step~5 is not removed from the
+decomposition uses an OR gate, the failure of any one sub-goal is on its own
+sufficient for the proximate cause, so the failure of any one sub-goal puts the
+parent goal in doubt. A branch whose signal is rejected at Step~5 is not removed from the
 argument. It remains as an undeveloped goal, marked as such in the notation
 \cite{gsncs2021}, so that the safety case shows where monitoring is absent instead
 of implying a coverage that does not exist.
@@ -516,14 +526,14 @@ not observable to the ego vehicle.
 \end{figure}
 
 Table~\ref{tab:spi_attachment} states each attached indicator in the form of
-Equation~(\ref{eq:method_spiform}), together with the goal it monitors. The metric
+Equation~\eqref{eq:method_spiform}, together with the goal it monitors. The metric
 thresholds are those calibrated in Section~\ref{sec:exp_calibration}. The SPI
-thresholds are given symbolically, because T is a risk-acceptance decision that
+thresholds are given symbolically, because $T$ is a risk-acceptance decision that
 is not taken in this work (Section~\ref{sec:method_spithreshold}).
 
 \begin{table}[htbp]
     \centering
-    \caption[Attachment of the nine SPIs]{Attachment of the nine SPIs. Each SPI in the form of Equation~(\ref{eq:method_spiform}) and the goal of Figure~\ref{fig:lti_safety_case} it monitors.}
+    \caption[Attachment of the nine SPIs]{Attachment of the nine SPIs. Each SPI in the form of Equation~\eqref{eq:method_spiform} and the goal of Figure~\ref{fig:lti_safety_case} it monitors.}
     \label{tab:spi_attachment}
     \small
     \begin{tabular}{@{}l l l >{\raggedright\arraybackslash}p{8.6cm}@{}}
@@ -568,11 +578,11 @@ derivation is to be repeated from Step~2; the second means that the indicator
 itself is to be reviewed. The loss event is therefore first checked against the
 indicators of its chain before the decomposition is revised.
 
-Each attachment is recorded in the model of the safety case. The metric threshold
-$\theta$ and the SPI threshold $T$ are stored as dimension elements of the
-indicator, and the full derivation chain, from the lagging SPI through the
-proximate and intermediate causes to the signal and its source, is stored in the
-traceability field. This closes the loop opened in Step~1, since the goal that
+Each attachment carries a record of its own. The metric threshold $\theta$ and the
+SPI threshold $T$ belong to the indicator, and the full derivation chain, from the
+lagging SPI through the proximate and intermediate causes to the signal and its
+source, is kept as its traceability record, as shown for the three chains in
+Figures~\ref{fig:causal_chain_example} to~\ref{fig:chain_rear}. This closes the loop opened in Step~1, since the goal that
 began as a bare assertion now carries a monitorable claim, and a violation
 invalidates that specific claim rather than leaving the safety case silently wrong.
 Two failure modes are avoided explicitly, namely attaching an indicator to a
@@ -580,10 +590,10 @@ convenient parent goal instead of the goal it actually monitors, and omitting th
 traceability record, which is the element that distinguishes a derived indicator
 from an asserted one. The resulting argument structure is consistent with the
 \ac{GSN} community standard \cite{gsncs2021} and with the argument pattern for the
-use of indicators proposed by Ratiu et al.\ \cite{ratiu2024}. The method does not
-depend on any particular tool; a model-based safety-engineering environment that
-supports \ac{GSN}, such as SafeTbox, is suitable for carrying out the attachment in
-practice.
+use of indicators proposed by Ratiu et~al.\ \cite{ratiu2024}. The method does not
+depend on a particular tool. The argument of Figure~\ref{fig:lti_safety_case} is drawn
+as a diagram, and its modelling in a model-based safety-engineering environment is not
+part of this work.
 
 The attachment ends where the \ac{DRSPI} framework begins. Diaz and Woon assume
 indicators that are already attached to safety case sub-arguments, select those
@@ -622,8 +632,8 @@ architectural-tier indicators that depend on detection confidence or time of fir
 detection are outside the empirical scope of this work, since ground truth carries no
 notion of confidence and a calibrated perception model would be required before any
 threshold on such a signal is meaningful. Second, indicators are computed in
-post-processing rather than during a run, which permits $\theta$ and $T$ to be
-recalibrated without regenerating the scenarios, and which equally means that the
+post-processing rather than during a run, which permits $\theta$ to be recalibrated
+and $T$ to be applied once it is set, without regenerating the scenarios, and which equally means that the
 runtime cost of evaluating an indicator on a vehicle is not measured here. The
 operational loop of Chapter~\ref{ch:sota} is accordingly evidenced in its derivation and
 monitoring stages only.

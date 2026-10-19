@@ -15,7 +15,8 @@ parameters. Section~\ref{sec:exp_parameters} gives the quantities sampled per
 run. Section~\ref{sec:exp_audit} accounts for the difference between the rows
 recorded and the runs analysed. Section~\ref{sec:exp_collision} fixes what counts
 as a collision, which for the pedestrian chain is not self-evident.
-Section~\ref{sec:exp_criteria} defines the evaluation measures, and
+Section~\ref{sec:exp_criteria} defines the eligible runs of each chain and the
+evaluation measures, and
 Section~\ref{sec:exp_calibration} gives the calibrated metric thresholds.
 
 \section{Scenario and Conflict Geometries}
@@ -51,9 +52,7 @@ crossing, a lateral crossing and a longitudinal following conflict at once.
 
 The quantity under evaluation is the indicator, not a driving function, and the
 ego configuration is chosen accordingly: it has to produce conflicts of all three
-kinds reliably and reproducibly, not to resolve them well.
-
-The ego vehicle is driven by the CARLA Traffic Manager with an added
+kinds reliably and reproducibly, not to resolve them well. The ego vehicle is driven by the CARLA Traffic Manager with an added
 pedestrian-stop rule and without gap acceptance. It therefore enters the turn
 without evaluating whether the gap in oncoming traffic is sufficient. The
 evaluation consequently tests the indicators on trajectories rather than on a
@@ -70,11 +69,11 @@ every actor, and every collision event with the identity of the actor involved.
 No indicator is computed during the run. All indicators are computed offline from
 the stored ground truth, which keeps the derivation independent of the simulated
 vehicle's own perception and makes every value reproducible from the frozen data.
-The datasets were frozen on 28~September 2026.
 
-Three campaigns were executed. They differ in the scenario generator as well as
-in the controller configuration, so a comparison between them is a comparison of
-two known groups rather than a controlled variation of one factor.
+Three campaigns were executed. Campaign~1 differs from Campaigns~2 and~3 in the
+scenario generator as well as in the controller configuration, so a comparison
+between them is a comparison of two known groups rather than a controlled
+variation of one factor. Campaigns~2 and~3 use the same configuration.
 Table~\ref{tab:campaigns} gives their composition.
 
 \begin{table}[htbp]
@@ -93,8 +92,8 @@ Table~\ref{tab:campaigns} gives their composition.
         Total      &                                                 & 94,816 \\
         \bottomrule
     \end{tabular}
-    \par\smallskip\footnotesize\raggedright Campaign~3 shows no significant
-    difference from Campaign~2 in the metric distributions; see Section~\ref{sec:results_poolability}.
+    \par\smallskip\footnotesize\raggedright Campaigns~2 and~3 share one configuration;
+    their metric distributions show no significant difference (Section~\ref{sec:results_poolability}).
 \end{table}
 
 \section{Sampled Parameters}
@@ -211,7 +210,7 @@ emits a contact event that is indistinguishable in the log from a contact the eg
 vehicle caused.
 
 A pedestrian contact therefore counts as a collision only if the ego vehicle
-moves at at least 0.3\,m/s at the simulation step before the contact event.
+moves at a speed of at least 0.3\,m/s at the simulation step before the contact event.
 Contacts with a standing ego vehicle are recorded but not counted.
 Figure~\ref{fig:5_2_pedestrian_contacts} and Table~\ref{tab:pedestrian_contacts}
 give the audit on which that rule rests.
@@ -262,6 +261,18 @@ standing ego vehicle.
 \section{Evaluation Measures}
 \label{sec:exp_criteria}
 
+Not every run can produce every conflict, so each chain is scored only on the runs
+in which its conflict can arise. A run is eligible for the oncoming chain if at least
+one oncoming vehicle passes the conflict gate, which admits an oncoming vehicle as a
+conflict partner only if its path intersects the conflict area of the ego vehicle's
+turn; vehicles that turn away or pass clear of the turn arc are not partners of the
+conflict. A run is eligible for the pedestrian chain if at least one pedestrian
+crosses in the corridor of the leg into which the ego vehicle turns, and for the
+following-vehicle chain if a following vehicle is present. GAP\_TTC, REQ\_DECEL and
+AEB\_ONC are computed only towards gated oncoming vehicles, and PED\_CPA and AEB\_PED
+only towards corridor pedestrians. This gives 80,455 eligible runs for the oncoming
+chain, 37,309 for the pedestrian chain and 89,882 for the following-vehicle chain.
+
 An indicator is evaluated by how its violations relate to the collisions of its
 own chain, so each eligible run is classified before any measure is computed. A
 run of a given chain is a true positive (TP) if the indicator is violated before
@@ -272,7 +283,7 @@ violations that precede the collision are counted, so that a violation can never
 be a consequence of the event it is meant to anticipate.
 
 Three measures follow directly from that classification. Precision, in
-Equation~(\ref{eq:exp_precision}), is the share of violating runs that end in a
+Equation~\eqref{eq:exp_precision}, is the share of violating runs that end in a
 collision of the chain.
 
 \begin{equation}
@@ -281,7 +292,14 @@ collision of the chain.
 \end{equation}
 \equationentry{Precision}
 
-Recall, in Equation~(\ref{eq:exp_recall}), is the share of collision runs
+where:\nopagebreak
+\begin{tabbing}
+    \hspace{2.2cm} \= \kill
+    TP \> number of eligible runs with a violation before a collision of the chain \\
+    FP \> number of eligible runs with a violation and without a collision of the chain
+\end{tabbing}
+
+Recall, in Equation~\eqref{eq:exp_recall}, is the share of collision runs
 preceded by a violation.
 
 \begin{equation}
@@ -290,7 +308,13 @@ preceded by a violation.
 \end{equation}
 \equationentry{Recall}
 
-The false-alarm rate, in Equation~(\ref{eq:exp_falsealarm}), is the share of
+where:\nopagebreak
+\begin{tabbing}
+    \hspace{2.2cm} \= \kill
+    FN \> number of eligible runs with a collision of the chain and without an earlier violation
+\end{tabbing}
+
+The false-alarm rate, in Equation~\eqref{eq:exp_falsealarm}, is the share of
 collision-free eligible runs that nevertheless record a violation.
 
 \begin{equation}
@@ -299,9 +323,15 @@ collision-free eligible runs that nevertheless record a violation.
 \end{equation}
 \equationentry{False-alarm rate}
 
+where:\nopagebreak
+\begin{tabbing}
+    \hspace{2.2cm} \= \kill
+    TN \> number of eligible runs with neither a violation nor a collision of the chain
+\end{tabbing}
+
 Precision and recall describe the indicator but do not state how much a violation
 changes the collision probability. The relative risk, in
-Equation~(\ref{eq:exp_relrisk}), gives that directly as the ratio of the
+Equation~\eqref{eq:exp_relrisk}, gives that directly as the ratio of the
 collision probability among violating runs to the collision probability among
 runs without a violation.
 
@@ -312,15 +342,15 @@ runs without a violation.
 \end{equation}
 \equationentry{Relative risk of a collision after a violation}
 
-\textbf{Variable key:} TP, number of eligible runs with a violation before a
-collision of the chain, dimensionless; FP, number of eligible runs with a
-violation and without a collision of the chain, dimensionless; FN, number of
-eligible runs with a collision of the chain and without an earlier violation,
-dimensionless; TN, number of eligible runs with neither, dimensionless; RR,
-relative risk, dimensionless.
+where:\nopagebreak
+\begin{tabbing}
+    \hspace{2.2cm} \= \kill
+    RR \> relative risk, dimensionless \\
+    TP, FP, FN, TN \> run counts as in Equations~\eqref{eq:exp_precision} to~\eqref{eq:exp_falsealarm}
+\end{tabbing}
 
 Every proportion is reported with a Wilson score interval and every relative risk
-with the Katz log interval of Equation~(\ref{eq:exp_katz}), both at 95\,\%
+with the Katz log interval of Equation~\eqref{eq:exp_katz}, both at 95\,\%
 \cite{wilson1927probable} \cite{katz1978risk}.
 
 \begin{equation}
@@ -332,8 +362,11 @@ with the Katz log interval of Equation~(\ref{eq:exp_katz}), both at 95\,\%
 \end{equation}
 \equationentry{Katz log interval of the relative risk}
 
-\textbf{Variable key:} $z$, standard normal quantile, here 1.96 for a two-sided
-95\,\% interval, dimensionless.
+where:\nopagebreak
+\begin{tabbing}
+    \hspace{2.2cm} \= \kill
+    $z$ \> standard normal quantile, here 1.96 for a two-sided 95\,\% interval, dimensionless
+\end{tabbing}
 
 Where a cell of the classification is zero the interval is not defined, so 0.5 is
 added to every cell before the interval is computed, which is the
@@ -341,7 +374,7 @@ Haldane-Anscombe correction \cite{haldane1956} \cite{anscombe1956}. Where FN is 
 reported as a lower bound rather than as a point estimate.
 
 All measures in this section are computed against the metric threshold
-$\theta$. The SPI threshold T is not evaluated, because it is a risk-acceptance
+$\theta$. The SPI threshold $T$ is not evaluated, because it is a risk-acceptance
 decision that is outside the scope of this work
 (Section~\ref{sec:method_spithreshold}).
 
@@ -384,10 +417,15 @@ The thresholds are not transferable between configurations without checking. The
 metric threshold of REQ\_DECEL shifts by 21.52\,\% and that of PED\_CPA by
 37.90\,\% between Campaign~1 and the realistic-driving campaigns, which is why
 calibration is performed once on Campaign~1 and the resulting value is applied
-unchanged rather than refitted per campaign. Section~\ref{sec:results_poolability}
+unchanged rather than refitted per campaign. Whether one threshold can stand for
+several campaigns is judged by recalibrating it on each campaign and comparing the
+values: pooling is accepted up to a relative shift of 15\,\% and refused above it.
+The criterion is a tolerance set for this evaluation rather than a statistical test;
+a shift above it means that the uneventful behaviour of two campaigns differs too
+much for one metric threshold to represent both. Section~\ref{sec:results_poolability}
 reports the shift for every indicator.
 
-Two reaction-tier indicators carry no metric threshold. AEB\_ONC and AEB\_PED
+Two reaction-tier indicators carry no calibrated metric threshold. AEB\_ONC and AEB\_PED
 fire on an event, namely a brake command of at least 0.8 together with a
 line-of-sight time to collision of at most 1.5\,s to the gated partner of the
 chain in the same simulation step. Their calibration population of 16,950 runs is

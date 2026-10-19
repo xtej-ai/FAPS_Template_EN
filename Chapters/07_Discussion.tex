@@ -13,15 +13,14 @@ and why the conflict geometry decides the warning time
 to~\ref{sec:disc_threshold} discuss four individual decisions and anomalies: the
 pedestrian collision rule, the behaviour of AEB\_PED and the reaction tier, the
 formulation of REQ\_DECEL, and the choice of metric threshold.
+Section~\ref{sec:disc_sota} relates the results to the state of the art, and
 Section~\ref{sec:disc_limitations} collects the limitations.
 
 \section{What the Results Validate}
 \label{sec:disc_scope}
 
 The scope of the claim has to be stated before the findings are interpreted,
-because the evaluation is easily read as saying more than it does.
-
-The results validate the derivation method and the evaluation, not the safety of
+because the evaluation is easily read as saying more than it does. The results validate the derivation method and the evaluation, not the safety of
 a driving function. The ego vehicle is driven by the CARLA Traffic Manager with a
 pedestrian-stop rule and without gap acceptance, so the conflicts that arise in
 the oncoming chain follow from a capability the vehicle does not have rather than
@@ -45,8 +44,7 @@ In Campaign~1 the leading SPIs and the collisions are of comparable size. The
 oncoming chain records 3.8 GAP\_TTC violations, 1.9 REQ\_DECEL violations and 1.2
 AEB\_ONC events per collision, and the pedestrian chain 1.6 PED\_CPA violations
 and 1.0 AEB\_PED events per collision. In that regime the lagging SPI is
-itself countable, and a monitoring process would gain little from the leading
-one.
+itself countable, and a monitoring process gains little from the leading one.
 
 In Campaigns~2 and~3 the position reverses. Across 75,509 runs a single collision
 occurs, while the leading SPIs continue to be violated between 527 and 9,841
@@ -113,12 +111,12 @@ against which $\theta$ was set, and neither cause can be separated from the othe
 For GAP\_TTC and REAR\_TTC, whose thresholds remain within the criterion, the
 ratios of 1.56 and 1.2 are read against a common reference.
 
-This distinction matters for the safety engineers who set the SPI threshold T
-(Section~\ref{sec:method_spithreshold}). Because T bounds the violation rate per
+This distinction matters for the safety engineers who set the SPI threshold $T$
+(Section~\ref{sec:method_spithreshold}). Because $T$ bounds the violation rate per
 exposure unit, an indicator whose rate is dominated by exposure moves little
-against any T when the configuration changes, whereas an indicator whose rate
+against any $T$ when the configuration changes, whereas an indicator whose rate
 tracks the configuration moves strongly. The ratios above therefore indicate which
-entries of the register are suited to monitoring against T once it has been set,
+entries of the register are suited to monitoring against $T$ once it has been set,
 and which are suited mainly to the per-run detection reported in
 Section~\ref{sec:results_statistics}.
 
@@ -128,9 +126,7 @@ Section~\ref{sec:results_statistics}.
 The lead times in Table~\ref{tab:lead_time} divide the register along the
 conflict geometry rather than along the indicator design, which is the most
 consequential finding for the timeliness question of
-Section~\ref{sec:intro_objective}.
-
-In the two crossing conflicts the partner moves across the ego vehicle's line of
+Section~\ref{sec:intro_objective}. In the two crossing conflicts the partner moves across the ego vehicle's line of
 sight. Time to collision and time to the closest point of approach both depend on
 the closing component of the relative motion, so they change slowly while the
 paths are still separated and fall quickly only once the paths almost meet. The
@@ -142,18 +138,22 @@ same quantity changes monotonically throughout the approach, and 87 of 101
 collisions are preceded by a violation at least one second ahead. The dependence
 of a criticality metric on the geometry it is applied to is the point made in the
 review of such metrics \cite{westhofen2023}, and the lead times measured here are
-a quantitative instance of it.
+a quantitative instance of it. The derivation located the gap branch of the
+oncoming chain at the moment the turn is committed, but GAP\_TTC is the minimum over
+the manoeuvre, and for a crossing geometry that minimum is reached only when the
+paths almost meet. The insufficient gap therefore exists early, whereas the metric
+that represents it crosses its threshold late.
 
-Replacing the pedestrian time to collision by the time to the closest point of
-approach was a consequence of Step~4 of the derivation, which selects the
-formulation the geometry admits. Because PED\_CPA is gated on the miss distance
+The use of the time to the closest point of approach for the pedestrian chain
+follows from Step~4 of the derivation, which selects the formulation the geometry
+admits. Because PED\_CPA is gated on the miss distance
 $d_\mathrm{CPA}$, it is by construction silent for a pedestrian whose predicted
 path passes clear of the vehicle, and its precision of 44.0\,\% is the highest of
-the register. The two formulations were not evaluated side by side under the
-final collision definition, so the share of this precision that is owed to the
-change of formulation is not quantified here. The change did not lengthen the
-warning time,
-because it does not change what the metric depends on. Any substantially earlier
+the register. The line-of-sight time to collision was not evaluated side by side with it under
+the collision definition of Section~\ref{sec:exp_collision}, so the share of this
+precision that is owed to the formulation is not quantified here. Neither
+formulation can be expected to lengthen the warning time substantially, because
+both depend on the closing component of the relative motion. Any substantially earlier
 warning for a crossing pedestrian would have to come from signals of intention
 such as gait, head pose or dwell at the kerb, and those are perception
 quantities, outside the behavioural tier that this work evaluates.
@@ -163,10 +163,8 @@ quantities, outside the behavioural tier that this work evaluates.
 
 The rule of Section~\ref{sec:exp_collision}, under which a pedestrian contact
 counts as a collision only when the ego vehicle is moving, is a decision about
-the reference event rather than about an indicator, and it deserves to be
-defended as such.
-
-Without the rule the two realistic-driving campaigns would appear to produce 481
+the reference event rather than about an indicator, and it is defended as such
+here. Without the rule the two realistic-driving campaigns would appear to produce 481
 pedestrian collisions rather than one. The appearance would be an artefact: 480
 of those 481 contacts occur with a standing ego vehicle, which a CARLA walker
 does not avoid. The low-collision configuration would then look dangerous for a
@@ -188,17 +186,15 @@ pedestrian results depend on it.
 
 Two results concerning the reaction tier run against the expectation under which
 it was placed in the derivation, and both are discussed here rather than treated
-as settled.
-
-AEB\_PED is the weakest entry in the register once contacts with a standing ego
+as settled. AEB\_PED is the weakest entry in the register once contacts with a standing ego
 vehicle are excluded. It precedes 110 of the 815 pedestrian collisions, its
 relative risk is 3.7, and within Campaign~1 alone it is 1.4, which is close to no
 association. An emergency brake with a pedestrian in conflict therefore carries
 little information about whether that run ends in a pedestrian collision. The
-reading that follows from the collision rule is that the indicator previously
-appeared stronger because braking brings the vehicle to a stop and a stopped
-vehicle in a walker's path is walked into, so a large part of its apparent
-association was with contacts that are no longer counted.
+collision rule explains why: braking brings the vehicle to a stop, and a stopped
+vehicle in a walker's path is walked into, so many emergency-braking events
+precede contacts with a standing ego vehicle, which the rule does not count as
+collisions.
 
 The lead time of AEB\_PED has to be read with the same reserve. In the 110 runs
 in which an event precedes a collision, it does so by between 4.95\,s and
@@ -254,9 +250,7 @@ a partner-aware formulation would produce.
 
 The empirical percentile was selected in Section~\ref{sec:method_thresholds} for
 reasons of independence rather than of performance, and the results allow both
-sides of that choice to be stated.
-
-Its benefit is that no metric threshold is fitted on the collisions against which
+sides of that choice to be stated. Its benefit is that no metric threshold is fitted on the collisions against which
 the indicators are later scored. The only collision labels available are the ones
 that the evaluation uses, so any criterion that optimises a detection measure on
 labelled data would have produced a circular evaluation. The percentile uses the
@@ -274,6 +268,41 @@ the place where a level of risk enters, and it is deliberately not set in this
 work. Deriving it, or a risk-based metric threshold, from ALARP, GAMAB, MEM or a
 careful and competent human driver benchmark requires inputs that this work does
 not have and a decision that belongs to the safety engineers of the system.
+
+\section{Relation to the State of the Art}
+\label{sec:disc_sota}
+
+The research gap of Section~\ref{sec:sota_gap} was that the step from an open claim
+to a defined leading indicator is left to expert judgement, and the results allow
+the contribution of this work to be placed against the approaches that frame that
+gap. Laxman et~al.\ identify, through uncertainty propagation and eliminative
+argumentation, the claims that remain open until runtime data are available and
+define \acp{SPI} for them \cite{laxman2025}. The method of this thesis takes such
+an open claim as its input and supplies the construction of the indicator itself,
+from the lagging \ac{SPI} through the proximate cause to a signal with a calibrated
+metric threshold. The two approaches are therefore consecutive rather than
+competing: the first decides where an indicator is needed, the second how it is
+built.
+
+The \ac{DRSPI} framework of Diaz and Woon starts where the method of this thesis
+stops, with indicators already attached to low-level sub-claims, and relates the
+depth of a claim to the leading character of its indicator \cite{diaz2022drspi}. The
+results support that relation in terms of detection: the kinematic \acp{SPI} attached
+to the sub-goals G2.1, G3.1 and G4.1 precede 97.6\,\%, 96.9\,\% and 100\,\% of the
+collisions of their chains. They qualify it in terms of time, because a deep
+sub-goal yields a warning of more than one second only in the following conflict
+(Section~\ref{sec:disc_geometry}). Depth in the argument therefore does not by
+itself guarantee a usable lead time; the conflict geometry decides it.
+
+Ratiu et~al.\ argue that the rationale by which a set of \acp{SPI} contributes to
+safety is often left implicit and propose meta-indicators that monitor whether the
+indicators themselves continue to perform as intended \cite{ratiu2024}. The
+traceability record of every derived indicator makes that rationale explicit, and
+the evaluation measures of Chapter~\ref{ch:results} are the kind of evidence such a
+meta-indicator monitors. The split between exposure and configuration of
+Section~\ref{sec:disc_exposure} is a concrete case of their concern: GAP\_TTC and
+REAR\_TTC detect almost every collision of their chains, yet their violation rates
+barely change when the collisions of those chains fall to zero.
 
 \section{Limitations}
 \label{sec:disc_limitations}
@@ -306,16 +335,18 @@ would address it.
         only &
         Perception in the loop; architectural-tier indicators \\
         Narrow exposure &
-        One scenario, one map, oncoming partners that do not yield &
+        One scenario and one map; oncoming partners yield according to a sampled flag
+        rather than in response to the ego vehicle &
         Naturalistic data; responsive partners \\
         Thresholds &
-        $\theta$ bounds demonstrated behaviour and T is not set; ALARP, GAMAB, MEM
+        $\theta$ bounds demonstrated behaviour and $T$ is not set; ALARP, GAMAB, MEM
         and the careful and competent human driver benchmark are named but not
         applied &
         A risk-acceptance SPI threshold set with safety engineers \\
         Campaign comparison &
-        The campaigns differ in scenario generator as well as controller, so the
-        comparison is one of known groups and not a controlled experiment &
+        Campaign~1 differs from Campaigns~2 and~3 in scenario generator as well as
+        controller, so the comparison is one of known groups and not a controlled
+        experiment &
         Controlled variation of one factor \\
         Lead-time definition &
         Lead time is measured from the first violation anywhere in the run &
@@ -327,7 +358,7 @@ would address it.
 The last two limitations bear on specific results. Because the campaigns differ
 in two respects at once, the contrast of Section~\ref{sec:disc_exposure} shows
 that PED\_CPA tracks the difference between two configurations, not that it
-tracks the controller change within it. Because lead time is measured from the
+tracks the controller change alone. Because lead time is measured from the
 first violation anywhere in the run, the AEB\_PED interval of
 Section~\ref{sec:disc_aebped} cannot be attributed to the collision that follows
 it without the per-run check described there.

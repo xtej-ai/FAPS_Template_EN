@@ -3,16 +3,16 @@
 
 Whereas the fundamentals establish the terminology of safety assurance, safety
 argumentation, and safety performance indicators, this chapter reviews the
-\textit{current} state of research on their combined use for operational safety
+state of research on their combined use for operational safety
 assurance of \ac{ADS}. The review is organised from the general to the specific. It
 begins with structured safety argumentation and the shift towards operational
-assurance, narrows to \ac{SPI} based safety performance monitoring, then examines the
+assurance, narrows to \ac{SPI}-based safety performance monitoring, then examines the
 accident causation and investigation methods that supply the reasoning for deriving
 indicators, surveys how mature safety domains transform lagging indicators into
 leading ones, reviews the surrogate safety metrics that serve as candidate signals,
 and closes with a consolidated statement of the research gap that motivates the
-methodology in Chapter~\ref{ch:methodology}. Each section concludes with the aspect
-that remains open.
+methodology in Chapter~\ref{ch:methodology}. Where a line of research leaves an
+aspect open, the section concludes with it.
 
 \section{Structured Safety Argumentation for Automated Driving Systems}
 \label{sec:sota_argumentation}
@@ -41,13 +41,12 @@ dynamic operating environment of an \ac{ADS}.
 
 Operational safety assurance addresses the limitation above by maintaining confidence
 in the validity of the assurance case after deployment, using the growing
-availability of field data \cite{laxman2024}. Research in this direction is gaining
-traction, particularly for runtime model-based assurance cases. Wei et al. argue for
+availability of field data \cite{laxman2024}. Several approaches address runtime
+model-based assurance cases. Wei et~al.\ argue for
 the transition from design-time to runtime assurance-case processes on the basis of
-the Structured Assurance Case Metamodel \cite{wei2024access}, and Asaadi et al.
+the Structured Assurance Case Metamodel \cite{wei2024access}, and Asaadi et~al.\
 introduce dynamic assurance cases as a pathway to trusted autonomy for systems based
-on artificial intelligence and machine learning \cite{asaadi2020dynamic}. Carlan et
-al. extend this line of work to a dynamic safety-case management system for frontier
+on artificial intelligence and machine learning \cite{asaadi2020dynamic}. Carl\^{a}n et~al.\ extend this line of work to a dynamic safety-case management system for frontier
 artificial-intelligence systems \cite{carlan2024dynamic}. These approaches establish
 that the assurance case is to be treated as a dynamic artefact rather than a fixed
 document.
@@ -61,21 +60,21 @@ mechanism, in which claims are recursively challenged by doubts, termed defeater
 and confidence in a claim increases as these defeaters are resolved by additional
 argumentation or evidence \cite{goodenough2015ea}. Three types of defeater are
 distinguished, namely rebutting, undermining, and undercutting defeaters
-\cite{laxman2025}. Diemert et al. extend the idea to incremental assurance: an eliminative
+\cite{laxman2025}. Diemert et~al.\ extend the idea to incremental assurance: an eliminative
 argument gains confidence step by step as new evidence removes defeaters that were
 recorded earlier \cite{diemert2023incremental}. Hawkins
 and Ryan Conmy complement design-time argumentation with dialectic analysis, which
 identifies how an argument may be challenged at runtime and derives corresponding
 runtime monitoring requirements in a systematic manner \cite{hawkins2023dialectic}.
 The common contribution of these approaches is a structured record of doubt. The open
-aspect is that the resolution of many defeaters requires operational data that is
+aspect is that the resolution of many defeaters requires operational data that are
 unavailable before deployment.
 
 The integration of field data into this process is the specific concern of the
 SafetyDevOps paradigm. The SafeOps approach applies the principles of automation,
 feature-driven development, and operational monitoring to the iterative extension of
 safety-critical products under ISO~26262 \cite{munk2022safeops}. Building on this,
-Laxman et al. propose a cumulative operational safety assurance approach in which risk
+Laxman et~al.\ propose a cumulative operational safety assurance approach in which risk
 assessment, safety measures, requirements, and their validation are built up
 iteratively over time together with field data, so that the assurance case is
 enhanced continuously rather than fixed at release \cite{laxman2024}. The authors
@@ -88,7 +87,7 @@ specify which quantities are to be monitored.
 \label{sec:sota_spi}
 
 Safety performance indicators, defined in Section~\ref{sec:fund_spi}, are the
-mechanism by which field data is connected to the claims of an assurance case, and
+mechanism by which field data are connected to the claims of an assurance case, and
 their use is mandated for automated driving by ANSI/UL~4600 in its Section~16
 \cite{ul4600} and by BSI PAS~1881 \cite{pas1881}, with complementary field-monitoring
 obligations arising from ISO~26262 \cite{iso26262} and ISO~21448 \cite{iso21448}. The
@@ -113,21 +112,21 @@ the practitioner \cite{ul4600}.
     \label{fig:spi_spectrum}
 \end{figure}
 
-Several frameworks build on this leading-indicator property. The Dynamic Realtime
-\ac{SPI} (\ac{DRSPI}) framework of Diaz and Woon attaches indicators computed at runtime to
+Several frameworks build on this leading-indicator property. The \ac{DRSPI}
+framework of Diaz and Woon attaches indicators computed at runtime to
 sufficiently low safety-case sub-claims, so that a threshold violation signals that
 the \ac{ADS} is encountering an untested situation, and assigns each such indicator an
 improvement mechanism that adjusts vehicle behaviour to re-establish the validity of
-the sub-claim \cite{diaz2022drspi}. Ratiu et al. address a complementary concern,
+the sub-claim \cite{diaz2022drspi}. Ratiu et~al.\ address a complementary concern,
 namely that the rationale by which a chosen set of \acp{SPI} contributes to safety is
 often left implicit. They propose an explicit argument pattern for the use of
 \acp{SPI}, analyse the defeaters that can undermine confidence in a chosen indicator
 set, and introduce meta-indicators that monitor whether the indicators themselves
-continue to perform as intended \cite{ratiu2024}. Laxman et al. come closest to deriving
+continue to perform as intended \cite{ratiu2024}. Laxman et~al.\ come closest to deriving
 indicators systematically from an assurance case. Their approach has four steps: the
 uncertainty of each claim is expressed with Dempster-Shafer theory and carried up to
 the top goal, claims are then settled where possible by eliminative argumentation, and
-\acp{SPI} are defined for the claims that remain open until runtime data is available
+\acp{SPI} are defined for the claims that remain open until runtime data are available
 \cite{laxman2025}. To the knowledge reported in that
 work, no standard or otherwise widely used systematic approach for specifying
 \acp{SPI} exists \cite{laxman2025}. The open aspect is that the derivation of a
@@ -147,14 +146,14 @@ method that starts from an undesired top event and uses Boolean logic gates,
 principally AND and OR, to decompose it into intermediate events and finally basic
 events with associated failure data \cite{ericson1999,nasaftahandbook}. It is
 codified in IEC~61025 \cite{iec61025} and, for automotive systems, recommended by
-ISO~26262 for the higher automotive safety integrity levels \cite{iso26262}. The
+ISO~26262 for the higher \acp{ASIL} \cite{iso26262}. The
 top-down AND and OR decomposition supplies the structural skeleton for deriving
 indicators, because a loss event treated as a top event decomposes into the
 subsystem-level causes and observable signals that precede it. The recognised
 limitation of classical Fault Tree Analysis is its assumption of discrete,
-independent component failures, which does not capture the functional insufficiencies
-of a machine-learning perception stack, where a component operates as specified yet
-the specification itself is inadequate \cite{ruijters2015}. The structure is shown
+independent component failures \cite{ruijters2015}, which does not capture the
+functional insufficiencies of a machine-learning perception stack, where a component
+operates as specified yet the specification itself is inadequate. The structure is shown
 schematically in Figure~\ref{fig:fault_tree}: Boolean reduction of the tree yields
 minimal cut sets, the smallest combinations of basic events sufficient to cause the
 top event, and these map directly onto the candidate signal sets from which leading
@@ -168,7 +167,7 @@ indicators are drawn.
 \end{figure}
 
 The second family is the epidemiological, barrier-based model. Reason's organisational
-accident model distinguishes active failures from latent conditions and holds that an
+accident model, known as the Swiss Cheese model, distinguishes active failures from latent conditions and holds that an
 accident occurs when weaknesses in successive defensive layers momentarily align
 \cite{reason1990,reason2000}. The bowtie method operationalises this view by combining
 a fault tree of threats leading to a central loss event with an event tree of
@@ -189,16 +188,15 @@ a leading indicator monitors sitting on the preventive side.
     \label{fig:bowtie}
 \end{figure}
 
-The third family is the systemic, control-theoretic model. The Systems-Theoretic
-Accident Model and Processes treats safety as a control problem: accidents occur when
+The third family is the systemic, control-theoretic model. The \ac{STAMP} treats safety as a control problem: accidents occur when
 the controllers of a hierarchical structure fail to keep the system within its safety
 constraints, and not only when components fail in sequence \cite{leveson2011}. Its hazard-analysis technique, System-Theoretic Process Analysis,
 identifies unsafe control actions and their causal scenarios \cite{stpahandbook}, and
 its investigation counterpart, Causal Analysis based on System Theory, reconstructs
 the control-structure failures behind an accident \cite{casthandbook}. Unsafe control
 actions are candidate leading indicators, and the approach captures the non-failure,
-functional-insufficiency hazards that Fault Tree Analysis misses under the safety of
-the intended functionality \cite{iso21448}. The open aspect is that System-Theoretic
+functional-insufficiency hazards that Fault Tree Analysis misses under \ac{SOTIF}
+\cite{iso21448}. The open aspect is that System-Theoretic
 Process Analysis and Causal Analysis based on System Theory are qualitative and do
 not natively produce thresholds or continuously monitored indicators; their
 application to automated driving has concentrated on deriving test scenarios
@@ -249,13 +247,13 @@ management system institutionalises a continuous loop that monitors indicators,
 detects deviations, manages risk, and verifies the result \cite{icao9859}, and Flight
 Operational Quality Assurance mines routine flight data for exceedances that act as
 precursors before an accident occurs. This is the same lagging-to-leading
-transformation that the present work systematises for automated driving, and it is
-widely regarded as the origin of the \ac{SPI} concept later adopted by ANSI/UL~4600.
+transformation that the present work systematises for automated driving, and the
+\ac{SPI} concept later adopted by ANSI/UL~4600 originates in this practice \cite{icao9859}.
 Within automated driving, the equivalent sentinel signal is the activation of
-automatic emergency braking (AEB), a last-resort intervention triggered when normal control
-has failed to preserve an adequate margin, typically parameterised by time-to-collision
+\ac{AEB}, a last-resort intervention triggered when normal control
+has failed to preserve an adequate margin, typically parameterised by the time to collision
 \cite{eNCAP_aeb}. A rising activation rate is an early-warning precursor of collision
-risk. The published treatment of automatic emergency braking is, however, oriented
+risk. The published treatment of \ac{AEB} is, however, oriented
 towards component testing under rating protocols rather than towards a monitored fleet
 indicator with a calibrated threshold feeding a safety case.
 
@@ -263,17 +261,18 @@ The lagging indicators of automated driving are documented in crash and disengag
 data. Analyses of the California disengagement and collision reports report, for
 example, an average of one accident per 178 disengagements up to July 2017
 \cite{favaro2018}, and the reporting mandated by the United States National Highway
-Traffic Safety Administration provides a growing but incomplete record of automation-
-involved crashes \cite{nhtsa_sgo}. The investigation of the Tesla Autopilot design by
+Traffic Safety Administration provides a growing but incomplete record of
+automation-involved crashes \cite{nhtsa_sgo}. The investigation of the Tesla Autopilot design by
 that agency reviewed 956 crashes in which the system was alleged to have been engaged,
 analysed 467 after exclusions, identified at least 13 involving one or more
 fatalities, and concluded that the design contributed to foreseeable misuse and
 avoidable crashes \cite{nhtsa_ea22002}. The same investigation records that only about
-18 per cent of police-reported crashes involve an airbag deployment and that the
+18\,\% of police-reported crashes involve an airbag deployment and that the
 manufacturer largely receives data only for such crashes, which exposes the sparsity
 and reporting bias of field lagging data \cite{nhtsa_ea22002}. This limitation is the
-direct justification for generating leading indicators in simulation, as pursued in
-this work, rather than relying on sparse field data.
+direct justification for leading indicators, which accumulate long before lagging
+field data do, and for evaluating them in simulation until field data of sufficient
+scale is available, as pursued in this work.
 
 \section{Deriving Leading Indicators from Lagging Indicators}
 \label{sec:sota_derivation}
@@ -289,10 +288,8 @@ United Kingdom Health and Safety Executive adds the concept of dual assurance, p
 a leading and a lagging indicator for each critical risk-control system
 \cite{hse2006hsg254}. Across these domains the distinction is consistent, with lagging
 indicators being retrospective, few, and severe, and leading indicators being
-forward-looking and numerous.
-
-Table~\ref{tab:crossdomain} sets the four domains side by side, which makes the common
-structure and the common omission visible in one view.
+forward-looking and numerous. Table~\ref{tab:crossdomain} sets the four domains side by
+side, which makes the common structure and the common omission visible in one view.
 
 \begin{table}[htbp]
     \centering
@@ -325,7 +322,7 @@ barriers from a causation model and then defines indicators of barrier health, a
 domain publishes a validated, step-by-step method that takes a specific lagging
 indicator and produces calibrated leading indicators with explicit observability and
 independence checks. For automated driving the gap is stated directly in the
-literature. Ratiu et al. observe that there is no systematic discussion of the
+literature. Ratiu et~al.\ observe that there is no systematic discussion of the
 challenges of deploying \acp{SPI} and frame their own contribution as only an initial
 step towards a systematic framework \cite{ratiu2024}, and Diaz and Woon classify each
 indicator as leading or lagging case by case rather than deriving them systematically
@@ -337,14 +334,16 @@ precise gap that the methodology of this work fills.
 
 The metric component of an \ac{SPI} is drawn from the body of surrogate safety
 metrics defined in Section~\ref{sec:fund_metrics}, and the suitability of a metric
-determines the quality of the resulting indicator. Fraade-Blanar et al. provide a
+determines the quality of the resulting indicator. Fraade-Blanar et~al.\ provide a
 framework for measuring automated-vehicle safety that organises these measures along a
 leading-to-lagging axis and catalogues their respective strengths and weaknesses
-\cite{fraadeblanar2018}, and Westhofen et al. survey the wider landscape of criticality
+\cite{fraadeblanar2018}, and Westhofen et~al.\ survey the wider landscape of criticality
 metrics and analyse their suitability for different conflict types \cite{westhofen2023}.
-The value of these metrics as established, pre-validated loss predictors means that the
-derivation of this work can treat the signals as known and claim novelty in the
-derivation procedure rather than in the predictive power of each signal.
+Because these metrics are established measures of how close an interaction comes to a
+collision, the derivation of this work takes its candidate signals from this literature
+and claims novelty in the derivation procedure rather than in the signals themselves.
+Whether a derived signal actually precedes the collisions of its conflict is not
+assumed but tested empirically in Chapter~\ref{ch:results}.
 
 \section{Conflicts in the Target Manoeuvre}
 \label{sec:sota_conflicts}
@@ -360,15 +359,19 @@ opposite-direction traffic, in which the two paths intersect at an angle. Studie
 this conflict is among the most demanding, because the decision window is short and the
 turn crosses the path of oncoming traffic \cite{leftturn_unsignalized}. Field testing
 of driver-assistance systems in naturalistic left-turn-across-path conditions reports
-that automatic emergency braking failed to activate braking early enough even when the
+that \ac{AEB} failed to activate braking early enough even when the
 detection criteria were technically met, with decision windows on the order of three
 seconds \cite{leftturn_field2025}. This indicates that a purely detection-based
 indicator offers poor lead-time adequacy in this conflict.
 
 The second is the pedestrian-crossing conflict, a crossing interaction for which
-post-encroachment time rather than pure time-to-collision is the natural surrogate
-measure \cite{allen1978pet}. Pedestrian protection is assessed in rating protocols
-through dedicated automatic-emergency-braking pedestrian tests \cite{eNCAP_aeb}. A
+post-encroachment time rather than the pure time to collision is the natural surrogate
+measure \cite{allen1978pet}. Because the post-encroachment time is known only once both
+road users have left the conflict area (Section~\ref{sec:fund_metrics}), it describes an
+encounter after the fact and cannot serve as a leading indicator, so a measure that is
+available during the approach, such as the time to the closest point of approach, is
+required instead. Pedestrian protection is assessed in rating protocols through
+dedicated \ac{AEB} pedestrian tests \cite{eNCAP_aeb}. A
 pedestrian who is hidden until late becomes observable only shortly before the
 conflict, and any indicator computed from observed kinematics inherits that delay. The adequacy of a crossing indicator therefore
 depends strongly on when the crossing road user first becomes observable, which differs
@@ -424,7 +427,7 @@ method that takes a lagging \ac{SPI}, identifies its proximate cause through a
 counterfactual prevention test, decomposes it with fault-tree gate logic to the
 subsystem level, extracts the earliest observable signals, checks their observability
 and independence, calibrates the metric threshold $\theta$ while leaving the SPI threshold $T$ to a risk-acceptance decision, and attaches the
-resulting leading \acp{SPI} to a \ac{GSN} safety case modelled in a \ac{GSN} modelling tool.
+resulting leading \acp{SPI} to the goals of a \ac{GSN} safety case.
 The indicators are evaluated from simulation data generated in the CARLA simulator
 \cite{dosovitskiy2017carla} with an explicit distinction between detection and
 lead-time adequacy, separated by conflict actor. The derived indicators operate

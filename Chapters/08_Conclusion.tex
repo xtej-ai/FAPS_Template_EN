@@ -1,12 +1,16 @@
 \chapter[Conclusion and Outlook]{Conclusion and Outlook on Indicator-Based Operational Safety Assurance}
 \label{ch:conclusion}
 
+This chapter summarises the contributions of the thesis and answers the three
+research questions on the basis of the evaluation. The outlook then states the work
+that remains open.
+
 \section{Conclusion}
 \label{sec:conclusion}
 
 Operational safety assurance requires that the claims of a safety case be kept
 under observation after release, and the instrument of that observation is the
-safety performance indicator. UL~4600 \cite{ul4600} and PAS~1881
+safety performance indicator. ANSI/UL~4600 \cite{ul4600} and PAS~1881
 \cite{pas1881} require such monitoring and give examples of indicators;
 ISO~21448 \cite{iso21448} requires that functional insufficiencies be monitored
 in operation without saying which quantities carry that information; and the
@@ -32,10 +36,8 @@ leading SPIs are set against the 540 oncoming-vehicle, 815 pedestrian and
 dashboard built on the same results, which demonstrates the form in which a
 derived register is consumed and keeps the metric threshold of each indicator
 together with its baseline, as the reference against which the SPI threshold is
-later set.
-
-Table~\ref{tab:rq_answers} states what the evaluation establishes for each
-research question.
+later set. Table~\ref{tab:rq_answers} states what the evaluation establishes for
+each research question.
 
 \begin{table}[htbp]
     \centering
@@ -49,9 +51,8 @@ research question.
         RQ1 Derivation &
         Yes &
         Seven traceable steps produce the register, and the checks reject
-        candidates: PLAN\_DEV as an input of the controller's own error, the
-        pedestrian perception branch as architectural, and the follower reaction
-        delay as not observable to the ego vehicle \\
+        candidates: the pedestrian perception branch as architectural, and the
+        follower reaction delay as not observable to the ego vehicle \\
         RQ2 Timeliness &
         Partly &
         The leading SPIs remain measurable where collisions are rare, with 527 to
@@ -90,9 +91,7 @@ campaigns, the leading SPIs are what remains to be monitored.
 \label{sec:outlook}
 
 Several of the limitations in Section~\ref{sec:disc_limitations} point to work
-that could be carried out on the existing data.
-
-A sensitivity analysis under the unrestricted pedestrian collision definition
+that could be carried out on the existing data. A sensitivity analysis under the unrestricted pedestrian collision definition
 would bound how far the pedestrian results depend on the moving-ego rule of
 Section~\ref{sec:exp_collision}, and would belong in an appendix beside the
 results reported here. A per-run check of the 110 AEB\_PED runs would settle
@@ -101,8 +100,8 @@ or a genuine warning, and would decide whether the reaction tier of the
 pedestrian chain carries any timing information at all. Both could be done
 without new simulation.
 
-The SPI threshold T is the most important step left open. It is a
-risk-acceptance decision and was not addressed in this thesis. Setting T from
+The SPI threshold $T$ is the most important step left open. It is a
+risk-acceptance decision and was not addressed in this thesis. Setting $T$ from
 ALARP, GAMAB, MEM or a careful and competent human driver benchmark requires a
 stated level of acceptable risk and has to be done by the safety engineers
 responsible for the system, with the baselines of Table~\ref{tab:dashboard_register}
@@ -127,6 +126,11 @@ parameter grid cannot reproduce. Extreme value theory and human-driver baselines
 for the metric threshold would become available with that data, and a sensitivity
 sweep over the calibration percentile would show how much the reported operating
 points depend on the tenth and ninety-fifth percentiles.
+
+The safety case of Figure~\ref{fig:lti_safety_case} is drawn as a diagram. Modelling
+it in a model-based safety-engineering environment would keep the metric threshold,
+the SPI threshold and the traceability record of every indicator together with the
+argument, so that they could be maintained as the register changes.
 
 Finally, the method itself could be tested rather than only applied. A study in
 which several engineers derive indicators independently from the same claim would

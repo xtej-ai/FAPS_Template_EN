@@ -1,237 +1,38 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
-
-<svg
-   version="1.1"
-   id="svg2"
-   width="940"
-   height="372"
-   viewBox="0 0 940 372"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg">
-  <defs
-     id="defs6" />
-  <g
-     id="g8"
-     transform="matrix(1.3333333,0,0,1.3333333,0,9.3e-6)">
-    <g
-       id="g10">
-      <path
-         d="M 0,0 H 705 V 279 H 0 Z"
-         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="path12" />
-      <text
-         xml:space="preserve"
-         transform="translate(128.19531,22.5)"
-         style="font-variant:normal;font-weight:bold;font-size:11.25px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#1a1a1a;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text16"><tspan
-           x="0 6.8737502 13.7475 16.875 20.002501 26.876249 35.62875 38.756248 45.630001 55.631248 61.88625 68.760002 75.633751 79.379997 82.5075 85.635002 91.889999 354.54297 362.66547 367.04172 373.91547 380.17047 386.42548 389.55298 396.42673 406.42798 412.68298 419.55673 426.43048 430.17673 433.30423 436.43173 442.68674"
-           y="0"
-           id="tspan14">FollowingconflictCrossingconflict</tspan></text>
-      <path
-         d="m 22.5,88.5 h 315 v 60 h -315 z"
-         style="fill:#d9d9d9;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="path18" />
-      <g
-         id="g20">
-        <path
-           d="m 22.5,118.5 h 315"
-           style="fill:none;stroke:#ffffff;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:10.5, 9;stroke-dashoffset:0;stroke-opacity:1"
-           id="path22" />
-      </g>
-      <path
-         d="m 88.5,104.25 h 33 c 2.484,0 4.5,2.484 4.5,4.5 v 19.5 c 0,2.484 -2.016,4.5 -4.5,4.5 h -33 c -2.484,0 -4.5,-2.484 -4.5,-4.5 v -19.5 c 0,-2.484 2.016,-4.5 4.5,-4.5 z"
-         style="fill:#6e9024;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="path24" />
-      <text
-         xml:space="preserve"
-         transform="translate(101.30859,122.25)"
-         style="font-variant:normal;font-weight:bold;font-size:10.5px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text28"><tspan
-           x="0"
-           y="0"
-           id="tspan26">E</tspan></text>
-      <path
-         d="m 252,104.25 h 33 c 2.484,0 4.5,2.484 4.5,4.5 v 19.5 c 0,2.484 -2.016,4.5 -4.5,4.5 h -33 c -2.484,0 -4.5,-2.484 -4.5,-4.5 v -19.5 c 0,-2.484 2.016,-4.5 4.5,-4.5 z"
-         style="fill:#1a1a1a;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="path30" />
-      <g
-         id="g32">
-        <path
-           d="m 141,94.5 h 48"
-           style="fill:none;stroke:#6e9024;stroke-width:1.8;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           id="path34" />
-      </g>
-      <path
-         d="m 173.57,86.785 18,7.715 -18,7.715 z"
-         style="fill:#6e9024;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="path36" />
-      <text
-         xml:space="preserve"
-         transform="translate(142.69531,86.25)"
-         style="font-variant:normal;font-weight:normal;font-size:10.5px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#6e9024;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text40"><tspan
-           x="0 5.25 11.088 14.5845 20.422501"
-           y="0"
-           id="tspan38">v_rel</tspan></text>
-      <g
-         id="g42">
-        <path
-           d="M 126,135.75 V 178.5"
-           style="fill:none;stroke:#8a8a8a;stroke-width:0.75;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2.25, 2.25;stroke-dashoffset:0;stroke-opacity:1"
-           id="path44" />
-      </g>
-      <g
-         id="g46">
-        <path
-           d="M 247.5,135.75 V 178.5"
-           style="fill:none;stroke:#8a8a8a;stroke-width:0.75;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2.25, 2.25;stroke-dashoffset:0;stroke-opacity:1"
-           id="path48" />
-      </g>
-      <g
-         id="g50">
-        <path
-           d="M 126,174 H 247.5"
-           style="fill:none;stroke:#1a1a1a;stroke-width:1.35;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           id="path52" />
-      </g>
-      <path
-         d="m 137.57,168.215 -13.5,5.785 13.5,5.785 z"
-         style="fill:#1a1a1a;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="path54" />
-      <path
-         d="m 235.93,168.215 13.5,5.785 -13.5,5.785 z"
-         style="fill:#1a1a1a;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="path56" />
-      <text
-         xml:space="preserve"
-         transform="translate(175.31641,190.5)"
-         style="font-variant:normal;font-weight:normal;font-size:10.5px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#1a1a1a;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text60"><tspan
-           x="0 5.8379998 11.676 15.1725 21.0105"
-           y="0"
-           id="tspan58">d_rel</tspan></text>
-      <text
-         xml:space="preserve"
-         transform="translate(79.214844,231)"
-         style="font-variant:normal;font-weight:normal;font-size:9.75px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#8a8a8a;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text64"><tspan
-           x="0 5.9572501 11.9145 21.664499 30.069 35.490002 40.910999 44.157749 49.578751 54.453751 59.874748 64.749748 70.170753 73.417503 78.838501 83.713501 97.265999 102.687 108.108 111.35475 116.77575 124.90725 133.31175 138.18675 143.60776 146.85451 152.2755 154.44 160.39725 165.81825 169.065 177.1965 182.61749 188.0385 191.28525 196.70625 198.87074"
-           y="0"
-           id="tspan62">TTC=d_rel/v_rel,a_req=v_rel²/(2d_rel)</tspan></text>
-      <path
-         d="m 465,52.5 h 60 V 240 h -60 z"
-         style="fill:#d9d9d9;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="path66" />
-      <path
-         d="m 375,112.5 h 330 v 57 H 375 Z"
-         style="fill:#d9d9d9;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="path68" />
-      <path
-         d="m 466.5,113.25 h 57 v 55.5 h -57 z"
-         style="fill:#97c139;fill-opacity:0.22;fill-rule:nonzero;stroke:none"
-         id="path70" />
-      <g
-         id="g72">
-        <path
-           d="m 466.5,113.25 h 57 v 55.5 h -57 z"
-           style="fill:none;stroke:#6e9024;stroke-width:0.9;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.75, 3;stroke-dashoffset:0;stroke-opacity:0.22"
-           id="path74" />
-      </g>
-      <path
-         d="m 416.25,141 c 0,4.141 -3.359,7.5 -7.5,7.5 -4.141,0 -7.5,-3.359 -7.5,-7.5 0,-4.141 3.359,-7.5 7.5,-7.5 4.141,0 7.5,3.359 7.5,7.5 z"
-         style="fill:#6e9024;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="path76" />
-      <g
-         id="g78">
-        <path
-           d="m 418.5,141 h 69"
-           style="fill:none;stroke:#6e9024;stroke-width:1.8;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           id="path80" />
-      </g>
-      <path
-         d="m 472.07,133.285 18,7.715 -18,7.715 z"
-         style="fill:#6e9024;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="path82" />
-      <text
-         xml:space="preserve"
-         transform="translate(392.31641,144.75)"
-         style="font-variant:normal;font-weight:bold;font-size:9.75px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#6e9024;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text86"><tspan
-           x="0"
-           y="0"
-           id="tspan84">1</tspan></text>
-      <text
-         xml:space="preserve"
-         transform="translate(385.4375,204)"
-         style="font-variant:normal;font-weight:normal;font-size:9.375px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#8a8a8a;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text90"><tspan
-           x="0 2.08125 7.2937498 12.50625 17.19375 22.40625 29.700001 34.912498 40.125 42.731251"
-           y="0"
-           id="tspan88">leavesatt1</tspan></text>
-      <path
-         d="m 502.5,69 c 0,4.141 -3.359,7.5 -7.5,7.5 -4.141,0 -7.5,-3.359 -7.5,-7.5 0,-4.141 3.359,-7.5 7.5,-7.5 4.141,0 7.5,3.359 7.5,7.5 z"
-         style="fill:#c0392b;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="path92" />
-      <g
-         id="g94">
-        <path
-           d="M 495,78.75 V 112.5"
-           style="fill:none;stroke:#c0392b;stroke-width:1.8;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           id="path96" />
-      </g>
-      <path
-         d="m 502.715,97.07 -7.715,18 -7.715,-18 z"
-         style="fill:#c0392b;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="path98" />
-      <text
-         xml:space="preserve"
-         transform="translate(509.25,72.75)"
-         style="font-variant:normal;font-weight:bold;font-size:9.75px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#c0392b;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text102"><tspan
-           x="0"
-           y="0"
-           id="tspan100">2</tspan></text>
-      <text
-         xml:space="preserve"
-         transform="translate(556.5,72.75)"
-         style="font-variant:normal;font-weight:normal;font-size:9.375px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#8a8a8a;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text106"><tspan
-           x="0 5.2125001 10.425 13.03125 18.24375 21.365625 28.659374 33.871876 39.084373 41.690624"
-           y="0"
-           id="tspan104">entersatt2</tspan></text>
-      <text
-         xml:space="preserve"
-         transform="translate(469.68359,187.5)"
-         style="font-variant:normal;font-weight:normal;font-size:9.375px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#6e9024;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text110"><tspan
-           x="0 4.6875 9.8999996 15.1125 17.71875 19.799999 21.88125 26.56875 31.78125 36.993752 40.115623 45.328125"
-           y="0"
-           id="tspan108">conflictarea</tspan></text>
-      <text
-         xml:space="preserve"
-         transform="translate(555.34766,225)"
-         style="font-variant:normal;font-weight:normal;font-size:9.75px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#8a8a8a;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text114"><tspan
-           x="0 6.5032501 13.0065 21.67425 30.078751 32.789249"
-           y="0"
-           id="tspan112">PET=t2</tspan></text>
-      <text
-         xml:space="preserve"
-         transform="translate(596.26841,225)"
-         style="font-variant:normal;font-weight:normal;font-size:9.75px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#8a8a8a;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text118"><tspan
-           x="0"
-           y="0"
-           id="tspan116">−</tspan></text>
-      <text
-         xml:space="preserve"
-         transform="translate(604.67291,225)"
-         style="font-variant:normal;font-weight:normal;font-size:9.75px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#8a8a8a;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text122"><tspan
-           x="0 2.7105"
-           y="0"
-           id="tspan120">t1</tspan></text>
-    </g>
-  </g>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="425pt" height="200pt" viewBox="0 0 425 200">
+<rect x="0" y="0" width="425" height="200" fill="#ffffff"/>
+<text x="105.00" y="14.00" font-family="Arial, Helvetica, sans-serif" font-size="9.00" fill="#1a1a1a" font-weight="bold" text-anchor="middle" xml:space="preserve"><tspan>Following conflict</tspan></text>
+<rect x="5.00" y="62.00" width="200.00" height="34.00" rx="0" ry="0" fill="#d9d9d9" stroke="#d9d9d9" stroke-width="0.5"/>
+<polyline points="5.00,79.00 205.00,79.00" fill="none" stroke="white" stroke-width="1.2" stroke-dasharray="6,5"/>
+<rect x="42.00" y="70.00" width="24.00" height="18.00" rx="2" ry="2" fill="#97c139" stroke="#6e9024" stroke-width="0.8"/>
+<text x="54.00" y="82.00" font-family="Arial, Helvetica, sans-serif" font-size="8.00" fill="white" font-weight="bold" text-anchor="middle" xml:space="preserve"><tspan>E</tspan></text>
+<rect x="150.00" y="70.00" width="26.00" height="18.00" rx="3" ry="3" fill="#1a1a1a" stroke="#1a1a1a" stroke-width="0.8"/>
+<polyline points="80.00,52.00 108.00,52.00" fill="none" stroke="#6e9024" stroke-width="1.6"/>
+<polygon points="115.00,52.00 108.00,55.50 108.00,48.50" fill="#6e9024" stroke="#6e9024" stroke-width="1.6"/>
+<text x="97.00" y="45.00" font-family="Arial, Helvetica, sans-serif" font-size="8.00" fill="#6e9024" text-anchor="middle" xml:space="preserve"><tspan>v</tspan><tspan font-size="5.76" baseline-shift="sub">rel</tspan></text>
+<polyline points="66.00,90.00 66.00,112.00" fill="none" stroke="#7a7a7a" stroke-width="0.6" stroke-dasharray="2,2"/>
+<polyline points="150.00,90.00 150.00,112.00" fill="none" stroke="#7a7a7a" stroke-width="0.6" stroke-dasharray="2,2"/>
+<polyline points="108.00,108.00 72.00,108.00" fill="none" stroke="#1a1a1a" stroke-width="0.9"/>
+<polygon points="66.00,108.00 72.00,105.00 72.00,111.00" fill="#1a1a1a" stroke="#1a1a1a" stroke-width="0.9"/>
+<polyline points="108.00,108.00 144.00,108.00" fill="none" stroke="#1a1a1a" stroke-width="0.9"/>
+<polygon points="150.00,108.00 144.00,111.00 144.00,105.00" fill="#1a1a1a" stroke="#1a1a1a" stroke-width="0.9"/>
+<text x="108.00" y="124.00" font-family="Arial, Helvetica, sans-serif" font-size="8.00" fill="#1a1a1a" text-anchor="middle" xml:space="preserve"><tspan>d</tspan><tspan font-size="5.76" baseline-shift="sub">rel</tspan></text>
+<text x="105.00" y="150.00" font-family="Arial, Helvetica, sans-serif" font-size="8.00" fill="#1a1a1a" text-anchor="middle" xml:space="preserve"><tspan>TTC = d</tspan><tspan font-size="5.76" baseline-shift="sub">rel</tspan><tspan> / v</tspan><tspan font-size="5.76" baseline-shift="sub">rel</tspan></text>
+<text x="105.00" y="164.00" font-family="Arial, Helvetica, sans-serif" font-size="8.00" fill="#1a1a1a" text-anchor="middle" xml:space="preserve"><tspan>a</tspan><tspan font-size="5.76" baseline-shift="sub">req</tspan><tspan> = v</tspan><tspan font-size="5.76" baseline-shift="sub">rel</tspan><tspan font-size="5.76" baseline-shift="super">2</tspan><tspan> / (2 d</tspan><tspan font-size="5.76" baseline-shift="sub">rel</tspan><tspan>)</tspan></text>
+<text x="318.00" y="14.00" font-family="Arial, Helvetica, sans-serif" font-size="9.00" fill="#1a1a1a" font-weight="bold" text-anchor="middle" xml:space="preserve"><tspan>Crossing conflict</tspan></text>
+<rect x="300.00" y="26.00" width="36.00" height="170.00" rx="0" ry="0" fill="#d9d9d9" stroke="#d9d9d9" stroke-width="0.5"/>
+<rect x="228.00" y="87.00" width="196.00" height="36.00" rx="0" ry="0" fill="#d9d9d9" stroke="#d9d9d9" stroke-width="0.5"/>
+<rect x="300.00" y="87.00" width="36.00" height="36.00" rx="0" ry="0" fill="#d6e6c2" stroke="#6e9024" stroke-width="0.8" stroke-dasharray="3,2"/>
+<text x="342.00" y="137.00" font-family="Arial, Helvetica, sans-serif" font-size="8.00" fill="#6e9024" xml:space="preserve"><tspan>conflict area</tspan></text>
+<circle cx="250" cy="105" r="5" fill="#97c139" stroke="#6e9024" stroke-width="0.8"/>
+<text x="240.00" y="108.00" font-family="Arial, Helvetica, sans-serif" font-size="8.00" fill="#6e9024" font-weight="bold" text-anchor="end" xml:space="preserve"><tspan>1</tspan></text>
+<polyline points="257.00,105.00 293.00,105.00" fill="none" stroke="#6e9024" stroke-width="1.4"/>
+<polygon points="300.00,105.00 293.00,108.50 293.00,101.50" fill="#6e9024" stroke="#6e9024" stroke-width="1.4"/>
+<circle cx="318" cy="40" r="5" fill="#c0392b" stroke="#c0392b" stroke-width="0.8"/>
+<text x="327.00" y="43.00" font-family="Arial, Helvetica, sans-serif" font-size="8.00" fill="#c0392b" font-weight="bold" xml:space="preserve"><tspan>2</tspan></text>
+<polyline points="318.00,47.00 318.00,77.00" fill="none" stroke="#c0392b" stroke-width="1.4"/>
+<polygon points="318.00,84.00 314.50,77.00 321.50,77.00" fill="#c0392b" stroke="#c0392b" stroke-width="1.4"/>
+<text x="250.00" y="137.00" font-family="Arial, Helvetica, sans-serif" font-size="8.00" fill="#1a1a1a" text-anchor="middle" xml:space="preserve"><tspan>leaves at t</tspan><tspan font-size="5.76" baseline-shift="sub">1</tspan></text>
+<text x="342.00" y="43.00" font-family="Arial, Helvetica, sans-serif" font-size="8.00" fill="#1a1a1a" xml:space="preserve"><tspan>enters at t</tspan><tspan font-size="5.76" baseline-shift="sub">2</tspan></text>
+<text x="342.00" y="167.00" font-family="Arial, Helvetica, sans-serif" font-size="8.00" fill="#1a1a1a" xml:space="preserve"><tspan>PET = t</tspan><tspan font-size="5.76" baseline-shift="sub">2</tspan><tspan> − t</tspan><tspan font-size="5.76" baseline-shift="sub">1</tspan></text>
 </svg>

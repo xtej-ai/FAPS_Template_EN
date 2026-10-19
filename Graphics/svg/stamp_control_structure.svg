@@ -1,181 +1,26 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
-
-<svg
-   version="1.1"
-   id="svg2"
-   width="560"
-   height="470"
-   viewBox="0 0 560 470"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg">
-  <defs
-     id="defs6" />
-  <g
-     id="g8"
-     transform="matrix(1.3333333,0,0,1.3333333,0,1.175e-5)">
-    <g
-       id="g10" />
-    <g
-       id="g12">
-      <path
-         d="M 0,0 H 420 V 352.5 H 0 Z"
-         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="path14" />
-      <g
-         id="g16">
-        <path
-           d="m 132,22.5 h 156 c 2.484,0 4.5,2.484 4.5,4.5 v 33 c 0,2.484 -2.016,4.5 -4.5,4.5 H 132 c -2.484,0 -4.5,-2.484 -4.5,-4.5 V 27 c 0,-2.484 2.016,-4.5 4.5,-4.5 z"
-           style="fill:#e8efe0;fill-opacity:1;fill-rule:nonzero;stroke:#6e9024;stroke-width:1.125;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           id="path18" />
-      </g>
-      <text
-         xml:space="preserve"
-         transform="translate(162.01562,40.5)"
-         style="font-variant:normal;font-weight:bold;font-size:9px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#1a1a1a;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text22"><tspan
-           x="0 6.4980001 9 14.499 19.997999 25.002001 28.503 31.5 34.001999 39.006001 44.009998 49.014 54.018002 59.021999 64.521004 70.019997 73.016998 76.517998 82.016998 84.518997 87.021004 92.025002"
-           y="0"
-           id="tspan20">Higher-levelcontroller</tspan></text>
-      <text
-         xml:space="preserve"
-         transform="translate(160.48828,54)"
-         style="font-variant:normal;font-weight:normal;font-size:7.875px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#8a8a8a;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text26"><tspan
-           x="0 4.3785 8.757 13.1355 15.757875 20.136375 22.325624 26.704124 31.515751 35.894249 38.0835 39.831749 44.210251 48.588749 52.967251 59.527126 63.905624 68.284126 72.662628 77.041122 81.419624 87.9795 92.358002 96.736504"
-           y="0"
-           id="tspan24">operator/fleetmanagement</tspan></text>
-      <g
-         id="g28">
-        <path
-           d="m 132,150 h 156 c 2.484,0 4.5,2.484 4.5,4.5 v 33 c 0,2.484 -2.016,4.5 -4.5,4.5 H 132 c -2.484,0 -4.5,-2.484 -4.5,-4.5 v -33 c 0,-2.484 2.016,-4.5 4.5,-4.5 z"
-           style="fill:#e8efe0;fill-opacity:1;fill-rule:nonzero;stroke:#6e9024;stroke-width:1.125;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           id="path30" />
-      </g>
-      <text
-         xml:space="preserve"
-         transform="translate(188.38672,168)"
-         style="font-variant:normal;font-weight:bold;font-size:9px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#1a1a1a;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text34"><tspan
-           x="0 6.4980001 11.997 17.496 20.493 23.993999 29.493 31.995001 34.497002 39.500999"
-           y="0"
-           id="tspan32">Controller</tspan></text>
-      <text
-         xml:space="preserve"
-         transform="translate(163.92578,181.5)"
-         style="font-variant:normal;font-weight:normal;font-size:7.875px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#8a8a8a;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text38"><tspan
-           x="0 4.3785 8.757 10.94625 15.32475 21.884624 26.263124 28.452375 32.830875 39.398624 43.777126 46.399502 48.147751 52.085251 53.8335 58.212002 64.779747 66.969002 71.347504 75.725998 79.663498 81.852753 83.600998 87.9795"
-           y="0"
-           id="tspan36">automateddrivingfunction</tspan></text>
-      <g
-         id="g40">
-        <path
-           d="m 132,277.5 h 156 c 2.484,0 4.5,2.484 4.5,4.5 v 33 c 0,2.484 -2.016,4.5 -4.5,4.5 H 132 c -2.484,0 -4.5,-2.484 -4.5,-4.5 v -33 c 0,-2.484 2.016,-4.5 4.5,-4.5 z"
-           style="fill:#e8efe0;fill-opacity:1;fill-rule:nonzero;stroke:#6e9024;stroke-width:1.125;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           id="path42" />
-      </g>
-      <text
-         xml:space="preserve"
-         transform="translate(168.95703,295.5)"
-         style="font-variant:normal;font-weight:bold;font-size:9px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#1a1a1a;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text46"><tspan
-           x="0 6.4980001 11.997 17.496 20.493 23.993999 29.493 31.995001 34.497002 39.500999 47.501999 53.000999 56.501999 62.000999 67.004997 72.009003 77.013"
-           y="0"
-           id="tspan44">Controlledprocess</tspan></text>
-      <text
-         xml:space="preserve"
-         transform="translate(167.37891,309)"
-         style="font-variant:normal;font-weight:normal;font-size:7.875px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#8a8a8a;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text50"><tspan
-           x="0 3.9375 8.316 12.6945 14.44275 18.380251 20.1285 26.696251 31.074751 35.453251 42.021 46.399502 50.778 54.7155 56.463749 59.086124 63.464626 67.843124 74.403 78.781502 83.160004"
-           y="0"
-           id="tspan48">vehicleandenvironment</tspan></text>
-      <g
-         id="g52">
-        <path
-           d="m 176.25,64.5 v 84"
-           style="fill:none;stroke:#6e9024;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           id="path54" />
-      </g>
-      <path
-         d="m 182.68,135.645 -6.43,15 -6.43,-15 z"
-         style="fill:#6e9024;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="path56" />
-      <g
-         id="g58">
-        <path
-           d="M 243.75,148.5 V 66"
-           style="fill:none;stroke:#8a8a8a;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           id="path60" />
-      </g>
-      <path
-         d="m 237.32,78.855 6.43,-15 6.43,15 z"
-         style="fill:#6e9024;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="path62" />
-      <g
-         id="g64">
-        <path
-           d="m 176.25,192 v 84"
-           style="fill:none;stroke:#6e9024;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           id="path66" />
-      </g>
-      <path
-         d="m 182.68,263.145 -6.43,15 -6.43,-15 z"
-         style="fill:#6e9024;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="path68" />
-      <g
-         id="g70">
-        <path
-           d="M 243.75,276 V 193.5"
-           style="fill:none;stroke:#8a8a8a;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           id="path72" />
-      </g>
-      <path
-         d="m 237.32,206.355 6.43,-15 6.43,15 z"
-         style="fill:#6e9024;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="path74" />
-      <text
-         xml:space="preserve"
-         transform="translate(89.425781,112.5)"
-         style="font-variant:normal;font-weight:normal;font-size:7.875px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#6e9024;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text80"><tspan
-           x="0 3.9375 8.316 12.6945 14.88375 17.506124 21.884624"
-           y="0"
-           id="tspan76">control</tspan><tspan
-           x="-1.5507843 2.8277156 6.7652154 8.9544659 10.702716 15.081216 19.459715"
-           y="10.499997"
-           id="tspan78">actions</tspan></text>
-      <text
-         xml:space="preserve"
-         transform="translate(307.5,112.5)"
-         style="font-variant:normal;font-weight:normal;font-size:7.875px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#8a8a8a;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text84"><tspan
-           x="0 2.18925 6.56775 10.94625 15.32475 19.703251 24.081751 28.019251"
-           y="0"
-           id="tspan82">feedback</tspan></text>
-      <text
-         xml:space="preserve"
-         transform="translate(89.425781,240)"
-         style="font-variant:normal;font-weight:normal;font-size:7.875px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#6e9024;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text90"><tspan
-           x="0 3.9375 8.316 12.6945 14.88375 17.506124 21.884624"
-           y="0"
-           id="tspan86">control</tspan><tspan
-           x="-1.5507843 2.8277156 6.7652154 8.9544659 10.702716 15.081216 19.459715"
-           y="10.499997"
-           id="tspan88">actions</tspan></text>
-      <text
-         xml:space="preserve"
-         transform="translate(307.5,240)"
-         style="font-variant:normal;font-weight:normal;font-size:7.875px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#8a8a8a;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text96"><tspan
-           x="0 2.18925 6.56775 10.94625 15.32475 19.703251 24.081751 28.019251"
-           y="0"
-           id="tspan92">feedback</tspan><tspan
-           x="-218.43359 -214.0551 -207.48734 -205.73909 -201.3606 -196.98209 -192.60359 -188.2251 -183.84659 -179.46809 -175.0896 -172.90034 -166.3326 -162.3951 -158.01659 -153.63809 -151.44884 -148.82646 -144.44797 -140.51047 -136.13197 -132.19447 -130.00522 -128.25697 -123.87846 -117.31071 -115.56247 -109.43571 -102.86797 -98.930466 -94.551964 -90.17347 -85.794968 -84.046715 -79.668221 -75.289719 -73.100464 -66.532715 -62.595219 -60.846966 -58.657719 -52.089966 -49.900719 -45.522217 -40.71059 -34.142841 -32.394592 -28.016092 -23.637592 -19.259092 -17.510841 -13.132342 -6.5645919 -4.8163424 -0.43784213 3.9406579 5.6889081 9.6264076 14.004908 16.194159 20.572659"
-           y="99"
-           id="tspan94">aninadequatecontrolactionisacandidatesiteforaleadingindicator</tspan></text>
-    </g>
-  </g>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="312pt" height="238pt" viewBox="0 0 312 238">
+<rect x="0" y="0" width="312" height="238" fill="#ffffff"/>
+<rect x="71.00" y="8.00" width="170.00" height="36.00" rx="2" ry="2" fill="#e8efe0" stroke="#6e9024" stroke-width="1.0"/>
+<text x="156.00" y="23.00" font-family="Arial, Helvetica, sans-serif" font-size="9.00" fill="#1a1a1a" font-weight="bold" text-anchor="middle" xml:space="preserve"><tspan>Higher-level controller</tspan></text>
+<text x="156.00" y="36.00" font-family="Arial, Helvetica, sans-serif" font-size="8.00" fill="#404040" text-anchor="middle" xml:space="preserve"><tspan>operator / fleet management</tspan></text>
+<rect x="71.00" y="92.00" width="170.00" height="36.00" rx="2" ry="2" fill="#e8efe0" stroke="#6e9024" stroke-width="1.0"/>
+<text x="156.00" y="107.00" font-family="Arial, Helvetica, sans-serif" font-size="9.00" fill="#1a1a1a" font-weight="bold" text-anchor="middle" xml:space="preserve"><tspan>Controller</tspan></text>
+<text x="156.00" y="120.00" font-family="Arial, Helvetica, sans-serif" font-size="8.00" fill="#404040" text-anchor="middle" xml:space="preserve"><tspan>automated driving function</tspan></text>
+<rect x="71.00" y="176.00" width="170.00" height="36.00" rx="2" ry="2" fill="#e8efe0" stroke="#6e9024" stroke-width="1.0"/>
+<text x="156.00" y="191.00" font-family="Arial, Helvetica, sans-serif" font-size="9.00" fill="#1a1a1a" font-weight="bold" text-anchor="middle" xml:space="preserve"><tspan>Controlled process</tspan></text>
+<text x="156.00" y="204.00" font-family="Arial, Helvetica, sans-serif" font-size="8.00" fill="#404040" text-anchor="middle" xml:space="preserve"><tspan>vehicle and environment</tspan></text>
+<polyline points="116.00,44.00 116.00,85.00" fill="none" stroke="#6e9024" stroke-width="1.2"/>
+<polygon points="116.00,92.00 112.50,85.00 119.50,85.00" fill="#6e9024" stroke="#6e9024" stroke-width="1.2"/>
+<polyline points="196.00,92.00 196.00,51.00" fill="none" stroke="#6e9024" stroke-width="1.2"/>
+<polygon points="196.00,44.00 199.50,51.00 192.50,51.00" fill="#6e9024" stroke="#6e9024" stroke-width="1.2"/>
+<text x="110.00" y="66.00" font-family="Arial, Helvetica, sans-serif" font-size="8.00" fill="#6e9024" text-anchor="end" xml:space="preserve"><tspan>control actions</tspan></text>
+<text x="202.00" y="66.00" font-family="Arial, Helvetica, sans-serif" font-size="8.00" fill="#6e9024" xml:space="preserve"><tspan>feedback</tspan></text>
+<polyline points="116.00,128.00 116.00,169.00" fill="none" stroke="#6e9024" stroke-width="1.2"/>
+<polygon points="116.00,176.00 112.50,169.00 119.50,169.00" fill="#6e9024" stroke="#6e9024" stroke-width="1.2"/>
+<polyline points="196.00,176.00 196.00,135.00" fill="none" stroke="#6e9024" stroke-width="1.2"/>
+<polygon points="196.00,128.00 199.50,135.00 192.50,135.00" fill="#6e9024" stroke="#6e9024" stroke-width="1.2"/>
+<text x="110.00" y="150.00" font-family="Arial, Helvetica, sans-serif" font-size="8.00" fill="#6e9024" text-anchor="end" xml:space="preserve"><tspan>control actions</tspan></text>
+<text x="202.00" y="150.00" font-family="Arial, Helvetica, sans-serif" font-size="8.00" fill="#6e9024" xml:space="preserve"><tspan>feedback</tspan></text>
+<text x="156.00" y="230.00" font-family="Arial, Helvetica, sans-serif" font-size="8.00" fill="#404040" text-anchor="middle" xml:space="preserve"><tspan>an inadequate control action is a candidate site for a leading indicator</tspan></text>
 </svg>

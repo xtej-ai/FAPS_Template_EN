@@ -1,319 +1,48 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
-
-<svg
-   version="1.1"
-   id="svg2"
-   width="640"
-   height="580"
-   viewBox="0 0 640 580"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg">
-  <defs
-     id="defs6" />
-  <g
-     id="g8"
-     transform="matrix(1.3333333,0,0,1.3333333,0,1.45e-5)">
-    <g
-       id="g10">
-      <path
-         d="M 0,0 H 480 V 435 H 0 Z"
-         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="path12" />
-      <path
-         d="M 97.5,132 H 435 c 4.141,0 7.5,4.141 7.5,7.5 V 408 c 0,4.141 -3.359,7.5 -7.5,7.5 H 97.5 C 93.359,415.5 90,411.359 90,408 V 139.5 c 0,-4.141 3.359,-7.5 7.5,-7.5 z"
-         style="fill:#97c139;fill-opacity:0.09;fill-rule:nonzero;stroke:none"
-         id="path14" />
-      <g
-         id="g16">
-        <path
-           d="M 97.5,132 H 435 c 4.141,0 7.5,4.141 7.5,7.5 V 408 c 0,4.141 -3.359,7.5 -7.5,7.5 H 97.5 C 93.359,415.5 90,411.359 90,408 V 139.5 c 0,-4.141 3.359,-7.5 7.5,-7.5 z"
-           style="fill:none;stroke:#6e9024;stroke-width:0.75;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.75, 3;stroke-dashoffset:0;stroke-opacity:0.09"
-           id="path18" />
-      </g>
-      <text
-         xml:space="preserve"
-         transform="translate(96,409.5)"
-         style="font-variant:normal;font-weight:normal;font-size:8.25px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#6e9024;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text22"><tspan
-           x="0 1.8315001 6.4184999 11.0055 17.886 22.473 26.598 31.184999 36.22575 38.519249 43.106251 49.986752 51.818249 56.405251 60.992249 65.579247 67.410751 71.997749 76.584747 79.332001 81.163498 85.750504 90.337502 92.168999 96.293999 100.881 103.1745 107.7615 112.80225 115.5495 120.1365 124.7235 126.555 130.67999 132.9735 137.5605"
-           y="0"
-           id="tspan20">loopoverthelagging-indicatorregister</tspan></text>
-      <g
-         id="g24">
-        <path
-           d="m 117.75,22.5 h 274.5 c 2.898,0 5.25,2.898 5.25,5.25 v 25.5 c 0,2.898 -2.352,5.25 -5.25,5.25 h -274.5 c -2.898,0 -5.25,-2.898 -5.25,-5.25 v -25.5 c 0,-2.898 2.352,-5.25 5.25,-5.25 z"
-           style="fill:#d6e6c2;fill-opacity:1;fill-rule:nonzero;stroke:#6e9024;stroke-width:1.125;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           id="path26" />
-      </g>
-      <text
-         xml:space="preserve"
-         transform="translate(124.5,44.25)"
-         style="font-variant:normal;font-weight:bold;font-size:9.75px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#6e9024;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text30"><tspan
-           x="0"
-           y="0"
-           id="tspan28">0</tspan></text>
-      <text
-         xml:space="preserve"
-         transform="translate(165,44.25)"
-         style="font-variant:normal;font-weight:normal;font-size:9.75px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#1a1a1a;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text34"><tspan
-           x="0 7.0395002 12.4605 15.171 17.335501 22.7565 30.888 36.308998 41.183998 49.315498 54.190498 59.6115 64.486504 72.617996 75.864754 78.575249 83.996246 89.417252 94.292252 97.002747 99.167252 104.58825 110.00925 115.43025 120.85125 125.72625 128.43675 133.85776 137.10451 141.97951 147.4005 154.98599 162.0255 169.065"
-           y="0"
-           id="tspan32">Defineusecase(function,actors,ODD)</tspan></text>
-      <g
-         id="g36">
-        <path
-           d="m 117.75,72 h 274.5 c 2.898,0 5.25,2.898 5.25,5.25 v 25.5 c 0,2.898 -2.352,5.25 -5.25,5.25 h -274.5 c -2.898,0 -5.25,-2.898 -5.25,-5.25 v -25.5 c 0,-2.898 2.352,-5.25 5.25,-5.25 z"
-           style="fill:#d6e6c2;fill-opacity:1;fill-rule:nonzero;stroke:#6e9024;stroke-width:1.125;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           id="path38" />
-      </g>
-      <text
-         xml:space="preserve"
-         transform="translate(124.5,93.75)"
-         style="font-variant:normal;font-weight:bold;font-size:9.75px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#6e9024;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text42"><tspan
-           x="0"
-           y="0"
-           id="tspan40">1</tspan></text>
-      <text
-         xml:space="preserve"
-         transform="translate(165,93.75)"
-         style="font-variant:normal;font-weight:normal;font-size:9.75px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#1a1a1a;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text46"><tspan
-           x="0 6.5032501 11.92425 14.08875 16.25325 24.38475 26.54925 31.970249 37.391251 42.812248 44.976749 50.397751 55.818748 59.065498 61.23 66.651001 72.071999 74.236504 79.111504 84.532501 87.242996 92.664001 98.621246 101.868 107.289 112.71 114.8745 119.7495 122.46 127.881"
-           y="0"
-           id="tspan44">Buildlagging-indicatorregister</tspan></text>
-      <g
-         id="g48">
-        <path
-           d="m 117.75,142.5 h 274.5 c 2.898,0 5.25,2.898 5.25,5.25 v 25.5 c 0,2.898 -2.352,5.25 -5.25,5.25 h -274.5 c -2.898,0 -5.25,-2.898 -5.25,-5.25 v -25.5 c 0,-2.898 2.352,-5.25 5.25,-5.25 z"
-           style="fill:#e8efe0;fill-opacity:1;fill-rule:nonzero;stroke:#6e9024;stroke-width:1.125;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           id="path50" />
-      </g>
-      <text
-         xml:space="preserve"
-         transform="translate(124.5,164.25)"
-         style="font-variant:normal;font-weight:bold;font-size:9.75px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#6e9024;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text54"><tspan
-           x="0"
-           y="0"
-           id="tspan52">2</tspan></text>
-      <text
-         xml:space="preserve"
-         transform="translate(165,164.25)"
-         style="font-variant:normal;font-weight:normal;font-size:9.75px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#1a1a1a;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text58"><tspan
-           x="0 6.5032501 9.75 15.171 20.046 22.210501 30.332251 35.75325 38.463749 46.595249 51.470249 56.891251 62.312248 67.187248 75.318748 78.565498 83.986504 87.233253 92.654251 97.529251 102.95025 108.37125 111.08175 113.24625 118.66725 126.79875 129.50925 134.93025 139.80525 142.51575"
-           y="0"
-           id="tspan56">Proximatecause(preventiontest)</tspan></text>
-      <g
-         id="g60">
-        <path
-           d="m 117.75,187.5 h 274.5 c 2.898,0 5.25,2.898 5.25,5.25 v 25.5 c 0,2.898 -2.352,5.25 -5.25,5.25 h -274.5 c -2.898,0 -5.25,-2.898 -5.25,-5.25 v -25.5 c 0,-2.898 2.352,-5.25 5.25,-5.25 z"
-           style="fill:#e8efe0;fill-opacity:1;fill-rule:nonzero;stroke:#6e9024;stroke-width:1.125;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           id="path62" />
-      </g>
-      <text
-         xml:space="preserve"
-         transform="translate(124.5,209.25)"
-         style="font-variant:normal;font-weight:bold;font-size:9.75px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#6e9024;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text66"><tspan
-           x="0"
-           y="0"
-           id="tspan64">3</tspan></text>
-      <text
-         xml:space="preserve"
-         transform="translate(165,209.25)"
-         style="font-variant:normal;font-weight:normal;font-size:9.75px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#1a1a1a;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text70"><tspan
-           x="0 7.0395002 12.4605 17.8815 22.7565 28.1775 33.052502 38.473499 43.894501 48.769501 54.190498 62.312248 67.733253 73.154251 78.029251 80.193748 82.904251 85.068748 90.489754 98.621246 101.868 109.4535 119.2035 124.6245 131.12775 138.16725 147.91725 153.33826 158.75925 161.46976 166.89075 171.76575"
-           y="0"
-           id="tspan68">Causaldecomposition(OR/ANDgates)</tspan></text>
-      <g
-         id="g72">
-        <path
-           d="m 117.75,232.5 h 274.5 c 2.898,0 5.25,2.898 5.25,5.25 v 25.5 c 0,2.898 -2.352,5.25 -5.25,5.25 h -274.5 c -2.898,0 -5.25,-2.898 -5.25,-5.25 v -25.5 c 0,-2.898 2.352,-5.25 5.25,-5.25 z"
-           style="fill:#e8efe0;fill-opacity:1;fill-rule:nonzero;stroke:#6e9024;stroke-width:1.125;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           id="path74" />
-      </g>
-      <text
-         xml:space="preserve"
-         transform="translate(124.5,254.25)"
-         style="font-variant:normal;font-weight:bold;font-size:9.75px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#6e9024;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text78"><tspan
-           x="0"
-           y="0"
-           id="tspan76">4</tspan></text>
-      <text
-         xml:space="preserve"
-         transform="translate(165,254.25)"
-         style="font-variant:normal;font-weight:normal;font-size:9.75px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#1a1a1a;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text82"><tspan
-           x="0 6.5032501 11.92425 15.171 17.335501 19.5 24.921 29.796 35.216999 40.638 46.058998 50.933998 56.355 59.601749 64.476753 69.897751 75.318748 77.483253 85.614754 90.489754 92.654251 98.075249 103.49625 108.91725"
-           y="0"
-           id="tspan80">Earliestobservablesignal</tspan></text>
-      <g
-         id="g84">
-        <path
-           d="m 117.75,277.5 h 274.5 c 2.898,0 5.25,2.898 5.25,5.25 v 25.5 c 0,2.898 -2.352,5.25 -5.25,5.25 h -274.5 c -2.898,0 -5.25,-2.898 -5.25,-5.25 v -25.5 c 0,-2.898 2.352,-5.25 5.25,-5.25 z"
-           style="fill:#e8efe0;fill-opacity:1;fill-rule:nonzero;stroke:#6e9024;stroke-width:1.125;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           id="path86" />
-      </g>
-      <text
-         xml:space="preserve"
-         transform="translate(124.5,299.25)"
-         style="font-variant:normal;font-weight:bold;font-size:9.75px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#6e9024;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text90"><tspan
-           x="0"
-           y="0"
-           id="tspan88">5</tspan></text>
-      <text
-         xml:space="preserve"
-         transform="translate(165,299.25)"
-         style="font-variant:normal;font-weight:normal;font-size:9.75px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#1a1a1a;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text94"><tspan
-           x="0 7.5854998 13.0065 17.8815 23.3025 26.54925 31.42425 36.845249 42.266251 44.430752 46.595249 48.75975 51.470249 59.055752 64.476753 69.897751 78.029251 80.193748 85.614754 91.035751 96.456749 101.87775 107.29875 112.71975 118.14075 123.56175 128.98276 133.85776 141.98924 146.86424 152.28525 157.70625 162.58125"
-           y="0"
-           id="tspan92">Observabilityandindependencecheck</tspan></text>
-      <g
-         id="g96">
-        <path
-           d="m 117.75,322.5 h 274.5 c 2.898,0 5.25,2.898 5.25,5.25 v 25.5 c 0,2.898 -2.352,5.25 -5.25,5.25 h -274.5 c -2.898,0 -5.25,-2.898 -5.25,-5.25 v -25.5 c 0,-2.898 2.352,-5.25 5.25,-5.25 z"
-           style="fill:#e8efe0;fill-opacity:1;fill-rule:nonzero;stroke:#6e9024;stroke-width:1.125;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           id="path98" />
-      </g>
-      <text
-         xml:space="preserve"
-         transform="translate(124.5,344.25)"
-         style="font-variant:normal;font-weight:bold;font-size:9.75px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#6e9024;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text102"><tspan
-           x="0"
-           y="0"
-           id="tspan100">6</tspan></text>
-      <text xml:space="preserve" transform="translate(165,344.25)" style="font-variant:normal;font-weight:normal;font-size:9.75px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#1a1a1a;fill-opacity:1;fill-rule:nonzero;stroke:none" id="text106"><tspan x="0" y="0" id="tspan104">Metric threshold θ and SPI threshold T</tspan></text>
-      
-      
-      <g
-         id="g116">
-        <path
-           d="m 117.75,367.5 h 274.5 c 2.898,0 5.25,2.898 5.25,5.25 v 25.5 c 0,2.898 -2.352,5.25 -5.25,5.25 h -274.5 c -2.898,0 -5.25,-2.898 -5.25,-5.25 v -25.5 c 0,-2.898 2.352,-5.25 5.25,-5.25 z"
-           style="fill:#97c139;fill-opacity:1;fill-rule:nonzero;stroke:#6e9024;stroke-width:1.125;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           id="path118" />
-      </g>
-      <text
-         xml:space="preserve"
-         transform="translate(124.5,389.25)"
-         style="font-variant:normal;font-weight:bold;font-size:9.75px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#6e9024;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text122"><tspan
-           x="0"
-           y="0"
-           id="tspan120">7</tspan></text>
-      <text
-         xml:space="preserve"
-         transform="translate(165,389.25)"
-         style="font-variant:normal;font-weight:normal;font-size:9.75px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#1a1a1a;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text126"><tspan
-           x="0 6.5032501 9.2137499 11.92425 17.345249 22.220249 30.351749 33.062248 41.193748 48.779251 55.282501 65.032501 69.907501 75.328499 78.039001 83.459999 86.170502 93.755997 98.630997 104.052 108.927"
-           y="0"
-           id="tspan124">AttachtoGSNsafetycase</tspan></text>
-      <g
-         id="g128">
-        <path
-           d="M 255,58.5 V 72"
-           style="fill:none;stroke:#6e9024;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           id="path130" />
-      </g>
-      <path
-         d="m 261.43,59.145 -6.43,15 -6.43,-15 z"
-         style="fill:#6e9024;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="path132" />
-      <g
-         id="g134">
-        <path
-           d="m 255,108 v 34.5"
-           style="fill:none;stroke:#6e9024;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           id="path136" />
-      </g>
-      <path
-         d="m 261.43,129.645 -6.43,15 -6.43,-15 z"
-         style="fill:#6e9024;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="path138" />
-      <g
-         id="g140">
-        <path
-           d="m 255,178.5 v 9"
-           style="fill:none;stroke:#6e9024;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           id="path142" />
-      </g>
-      <path
-         d="m 261.43,174.645 -6.43,15 -6.43,-15 z"
-         style="fill:#6e9024;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="path144" />
-      <g
-         id="g146">
-        <path
-           d="m 255,223.5 v 9"
-           style="fill:none;stroke:#6e9024;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           id="path148" />
-      </g>
-      <path
-         d="m 261.43,219.645 -6.43,15 -6.43,-15 z"
-         style="fill:#6e9024;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="path150" />
-      <g
-         id="g152">
-        <path
-           d="m 255,268.5 v 9"
-           style="fill:none;stroke:#6e9024;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           id="path154" />
-      </g>
-      <path
-         d="m 261.43,264.645 -6.43,15 -6.43,-15 z"
-         style="fill:#6e9024;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="path156" />
-      <g
-         id="g158">
-        <path
-           d="m 255,313.5 v 9"
-           style="fill:none;stroke:#6e9024;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           id="path160" />
-      </g>
-      <path
-         d="m 261.43,309.645 -6.43,15 -6.43,-15 z"
-         style="fill:#6e9024;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="path162" />
-      <g
-         id="g164">
-        <path
-           d="m 255,358.5 v 9"
-           style="fill:none;stroke:#6e9024;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           id="path166" />
-      </g>
-      <path
-         d="m 261.43,354.645 -6.43,15 -6.43,-15 z"
-         style="fill:#6e9024;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="path168" />
-      <g
-         id="g170">
-        <path
-           d="m 397.5,385.5 c 52.5,0 52.5,-225 0,-225"
-           style="fill:none;stroke:#6e9024;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:4.5, 3;stroke-dashoffset:0;stroke-opacity:1"
-           id="path172" />
-      </g>
-      <path
-         d="m 410.355,166.93 -15,-6.43 15,-6.43 z"
-         style="fill:#6e9024;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="path174" />
-      <text
-         xml:space="preserve"
-         transform="rotate(90,121.23242,333.26758)"
-         style="font-variant:normal;font-weight:normal;font-size:8.25px;font-family:Arial,Helvetica,sans-serif;writing-mode:lr-tb;fill:#6e9024;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="text178"><tspan
-           x="0 4.5869999 9.1739998 13.299 17.886 19.717501 24.304501 28.8915 33.4785 35.310001 39.896999 46.7775 48.609001 53.195999 57.783001 59.614498 63.739498 68.3265 70.620003 75.207001"
-           y="0"
-           id="tspan176">nextlaggingindicator</tspan></text>
-    </g>
-  </g>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="298pt" height="300pt" viewBox="0 0 298 300">
+<rect x="0" y="0" width="298" height="300" fill="#ffffff"/>
+<rect x="10.00" y="72.00" width="278.00" height="211.00" rx="4" ry="4" fill="#f3f7ec" stroke="#c9dcae" stroke-width="0.8"/>
+<rect x="20.00" y="8.00" width="222.00" height="24.00" rx="3" ry="3" fill="#d6e6c2" stroke="#6e9024" stroke-width="1.0"/>
+<text x="30.00" y="24.00" font-family="Arial, Helvetica, sans-serif" font-size="9.00" fill="#1a1a1a" font-weight="bold" xml:space="preserve"><tspan>0</tspan></text>
+<text x="46.00" y="24.00" font-family="Arial, Helvetica, sans-serif" font-size="8.00" fill="#1a1a1a" xml:space="preserve"><tspan>Define use case (function, actors, ODD)</tspan></text>
+<polyline points="131.00,32.00 131.00,37.00" fill="none" stroke="#6e9024" stroke-width="1.2"/>
+<polygon points="131.00,43.00 128.00,37.00 134.00,37.00" fill="#6e9024" stroke="#6e9024" stroke-width="1.2"/>
+<rect x="20.00" y="43.00" width="222.00" height="24.00" rx="3" ry="3" fill="#d6e6c2" stroke="#6e9024" stroke-width="1.0"/>
+<text x="30.00" y="59.00" font-family="Arial, Helvetica, sans-serif" font-size="9.00" fill="#1a1a1a" font-weight="bold" xml:space="preserve"><tspan>1</tspan></text>
+<text x="46.00" y="59.00" font-family="Arial, Helvetica, sans-serif" font-size="8.00" fill="#1a1a1a" xml:space="preserve"><tspan>Build lagging-indicator register</tspan></text>
+<polyline points="131.00,67.00 131.00,72.00" fill="none" stroke="#6e9024" stroke-width="1.2"/>
+<polygon points="131.00,78.00 128.00,72.00 134.00,72.00" fill="#6e9024" stroke="#6e9024" stroke-width="1.2"/>
+<rect x="20.00" y="78.00" width="222.00" height="24.00" rx="3" ry="3" fill="#d6e6c2" stroke="#6e9024" stroke-width="1.0"/>
+<text x="30.00" y="94.00" font-family="Arial, Helvetica, sans-serif" font-size="9.00" fill="#1a1a1a" font-weight="bold" xml:space="preserve"><tspan>2</tspan></text>
+<text x="46.00" y="94.00" font-family="Arial, Helvetica, sans-serif" font-size="8.00" fill="#1a1a1a" xml:space="preserve"><tspan>Proximate cause (prevention test)</tspan></text>
+<polyline points="131.00,102.00 131.00,107.00" fill="none" stroke="#6e9024" stroke-width="1.2"/>
+<polygon points="131.00,113.00 128.00,107.00 134.00,107.00" fill="#6e9024" stroke="#6e9024" stroke-width="1.2"/>
+<rect x="20.00" y="113.00" width="222.00" height="24.00" rx="3" ry="3" fill="#d6e6c2" stroke="#6e9024" stroke-width="1.0"/>
+<text x="30.00" y="129.00" font-family="Arial, Helvetica, sans-serif" font-size="9.00" fill="#1a1a1a" font-weight="bold" xml:space="preserve"><tspan>3</tspan></text>
+<text x="46.00" y="129.00" font-family="Arial, Helvetica, sans-serif" font-size="8.00" fill="#1a1a1a" xml:space="preserve"><tspan>Causal decomposition (OR / AND gates)</tspan></text>
+<polyline points="131.00,137.00 131.00,142.00" fill="none" stroke="#6e9024" stroke-width="1.2"/>
+<polygon points="131.00,148.00 128.00,142.00 134.00,142.00" fill="#6e9024" stroke="#6e9024" stroke-width="1.2"/>
+<rect x="20.00" y="148.00" width="222.00" height="24.00" rx="3" ry="3" fill="#d6e6c2" stroke="#6e9024" stroke-width="1.0"/>
+<text x="30.00" y="164.00" font-family="Arial, Helvetica, sans-serif" font-size="9.00" fill="#1a1a1a" font-weight="bold" xml:space="preserve"><tspan>4</tspan></text>
+<text x="46.00" y="164.00" font-family="Arial, Helvetica, sans-serif" font-size="8.00" fill="#1a1a1a" xml:space="preserve"><tspan>Earliest observable signal</tspan></text>
+<polyline points="131.00,172.00 131.00,177.00" fill="none" stroke="#6e9024" stroke-width="1.2"/>
+<polygon points="131.00,183.00 128.00,177.00 134.00,177.00" fill="#6e9024" stroke="#6e9024" stroke-width="1.2"/>
+<rect x="20.00" y="183.00" width="222.00" height="24.00" rx="3" ry="3" fill="#d6e6c2" stroke="#6e9024" stroke-width="1.0"/>
+<text x="30.00" y="199.00" font-family="Arial, Helvetica, sans-serif" font-size="9.00" fill="#1a1a1a" font-weight="bold" xml:space="preserve"><tspan>5</tspan></text>
+<text x="46.00" y="199.00" font-family="Arial, Helvetica, sans-serif" font-size="8.00" fill="#1a1a1a" xml:space="preserve"><tspan>Observability and independence check</tspan></text>
+<polyline points="131.00,207.00 131.00,212.00" fill="none" stroke="#6e9024" stroke-width="1.2"/>
+<polygon points="131.00,218.00 128.00,212.00 134.00,212.00" fill="#6e9024" stroke="#6e9024" stroke-width="1.2"/>
+<rect x="20.00" y="218.00" width="222.00" height="24.00" rx="3" ry="3" fill="#d6e6c2" stroke="#6e9024" stroke-width="1.0"/>
+<text x="30.00" y="234.00" font-family="Arial, Helvetica, sans-serif" font-size="9.00" fill="#1a1a1a" font-weight="bold" xml:space="preserve"><tspan>6</tspan></text>
+<text x="46.00" y="234.00" font-family="Arial, Helvetica, sans-serif" font-size="8.00" fill="#1a1a1a" xml:space="preserve"><tspan>Metric threshold θ and SPI threshold T</tspan></text>
+<polyline points="131.00,242.00 131.00,247.00" fill="none" stroke="#6e9024" stroke-width="1.2"/>
+<polygon points="131.00,253.00 128.00,247.00 134.00,247.00" fill="#6e9024" stroke="#6e9024" stroke-width="1.2"/>
+<rect x="20.00" y="253.00" width="222.00" height="24.00" rx="3" ry="3" fill="#97c139" stroke="#6e9024" stroke-width="1.0"/>
+<text x="30.00" y="269.00" font-family="Arial, Helvetica, sans-serif" font-size="9.00" fill="#1a1a1a" font-weight="bold" xml:space="preserve"><tspan>7</tspan></text>
+<text x="46.00" y="269.00" font-family="Arial, Helvetica, sans-serif" font-size="8.00" fill="#1a1a1a" xml:space="preserve"><tspan>Attach to GSN safety case</tspan></text>
+<polyline points="242.00,265.00 262.00,265.00 262.00,90.00" fill="none" stroke="#6e9024" stroke-width="1.0" stroke-dasharray="4,3"/>
+<polyline points="262.00,90.00 249.00,90.00" fill="none" stroke="#6e9024" stroke-width="1.0"/>
+<polygon points="243.00,90.00 249.00,87.00 249.00,93.00" fill="#6e9024" stroke="#6e9024" stroke-width="1.0"/>
+<g transform="translate(273,177.5) rotate(90)"><text x="0.00" y="0.00" font-family="Arial, Helvetica, sans-serif" font-size="8.00" fill="#6e9024" text-anchor="middle" xml:space="preserve"><tspan>next lagging indicator</tspan></text></g>
+<text x="20.00" y="294.00" font-family="Arial, Helvetica, sans-serif" font-size="8.00" fill="#404040" xml:space="preserve"><tspan>loop over the lagging-indicator register</tspan></text>
 </svg>
